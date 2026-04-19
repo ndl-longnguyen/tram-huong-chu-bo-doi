@@ -12,27 +12,27 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const categories = [
-  { icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80", label: { vi: "Vong Tay", en: "Bracelets", zh: "手链" }, count: 120 },
-  { icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80", label: { vi: "Nhan", en: "Rings", zh: "戒指" }, count: 45 },
-  { icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80", label: { vi: "Chuoi Co", en: "Necklaces", zh: "项链" }, count: 38 },
-  { icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80", label: { vi: "Mat Day Chuyen", en: "Pendants", zh: "吊坠" }, count: 56 },
+  { icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80", label: { vi: "Vòng Tay", en: "Bracelets", zh: "手链" }, count: 120 },
+  { icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80", label: { vi: "Nhẫn", en: "Rings", zh: "戒指" }, count: 45 },
+  { icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80", label: { vi: "Chuỗi Cổ", en: "Necklaces", zh: "项链" }, count: 38 },
+  { icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80", label: { vi: "Mặt Dây Chuyền", en: "Pendants", zh: "吊坠" }, count: 56 },
 ]
 
 export default function ProductsPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chu", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "Trang Suc Tram Huong", en: "Agarwood Jewelry", zh: "沉香珠宝" },
-    collection: { vi: "BO SUU TAP", en: "COLLECTION", zh: "产品系列" },
-    title1: { vi: "Trang Suc Tram Huong", en: "Agarwood Jewelry", zh: "沉香珠宝" },
-    title2: { vi: "Cao Cap", en: "Premium", zh: "高端系列" },
+    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    breadcrumb: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
+    collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
+    title1: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
+    title2: { vi: "Cao Cấp", en: "Premium", zh: "高端系列" },
     description: {
-      vi: "Kham pha bo suu tap trang suc tram huong tu nhien 100%, duoc che tac thu cong boi nhung nghe nhan lanh nghe voi hon 20 nam kinh nghiem.",
+      vi: "Khám phá bộ sưu tập trang sức trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 20 năm kinh nghiệm.",
       en: "Discover our collection of 100% natural agarwood jewelry, handcrafted by skilled artisans with over 20 years of experience.",
       zh: "探索我们100%天然沉香珠宝系列，由拥有20多年经验的熟练工匠手工制作。"
     },
-    products: { vi: "san pham", en: "products", zh: "件产品" },
+    products: { vi: "sản phẩm", en: "products", zh: "件产品" },
   }
 
   return (

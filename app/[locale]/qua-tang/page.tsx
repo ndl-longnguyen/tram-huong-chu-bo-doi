@@ -8,47 +8,47 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const giftProducts = [
-  { id: "1", name: { vi: "Set Qua Tang VIP", en: "VIP Gift Set", zh: "VIP礼品套装" }, price: 5500000, originalPrice: 6500000, image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=80", badge: { vi: "Best Seller", en: "Best Seller", zh: "畅销" } },
-  { id: "2", name: { vi: "Hop Qua Nhang Tram Premium", en: "Premium Incense Gift Box", zh: "高级香礼盒" }, price: 2800000, originalPrice: 3500000, image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=500&q=80", badge: { vi: "Moi", en: "New", zh: "新品" } },
-  { id: "3", name: { vi: "Set Vong Tay Cap Doi", en: "Couple Bracelet Set", zh: "情侣手链套装" }, price: 3800000, image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" },
-  { id: "4", name: { vi: "Qua Tang Doanh Nghiep", en: "Corporate Gift", zh: "企业礼品" }, price: 8500000, originalPrice: 10000000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Corporate", en: "Corporate", zh: "企业" } },
-  { id: "5", name: { vi: "Set Qua Tang Sinh Nhat", en: "Birthday Gift Set", zh: "生日礼品套装" }, price: 1800000, image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=500&q=80" },
-  { id: "6", name: { vi: "Qua Tang Tet Luxury", en: "Luxury Tet Gift", zh: "豪华春节礼品" }, price: 12000000, originalPrice: 15000000, image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=500&q=80", badge: { vi: "Limited", en: "Limited", zh: "限量" } },
+  { id: "1", name: { vi: "Set Quà Tặng VIP", en: "VIP Gift Set", zh: "VIP礼品套装" }, price: 5500000, originalPrice: 6500000, image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=80", badge: { vi: "Best Seller", en: "Best Seller", zh: "畅销" } },
+  { id: "2", name: { vi: "Hộp Quà Nhang Trầm Premium", en: "Premium Incense Gift Box", zh: "高级香礼盒" }, price: 2800000, originalPrice: 3500000, image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=500&q=80", badge: { vi: "Mới", en: "New", zh: "新品" } },
+  { id: "3", name: { vi: "Set Vòng Tay Cặp Đôi", en: "Couple Bracelet Set", zh: "情侣手链套装" }, price: 3800000, image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" },
+  { id: "4", name: { vi: "Quà Tặng Doanh Nghiệp", en: "Corporate Gift", zh: "企业礼品" }, price: 8500000, originalPrice: 10000000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Corporate", en: "Corporate", zh: "企业" } },
+  { id: "5", name: { vi: "Set Quà Tặng Sinh Nhật", en: "Birthday Gift Set", zh: "生日礼品套装" }, price: 1800000, image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=500&q=80" },
+  { id: "6", name: { vi: "Quà Tặng Tết Luxury", en: "Luxury Tet Gift", zh: "豪华春节礼品" }, price: 12000000, originalPrice: 15000000, image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=500&q=80", badge: { vi: "Limited", en: "Limited", zh: "限量" } },
 ]
 
 export default function GiftPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chu", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "Qua Tang Tram Huong", en: "Agarwood Gifts", zh: "沉香礼品" },
-    giftCategory: { vi: "QUA TANG Y NGHIA", en: "MEANINGFUL GIFTS", zh: "有意义的礼物" },
-    title1: { vi: "Qua Tang Tram Huong", en: "Agarwood Gifts", zh: "沉香礼品" },
-    title2: { vi: "Dang Cap & Tinh Te", en: "Elegant & Refined", zh: "优雅精致" },
+    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    breadcrumb: { vi: "Quà Tặng Trầm Hương", en: "Agarwood Gifts", zh: "沉香礼品" },
+    giftCategory: { vi: "QUÀ TẶNG Ý NGHĨA", en: "MEANINGFUL GIFTS", zh: "有意义的礼物" },
+    title1: { vi: "Quà Tặng Trầm Hương", en: "Agarwood Gifts", zh: "沉香礼品" },
+    title2: { vi: "Đẳng Cấp & Tinh Tế", en: "Elegant & Refined", zh: "优雅精致" },
     description: {
-      vi: "Tang qua tram huong - tang suc khoe va binh an. Bo suu tap qua tang cao cap phu hop cho moi dip dac biet trong cuoc song.",
+      vi: "Tặng quà trầm hương - tặng sức khỏe và bình an. Bộ sưu tập quà tặng cao cấp phù hợp cho mọi dịp đặc biệt trong cuộc sống.",
       en: "Give agarwood gifts - give health and peace. Premium gift collection suitable for all special occasions in life.",
       zh: "赠送沉香礼品 - 赠送健康与平安。适合生活中所有特殊场合的高端礼品系列。"
     },
-    birthday: { vi: "Qua Tang Sinh Nhat", en: "Birthday Gifts", zh: "生日礼物" },
-    birthdayDesc: { vi: "Mon qua y nghia cho nguoi than yeu", en: "Meaningful gift for loved ones", zh: "给亲人的有意义礼物" },
-    corporate: { vi: "Qua Tang Doanh Nghiep", en: "Corporate Gifts", zh: "企业礼品" },
-    corporateDesc: { vi: "Phong cach dang cap va chuyen nghiep", en: "Elegant and professional style", zh: "优雅专业的风格" },
-    wedding: { vi: "Qua Tang Cuoi Hoi", en: "Wedding Gifts", zh: "婚礼礼物" },
-    weddingDesc: { vi: "Loi chuc binh an cho cap doi", en: "Wishes of peace for the couple", zh: "对新人的平安祝福" },
-    tet: { vi: "Qua Tang Tet", en: "Tet Gifts", zh: "春节礼物" },
-    tetDesc: { vi: "Tinh hoa dau nam moi may man", en: "Essence of luck for the new year", zh: "新年好运精华" },
-    priceRange: { vi: "Muc gia:", en: "Price range:", zh: "价格范围：" },
-    collectionTitle: { vi: "Bo Suu Tap Qua Tang", en: "Gift Collection", zh: "礼品系列" },
-    collectionDesc: { vi: "Nhung mon qua tram huong tinh te, duoc dong goi sang trong", en: "Exquisite agarwood gifts, elegantly packaged", zh: "精致的沉香礼品，包装精美" },
-    servicesTitle: { vi: "DICH VU QUA TANG", en: "GIFT SERVICES", zh: "礼品服务" },
-    servicesSubtitle: { vi: "Dich Vu Dac Biet", en: "Special Services", zh: "特别服务" },
-    service1Title: { vi: "Goi Qua Cao Cap", en: "Premium Packaging", zh: "高级包装" },
-    service1Desc: { vi: "Dich vu dong goi qua tang sang trong voi hop go tram va thiep chuc mung", en: "Premium gift packaging service with agarwood box and greeting card", zh: "高级礼品包装服务，配有沉香木盒和贺卡" },
-    service2Title: { vi: "Khac Ten Mien Phi", en: "Free Engraving", zh: "免费刻字" },
-    service2Desc: { vi: "Khac ten hoac thong diep ca nhan len san pham hoan toan mien phi", en: "Free engraving of name or personal message on products", zh: "产品免费刻字或个人信息" },
-    service3Title: { vi: "Giao Hang Express", en: "Express Delivery", zh: "快递服务" },
-    service3Desc: { vi: "Giao hang nhanh trong 24h, co dich vu giao den tan noi", en: "Fast delivery within 24h, door-to-door service available", zh: "24小时内快速送达，提供上门服务" },
+    birthday: { vi: "Quà Tặng Sinh Nhật", en: "Birthday Gifts", zh: "生日礼物" },
+    birthdayDesc: { vi: "Món quà ý nghĩa cho người thân yêu", en: "Meaningful gift for loved ones", zh: "给亲人的有意义礼物" },
+    corporate: { vi: "Quà Tặng Doanh Nghiệp", en: "Corporate Gifts", zh: "企业礼品" },
+    corporateDesc: { vi: "Phong cách đẳng cấp và chuyên nghiệp", en: "Elegant and professional style", zh: "优雅专业的风格" },
+    wedding: { vi: "Quà Tặng Cưới Hội", en: "Wedding Gifts", zh: "婚礼礼物" },
+    weddingDesc: { vi: "Lời chúc bình an cho cặp đôi", en: "Wishes of peace for the couple", zh: "对新人的平安祝福" },
+    tet: { vi: "Quà Tặng Tết", en: "Tet Gifts", zh: "春节礼物" },
+    tetDesc: { vi: "Tinh hoa đầu năm mới may mắn", en: "Essence of luck for the new year", zh: "新年好运精华" },
+    priceRange: { vi: "Mức giá:", en: "Price range:", zh: "价格范围：" },
+    collectionTitle: { vi: "Bộ Sưu Tập Quà Tặng", en: "Gift Collection", zh: "礼品系列" },
+    collectionDesc: { vi: "Những món quà trầm hương tinh tế, được đóng gói sang trọng", en: "Exquisite agarwood gifts, elegantly packaged", zh: "精致的沉香礼品，包装精美" },
+    servicesTitle: { vi: "DỊCH VỤ QUÀ TẶNG", en: "GIFT SERVICES", zh: "礼品服务" },
+    servicesSubtitle: { vi: "Dịch Vụ Đặc Biệt", en: "Special Services", zh: "特别服务" },
+    service1Title: { vi: "Gói Quà Cao Cấp", en: "Premium Packaging", zh: "高级包装" },
+    service1Desc: { vi: "Dịch vụ đóng gói quà tặng sang trọng với hộp gỗ trầm và thiệp chúc mừng", en: "Premium gift packaging service with agarwood box and greeting card", zh: "高级礼品包装服务，配有沉香木盒和贺卡" },
+    service2Title: { vi: "Khắc Tên Miễn Phí", en: "Free Engraving", zh: "免费刻字" },
+    service2Desc: { vi: "Khắc tên hoặc thông điệp cá nhân lên sản phẩm hoàn toàn miễn phí", en: "Free engraving of name or personal message on products", zh: "产品免费刻字或个人信息" },
+    service3Title: { vi: "Giao Hàng Express", en: "Express Delivery", zh: "快递服务" },
+    service3Desc: { vi: "Giao hàng nhanh trong 24h, có dịch vụ giao đến tận nơi", en: "Fast delivery within 24h, door-to-door service available", zh: "24小时内快速送达，提供上门服务" },
   }
 
   const giftOccasions = [

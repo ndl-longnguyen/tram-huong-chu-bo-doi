@@ -19,8 +19,9 @@ const playfairDisplay = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Tram Huong Chu Bo Doi - Trang Suc Tram Huong Cao Cap',
-  description: 'Tram Huong Chu Bo Doi - Thuong hieu trang suc tram huong uy tin hang dau Viet Nam. Tinh hoa Tram Viet - Di san A Dong.',
+  charset: 'utf-8',
+  title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
+  description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Tinh hoa Trầm Việt - Di sản Á Đông.',
 }
 
 export function generateStaticParams() {

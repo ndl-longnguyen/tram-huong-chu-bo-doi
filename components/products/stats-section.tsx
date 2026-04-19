@@ -1,11 +1,32 @@
-const stats = [
-  { value: "300,000", suffix: "+", label: "Khách hàng" },
-  { value: "20", suffix: "+", label: "Quốc Gia" },
-  { value: "50", suffix: "+", label: "Nhân sự" },
-  { value: "45", suffix: "+", label: "Năm kinh nghiệm" },
-]
+"use client"
+
+import { useLanguage } from "@/lib/i18n/language-context"
+
+const statsData = {
+  vi: [
+    { value: "300,000", suffix: "+", label: "Khach hang" },
+    { value: "20", suffix: "+", label: "Quoc Gia" },
+    { value: "50", suffix: "+", label: "Nhan su" },
+    { value: "45", suffix: "+", label: "Nam kinh nghiem" },
+  ],
+  en: [
+    { value: "300,000", suffix: "+", label: "Customers" },
+    { value: "20", suffix: "+", label: "Countries" },
+    { value: "50", suffix: "+", label: "Staff members" },
+    { value: "45", suffix: "+", label: "Years experience" },
+  ],
+  zh: [
+    { value: "300,000", suffix: "+", label: "客户" },
+    { value: "20", suffix: "+", label: "国家" },
+    { value: "50", suffix: "+", label: "员工" },
+    { value: "45", suffix: "+", label: "年经验" },
+  ],
+}
 
 export function StatsSection() {
+  const { locale } = useLanguage()
+  const stats = statsData[locale]
+
   return (
     <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4">

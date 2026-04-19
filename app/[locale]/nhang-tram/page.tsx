@@ -8,46 +8,46 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const incenseProducts = [
-  { id: "1", name: { vi: "Nhang Tram Huong Cao Cap", en: "Premium Incense", zh: "高级沉香" }, price: 450000, originalPrice: 550000, image: "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=500&q=80", badge: { vi: "Ban chay", en: "Best Seller", zh: "畅销" } },
-  { id: "2", name: { vi: "Nu Tram Huong Thien Nhien", en: "Natural Incense Cones", zh: "天然沉香塔" }, price: 380000, originalPrice: 450000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Moi", en: "New", zh: "新品" } },
-  { id: "3", name: { vi: "Nhang Vong Tram Huong", en: "Coil Incense", zh: "盘香" }, price: 520000, originalPrice: 650000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80" },
-  { id: "4", name: { vi: "Nhang Tram Huong Dac Biet", en: "Special Incense", zh: "特级沉香" }, price: 780000, originalPrice: 900000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
-  { id: "5", name: { vi: "Nu Tram Mini", en: "Mini Cones", zh: "迷你香塔" }, price: 280000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
-  { id: "6", name: { vi: "Nhang Tram Gift Set", en: "Gift Set", zh: "礼盒装" }, price: 1200000, originalPrice: 1500000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Qua tang", en: "Gift", zh: "礼品" } },
+  { id: "1", name: { vi: "Nhang Trầm Hương Cao Cấp", en: "Premium Incense", zh: "高级沉香" }, price: 450000, originalPrice: 550000, image: "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=500&q=80", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
+  { id: "2", name: { vi: "Nụ Trầm Hương Thiên Nhiên", en: "Natural Incense Cones", zh: "天然沉香塔" }, price: 380000, originalPrice: 450000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Mới", en: "New", zh: "新品" } },
+  { id: "3", name: { vi: "Nhang Vòng Trầm Hương", en: "Coil Incense", zh: "盘香" }, price: 520000, originalPrice: 650000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80" },
+  { id: "4", name: { vi: "Nhang Trầm Hương Đặc Biệt", en: "Special Incense", zh: "特级沉香" }, price: 780000, originalPrice: 900000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
+  { id: "5", name: { vi: "Nụ Trầm Mini", en: "Mini Cones", zh: "迷你香塔" }, price: 280000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
+  { id: "6", name: { vi: "Nhang Trầm Gift Set", en: "Gift Set", zh: "礼盒装" }, price: 1200000, originalPrice: 1500000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Quà tặng", en: "Gift", zh: "礼品" } },
 ]
 
 export default function IncensePage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chu", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "Nhang Tram Huong", en: "Agarwood Incense", zh: "沉香" },
-    product: { vi: "SAN PHAM", en: "PRODUCTS", zh: "产品" },
-    title1: { vi: "Nhang Tram Huong", en: "Agarwood Incense", zh: "沉香" },
-    title2: { vi: "Nguyen Chat", en: "Pure Natural", zh: "纯天然" },
+    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    breadcrumb: { vi: "Nhang Trầm Hương", en: "Agarwood Incense", zh: "沉香" },
+    product: { vi: "SẢN PHẨM", en: "PRODUCTS", zh: "产品" },
+    title1: { vi: "Nhang Trầm Hương", en: "Agarwood Incense", zh: "沉香" },
+    title2: { vi: "Nguyên Chất", en: "Pure Natural", zh: "纯天然" },
     description: {
-      vi: "Nhang tram huong cao cap, duoc san xuat tu 100% bot tram huong tu nhien, mang lai huong thom thanh khiet va nang luong tich cuc cho khong gian song.",
+      vi: "Nhang trầm hương cao cấp, được sản xuất từ 100% bột trầm hương tự nhiên, mang lại hương thơm thanh khiết và năng lượng tích cực cho không gian sống.",
       en: "Premium agarwood incense, produced from 100% natural agarwood powder, bringing pure fragrance and positive energy to your living space.",
       zh: "高级沉香，采用100%天然沉香粉制作，为您的生活空间带来纯净的香气和正能量。"
     },
-    natural: { vi: "100% Tu Nhien", en: "100% Natural", zh: "100%天然" },
-    naturalDesc: { vi: "Duoc lam tu bot tram huong nguyen chat, khong hoa chat doc hai", en: "Made from pure agarwood powder, no harmful chemicals", zh: "采用纯沉香粉制作，无有害化学物质" },
-    fragrance: { vi: "Huong Thom Diu Nhe", en: "Gentle Fragrance", zh: "温和香气" },
-    fragranceDesc: { vi: "Huong tram tu nhien, thanh tao, giup thu gian tinh than", en: "Natural agarwood fragrance, elegant, helps relax the mind", zh: "天然沉香香气，优雅，有助于放松身心" },
-    health: { vi: "Tot Cho Suc Khoe", en: "Good for Health", zh: "有益健康" },
-    healthDesc: { vi: "Giup thanh loc khong khi, mang lai cam giac binh an", en: "Helps purify the air, brings a sense of peace", zh: "有助于净化空气，带来平静感" },
-    safe: { vi: "An Toan", en: "Safe", zh: "安全" },
-    safeDesc: { vi: "Khong khoi doc, an toan cho ca gia dinh va tre nho", en: "No toxic smoke, safe for the whole family and children", zh: "无毒烟，对全家和儿童都安全" },
-    productsTitle: { vi: "San Pham Nhang Tram", en: "Incense Products", zh: "沉香产品" },
-    productsDesc: { vi: "Kham pha bo suu tap nhang tram huong cao cap cua chung toi", en: "Discover our premium agarwood incense collection", zh: "探索我们的高端沉香系列" },
-    howToUse: { vi: "HUONG DAN SU DUNG", en: "HOW TO USE", zh: "使用方法" },
-    howToUseTitle: { vi: "Cach Su Dung Nhang Tram", en: "How to Use Incense", zh: "如何使用沉香" },
-    step1: { vi: "Chuan bi", en: "Prepare", zh: "准备" },
-    step1Desc: { vi: "Dat nhang vao de dot hoac lu huong phu hop", en: "Place incense in a suitable holder or censer", zh: "将香放入合适的香座或香炉中" },
-    step2: { vi: "Thap nhang", en: "Light", zh: "点燃" },
-    step2Desc: { vi: "Cham lua dau nhang va de chay vai giay", en: "Light the tip and let it burn for a few seconds", zh: "点燃顶端，让其燃烧几秒钟" },
-    step3: { vi: "Thuong thuc", en: "Enjoy", zh: "享受" },
-    step3Desc: { vi: "Thoi tat lua, de nhang toa huong tu nhien", en: "Blow out the flame, let the incense release its natural fragrance", zh: "吹灭火焰，让香自然散发香气" },
+    natural: { vi: "100% Tự Nhiên", en: "100% Natural", zh: "100%天然" },
+    naturalDesc: { vi: "Được làm từ bột trầm hương nguyên chất, không hóa chất độc hại", en: "Made from pure agarwood powder, no harmful chemicals", zh: "采用纯沉香粉制作，无有害化学物质" },
+    fragrance: { vi: "Hương Thơm Dịu Nhẹ", en: "Gentle Fragrance", zh: "温和香气" },
+    fragranceDesc: { vi: "Hương trầm tự nhiên, thanh tao, giúp thư giãn tinh thần", en: "Natural agarwood fragrance, elegant, helps relax the mind", zh: "天然沉香香气，优雅，有助于放松身心" },
+    health: { vi: "Tốt Cho Sức Khỏe", en: "Good for Health", zh: "有益健康" },
+    healthDesc: { vi: "Giúp thanh lọc không khí, mang lại cảm giác bình an", en: "Helps purify the air, brings a sense of peace", zh: "有助于净化空气，带来平静感" },
+    safe: { vi: "An Toàn", en: "Safe", zh: "安全" },
+    safeDesc: { vi: "Không khói độc, an toàn cho cả gia đình và trẻ nhỏ", en: "No toxic smoke, safe for the whole family and children", zh: "无毒烟，对全家和儿童都安全" },
+    productsTitle: { vi: "Sản Phẩm Nhang Trầm", en: "Incense Products", zh: "沉香产品" },
+    productsDesc: { vi: "Khám phá bộ sưu tập nhang trầm hương cao cấp của chúng tôi", en: "Discover our premium agarwood incense collection", zh: "探索我们的高端沉香系列" },
+    howToUse: { vi: "HƯỚNG DẪN SỬ DỤNG", en: "HOW TO USE", zh: "使用方法" },
+    howToUseTitle: { vi: "Cách Sử Dụng Nhang Trầm", en: "How to Use Incense", zh: "如何使用沉香" },
+    step1: { vi: "Chuẩn Bị", en: "Prepare", zh: "准备" },
+    step1Desc: { vi: "Đặt nhang vào để đốt hoặc lư hương phù hợp", en: "Place incense in a suitable holder or censer", zh: "将香放入合适的香座或香炉中" },
+    step2: { vi: "Thắp Nhang", en: "Light", zh: "点燃" },
+    step2Desc: { vi: "Chạm lửa đầu nhang và để cháy vài giây", en: "Light the tip and let it burn for a few seconds", zh: "点燃顶端，让其燃烧几秒钟" },
+    step3: { vi: "Thưởng Thức", en: "Enjoy", zh: "享受" },
+    step3Desc: { vi: "Thổi tắt lửa, để nhang tỏa hương tự nhiên", en: "Blow out the flame, let the incense release its natural fragrance", zh: "吹灭火焰，让香自然散发香气" },
   }
 
   const benefits = [

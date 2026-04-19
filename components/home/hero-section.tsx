@@ -3,9 +3,34 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
+
+const heroContent = {
+  tagline: {
+    vi: "TINH HOA TRAM VIET",
+    en: "ESSENCE OF VIETNAMESE AGARWOOD",
+    zh: "越南沉香精华",
+  },
+  description: {
+    vi: "Ke thua tinh hoa nghe tram huong truyen thong, mang den nhung san pham tram huong tu nhien 100% voi thiet ke doc dao va chat luong vuot troi.",
+    en: "Inheriting traditional agarwood craftsmanship, delivering 100% natural agarwood products with unique designs and superior quality.",
+    zh: "传承传统沉香工艺，提供100%天然沉香产品，设计独特，品质卓越。",
+  },
+  explore: {
+    vi: "KHAM PHA BO SUU TAP",
+    en: "EXPLORE COLLECTION",
+    zh: "探索系列",
+  },
+  about: {
+    vi: "VE CHUNG TOI",
+    en: "ABOUT US",
+    zh: "关于我们",
+  },
+}
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
+  const { locale, getLocalizedPath } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -36,32 +61,31 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 min-h-[90vh] flex flex-col items-center justify-center text-center">
         <div className="animate-fade-in-up">
           <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm mb-6 tracking-widest">
-            TINH HOA TRẦM VIỆT
+            {heroContent.tagline[locale]}
           </span>
         </div>
         
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-wide drop-shadow-2xl animate-fade-in-up animation-delay-100">
-          <span className="block">TRẦM HƯƠNG</span>
-          <span className="block text-primary mt-2">CHÚ BỘ ĐỘI</span>
+          <span className="block">TRAM HUONG</span>
+          <span className="block text-primary mt-2">CHU BO DOI</span>
         </h1>
         
         <p className="text-white/80 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-200">
-          Kế thừa tinh hoa nghề trầm hương truyền thống, mang đến những sản phẩm 
-          trầm hương tự nhiên 100% với thiết kế độc đáo và chất lượng vượt trội.
+          {heroContent.description[locale]}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
           <Link
-            href="/trang-suc"
+            href={getLocalizedPath("/trang-suc")}
             className="px-10 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300"
           >
-            KHÁM PHÁ BỘ SƯU TẬP
+            {heroContent.explore[locale]}
           </Link>
           <Link
-            href="/gioi-thieu"
+            href={getLocalizedPath("/gioi-thieu")}
             className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/20 hover:border-white/50 transition-all duration-300"
           >
-            VỀ CHÚNG TÔI
+            {heroContent.about[locale]}
           </Link>
         </div>
       </div>
