@@ -7,20 +7,20 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const timeline = [
-  { year: "2005", event: { vi: "Khoi nghiep voi dam me tram huong", en: "Started with passion for agarwood", zh: "带着对沉香的热情开始创业" } },
-  { year: "2010", event: { vi: "Mo cua hang dau tien tai Ha Noi", en: "Opened first store in Hanoi", zh: "在河内开设第一家店铺" } },
-  { year: "2015", event: { vi: "Mo rong ra thi truong mien Nam", en: "Expanded to Southern market", zh: "扩展到南方市场" } },
-  { year: "2018", event: { vi: "Dat chung nhan ISO ve chat luong", en: "Achieved ISO quality certification", zh: "获得ISO质量认证" } },
-  { year: "2022", event: { vi: "Phat trien kenh ban hang online", en: "Developed online sales channel", zh: "发展线上销售渠道" } },
-  { year: "2024", event: { vi: "Hon 10,000 khach hang tin tuong", en: "Over 10,000 trusted customers", zh: "超过10,000位信赖的客户" } },
+  { year: "2005", event: { vi: "Khởi nghiệp với đam mê trầm hương", en: "Started with passion for agarwood", zh: "带着对沉香的热情开始创业" } },
+  { year: "2010", event: { vi: "Mở cửa hàng đầu tiên tại Hà Nội", en: "Opened first store in Hanoi", zh: "在河内开设第一家店铺" } },
+  { year: "2015", event: { vi: "Mở rộng ra thị trường miền Nam", en: "Expanded to Southern market", zh: "扩展到南方市场" } },
+  { year: "2018", event: { vi: "Đạt chứng nhận ISO về chất lượng", en: "Achieved ISO quality certification", zh: "获得ISO质量认证" } },
+  { year: "2022", event: { vi: "Phát triển kênh bán hàng online", en: "Developed online sales channel", zh: "发展线上销售渠道" } },
+  { year: "2024", event: { vi: "Hơn 10,000 khách hàng tin tưởng", en: "Over 10,000 trusted customers", zh: "超过10,000位信赖的客户" } },
 ]
 
 const values = [
   {
     title: { vi: "TINH", en: "EXCELLENCE", zh: "精" },
-    subtitle: { vi: "Tinh hoa nghe truyen thong", en: "Traditional craftsmanship excellence", zh: "传统工艺精华" },
+    subtitle: { vi: "Tinh hoa nghề truyền thống", en: "Traditional craftsmanship excellence", zh: "传统工艺精华" },
     description: { 
-      vi: "Ke thua va phat huy tinh hoa nghe che tac tram huong truyen thong hang tram nam cua Viet Nam.", 
+      vi: "Kế thừa và phát huy tinh hoa nghề chế tác trầm hương truyền thống hàng trăm năm của Việt Nam.", 
       en: "Inheriting and promoting the traditional Vietnamese agarwood craftsmanship of hundreds of years.",
       zh: "继承和发扬越南数百年传统沉香工艺精华。"
     },
@@ -28,10 +28,10 @@ const values = [
     icon: Leaf,
   },
   {
-    title: { vi: "TIN", en: "TRUST", zh: "信" },
-    subtitle: { vi: "Uy tin va chat luong", en: "Trust and quality", zh: "信誉与品质" },
+    title: { vi: "TÍN", en: "TRUST", zh: "信" },
+    subtitle: { vi: "Uy tín và chất lượng", en: "Trust and quality", zh: "信誉与品质" },
     description: { 
-      vi: "Cam ket 100% san pham tram huong tu nhien, khong pha tron, khong hoa chat.", 
+      vi: "Cam kết 100% sản phẩm trầm hương tự nhiên, không pha trộn, không hóa chất.", 
       en: "Committed to 100% natural agarwood products, no mixing, no chemicals.",
       zh: "承诺100%天然沉香产品，无掺杂，无化学品。"
     },
@@ -39,10 +39,10 @@ const values = [
     icon: Shield,
   },
   {
-    title: { vi: "TAM", en: "DEDICATION", zh: "心" },
-    subtitle: { vi: "Tam huyet voi nghe", en: "Dedication to the craft", zh: "对工艺的专注" },
+    title: { vi: "TÂM", en: "DEDICATION", zh: "心" },
+    subtitle: { vi: "Tâm huyết với nghề", en: "Dedication to the craft", zh: "对工艺的专注" },
     description: { 
-      vi: "Moi san pham deu duoc che tac voi tam huyet, su ti mi va dam me cua nghe nhan.", 
+      vi: "Mỗi sản phẩm đều được chế tác với tâm huyết, sự tỉ mỉ và đam mê của nghệ nhân.", 
       en: "Each product is crafted with dedication, meticulousness and passion of artisans.",
       zh: "每件产品都凝聚着工匠的心血、细致和热情。"
     },
@@ -53,8 +53,8 @@ const values = [
 
 const stores = [
   {
-    name: { vi: "SHOWROOM CHINH", en: "MAIN SHOWROOM", zh: "主展厅" },
-    address: "Tien Phuoc, TP. Da Nang (Quang Nam cu)",
+    name: { vi: "SHOWROOM CHÍNH", en: "MAIN SHOWROOM", zh: "主展厅" },
+    address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
     phone: "0765.942.942",
     hours: "8:00 - 22:00",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
@@ -65,34 +65,34 @@ export default function AboutPage() {
   const { locale, t, getLocalizedPath } = useLanguage()
 
   const content = {
-    breadcrumb: { vi: "Ve Chung Toi", en: "About Us", zh: "关于我们" },
-    home: { vi: "Trang chu", en: "Home", zh: "首页" },
-    brandStory: { vi: "CAU CHUYEN THUONG HIEU", en: "BRAND STORY", zh: "品牌故事" },
+    breadcrumb: { vi: "Về Chúng Tôi", en: "About Us", zh: "关于我们" },
+    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    brandStory: { vi: "CÂU CHUYỆN THƯƠNG HIỆU", en: "BRAND STORY", zh: "品牌故事" },
     quote: {
-      vi: "Tu ngan xua, tram huong da duoc ong ba to tien chung ta phat hien va su dung - ton vinh la thu go quy, mang trong minh linh khi cua thien nhien de mang lai binh an va may man.",
+      vi: "Từ ngàn xưa, trầm hương đã được ông bà tổ tiên chúng ta phát hiện và sử dụng - tôn vinh là thứ gỗ quý, mang trong mình linh khí của thiên nhiên để mang lại bình an và may mắn.",
       en: "Since ancient times, agarwood has been discovered and cherished by our ancestors - revered as precious wood carrying the spirit of nature, bringing peace and fortune.",
       zh: "自古以来，沉香被我们的祖先发现和珍视——被尊为珍贵的木材，承载着大自然的灵气，带来平安和好运。"
     },
-    yearsExp: { vi: "Nam kinh nghiem", en: "Years experience", zh: "年经验" },
-    customers: { vi: "Khach hang", en: "Customers", zh: "客户" },
-    natural: { vi: "Tu nhien", en: "Natural", zh: "天然" },
-    philosophy: { vi: "TRIET LY KINH DOANH", en: "BUSINESS PHILOSOPHY", zh: "经营理念" },
-    philosophyTitle: { vi: "Tinh - Tin - Tam", en: "Excellence - Trust - Dedication", zh: "精 - 信 - 心" },
-    journey: { vi: "HANH TRINH", en: "OUR JOURNEY", zh: "我们的旅程" },
-    journeyTitle: { vi: "Chang Duong Phat Trien", en: "Development Milestones", zh: "发展里程碑" },
-    commitment: { vi: "CAM KET CUA CHUNG TOI", en: "OUR COMMITMENT", zh: "我们的承诺" },
-    commitmentTitle: { vi: "Chat Luong La Uu Tien Hang Dau", en: "Quality Is Our Top Priority", zh: "品质是我们的首要任务" },
+    yearsExp: { vi: "Năm kinh nghiệm", en: "Years experience", zh: "年经验" },
+    customers: { vi: "Khách hàng", en: "Customers", zh: "客户" },
+    natural: { vi: "Tự nhiên", en: "Natural", zh: "天然" },
+    philosophy: { vi: "TRIẾT LÝ KINH DOANH", en: "BUSINESS PHILOSOPHY", zh: "经营理念" },
+    philosophyTitle: { vi: "Tinh - Tín - Tâm", en: "Excellence - Trust - Dedication", zh: "精 - 信 - 心" },
+    journey: { vi: "HÀNH TRÌNH", en: "OUR JOURNEY", zh: "我们的旅程" },
+    journeyTitle: { vi: "Chặng Đường Phát Triển", en: "Development Milestones", zh: "发展里程碑" },
+    commitment: { vi: "CAM KẾT CỦA CHÚNG TÔI", en: "OUR COMMITMENT", zh: "我们的承诺" },
+    commitmentTitle: { vi: "Chất Lượng Là Ưu Tiên Hàng Đầu", en: "Quality Is Our Top Priority", zh: "品质是我们的首要任务" },
     commitmentDesc: {
-      vi: "Tai Tram Huong Chu Bo Doi, chung toi cam ket mang den cho khach hang nhung san pham tram huong tu nhien 100%, duoc chon loc ky cang tu nhung vung tram noi tieng cua Viet Nam.",
-      en: "At Tram Huong Chu Bo Doi, we are committed to providing customers with 100% natural agarwood products, carefully selected from famous agarwood regions of Vietnam.",
+      vi: "Tại Trầm Hương Chú Bộ Đội, chúng tôi cam kết mang đến cho khách hàng những sản phẩm trầm hương tự nhiên 100%, được chọn lọc kỹ càng từ những vùng trầm nổi tiếng của Việt Nam.",
+      en: "At Trầm Hương Chú Bộ Đội, we are committed to providing customers with 100% natural agarwood products, carefully selected from famous agarwood regions of Vietnam.",
       zh: "在朱伯队沉香，我们承诺为客户提供100%天然沉香产品，精心挑选自越南著名沉香产区。"
     },
-    warranty: { vi: "Bao hanh tron doi cho tat ca san pham", en: "Lifetime warranty for all products", zh: "所有产品终身保修" },
-    natural100: { vi: "100% tram huong tu nhien, khong hoa chat", en: "100% natural agarwood, no chemicals", zh: "100%天然沉香，无化学品" },
-    isoCert: { vi: "Chung nhan chat luong ISO", en: "ISO quality certification", zh: "ISO质量认证" },
-    artisans: { vi: "Doi ngu nghe nhan lanh nghe 20+ nam", en: "Team of skilled artisans 20+ years", zh: "20多年经验的熟练工匠团队" },
-    storeSystem: { vi: "HE THONG CUA HANG", en: "STORE SYSTEM", zh: "门店系统" },
-    visitUs: { vi: "Ghe Tham Chung Toi", en: "Visit Us", zh: "欢迎光临" },
+    warranty: { vi: "Bảo hành trọn đời cho tất cả sản phẩm", en: "Lifetime warranty for all products", zh: "所有产品终身保修" },
+    natural100: { vi: "100% trầm hương tự nhiên, không hóa chất", en: "100% natural agarwood, no chemicals", zh: "100%天然沉香，无化学品" },
+    isoCert: { vi: "Chứng nhận chất lượng ISO", en: "ISO quality certification", zh: "ISO质量认证" },
+    artisans: { vi: "Đội ngũ nghệ nhân lành nghề 20+ năm", en: "Team of skilled artisans 20+ years", zh: "20多年经验的熟练工匠团队" },
+    storeSystem: { vi: "HỆ THỐNG CỬA HÀNG", en: "STORE SYSTEM", zh: "门店系统" },
+    visitUs: { vi: "Ghé Thăm Chúng Tôi", en: "Visit Us", zh: "欢迎光临" },
   }
 
   return (
@@ -124,8 +124,8 @@ export default function AboutPage() {
                 {content.brandStory[locale]}
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8">
-                {locale === "zh" ? "沉香" : locale === "en" ? "Agarwood" : "Tram Huong"}
-                <span className="block text-primary mt-2">{locale === "zh" ? "朱伯队" : "Chu Bo Doi"}</span>
+                {locale === "zh" ? "沉香" : locale === "en" ? "Agarwood" : "Trầm Hương"}
+                <span className="block text-primary mt-2">{locale === "zh" ? "朱伯队" : locale === "en" ? "Chu Bo Doi" : "Chú Bộ Đội"}</span>
               </h1>
               
               <blockquote className="relative">
