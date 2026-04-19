@@ -69,11 +69,11 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
-                <span>Flagship Store: 11 Kim Mã, Ba Đình, Hà Nội</span>
+                <span>Tien Phuoc, TP. Da Nang (Quang Nam cu)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="font-medium">0818.348.368</span>
+                <span className="font-medium">0765.942.942</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
@@ -143,14 +143,8 @@ export function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© 2024 Trầm Hương Chú Bộ Đội. Tất cả quyền được bảo lưu.</p>
-          <div className="flex items-center gap-3">
-            <span className="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded text-white text-xs font-medium">VISA</span>
-            <span className="px-3 py-1.5 bg-gradient-to-r from-red-500 to-orange-500 rounded text-white text-xs font-medium">MasterCard</span>
-            <span className="px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded text-white text-xs font-medium">Momo</span>
-            <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded text-white text-xs font-medium">ZaloPay</span>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+          <p>© 2024 Tram Huong Chu Bo Doi. Tat ca quyen duoc bao luu.</p>
         </div>
       </div>
     </footer>
