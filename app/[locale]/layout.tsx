@@ -19,8 +19,8 @@ const playfairDisplay = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Tram Huong Chu Bo Doi - Trang Suc Tram Huong Cao Cap',
-  description: 'Tram Huong Chu Bo Doi - Thuong hieu trang suc tram huong uy tin hang dau Viet Nam. Tinh hoa Tram Viet - Di san A Dong.',
+  title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
+  description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Tinh Hoa Trầm Việt - Di Sản Á Đông.',
 }
 
 export function generateStaticParams() {
@@ -36,7 +36,7 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={params.locale} className="bg-background" suppressHydrationWarning>
-      <body className={`${beVietnamPro.variable} ${playfairDisplay.variable} font-sans antialiased`}>
+      <body className={`${beVietnamPro.variable} ${playfairDisplay.variable} font-sans antialiased overflow-x-hidden`}>
         <LanguageProvider>
           {children}
           <ScrollToTop />
