@@ -2,7 +2,7 @@ const testimonials = [
   {
     name: "CHỊ THU",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80",
-    content: "Mình đã mua vòng tay trầm hương cho ba làm quà sinh nhật. Chất lượng tuyệt vời, hương thơm dịu nhẹ, ba mình rất thích. Sẽ tiếp tục ủng hộ Thiên Mộc Hương.",
+    content: "Mình đã mua vòng tay trầm hương cho ba làm quà sinh nhật. Chất lượng tuyệt vời, hương thơm dịu nhẹ, ba mình rất thích. Sẽ tiếp tục ủng hộ Trầm Hương Chú Bộ Đội.",
   },
   {
     name: "CHỊ HÀ",
