@@ -17,10 +17,10 @@ export function HeroSection() {
     <section className="relative w-full min-h-[90vh] overflow-hidden">
       {/* Background with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&q=80')`,
-          transform: `translateY(${scrollY * 0.3}px)`,
+          transform: `translateY(${scrollY * 0.3}px) scale(1.15)`,
         }}
       />
       
@@ -28,9 +28,9 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-background" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      {/* Decorative Elements — clamped to stay inside viewport */}
+      <div className="absolute top-20 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-x-1/2" />
+      <div className="absolute bottom-20 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl translate-x-1/2" />
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 min-h-[90vh] flex flex-col items-center justify-center text-center">

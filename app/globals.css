@@ -81,9 +81,10 @@
   background: var(--accent);
 }
 
-/* Smooth scroll */
+/* Smooth scroll + prevent horizontal overflow */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Custom Animations */

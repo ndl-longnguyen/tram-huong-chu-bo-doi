@@ -9,11 +9,11 @@ export function ContactButtons() {
       <a
         href="tel:0765942942"
         className="group relative w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
-        aria-label="Goi ngay"
+        aria-label="Gọi ngay"
       >
         <Phone className="w-5 h-5" />
         <span className="absolute right-full mr-3 px-3 py-1.5 bg-foreground text-background text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
-          Goi ngay
+          Gọi ngay
         </span>
       </a>
 

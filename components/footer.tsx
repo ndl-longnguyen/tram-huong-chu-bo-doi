@@ -37,13 +37,13 @@ export function Footer() {
               <h3 className="text-xl font-serif text-primary mb-2">Đăng ký nhận tin</h3>
               <p className="text-gray-400 text-sm">Nhận thông tin ưu đãi và sản phẩm mới nhất</p>
             </div>
-            <div className="flex gap-3 w-full md:w-auto">
+            <div className="flex gap-3 w-full md:w-auto min-w-0">
               <input
                 type="email"
                 placeholder="Nhập email của bạn"
-                className="flex-1 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                className="flex-1 min-w-0 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
               />
-              <button className="px-8 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all">
+              <button className="px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all shrink-0">
                 Đăng ký
               </button>
             </div>
@@ -69,7 +69,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
-                <span>Tien Phuoc, TP. Da Nang (Quang Nam cu)</span>
+                <span>Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
