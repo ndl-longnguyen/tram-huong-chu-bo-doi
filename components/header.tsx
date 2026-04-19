@@ -2,9 +2,8 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X, Search, Phone, Globe, ChevronDown } from "lucide-react"
+import { Menu, X, Search, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
-import type { Locale } from "@/lib/i18n/translations"
 
 const navigation = [
   { name: "nav.about", href: "/gioi-thieu" },
@@ -17,17 +16,12 @@ const navigation = [
   { name: "nav.contact", href: "/lien-he" },
 ]
 
-const languageFlags: Record<Locale, string> = {
-  vi: "🇻🇳",
-  en: "🇬🇧",
-  zh: "🇨🇳",
-}
+
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isLangOpen, setIsLangOpen] = useState(false)
-  const { locale, setLocale, t, localeNames, getLocalizedPath } = useLanguage()
+  const { locale, t, getLocalizedPath } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,15 +31,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (isLangOpen && !(e.target as Element).closest(".lang-dropdown")) {
-        setIsLangOpen(false)
-      }
-    }
-    document.addEventListener("click", handleClickOutside)
-    return () => document.removeEventListener("click", handleClickOutside)
-  }, [isLangOpen])
+
 
   return (
     <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-lg" : ""}`}>
@@ -63,7 +49,7 @@ export function Header() {
               </div>
               <div className="hidden sm:block">
                 <p className="text-primary font-serif text-base md:text-xl font-bold leading-tight tracking-wide">
-                  TRAM HUONG CHU BO DOI
+                  TRẦM HƯƠNG CHÚ BỘ ĐỘI
                 </p>
                 <p className="text-muted-foreground text-xs tracking-widest">{t("header.tagline")}</p>
               </div>
@@ -85,41 +71,6 @@ export function Header() {
 
             {/* Contact & Actions */}
             <div className="flex items-center gap-2 md:gap-4">
-              {/* Language Switcher */}
-              <div className="relative lang-dropdown">
-                <button
-                  onClick={() => setIsLangOpen(!isLangOpen)}
-                  className="flex items-center gap-1 md:gap-2 px-2 md:px-3 py-1.5 md:py-2 bg-muted/50 border border-border rounded-full text-xs md:text-sm text-foreground hover:border-primary/50 transition-colors"
-                >
-                  <Globe className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-                  <span>{languageFlags[locale]}</span>
-                  <span className="hidden md:inline">{localeNames[locale]}</span>
-                  <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? "rotate-180" : ""}`} />
-                </button>
-                
-                {isLangOpen && (
-                  <div className="absolute top-full right-0 mt-2 w-40 bg-card border border-border rounded-xl shadow-xl overflow-hidden z-50">
-                    {(Object.keys(localeNames) as Locale[]).map((lang) => (
-                      <button
-                        key={lang}
-                        onClick={() => {
-                          setLocale(lang)
-                          setIsLangOpen(false)
-                        }}
-                        className={`w-full flex items-center gap-3 px-4 py-3 text-sm transition-colors ${
-                          locale === lang 
-                            ? "bg-primary/10 text-primary" 
-                            : "text-foreground hover:bg-muted"
-                        }`}
-                      >
-                        <span className="text-lg">{languageFlags[lang]}</span>
-                        <span>{localeNames[lang]}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
               <a 
                 href="tel:0765942942" 
                 className="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
@@ -173,31 +124,6 @@ export function Header() {
                   </Link>
                 </li>
               ))}
-              {/* Mobile Language Switcher */}
-              <li className="pt-4 border-t border-border mt-4">
-                <div className="px-4 pb-2 text-xs text-muted-foreground uppercase tracking-wider">
-                  {locale === "vi" ? "Ngon ngu" : locale === "en" ? "Language" : "语言"}
-                </div>
-                <div className="flex flex-wrap gap-2 px-4">
-                  {(Object.keys(localeNames) as Locale[]).map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        setLocale(lang)
-                        setIsMenuOpen(false)
-                      }}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
-                        locale === lang 
-                          ? "bg-primary text-white" 
-                          : "bg-muted text-foreground hover:bg-primary/10"
-                      }`}
-                    >
-                      <span>{languageFlags[lang]}</span>
-                      <span className="hidden xs:inline">{localeNames[lang]}</span>
-                    </button>
-                  ))}
-                </div>
-              </li>
               {/* Mobile Phone */}
               <li className="pt-4">
                 <a 
