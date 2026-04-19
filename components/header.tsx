@@ -2,22 +2,32 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X, Search, Phone } from "lucide-react"
+import { Menu, X, Search, Phone, Globe, ChevronDown } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
+import type { Locale } from "@/lib/i18n/translations"
 
 const navigation = [
-  { name: "GIỚI THIỆU", href: "/gioi-thieu" },
-  { name: "TRANG SỨC", href: "/trang-suc" },
-  { name: "VÒNG TAY", href: "/vong-tay" },
-  { name: "NHANG TRẦM", href: "/nhang-tram" },
-  { name: "MỸ NGHỆ", href: "/my-nghe" },
-  { name: "QUÀ TẶNG", href: "/qua-tang" },
-  { name: "BLOG", href: "/blog" },
-  { name: "LIÊN HỆ", href: "/lien-he" },
+  { name: "nav.about", href: "/gioi-thieu" },
+  { name: "nav.jewelry", href: "/trang-suc" },
+  { name: "nav.bracelet", href: "/vong-tay" },
+  { name: "nav.incense", href: "/nhang-tram" },
+  { name: "nav.art", href: "/my-nghe" },
+  { name: "nav.gift", href: "/qua-tang" },
+  { name: "nav.blog", href: "/blog" },
+  { name: "nav.contact", href: "/lien-he" },
 ]
+
+const languageFlags: Record<Locale, string> = {
+  vi: "🇻🇳",
+  en: "🇬🇧",
+  zh: "🇨🇳",
+}
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
+  const { locale, setLocale, t, localeNames } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +36,16 @@ export function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (isLangOpen && !(e.target as Element).closest(".lang-dropdown")) {
+        setIsLangOpen(false)
+      }
+    }
+    document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [isLangOpen])
 
   return (
     <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-lg" : ""}`}>
@@ -43,9 +63,9 @@ export function Header() {
               </div>
               <div className="hidden sm:block">
                 <p className="text-primary font-serif text-xl font-bold leading-tight tracking-wide">
-                  TRẦM HƯƠNG CHÚ BỘ ĐỘI
+                  TRAM HUONG CHU BO DOI
                 </p>
-                <p className="text-muted-foreground text-xs tracking-widest">Tinh Hoa Trầm Việt</p>
+                <p className="text-muted-foreground text-xs tracking-widest">{t("header.tagline")}</p>
               </div>
             </Link>
 
@@ -54,7 +74,7 @@ export function Header() {
               <div className="relative w-full group">
                 <input
                   type="text"
-                  placeholder="Tìm kiếm sản phẩm..."
+                  placeholder={t("header.search")}
                   className="w-full px-5 py-2.5 pr-12 border border-border rounded-full bg-muted/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-card transition-all"
                 />
                 <button className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-primary transition-colors">
@@ -64,7 +84,42 @@ export function Header() {
             </div>
 
             {/* Contact & Actions */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
+              {/* Language Switcher */}
+              <div className="relative lang-dropdown">
+                <button
+                  onClick={() => setIsLangOpen(!isLangOpen)}
+                  className="flex items-center gap-2 px-3 py-2 bg-muted/50 border border-border rounded-full text-sm text-foreground hover:border-primary/50 transition-colors"
+                >
+                  <Globe className="w-4 h-4 text-primary" />
+                  <span className="hidden sm:inline">{languageFlags[locale]}</span>
+                  <span className="hidden md:inline">{localeNames[locale]}</span>
+                  <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? "rotate-180" : ""}`} />
+                </button>
+                
+                {isLangOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-40 bg-card border border-border rounded-xl shadow-xl overflow-hidden z-50">
+                    {(Object.keys(localeNames) as Locale[]).map((lang) => (
+                      <button
+                        key={lang}
+                        onClick={() => {
+                          setLocale(lang)
+                          setIsLangOpen(false)
+                        }}
+                        className={`w-full flex items-center gap-3 px-4 py-3 text-sm transition-colors ${
+                          locale === lang 
+                            ? "bg-primary/10 text-primary" 
+                            : "text-foreground hover:bg-muted"
+                        }`}
+                      >
+                        <span className="text-lg">{languageFlags[lang]}</span>
+                        <span>{localeNames[lang]}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <a 
                 href="tel:0818348368" 
                 className="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
@@ -94,7 +149,7 @@ export function Header() {
                     href={item.href}
                     className="relative px-5 py-2.5 text-foreground hover:text-primary text-sm font-medium transition-colors group"
                   >
-                    {item.name}
+                    {t(item.name)}
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all group-hover:w-3/4" />
                   </Link>
                 </li>
@@ -104,7 +159,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-96" : "max-h-0"}`}>
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-[500px]" : "max-h-0"}`}>
           <nav className="border-t border-border bg-card">
             <ul className="py-4 px-4 space-y-1">
               {navigation.map((item) => (
@@ -114,12 +169,37 @@ export function Header() {
                     className="block py-3 px-4 text-foreground hover:text-primary hover:bg-primary/5 text-sm font-medium rounded-lg transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 </li>
               ))}
-              {/* Mobile Phone */}
+              {/* Mobile Language Switcher */}
               <li className="pt-4 border-t border-border mt-4">
+                <div className="px-4 pb-2 text-xs text-muted-foreground uppercase tracking-wider">
+                  {locale === "vi" ? "Ngôn ngữ" : locale === "en" ? "Language" : "语言"}
+                </div>
+                <div className="flex gap-2 px-4">
+                  {(Object.keys(localeNames) as Locale[]).map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => {
+                        setLocale(lang)
+                        setIsMenuOpen(false)
+                      }}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-colors ${
+                        locale === lang 
+                          ? "bg-primary text-white" 
+                          : "bg-muted text-foreground hover:bg-primary/10"
+                      }`}
+                    >
+                      <span>{languageFlags[lang]}</span>
+                      <span>{localeNames[lang]}</span>
+                    </button>
+                  ))}
+                </div>
+              </li>
+              {/* Mobile Phone */}
+              <li className="pt-4">
                 <a 
                   href="tel:0818348368" 
                   className="flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-lg font-medium"

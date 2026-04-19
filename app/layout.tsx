@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LanguageProvider } from '@/lib/i18n/language-context'
+import { ScrollToTop } from '@/components/scroll-to-top'
+import { ContactButtons } from '@/components/contact-buttons'
 import './globals.css'
 
 const beVietnamPro = Be_Vietnam_Pro({ 
@@ -16,8 +19,8 @@ const playfairDisplay = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
-  description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Tinh hoa Trầm Việt - Di sản Á Đông.',
+  title: 'Tram Huong Chu Bo Doi - Trang Suc Tram Huong Cao Cap',
+  description: 'Tram Huong Chu Bo Doi - Thuong hieu trang suc tram huong uy tin hang dau Viet Nam. Tinh hoa Tram Viet - Di san A Dong.',
 }
 
 export default function RootLayout({
@@ -26,9 +29,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="vi" className="bg-background">
+    <html lang="vi" className="bg-background" suppressHydrationWarning>
       <body className={`${beVietnamPro.variable} ${playfairDisplay.variable} font-sans antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+          <ScrollToTop />
+          <ContactButtons />
+        </LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

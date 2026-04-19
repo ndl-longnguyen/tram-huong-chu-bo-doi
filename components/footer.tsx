@@ -144,12 +144,11 @@ export function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© 2024 Trầm Hương Chú Bộ Đội. Tất cả quyền được bảo lưu.</p>
-          <div className="flex items-center gap-3">
-            <span className="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded text-white text-xs font-medium">VISA</span>
-            <span className="px-3 py-1.5 bg-gradient-to-r from-red-500 to-orange-500 rounded text-white text-xs font-medium">MasterCard</span>
-            <span className="px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded text-white text-xs font-medium">Momo</span>
-            <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded text-white text-xs font-medium">ZaloPay</span>
+          <p>© 2024 Tram Huong Chu Bo Doi. Tat ca quyen duoc bao luu.</p>
+          <div className="flex items-center gap-4 text-gray-400">
+            <span>Thanh toan khi nhan hang (COD)</span>
+            <span className="w-1 h-1 bg-gray-600 rounded-full" />
+            <span>Chuyen khoan ngan hang</span>
           </div>
         </div>
       </div>
