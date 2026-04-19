@@ -16,8 +16,8 @@ const playfairDisplay = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Thiên Mộc Hương - Trang Sức Trầm Hương Cao Cấp',
-  description: 'Thiên Mộc Hương - Thương hiệu trang sức trầm hương hàng đầu Việt Nam. Tinh hoa Trầm Việt - Di sản Á Đông.',
+  title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
+  description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Tinh hoa Trầm Việt - Di sản Á Đông.',
 }
 
 export default function RootLayout({

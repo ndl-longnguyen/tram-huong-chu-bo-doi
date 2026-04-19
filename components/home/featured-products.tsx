@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ProductCard } from "@/components/product-card"
+import { ArrowRight } from "lucide-react"
 
 const featuredProducts = [
   {
@@ -9,25 +10,27 @@ const featuredProducts = [
     originalPrice: 21500000,
     salePrice: 18500000,
     rating: 5,
+    badge: "Best Seller",
   },
   {
     id: "2",
-    name: "Vòng Tay Bảo Hương - Trầm Tốc",
+    name: "Vòng Tay Bảo Hương - Trầm Tốc Cao Cấp",
     image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80",
     originalPrice: 15900000,
     rating: 5,
   },
   {
     id: "3",
-    name: "Vòng Tay Lưu Quang Phối Phục - Trầm sống",
+    name: "Vòng Tay Lưu Quang Phối Phục - Trầm Sống",
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80",
     originalPrice: 18500000,
     salePrice: 16500000,
     rating: 5,
+    badge: "Sale",
   },
   {
     id: "4",
-    name: "Vòng Tay Trầm Hương Việt Nam Mọc Thật",
+    name: "Vòng Tay Trầm Hương Việt Nam Mộc Thật",
     image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80",
     originalPrice: 12900000,
     rating: 4,
@@ -36,33 +39,40 @@ const featuredProducts = [
 
 export function FeaturedProducts() {
   return (
-    <section className="py-16 lg:py-24 bg-muted/50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-16 bg-primary" />
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground">
-              SẢN PHẨM ĐƯỢC YÊU THÍCH
-            </h2>
-            <div className="h-px w-16 bg-primary" />
-          </div>
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider">
+            BEST SELLERS
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+            Sản Phẩm Được Yêu Thích
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Những sản phẩm trầm hương được khách hàng tin tưởng và lựa chọn nhiều nhất
+          </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-14">
           <Link
             href="/trang-suc"
-            className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-medium rounded hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
           >
-            XEM THÊM
+            XEM TẤT CẢ SẢN PHẨM
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

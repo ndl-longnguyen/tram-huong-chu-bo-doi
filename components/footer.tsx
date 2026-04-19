@@ -9,92 +9,89 @@ const collections = [
   "Nụ Trầm Hương Cao Cấp",
   "Nhang Trầm Hương Cao Cấp",
   "Vòng Trầm Hương Bọc Vàng",
-  "Bảng Giá Trầm Hương Mới Nhất 2026",
 ]
 
 const policies = [
-  "Chính sách bảo vệ",
-  "Chính sách thành viên",
+  "Chính sách bảo hành",
+  "Chính sách đổi trả",
   "Chính sách vận chuyển",
-  "Đăng ký Đại Lý",
-  "FAQ - Các câu hỏi thường gặp",
-  "Đổi trả và bảo hành",
+  "FAQ - Câu hỏi thường gặp",
   "Hướng dẫn thanh toán",
-  "Thiết kế và dịch vụ",
-  "Thư - đổi charm vàng",
 ]
 
 const aboutLinks = [
   "Giới thiệu",
-  "Sơ đồ trang Web",
-  "Tin Sức",
+  "Câu chuyện thương hiệu",
   "Liên hệ",
-  "Tuyển dụng",
   "Điều khoản dịch vụ",
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-white">
+    <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white">
       {/* Newsletter */}
-      <div className="border-b border-gray-700 py-6">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4">
-          <span className="text-muted-foreground">Nhập email của bạn</span>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder="Email của bạn"
-              className="px-4 py-2 bg-gray-800 border border-gray-600 rounded text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <button className="px-6 py-2 bg-primary text-primary-foreground rounded font-medium hover:bg-accent transition-colors">
-              Đăng ký
-            </button>
+      <div className="border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 py-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-serif text-primary mb-2">Đăng ký nhận tin</h3>
+              <p className="text-gray-400 text-sm">Nhận thông tin ưu đãi và sản phẩm mới nhất</p>
+            </div>
+            <div className="flex gap-3 w-full md:w-auto">
+              <input
+                type="email"
+                placeholder="Nhập email của bạn"
+                className="flex-1 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              />
+              <button className="px-8 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all">
+                Đăng ký
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-4">
-              CÔNG TY CỔ PHẦN THIÊN MỘC HƯƠNG
-            </h3>
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 text-primary flex-shrink-0" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-serif text-lg font-bold">CBD</span>
+              </div>
+              <div>
+                <h3 className="text-primary font-serif text-lg font-semibold">
+                  TRẦM HƯƠNG CHÚ BỘ ĐỘI
+                </h3>
+              </div>
+            </div>
+            <ul className="space-y-4 text-sm text-gray-300">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
                 <span>Flagship Store: 11 Kim Mã, Ba Đình, Hà Nội</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>0818348368</span>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="font-medium">0818.348.368</span>
               </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 text-primary flex-shrink-0" />
-                <span>Agarwood Gallery: 20 - 20A Nguyễn Trãi, Quận 5, TP.HCM</span>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <span>contact@tramhuongchubodoi.com</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>0933348368</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>thienmochuong@gmail.com</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>8h00 AM - 10h00 PM</span>
+              <li className="flex items-center gap-3">
+                <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                <span>8:00 - 22:00 (Thứ 2 - Chủ nhật)</span>
               </li>
             </ul>
-            <div className="flex items-center gap-3 mt-4">
-              <a href="#" className="text-gray-400 hover:text-primary">
+            <div className="flex items-center gap-4 mt-6">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -102,11 +99,11 @@ export function Footer() {
 
           {/* Policies */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-4">CHÍNH SÁCH</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="text-primary font-serif text-lg font-semibold mb-6">Chính sách</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
               {policies.map((policy) => (
                 <li key={policy}>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link href="#" className="hover:text-primary hover:pl-2 transition-all inline-block">
                     {policy}
                   </Link>
                 </li>
@@ -116,64 +113,43 @@ export function Footer() {
 
           {/* About Links */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-4">VỀ CHÚNG TÔI</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="text-primary font-serif text-lg font-semibold mb-6">Về chúng tôi</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
               {aboutLinks.map((link) => (
                 <li key={link}>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link href="#" className="hover:text-primary hover:pl-2 transition-all inline-block">
                     {link}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 space-y-2">
-              <div className="flex items-center gap-2">
-                <div className="w-24 h-10 bg-red-700 rounded flex items-center justify-center text-white text-xs font-bold">
-                  ĐÃ THÔNG BÁO
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-16 h-8 bg-white rounded flex items-center justify-center text-black text-xs font-bold">
-                  DMCA
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Collections */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-4">BỘ SƯU TẬP</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="text-primary font-serif text-lg font-semibold mb-6">Bộ sưu tập</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
               {collections.map((collection) => (
                 <li key={collection}>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link href="#" className="hover:text-primary hover:pl-2 transition-all inline-block">
                     {collection}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-6">
-              <p className="text-sm text-gray-400 mb-2">Đăng Ký</p>
-              <div className="flex items-center gap-2">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="px-3 py-1.5 bg-gray-800 border border-gray-600 rounded text-sm text-white placeholder:text-gray-400 focus:outline-none"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-700 py-4">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-          <p>© Bản quyền thuộc về Thiên Mộc Hương</p>
-          <div className="flex items-center gap-4">
-            <span className="w-10 h-6 bg-blue-600 rounded flex items-center justify-center text-white text-xs">VISA</span>
-            <span className="w-10 h-6 bg-red-500 rounded flex items-center justify-center text-white text-xs">MC</span>
-            <span className="w-10 h-6 bg-green-600 rounded flex items-center justify-center text-white text-xs">JCB</span>
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <p>© 2024 Trầm Hương Chú Bộ Đội. Tất cả quyền được bảo lưu.</p>
+          <div className="flex items-center gap-3">
+            <span className="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded text-white text-xs font-medium">VISA</span>
+            <span className="px-3 py-1.5 bg-gradient-to-r from-red-500 to-orange-500 rounded text-white text-xs font-medium">MasterCard</span>
+            <span className="px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded text-white text-xs font-medium">Momo</span>
+            <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded text-white text-xs font-medium">ZaloPay</span>
           </div>
         </div>
       </div>

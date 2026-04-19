@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Star } from "lucide-react"
+import { Star, Eye } from "lucide-react"
 
 interface ProductCardProps {
   id: string
@@ -9,7 +9,6 @@ interface ProductCardProps {
   salePrice?: number
   rating: number
   badge?: string
-  badgeColor?: string
 }
 
 export function ProductCard({
@@ -20,52 +19,91 @@ export function ProductCard({
   salePrice,
   rating,
   badge,
-  badgeColor = "bg-primary"
 }: ProductCardProps) {
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price) + ' đ'
   }
 
+  const discountPercent = salePrice 
+    ? Math.round((1 - salePrice / originalPrice) * 100) 
+    : 0
+
   return (
     <Link href={`/san-pham/${id}`} className="group block">
-      <div className="relative overflow-hidden rounded-lg bg-muted aspect-square">
+      <div className="relative overflow-hidden rounded-2xl bg-muted aspect-square">
+        {/* Image */}
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
         />
-        {badge && (
-          <span className={`absolute top-2 left-2 ${badgeColor} text-white text-xs font-medium px-2 py-1 rounded`}>
-            {badge}
+        
+        {/* Overlay on hover */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+        
+        {/* Quick view button */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground text-sm font-medium rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <Eye className="w-4 h-4" />
+            Xem nhanh
           </span>
-        )}
+        </div>
+        
+        {/* Badges */}
+        <div className="absolute top-3 left-3 flex flex-col gap-2">
+          {badge && (
+            <span className={`${
+              badge === "Sale" 
+                ? "bg-red-500" 
+                : badge === "Best Seller" 
+                ? "bg-gradient-to-r from-primary to-accent" 
+                : "bg-primary"
+            } text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg`}>
+              {badge}
+            </span>
+          )}
+          {salePrice && (
+            <span className="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+              -{discountPercent}%
+            </span>
+          )}
+        </div>
       </div>
-      <div className="mt-3 space-y-1.5">
-        <h3 className="text-foreground text-sm font-medium line-clamp-2 group-hover:text-primary transition-colors">
+      
+      <div className="mt-4 space-y-2">
+        {/* Product Name */}
+        <h3 className="text-foreground font-medium line-clamp-2 group-hover:text-primary transition-colors leading-snug">
           {name}
         </h3>
-        <div className="flex items-center gap-0.5">
+        
+        {/* Rating */}
+        <div className="flex items-center gap-1">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className={`w-3.5 h-3.5 ${
-                i < rating ? 'fill-yellow-400 text-yellow-400' : 'fill-gray-200 text-gray-200'
+              className={`w-4 h-4 ${
+                i < rating 
+                  ? 'fill-accent text-accent' 
+                  : 'fill-gray-200 text-gray-200'
               }`}
             />
           ))}
+          <span className="text-muted-foreground text-sm ml-1">({rating}.0)</span>
         </div>
-        <div className="flex items-center gap-2">
+        
+        {/* Price */}
+        <div className="flex items-center gap-3">
           {salePrice ? (
             <>
+              <span className="text-primary font-bold text-lg">
+                {formatPrice(salePrice)}
+              </span>
               <span className="text-muted-foreground text-sm line-through">
                 {formatPrice(originalPrice)}
               </span>
-              <span className="text-primary font-semibold">
-                {formatPrice(salePrice)}
-              </span>
             </>
           ) : (
-            <span className="text-primary font-semibold">
+            <span className="text-primary font-bold text-lg">
               {formatPrice(originalPrice)}
             </span>
           )}

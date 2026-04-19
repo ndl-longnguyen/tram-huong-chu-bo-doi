@@ -2,66 +2,66 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ChevronRight, MapPin, Phone, Clock } from "lucide-react"
+import { ChevronRight, MapPin, Phone, Clock, Mail, Send } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
 const mainStores = [
   {
-    name: "AGARWOOD ART GALLERY HỒ CHÍ MINH",
-    address: "20 – 20A Nguyễn Trãi, Phường Cư Quán  (Phường 2, Quận 5, TP. Hồ Chí Minh cũ)",
-    hours: "Giờ mở cửa: 8h00 – 22h00 (T2-CN)",
-    phone: "0933.348.368",
+    name: "FLAGSHIP STORE HÀ NỘI",
+    address: "11 Kim Mã, Phường Ngọc Hà, Quận Ba Đình, Hà Nội",
+    hours: "8:00 – 22:00 (Thứ 2 - Chủ nhật)",
+    phone: "0818.348.368",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
   },
   {
-    name: "TRUNG TÂM CHĂM SÓC KHÁCH HÀNG VÀ BẢO HÀNH",
-    address: "71 Nguyễn Khắc Nhu, Phường Cầu Ông Lãnh (Phường Cô Giang, Quận 1, TP. Hồ Chí Minh cũ)",
-    hours: "Giờ mở cửa: 8h00 – 22h00 (T2-T7)",
+    name: "CHI NHÁNH TP. HỒ CHÍ MINH",
+    address: "20 – 20A Nguyễn Trãi, Quận 5, TP. Hồ Chí Minh",
+    hours: "8:00 – 22:00 (Thứ 2 - Chủ nhật)",
     phone: "0933.348.368",
-  },
-  {
-    name: "FLAGSHIP STORE HÀ NỘI",
-    address: "Flagship Store: 11 Kim Mã, Phường Ngọc Hà (Quận Ba Đình, Hà Nội cũ)",
-    hours: "Giờ mở cửa: 8h00 – 22h00 (T2-CN)",
-    phone: "0818.348.368",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
   },
 ]
 
-const branches = [
+const contactInfo = [
   {
-    name: "Gia Lai",
-    address: "Cảng Hàng Không Pleiku, Đường 17/3, P.Thống Nhất, TP.Pleiku, Tỉnh Gia Lai",
+    icon: Phone,
+    title: "Hotline",
+    value: "0818.348.368",
+    description: "Hỗ trợ 24/7",
   },
   {
-    name: "Buôn Ma Thuột",
-    address: "Sân Bay Buôn Ma Thuột, Thôn 8, Xã Hòa Thắng, TP.Buôn Ma Thuột, Tỉnh Đắk Lắk",
+    icon: Mail,
+    title: "Email",
+    value: "contact@tramhuongchubodoi.com",
+    description: "Phản hồi trong 24h",
   },
-]
-
-const galleryImages = [
-  "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-  "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=600&q=80",
-  "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=600&q=80",
+  {
+    icon: Clock,
+    title: "Giờ làm việc",
+    value: "8:00 - 22:00",
+    description: "Thứ 2 - Chủ nhật",
+  },
 ]
 
 export default function ContactPage() {
-  const [currentImage, setCurrentImage] = useState(0)
   const [formData, setFormData] = useState({
     name: "",
-    subject: "",
+    email: "",
     phone: "",
-    address: "",
+    subject: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log(formData)
+    setIsSubmitting(true)
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setIsSubmitting(false)
     alert("Cảm ơn bạn đã gửi yêu cầu. Chúng tôi sẽ liên hệ lại sớm nhất!")
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
   }
 
   return (
@@ -72,7 +72,7 @@ export default function ContactPage() {
         <div className="bg-muted/50 py-4">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center gap-2 text-sm">
-              <Link href="/" className="text-muted-foreground hover:text-primary">
+              <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
                 Trang chủ
               </Link>
               <ChevronRight className="w-4 h-4 text-muted-foreground" />
@@ -81,164 +81,213 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Store System */}
-        <section className="py-12 lg:py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <h1 className="font-serif text-2xl md:text-3xl text-primary mb-8">
-              Hệ Thống Cửa Hàng
-            </h1>
+        {/* Hero Section */}
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+          <div className="max-w-7xl mx-auto px-4 relative z-10">
+            <div className="text-center max-w-3xl mx-auto">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
+                LIÊN HỆ VỚI CHÚNG TÔI
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+                Chúng Tôi Luôn Sẵn Sàng
+                <span className="block text-primary mt-2">Hỗ Trợ Bạn</span>
+              </h1>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Hãy liên hệ với Trầm Hương Chú Bộ Đội để được tư vấn về sản phẩm trầm hương 
+                chính hãng và nhận những ưu đãi tốt nhất.
+              </p>
+            </div>
+          </div>
+        </section>
 
-            {/* Main Stores */}
-            <div className="space-y-8">
-              {mainStores.map((store, index) => (
-                <div key={index} className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-primary font-semibold">{store.name}</h3>
-                      <p className="text-muted-foreground text-sm">{store.address}</p>
-                      <p className="text-muted-foreground text-sm">{store.hours}</p>
-                      <p className="text-sm">
-                        <span className="text-muted-foreground">Hotline: </span>
-                        <a href={`tel:${store.phone}`} className="text-primary hover:underline">
-                          {store.phone}
-                        </a>
-                      </p>
-                    </div>
+        {/* Contact Info Cards */}
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {contactInfo.map((info, index) => (
+                <div 
+                  key={index} 
+                  className="group bg-card p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <info.icon className="w-8 h-8 text-primary" />
                   </div>
-                  {store.image && (
-                    <img
-                      src={store.image}
-                      alt={store.name}
-                      className="w-full h-64 md:h-80 object-cover rounded-lg"
-                    />
-                  )}
+                  <h3 className="text-muted-foreground text-sm uppercase tracking-wider mb-2">{info.title}</h3>
+                  <p className="text-foreground font-semibold text-xl mb-1">{info.value}</p>
+                  <p className="text-muted-foreground text-sm">{info.description}</p>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* Gallery Carousel */}
-            <div className="mt-12">
-              <div className="relative overflow-hidden rounded-lg">
-                <div className="aspect-video">
-                  <img
-                    src={galleryImages[currentImage]}
-                    alt={`Gallery ${currentImage + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <button
-                  onClick={() => setCurrentImage((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
-                >
-                  <ChevronRight className="w-6 h-6 rotate-180" />
-                </button>
-                <button
-                  onClick={() => setCurrentImage((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              </div>
-              <div className="flex justify-center gap-2 mt-4">
-                {galleryImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImage(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentImage ? 'bg-primary' : 'bg-muted-foreground/30'
-                    }`}
-                  />
-                ))}
-              </div>
+        {/* Store Locations */}
+        <section className="py-16 bg-gradient-to-b from-muted/30 to-background">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider">
+                HỆ THỐNG CỬA HÀNG
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground">
+                Ghé Thăm Showroom
+              </h2>
             </div>
 
-            {/* Branch Locations */}
-            <div className="mt-12">
-              <h2 className="font-serif text-xl md:text-2xl text-foreground mb-6">
-                Hệ Thống Chi Nhánh
-              </h2>
-              <div className="space-y-4">
-                {branches.map((branch, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-primary font-semibold">{branch.name}</h3>
-                      <p className="text-muted-foreground text-sm">{branch.address}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {mainStores.map((store, index) => (
+                <div key={index} className="group bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-2xl transition-all duration-500">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={store.image}
+                      alt={store.name}
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="px-4 py-1.5 bg-primary text-white text-sm font-medium rounded-full">
+                        {store.name}
+                      </span>
                     </div>
                   </div>
-                ))}
-              </div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <p className="text-foreground">{store.address}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                      <p className="text-muted-foreground">{store.hours}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                      <a href={`tel:${store.phone}`} className="text-primary font-semibold hover:underline">
+                        {store.phone}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Contact Form */}
-        <section className="py-12 lg:py-16 bg-muted/50">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="font-serif text-xl md:text-2xl text-foreground mb-8">
-              Gửi Yêu Cầu Của Bạn
-            </h2>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
+        <section className="py-16 lg:py-24">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left - Info */}
               <div>
-                <input
-                  type="text"
-                  placeholder="Họ và tên"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                  required
-                />
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
+                  GỬI TIN NHẮN
+                </span>
+                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                  Bạn Cần Hỗ Trợ?
+                  <span className="block text-primary mt-2">Hãy Liên Hệ Ngay</span>
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Điền thông tin vào form bên cạnh, đội ngũ tư vấn của Trầm Hương Chú Bộ Đội 
+                  sẽ liên hệ lại với bạn trong thời gian sớm nhất.
+                </p>
+                
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl" />
+                  <img
+                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"
+                    alt="Trầm hương"
+                    className="relative w-full h-64 object-cover rounded-2xl"
+                  />
+                </div>
               </div>
 
-              <div>
-                <input
-                  type="text"
-                  placeholder="Chủ đề"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                  required
-                />
-              </div>
+              {/* Right - Form */}
+              <div className="bg-card p-8 md:p-10 rounded-3xl border border-border shadow-xl">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">Họ và tên *</label>
+                      <input
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full px-4 py-3 border border-border rounded-xl bg-muted/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                        placeholder="Nhập họ tên"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">Số điện thoại *</label>
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full px-4 py-3 border border-border rounded-xl bg-muted/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                        placeholder="Nhập số điện thoại"
+                        required
+                      />
+                    </div>
+                  </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="tel"
-                  placeholder="Số điện thoại"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Địa chỉ"
-                  value={formData.address}
-                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                    <input
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 border border-border rounded-xl bg-muted/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                      placeholder="Nhập email của bạn"
+                    />
+                  </div>
 
-              <div>
-                <textarea
-                  placeholder="Nội dung"
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                  required
-                />
-              </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Chủ đề *</label>
+                    <select
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="w-full px-4 py-3 border border-border rounded-xl bg-muted/50 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                      required
+                    >
+                      <option value="">Chọn chủ đề</option>
+                      <option value="tu-van">Tư vấn sản phẩm</option>
+                      <option value="bao-hanh">Bảo hành</option>
+                      <option value="khieu-nai">Khiếu nại</option>
+                      <option value="hop-tac">Hợp tác kinh doanh</option>
+                      <option value="khac">Khác</option>
+                    </select>
+                  </div>
 
-              <button
-                type="submit"
-                className="px-8 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-accent transition-colors"
-              >
-                Gửi liên hệ
-              </button>
-            </form>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Nội dung *</label>
+                    <textarea
+                      rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-4 py-3 border border-border rounded-xl bg-muted/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
+                      placeholder="Nhập nội dung tin nhắn..."
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Đang gửi...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Gửi tin nhắn
+                      </>
+                    )}
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
       </main>

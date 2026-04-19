@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fffbf5;
+  --background: #faf8f5;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #8b6914;
+  --primary: #8b5a2b;
   --primary-foreground: #ffffff;
   --secondary: #f5ebe0;
   --secondary-foreground: #5c4a1f;
-  --muted: #f8f4ed;
-  --muted-foreground: #6b5c3f;
+  --muted: #f5f1eb;
+  --muted-foreground: #6b5c4a;
   --accent: #c9a227;
   --accent-foreground: #1a1a1a;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #e8dcc8;
   --input: #e8dcc8;
-  --ring: #8b6914;
-  --radius: 0.5rem;
+  --ring: #8b5a2b;
+  --radius: 0.75rem;
 }
 
 @theme inline {
@@ -84,4 +84,112 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Image hover zoom */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Section divider */
+.section-divider {
+  position: relative;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
 }
