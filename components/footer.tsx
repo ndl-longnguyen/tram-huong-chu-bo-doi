@@ -144,7 +144,7 @@ export function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          <p>© 2024 Tram Huong Chu Bo Doi. Tat ca quyen duoc bao luu.</p>
+          <p>© 2024 TRẦM HƯƠNG CHÚ BỘ ĐỘI. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
     </footer>
