@@ -7,35 +7,35 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const blogPosts = [
-  { id: "1", title: { vi: "Huong Dan Phan Biet Tram Huong That - Gia", en: "Guide to Distinguish Real vs Fake Agarwood", zh: "如何辨别真假沉香指南" }, excerpt: { vi: "Tram huong la mot loai go quy hiem, co gia tri cao...", en: "Agarwood is a rare and valuable wood...", zh: "沉香是一种稀有珍贵的木材..." }, image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80", date: "15/04/2024", readTime: { vi: "8 phut doc", en: "8 min read", zh: "8分钟阅读" }, category: { vi: "Kien thuc", en: "Knowledge", zh: "知识" } },
-  { id: "2", title: { vi: "Y Nghia Phong Thuy Cua Vong Tay Tram Huong", en: "Feng Shui Meaning of Agarwood Bracelets", zh: "沉香手链的风水意义" }, excerpt: { vi: "Kham pha nhung y nghia phong thuy sau sac...", en: "Discover the profound feng shui meanings...", zh: "探索深刻的风水意义..." }, image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80", date: "12/04/2024", readTime: { vi: "5 phut doc", en: "5 min read", zh: "5分钟阅读" }, category: { vi: "Phong thuy", en: "Feng Shui", zh: "风水" } },
-  { id: "3", title: { vi: "Cach Bao Quan Tram Huong Dung Cach", en: "How to Properly Store Agarwood", zh: "如何正确保存沉香" }, excerpt: { vi: "Nhung luu y quan trong khi bao quan...", en: "Important notes when storing...", zh: "保存时的重要注意事项..." }, image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500&q=80", date: "10/04/2024", readTime: { vi: "4 phut doc", en: "4 min read", zh: "4分钟阅读" }, category: { vi: "Huong dan", en: "Guide", zh: "指南" } },
-  { id: "4", title: { vi: "Lich Su Tram Huong Viet Nam", en: "History of Vietnamese Agarwood", zh: "越南沉香历史" }, excerpt: { vi: "Tim hieu ve lich su hinh thanh va phat trien...", en: "Learn about the history and development...", zh: "了解形成和发展的历史..." }, image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80", date: "08/04/2024", readTime: { vi: "10 phut doc", en: "10 min read", zh: "10分钟阅读" }, category: { vi: "Lich su", en: "History", zh: "历史" } },
-  { id: "5", title: { vi: "Top 5 Vung Tram Huong Noi Tieng Viet Nam", en: "Top 5 Famous Agarwood Regions in Vietnam", zh: "越南五大著名沉香产区" }, excerpt: { vi: "Kham pha nhung vung dat noi tieng...", en: "Discover the famous regions...", zh: "探索著名的产区..." }, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80", date: "05/04/2024", readTime: { vi: "6 phut doc", en: "6 min read", zh: "6分钟阅读" }, category: { vi: "Kham pha", en: "Explore", zh: "探索" } },
-  { id: "6", title: { vi: "Tram Huong Trong Y Hoc Co Truyen", en: "Agarwood in Traditional Medicine", zh: "沉香在传统医学中的应用" }, excerpt: { vi: "Vai tro cua tram huong trong y hoc co truyen...", en: "The role of agarwood in traditional medicine...", zh: "沉香在传统医学中的作用..." }, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80", date: "02/04/2024", readTime: { vi: "7 phut doc", en: "7 min read", zh: "7分钟阅读" }, category: { vi: "Suc khoe", en: "Health", zh: "健康" } },
+  { id: "1", title: { vi: "Hướng Dẫn Phân Biệt Trầm Hương Thật - Giả", en: "Guide to Distinguish Real vs Fake Agarwood", zh: "如何辨别真假沉香指南" }, excerpt: { vi: "Trầm hương là một loại gỗ quý hiếm, có giá trị cao...", en: "Agarwood is a rare and valuable wood...", zh: "沉香是一种稀有珍贵的木材..." }, image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80", date: "15/04/2024", readTime: { vi: "8 phút đọc", en: "8 min read", zh: "8分钟阅读" }, category: { vi: "Kiến thức", en: "Knowledge", zh: "知识" } },
+  { id: "2", title: { vi: "Ý Nghĩa Phong Thủy Của Vòng Tay Trầm Hương", en: "Feng Shui Meaning of Agarwood Bracelets", zh: "沉香手链的风水意义" }, excerpt: { vi: "Khám phá những ý nghĩa phong thủy sâu sắc...", en: "Discover the profound feng shui meanings...", zh: "探索深刻的风水意义..." }, image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80", date: "12/04/2024", readTime: { vi: "5 phút đọc", en: "5 min read", zh: "5分钟阅读" }, category: { vi: "Phong thủy", en: "Feng Shui", zh: "风水" } },
+  { id: "3", title: { vi: "Cách Bảo Quản Trầm Hương Đúng Cách", en: "How to Properly Store Agarwood", zh: "如何正确保存沉香" }, excerpt: { vi: "Những lưu ý quan trọng khi bảo quản...", en: "Important notes when storing...", zh: "保存时的重要注意事项..." }, image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500&q=80", date: "10/04/2024", readTime: { vi: "4 phút đọc", en: "4 min read", zh: "4分钟阅读" }, category: { vi: "Hướng dẫn", en: "Guide", zh: "指南" } },
+  { id: "4", title: { vi: "Lịch Sử Trầm Hương Việt Nam", en: "History of Vietnamese Agarwood", zh: "越南沉香历史" }, excerpt: { vi: "Tìm hiểu về lịch sử hình thành và phát triển...", en: "Learn about the history and development...", zh: "了解形成和发展的历史..." }, image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80", date: "08/04/2024", readTime: { vi: "10 phút đọc", en: "10 min read", zh: "10分钟阅读" }, category: { vi: "Lịch sử", en: "History", zh: "历史" } },
+  { id: "5", title: { vi: "Top 5 Vùng Trầm Hương Nổi Tiếng Việt Nam", en: "Top 5 Famous Agarwood Regions in Vietnam", zh: "越南五大著名沉香产区" }, excerpt: { vi: "Khám phá những vùng đất nổi tiếng...", en: "Discover the famous regions...", zh: "探索著名的产区..." }, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80", date: "05/04/2024", readTime: { vi: "6 phút đọc", en: "6 min read", zh: "6分钟阅读" }, category: { vi: "Khám phá", en: "Explore", zh: "探索" } },
+  { id: "6", title: { vi: "Trầm Hương Trong Y Học Cổ Truyền", en: "Agarwood in Traditional Medicine", zh: "沉香在传统医学中的应用" }, excerpt: { vi: "Vai trò của trầm hương trong y học cổ truyền...", en: "The role of agarwood in traditional medicine...", zh: "沉香在传统医学中的作用..." }, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80", date: "02/04/2024", readTime: { vi: "7 phút đọc", en: "7 min read", zh: "7分钟阅读" }, category: { vi: "Sức khỏe", en: "Health", zh: "健康" } },
 ]
 
 export default function BlogPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chu", en: "Home", zh: "首页" },
+    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Blog", en: "Blog", zh: "博客" },
-    blogCategory: { vi: "BLOG & TIN TUC", en: "BLOG & NEWS", zh: "博客与新闻" },
-    title1: { vi: "Kham Pha The Gioi", en: "Discover the World", zh: "探索世界" },
-    title2: { vi: "Tram Huong", en: "of Agarwood", zh: "沉香" },
+    blogCategory: { vi: "BLOG & TIN TỨC", en: "BLOG & NEWS", zh: "博客与新闻" },
+    title1: { vi: "Khám Phá Thế Giới", en: "Discover the World", zh: "探索世界" },
+    title2: { vi: "Trầm Hương", en: "of Agarwood", zh: "沉香" },
     description: {
-      vi: "Chia se kien thuc, kinh nghiem va nhung cau chuyen thu vi ve tram huong Viet Nam tu doi ngu chuyen gia cua chung toi.",
+      vi: "Chia sẻ kiến thức, kinh nghiệm và những câu chuyện thú vị về trầm hương Việt Nam từ đội ngũ chuyên gia của chúng tôi.",
       en: "Sharing knowledge, experience and interesting stories about Vietnamese agarwood from our team of experts.",
       zh: "分享我们专家团队关于越南沉香的知识、经验和有趣故事。"
     },
-    readMore: { vi: "Doc tiep", en: "Read more", zh: "阅读更多" },
-    loadMore: { vi: "Xem them bai viet", en: "Load more posts", zh: "加载更多文章" },
+    readMore: { vi: "Đọc tiếp", en: "Read more", zh: "阅读更多" },
+    loadMore: { vi: "Xem thêm bài viết", en: "Load more posts", zh: "加载更多文章" },
     newsletter: { vi: "NEWSLETTER", en: "NEWSLETTER", zh: "通讯" },
-    newsletterTitle: { vi: "Dang Ky Nhan Bai Viet Moi", en: "Subscribe to New Posts", zh: "订阅新文章" },
-    newsletterDesc: { vi: "Nhan thong bao khi co bai viet moi ve tram huong, phong thuy va suc khoe", en: "Get notified when there are new posts about agarwood, feng shui and health", zh: "当有关于沉香、风水和健康的新文章时收到通知" },
-    enterEmail: { vi: "Nhap email cua ban", en: "Enter your email", zh: "输入您的邮箱" },
-    subscribe: { vi: "Dang ky", en: "Subscribe", zh: "订阅" },
+    newsletterTitle: { vi: "Đăng Ký Nhận Bài Viết Mới", en: "Subscribe to New Posts", zh: "订阅新文章" },
+    newsletterDesc: { vi: "Nhận thông báo khi có bài viết mới về trầm hương, phong thủy và sức khỏe", en: "Get notified when there are new posts about agarwood, feng shui and health", zh: "当有关于沉香、风水和健康的新文章时收到通知" },
+    enterEmail: { vi: "Nhập email của bạn", en: "Enter your email", zh: "输入您的邮箱" },
+    subscribe: { vi: "Đăng ký", en: "Subscribe", zh: "订阅" },
   }
 
   return (

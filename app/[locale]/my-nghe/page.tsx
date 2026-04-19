@@ -8,50 +8,50 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const artProducts = [
-  { id: "1", name: { vi: "Tuong Phat Di Lac", en: "Buddha Statue", zh: "弥勒佛像" }, price: 15000000, originalPrice: 18000000, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=500&q=80", badge: { vi: "Doc dao", en: "Unique", zh: "独特" } },
-  { id: "2", name: { vi: "Tuong Quan Am", en: "Guanyin Statue", zh: "观音像" }, price: 12000000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80" },
-  { id: "3", name: { vi: "Lu Dot Tram Cao Cap", en: "Premium Censer", zh: "高级香炉" }, price: 3500000, originalPrice: 4200000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80", badge: { vi: "Ban chay", en: "Best Seller", zh: "畅销" } },
-  { id: "4", name: { vi: "Hop Dung Trang Suc", en: "Jewelry Box", zh: "首饰盒" }, price: 2800000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80" },
-  { id: "5", name: { vi: "But Ky Tram Huong", en: "Agarwood Pen", zh: "沉香钢笔" }, price: 4500000, originalPrice: 5500000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
-  { id: "6", name: { vi: "Cay Tram Phong Thuy", en: "Feng Shui Tree", zh: "风水树" }, price: 8500000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
+  { id: "1", name: { vi: "Tượng Phật Di Lạc", en: "Buddha Statue", zh: "弥勒佛像" }, price: 15000000, originalPrice: 18000000, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=500&q=80", badge: { vi: "Độc đáo", en: "Unique", zh: "独特" } },
+  { id: "2", name: { vi: "Tượng Quan Âm", en: "Guanyin Statue", zh: "观音像" }, price: 12000000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80" },
+  { id: "3", name: { vi: "Lư Đốt Trầm Cao Cấp", en: "Premium Censer", zh: "高级香炉" }, price: 3500000, originalPrice: 4200000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
+  { id: "4", name: { vi: "Hộp Đựng Trang Sức", en: "Jewelry Box", zh: "首饰盒" }, price: 2800000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80" },
+  { id: "5", name: { vi: "Bút Ký Trầm Hương", en: "Agarwood Pen", zh: "沉香钢笔" }, price: 4500000, originalPrice: 5500000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
+  { id: "6", name: { vi: "Cây Trầm Phong Thủy", en: "Feng Shui Tree", zh: "风水树" }, price: 8500000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
 ]
 
 const categories = [
-  { name: { vi: "Tuong Phat", en: "Buddha Statues", zh: "佛像" }, count: 25, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=300&q=80" },
-  { name: { vi: "Lu Dot Tram", en: "Censers", zh: "香炉" }, count: 18, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=300&q=80" },
-  { name: { vi: "Vat Pham Phong Thuy", en: "Feng Shui Items", zh: "风水物品" }, count: 32, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=300&q=80" },
-  { name: { vi: "Do Decor", en: "Decor Items", zh: "装饰品" }, count: 22, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=300&q=80" },
+  { name: { vi: "Tượng Phật", en: "Buddha Statues", zh: "佛像" }, count: 25, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=300&q=80" },
+  { name: { vi: "Lư Đốt Trầm", en: "Censers", zh: "香炉" }, count: 18, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=300&q=80" },
+  { name: { vi: "Vật Phẩm Phong Thủy", en: "Feng Shui Items", zh: "风水物品" }, count: 32, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=300&q=80" },
+  { name: { vi: "Đồ Decor", en: "Decor Items", zh: "装饰品" }, count: 22, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=300&q=80" },
 ]
 
 export default function ArtworksPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chu", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "My Nghe Tram Huong", en: "Agarwood Artworks", zh: "沉香工艺品" },
-    artCategory: { vi: "MY NGHE CAO CAP", en: "PREMIUM ARTWORKS", zh: "高端工艺品" },
-    title1: { vi: "My Nghe Tram Huong", en: "Agarwood Artworks", zh: "沉香工艺品" },
-    title2: { vi: "Thu Cong Tinh Xao", en: "Exquisite Craftsmanship", zh: "精湛工艺" },
+    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    breadcrumb: { vi: "Mỹ Nghệ Trầm Hương", en: "Agarwood Artworks", zh: "沉香工艺品" },
+    artCategory: { vi: "MỸ NGHỆ CAO CẤP", en: "PREMIUM ARTWORKS", zh: "高端工艺品" },
+    title1: { vi: "Mỹ Nghệ Trầm Hương", en: "Agarwood Artworks", zh: "沉香工艺品" },
+    title2: { vi: "Thủ Công Tinh Xảo", en: "Exquisite Craftsmanship", zh: "精湛工艺" },
     description: {
-      vi: "Bo suu tap my nghe tram huong duoc che tac thu cong boi nhung nghe nhan lanh nghe, mang dam net van hoa truyen thong Viet Nam.",
+      vi: "Bộ sưu tập mỹ nghệ trầm hương được chế tác thủ công bởi những nghệ nhân lành nghề, mang đậm nét văn hóa truyền thống Việt Nam.",
       en: "Agarwood artwork collection handcrafted by skilled artisans, featuring traditional Vietnamese cultural elements.",
       zh: "沉香工艺品系列由熟练工匠手工制作，融入越南传统文化元素。"
     },
-    products: { vi: "san pham", en: "products", zh: "件产品" },
-    featuredTitle: { vi: "San Pham Noi Bat", en: "Featured Products", zh: "精选产品" },
-    featuredDesc: { vi: "Nhung tac pham nghe thuat tram huong duoc che tac tinh xao tu tay nghe nhan", en: "Exquisite agarwood artworks crafted by skilled artisans", zh: "由熟练工匠精心制作的沉香工艺品" },
-    craftsmanship: { vi: "NGHE THUAT CHE TAC", en: "CRAFTSMANSHIP", zh: "工艺艺术" },
-    craftTitle1: { vi: "Tay Nghe Thu Cong", en: "Handcraft Skills", zh: "手工技艺" },
-    craftTitle2: { vi: "Truyen Thong", en: "Traditional", zh: "传统" },
+    products: { vi: "sản phẩm", en: "products", zh: "件产品" },
+    featuredTitle: { vi: "Sản Phẩm Nổi Bật", en: "Featured Products", zh: "精选产品" },
+    featuredDesc: { vi: "Những tác phẩm nghệ thuật trầm hương được chế tác tinh xảo từ tay nghệ nhân", en: "Exquisite agarwood artworks crafted by skilled artisans", zh: "由熟练工匠精心制作的沉香工艺品" },
+    craftsmanship: { vi: "NGHỆ THUẬT CHẾ TẠO", en: "CRAFTSMANSHIP", zh: "工艺艺术" },
+    craftTitle1: { vi: "Tay Nghề Thủ Công", en: "Handcraft Skills", zh: "手工技艺" },
+    craftTitle2: { vi: "Truyền Thống", en: "Traditional", zh: "传统" },
     craftDesc: {
-      vi: "Moi san pham my nghe tram huong cua chung toi deu duoc che tac thu cong boi nhung nghe nhan co hon 20 nam kinh nghiem. Tu viec chon loc nguyen lieu den tung chi tiet hoan thien, tat ca deu duoc thuc hien voi su ti mi va tam huyet cao nhat.",
+      vi: "Mỗi sản phẩm mỹ nghệ trầm hương của chúng tôi đều được chế tác thủ công bởi những nghệ nhân có hơn 20 năm kinh nghiệm. Từ việc chọn lọc nguyên liệu đến từng chi tiết hoàn thiện, tất cả đều được thực hiện với sự tỉ mị và tâm huyết cao nhất.",
       en: "Every agarwood artwork is handcrafted by artisans with over 20 years of experience. From material selection to every finishing detail, everything is done with the utmost care and dedication.",
       zh: "每件沉香工艺品都由拥有20多年经验的工匠手工制作。从原材料选择到每个细节的完成，一切都以最大的关怀和奉献精神完成。"
     },
-    feature1: { vi: "100% thu cong tu nghe nhan lanh nghe", en: "100% handcrafted by skilled artisans", zh: "100%由熟练工匠手工制作" },
-    feature2: { vi: "Nguyen lieu tram huong tu nhien cao cap", en: "Premium natural agarwood materials", zh: "高级天然沉香原料" },
-    feature3: { vi: "Thiet ke doc dao, mang dam van hoa Viet", en: "Unique design with Vietnamese culture", zh: "融入越南文化的独特设计" },
-    feature4: { vi: "Bao hanh tron doi cho tat ca san pham", en: "Lifetime warranty for all products", zh: "所有产品终身保修" },
+    feature1: { vi: "100% thủ công từ nghệ nhân lành nghề", en: "100% handcrafted by skilled artisans", zh: "100%由熟练工匠手工制作" },
+    feature2: { vi: "Nguyên liệu trầm hương tự nhiên cao cấp", en: "Premium natural agarwood materials", zh: "高级天然沉香原料" },
+    feature3: { vi: "Thiết kế độc đáo, mang đậm văn hóa Việt", en: "Unique design with Vietnamese culture", zh: "融入越南文化的独特设计" },
+    feature4: { vi: "Bảo hành trọn đời cho tất cả sản phẩm", en: "Lifetime warranty for all products", zh: "所有产品终身保修" },
   }
 
   return (
