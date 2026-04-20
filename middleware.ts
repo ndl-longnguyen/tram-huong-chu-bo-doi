@@ -12,16 +12,6 @@ function getLocale(request: NextRequest): string {
   )
   if (pathnameLocale) return pathnameLocale
 
-  // Check accept-language header
-  const acceptLanguage = request.headers.get('accept-language')
-  if (acceptLanguage) {
-    const preferredLocale = acceptLanguage
-      .split(',')
-      .map(lang => lang.split(';')[0].trim().substring(0, 2))
-      .find(lang => locales.includes(lang))
-    if (preferredLocale) return preferredLocale
-  }
-
   return defaultLocale
 }
 
