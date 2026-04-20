@@ -7,11 +7,10 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const timeline = [
-  { year: "2005", event: { vi: "Khởi nghiệp với đam mê trầm hương", en: "Started with passion for agarwood", zh: "带着对沉香的热情开始创业" } },
-  { year: "2010", event: { vi: "Mở cửa hàng đầu tiên tại Hà Nội", en: "Opened first store in Hanoi", zh: "在河内开设第一家店铺" } },
-  { year: "2015", event: { vi: "Mở rộng ra thị trường miền Nam", en: "Expanded to Southern market", zh: "扩展到南方市场" } },
-  { year: "2018", event: { vi: "Đạt chứng nhận ISO về chất lượng", en: "Achieved ISO quality certification", zh: "获得ISO质量认证" } },
-  { year: "2022", event: { vi: "Phát triển kênh bán hàng online", en: "Developed online sales channel", zh: "发展线上销售渠道" } },
+  { year: "2015", event: { vi: "Khởi nghiệp với đam mê trầm hương", en: "Started with passion for agarwood", zh: "带着对沉香的热情开始创业" } },
+  { year: "2019", event: { vi: "Mở xưởng sản xuất tại Tiên Phước", en: "Open factory in Tien Phuoc", zh: "在仙福开设工厂" } },
+  { year: "2022", event: { vi: "Mở rộng đa dạng sản phẩm", en: "Expanded product range", zh: "扩大产品范围" } },
+  { year: "2023", event: { vi: "Phát triển kênh bán hàng online", en: "Developed online sales channel", zh: "发展线上销售渠道" } },
   { year: "2024", event: { vi: "Hơn 10,000 khách hàng tin tưởng", en: "Over 10,000 trusted customers", zh: "超过10,000位信赖的客户" } },
 ]
 
@@ -19,8 +18,8 @@ const values = [
   {
     title: { vi: "TINH", en: "EXCELLENCE", zh: "精" },
     subtitle: { vi: "Tinh hoa nghề truyền thống", en: "Traditional craftsmanship excellence", zh: "传统工艺精华" },
-    description: { 
-      vi: "Kế thừa và phát huy tinh hoa nghề chế tác trầm hương truyền thống hàng trăm năm của Việt Nam.", 
+    description: {
+      vi: "Kế thừa và phát huy tinh hoa nghề chế tác trầm hương truyền thống hàng trăm năm của Việt Nam.",
       en: "Inheriting and promoting the traditional Vietnamese agarwood craftsmanship of hundreds of years.",
       zh: "继承和发扬越南数百年传统沉香工艺精华。"
     },
@@ -30,8 +29,8 @@ const values = [
   {
     title: { vi: "TÍN", en: "TRUST", zh: "信" },
     subtitle: { vi: "Uy tín và chất lượng", en: "Trust and quality", zh: "信誉与品质" },
-    description: { 
-      vi: "Cam kết 100% sản phẩm trầm hương tự nhiên, không pha trộn, không hóa chất.", 
+    description: {
+      vi: "Cam kết 100% sản phẩm trầm hương tự nhiên, không pha trộn, không hóa chất.",
       en: "Committed to 100% natural agarwood products, no mixing, no chemicals.",
       zh: "承诺100%天然沉香产品，无掺杂，无化学品。"
     },
@@ -41,8 +40,8 @@ const values = [
   {
     title: { vi: "TÂM", en: "DEDICATION", zh: "心" },
     subtitle: { vi: "Tâm huyết với nghề", en: "Dedication to the craft", zh: "对工艺的专注" },
-    description: { 
-      vi: "Mỗi sản phẩm đều được chế tác với tâm huyết, sự tỉ mỉ và đam mê của nghệ nhân.", 
+    description: {
+      vi: "Mỗi sản phẩm đều được chế tác với tâm huyết, sự tỉ mỉ và đam mê của nghệ nhân.",
       en: "Each product is crafted with dedication, meticulousness and passion of artisans.",
       zh: "每件产品都凝聚着工匠的心血、细致和热情。"
     },
@@ -117,7 +116,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
           <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
@@ -127,7 +126,7 @@ export default function AboutPage() {
                 {locale === "zh" ? "沉香" : locale === "en" ? "Agarwood" : "Trầm Hương"}
                 <span className="block text-primary mt-2">{locale === "zh" ? "朱伯队" : locale === "en" ? "Chu Bo Doi" : "Chú Bộ Đội"}</span>
               </h1>
-              
+
               <blockquote className="relative">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                   <span className="text-primary font-serif text-3xl">&ldquo;</span>
@@ -248,7 +247,7 @@ export default function AboutPage() {
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {content.commitmentDesc[locale]}
                 </p>
-                
+
                 <div className="space-y-4">
                   {[
                     { icon: Shield, text: content.warranty[locale] },
@@ -265,7 +264,7 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
                 <img

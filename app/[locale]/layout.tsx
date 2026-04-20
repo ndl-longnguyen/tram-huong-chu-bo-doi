@@ -100,6 +100,10 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code',
   },
   category: 'ecommerce',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 }
 
 export function generateStaticParams() {
@@ -178,15 +182,16 @@ const jsonLd = {
   ],
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params;
   return (
-    <html lang={params.locale} className="bg-background" suppressHydrationWarning>
+    <html lang={locale} className="bg-background" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

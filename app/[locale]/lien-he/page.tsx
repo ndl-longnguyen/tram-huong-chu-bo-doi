@@ -88,7 +88,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: content.email[locale],
-      value: "contact@tramhuongchubodoi.com",
+      value: "tramhuongchubodoi@gmail.com",
       description: content.emailResponse[locale],
     },
     {
@@ -149,8 +149,8 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {contactInfo.map((info, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group bg-card p-6 md:p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 text-center"
                 >
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform">
@@ -231,7 +231,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {content.formDesc[locale]}
                 </p>
-                
+
                 <div className="relative hidden lg:block">
                   <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl" />
                   <img

@@ -1,6 +1,8 @@
 "use client"
+// Updated branding logo and text alignment
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Menu, X, Search, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -42,10 +44,14 @@ export function Header() {
             {/* Logo */}
             <Link href={getLocalizedPath("/")} className="flex items-center gap-2 md:gap-3 group">
               <div className="relative">
-                <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-primary via-accent to-primary rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-                  <span className="text-primary-foreground font-serif text-base md:text-xl font-bold">CBD</span>
-                </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-sm -z-10" />
+                <Image
+                  src="/logo.png"
+                  alt="Trầm Hương Chú Bộ Đội"
+                  width={200}
+                  height={80}
+                  className="h-10 w-auto md:h-14 object-contain transition-transform group-hover:scale-105 logo-primary"
+                  priority
+                />
               </div>
               <div className="hidden sm:block">
                 <p className="text-primary font-serif text-base md:text-xl font-bold leading-tight tracking-wide">
@@ -71,8 +77,8 @@ export function Header() {
 
             {/* Contact & Actions */}
             <div className="flex items-center gap-2 md:gap-4">
-              <a 
-                href="tel:0765942942" 
+              <a
+                href="tel:0765942942"
                 className="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
               >
                 <Phone className="w-4 h-4 group-hover:animate-pulse" />
@@ -80,7 +86,7 @@ export function Header() {
               </a>
 
               {/* Mobile Menu Button */}
-              <button 
+              <button
                 className="lg:hidden text-foreground hover:text-primary transition-colors p-1"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
@@ -96,7 +102,7 @@ export function Header() {
             <ul className="flex items-center justify-center gap-1 py-2">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link
                     href={getLocalizedPath(item.href)}
                     className="relative px-5 py-2.5 text-foreground hover:text-primary text-sm font-medium transition-colors group"
                   >
@@ -115,7 +121,7 @@ export function Header() {
             <ul className="py-4 px-4 space-y-1">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link
                     href={getLocalizedPath(item.href)}
                     className="block py-3 px-4 text-foreground hover:text-primary hover:bg-primary/5 text-sm font-medium rounded-lg transition-all"
                     onClick={() => setIsMenuOpen(false)}
@@ -126,8 +132,8 @@ export function Header() {
               ))}
               {/* Mobile Phone */}
               <li className="pt-4">
-                <a 
-                  href="tel:0765942942" 
+                <a
+                  href="tel:0765942942"
                   className="flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-lg font-medium"
                 >
                   <Phone className="w-4 h-4" />

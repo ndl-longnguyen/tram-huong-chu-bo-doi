@@ -1,10 +1,8 @@
 const pressLogos = [
-  { name: "VnExpress", color: "from-red-600 to-red-700" },
-  { name: "VTV", color: "from-blue-700 to-blue-800" },
-  { name: "Tuổi Trẻ", color: "from-orange-500 to-orange-600" },
-  { name: "Vietcetera", color: "from-gray-800 to-black" },
-  { name: "Tiền Phong", color: "from-red-700 to-red-800" },
-  { name: "Dân Trí", color: "from-blue-600 to-blue-700" },
+  { name: "Đà Nẵng", color: "from-blue-700 to-blue-800", link: "https://baodanang.vn/bo-doi-xuat-ngu-khoi-nghiep-voi-den-trang-tri-tram-canh-3140715.html" },
+  { name: "Tiền Phong", color: "from-red-700 to-red-800", link: "https://baodanang.vn/doi-ban-than-xuat-ngu-ve-mo-xuong-tram-huong-3320268.html" },
+  { name: "VnExpress", color: "from-red-600 to-red-700", link: "https://vnexpress.net/lam-den-ngu-bang-tram-huong-4794276.html" },
+  { name: "Vietnamnet", color: "from-orange-500 to-orange-600", link: "https://vietnamnet.vn/doi-ban-than-o-quang-nam-che-tac-den-ngu-doc-la-toa-mui-thom-giup-ngu-ngon-2347044.html" },
 ]
 
 export function PressSection() {
