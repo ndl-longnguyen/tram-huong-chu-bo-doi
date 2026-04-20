@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react"
 
 const collections = [
@@ -57,9 +58,13 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-serif text-lg font-bold">CBD</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Trầm Hương Chú Bộ Đội"
+                width={200}
+                height={80}
+                className="h-14 w-auto object-contain logo-primary"
+              />
               <div>
                 <h3 className="text-primary font-serif text-lg font-semibold">
                   TRẦM HƯƠNG CHÚ BỘ ĐỘI
@@ -77,7 +82,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>contact@tramhuongchubodoi.com</span>
+                <span>tramhuongchubodoi@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0" />
@@ -85,13 +90,13 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex items-center gap-4 mt-6">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all">
+              <a href="https://www.facebook.com/tramhuongchubodoivn" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all">
+              <a href="https://www.instagram.com/tramhuongchubodoi" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all">
+              <a href="https://www.youtube.com/@tramhuongchubodoi" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -144,7 +149,7 @@ export function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          <p>© 2024 TRẦM HƯƠNG CHÚ BỘ ĐỘI. Tất cả quyền được bảo lưu.</p>
+          <p>© 2022 TRẦM HƯƠNG CHÚ BỘ ĐỘI. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
     </footer>

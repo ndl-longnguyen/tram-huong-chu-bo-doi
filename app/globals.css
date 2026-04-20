@@ -4,25 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #faf8f5;
+  --background: #fafafa;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #8b5a2b;
+  --primary: #3a4a1c;
   --primary-foreground: #ffffff;
-  --secondary: #f5ebe0;
-  --secondary-foreground: #5c4a1f;
-  --muted: #f5f1eb;
-  --muted-foreground: #6b5c4a;
+  --secondary: #f1f3ec;
+  --secondary-foreground: #2d3a1a;
+  --muted: #f0f2eb;
+  --muted-foreground: #5c664d;
   --accent: #c9a227;
   --accent-foreground: #1a1a1a;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e8dcc8;
-  --input: #e8dcc8;
-  --ring: #8b5a2b;
+  --border: #d4d9cc;
+  --input: #d4d9cc;
+  --ring: #3a4a1c;
+  --primary-filter: invert(24%) sepia(24%) saturate(980%) hue-rotate(42deg) brightness(94%) contrast(92%);
   --radius: 0.75rem;
 }
 
@@ -193,4 +194,8 @@ html {
   width: 100px;
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.logo-primary {
+  filter: brightness(0) saturate(100%) var(--primary-filter);
 }
