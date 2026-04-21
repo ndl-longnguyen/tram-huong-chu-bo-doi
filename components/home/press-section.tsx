@@ -22,12 +22,15 @@ export function PressSection() {
         {/* Press Logos */}
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {pressLogos.map((logo, index) => (
-            <div
+            <a
               key={index}
-              className={`bg-gradient-to-r ${logo.color} text-white px-6 py-3 rounded-xl font-bold text-sm md:text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
+              href={logo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-gradient-to-r ${logo.color} text-white px-6 py-3 rounded-xl font-bold text-sm md:text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer block`}
             >
               {logo.name}
-            </div>
+            </a>
           ))}
         </div>
 

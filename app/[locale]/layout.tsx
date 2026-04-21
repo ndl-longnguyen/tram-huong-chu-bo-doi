@@ -102,7 +102,7 @@ export const metadata: Metadata = {
   category: 'ecommerce',
   icons: {
     icon: '/favicon.ico',
-    apple: '/apple-icon.png',
+    apple: '/apple-touch-icon.png',
   },
 }
 
