@@ -2,7 +2,21 @@ import type { MetadataRoute } from 'next'
 
 const BASE_URL = 'https://tramhuongchubodoi.com'
 const LOCALES = ['vi', 'en', 'zh']
-const PAGES = ['', '/trang-suc', '/gioi-thieu', '/lien-he', '/blog', '/nhang-tram', '/vong-tay', '/my-nghe', '/qua-tang']
+const PAGES = [
+  '', 
+  '/trang-suc', 
+  '/gioi-thieu', 
+  '/lien-he', 
+  '/blog', 
+  '/nhang-tram', 
+  '/vong-tay', 
+  '/my-nghe', 
+  '/qua-tang',
+  '/chinh-sach-dieu-khoan',
+  '/chinh-sach-bao-mat',
+  '/chinh-sach-van-chuyen',
+  '/chinh-sach-bao-hanh'
+]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []

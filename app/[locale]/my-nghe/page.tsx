@@ -58,11 +58,12 @@ export default function ArtworksPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+        <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
           
           <div className="max-w-7xl mx-auto px-4 relative z-10">
+            {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
               <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
                 {content.home[locale]}
@@ -71,22 +72,23 @@ export default function ArtworksPage() {
               <span className="text-foreground font-medium">{content.breadcrumb[locale]}</span>
             </div>
 
+
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
                 {content.artCategory[locale]}
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
                 {content.title1[locale]}
                 <span className="block text-primary mt-2">{content.title2[locale]}</span>
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
                 {content.description[locale]}
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-card border-y border-border">
+        <section className="py-20 bg-card border-y border-border">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {categories.map((category, index) => (
@@ -103,11 +105,11 @@ export default function ArtworksPage() {
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">{content.featuredTitle[locale]}</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">{content.featuredDesc[locale]}</p>
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 uppercase tracking-tight">{content.featuredTitle[locale]}</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">{content.featuredDesc[locale]}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -118,18 +120,18 @@ export default function ArtworksPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-b from-muted/30 to-background">
+        <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative order-2 lg:order-1">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
                 <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Craftsmanship" className="relative w-full h-[400px] object-cover rounded-3xl" />
               </div>
               <div className="order-1 lg:order-2">
-                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
                   {content.craftsmanship[locale]}
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-8 uppercase tracking-tight">
                   {content.craftTitle1[locale]}
                   <span className="block text-primary mt-2">{content.craftTitle2[locale]}</span>
                 </h2>

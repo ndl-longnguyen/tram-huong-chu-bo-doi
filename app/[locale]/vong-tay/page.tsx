@@ -10,25 +10,25 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const braceletTypes = [
-  { 
-    icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80", 
-    label: { vi: "Vòng Tay 108 Hạt", en: "108 Beads Bracelet", zh: "108颗珠子手链" }, 
-    count: 45 
+  {
+    icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80",
+    label: { vi: "Vòng Tay 108 Hạt", en: "108 Beads Bracelet", zh: "108颗珠子手链" },
+    count: 45
   },
-  { 
-    icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80", 
-    label: { vi: "Vòng Tay Phong Thủy", en: "Feng Shui Bracelet", zh: "风水手链" }, 
-    count: 38 
+  {
+    icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80",
+    label: { vi: "Vòng Tay Phong Thủy", en: "Feng Shui Bracelet", zh: "风水手链" },
+    count: 38
   },
-  { 
-    icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80", 
-    label: { vi: "Vòng Tay Bọc Vàng", en: "Gold-wrapped Bracelet", zh: "包金手链" }, 
-    count: 28 
+  {
+    icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80",
+    label: { vi: "Vòng Tay Bọc Vàng", en: "Gold-wrapped Bracelet", zh: "包金手链" },
+    count: 28
   },
-  { 
-    icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80", 
-    label: { vi: "Vòng Tay Đơn Giản", en: "Simple Bracelet", zh: "简约手链" }, 
-    count: 52 
+  {
+    icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80",
+    label: { vi: "Vòng Tay Đơn Giản", en: "Simple Bracelet", zh: "简约手链" },
+    count: 52
   },
 ]
 
@@ -53,11 +53,12 @@ export default function BraceletPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+        <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
+            {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
               <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
                 {content.home[locale]}
@@ -67,21 +68,21 @@ export default function BraceletPage() {
             </div>
 
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
                 {content.collection[locale]}
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
                 {content.title1[locale]}
                 <span className="block text-primary mt-2">{content.title2[locale]}</span>
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
                 {content.description[locale]}
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-card border-y border-border">
+        <section className="py-20 bg-card border-y border-border">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {braceletTypes.map((type, index) => (

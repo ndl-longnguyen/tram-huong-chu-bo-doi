@@ -112,23 +112,20 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Breadcrumb */}
-        <div className="bg-muted/50 py-4">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center gap-2 text-sm">
+        {/* Hero Section */}
+        <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+          
+          <div className="max-w-7xl mx-auto px-4 relative z-10">
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 text-sm mb-8">
               <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
                 {content.home[locale]}
               </Link>
               <ChevronRight className="w-4 h-4 text-muted-foreground" />
               <span className="text-foreground font-medium">{content.breadcrumb[locale]}</span>
             </div>
-          </div>
-        </div>
 
-        {/* Hero Section */}
-        <section className="relative py-16 lg:py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-          <div className="max-w-7xl mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
                 {content.subtitle[locale]}

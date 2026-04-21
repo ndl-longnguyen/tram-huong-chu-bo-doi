@@ -9,6 +9,7 @@ export const localeNames: Record<Locale, string> = {
 export const translations: Record<Locale, Record<string, string>> = {
   vi: {
     // Navigation
+    "nav.home": "Trang Chủ",
     "nav.about": "GIỚI THIỆU",
     "nav.jewelry": "TRANG SỨC",
     "nav.bracelet": "VÒNG TAY",
@@ -173,7 +174,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "why.subtitle": "TẠI SAO CHỌN CHÚNG TÔI",
     "why.title": "Lý Do Nên Chọn Trầm Hương Chú Bộ Đội",
     "why.reason1.title": "Giao hàng tốc",
-    "why.reason1.desc": "Nội thành HCM - HN trong 2h",
+    "why.reason1.desc": "Nội thành Đà Nẵng trong 2h",
     "why.reason2.title": "Bảo hành hậu mãi",
     "why.reason2.desc": "1 đổi 1 trong 30 ngày",
     "why.reason3.title": "100% Tự Nhiên",
@@ -217,9 +218,17 @@ export const translations: Record<Locale, Record<string, string>> = {
     "contact.sending": "Đang gửi...",
     "contact.send": "Gửi tin nhắn",
     "contact.thankYou": "Cảm ơn bạn đã gửi yêu cầu. Chúng tôi sẽ liên hệ lại sớm nhất!",
+
+    // Policies
+    "policy.lastUpdated": "Ngày cập nhật cuối: 21/04/2026. Mọi thắc mắc vui lòng liên hệ hotline:",
+    "policy.terms.content": "<p>Chào mừng bạn đến với Trầm Hương Chú Bộ Đội. Bằng việc truy cập và sử dụng website này, bạn đồng ý tuân thủ các điều khoản dịch vụ dưới đây.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Quy định chung</h3><p>Các điều khoản này áp dụng cho mọi giao dịch mua bán trên website. Chúng tôi có quyền thay đổi, chỉnh sửa các điều khoản này bất cứ lúc nào mà không cần báo trước.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Quyền và Trách nhiệm</h3><p>Khách hàng có trách nhiệm cung cấp thông tin chính xác khi đặt hàng. Chúng tôi cam kết bảo mật thông tin và cung cấp sản phẩm đúng chất lượng như mô tả.</p>",
+    "policy.privacy.content": "<p>Chúng tôi hiểu rằng quyền riêng tư của bạn là quan trọng. Chính sách này mô tả cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Thu thập thông tin</h3><p>Chúng tôi chỉ thu thập các thông tin cần thiết để xử lý đơn hàng như: Họ tên, số điện thoại, địa chỉ giao hàng và email.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Bảo vệ dữ liệu</h3><p>Mọi thông tin khách hàng được mã hóa và lưu trữ an toàn. Chúng tôi không chia sẻ thông tin cho bất kỳ bên thứ ba nào khi chưa có sự đồng ý.</p>",
+    "policy.shipping.content": "<p>Chúng tôi nỗ lực mang sản phẩm đến tay khách hàng trong thời gian nhanh nhất cùng với chất lượng dịch vụ tốt nhất.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Thời gian giao hàng</h3><ul class='list-disc pl-5 space-y-2'><li>Nội thành Đà Nẵng: Giao hỏa tốc trong vòng 2 giờ.</li><li>Các tỉnh thành khác: Giao hàng chuẩn từ 2 - 4 ngày làm việc.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Phí vận chuyển</h3><p>Miễn phí vận chuyển toàn quốc cho các đơn hàng có giá trị từ 500,000 VNĐ. Với đơn hàng dưới 500,000 VNĐ, phí giao hàng sẽ được tính theo bảng giá của đối tác vận chuyển.</p>",
+    "policy.warranty.content": "<p>Sự hài lòng của khách hàng là ưu tiên hàng đầu. Chúng tôi tự tin ban hành chính sách bảo hành tốt nhất thị trường cho các sản phẩm trầm hương tự nhiên.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Điều kiện bảo hành</h3><ul class='list-disc pl-5 space-y-2'><li>Bảo hành mùi hương trọn đời. Vòng đeo sẽ giữ được hương thơm tự nhiên mãi mãi.</li><li>Hỗ trợ thay dây, đánh bóng hạt miễn phí trong quá trình sử dụng.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Chính sách đổi trả</h3><p>1 đổi 1 trong vòng 30 ngày nếu sản phẩm có lỗi từ nhà sản xuất hoặc khách hàng phát hiện sản phẩm không phải là trầm tự nhiên.</p>",
   },
   en: {
     // Navigation
+    "nav.home": "Home",
     "nav.about": "ABOUT US",
     "nav.jewelry": "JEWELRY",
     "nav.bracelet": "BRACELETS",
@@ -384,7 +393,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "why.subtitle": "WHY CHOOSE US",
     "why.title": "Reasons To Choose Chu Bo Doi Agarwood",
     "why.reason1.title": "Fast Delivery",
-    "why.reason1.desc": "Within 2h in HCM - HN",
+    "why.reason1.desc": "Within 2h in Da Nang",
     "why.reason2.title": "After-sales Warranty",
     "why.reason2.desc": "1-to-1 in 30 days",
     "why.reason3.title": "100% Natural",
@@ -428,9 +437,17 @@ export const translations: Record<Locale, Record<string, string>> = {
     "contact.sending": "Sending...",
     "contact.send": "Send message",
     "contact.thankYou": "Thank you for your request. We will contact you soon!",
+
+    // Policies
+    "policy.lastUpdated": "Last updated: April 21, 2026. For any inquiries, please contact our hotline:",
+    "policy.terms.content": "<p>Welcome to Tram Huong Chu Bo Doi. By accessing and using this website, you agree to comply with the following terms of service.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. General Provisions</h3><p>These terms apply to all transactions on the website. We reserve the right to change or modify these terms at any time without prior notice.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Rights and Responsibilities</h3><p>Customers are responsible for providing correct information when placing orders. We are committed to protecting information and providing products of the exact quality as described.</p>",
+    "policy.privacy.content": "<p>We understand that your privacy is important. This policy describes how we collect, use, and protect your personal information.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Information Collection</h3><p>We only collect information necessary to process orders such as: Full name, phone number, shipping address, and email.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Data Protection</h3><p>All customer information is encrypted and securely stored. We do not share information with any third party without consent.</p>",
+    "policy.shipping.content": "<p>We strive to deliver products to customers in the fastest time with the best service quality.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Delivery Time</h3><ul class='list-disc pl-5 space-y-2'><li>Inner Da Nang: Express delivery within 2 hours.</li><li>Other provinces: Standard delivery from 2 - 4 working days.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Shipping Fee</h3><p>Free nationwide shipping for orders valued from 500,000 VND. For orders under 500,000 VND, shipping fee will be calculated according to our shipping partner's pricing.</p>",
+    "policy.warranty.content": "<p>Customer satisfaction is our top priority. We are confident in issuing the best warranty policy in the market for natural agarwood products.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Warranty Conditions</h3><ul class='list-disc pl-5 space-y-2'><li>Lifetime scent warranty. The bracelet will retain its natural aroma forever.</li><li>Free string replacement and bead polishing during use.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Return Policy</h3><p>1-to-1 exchange within 30 days if the product has a manufacturer defect or the customer discovers the product is not natural agarwood.</p>",
   },
   zh: {
     // Navigation
+    "nav.home": "首页",
     "nav.about": "关于我们",
     "nav.jewelry": "珠宝首饰",
     "nav.bracelet": "手链",
@@ -594,7 +611,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "why.subtitle": "为什么选择我们",
     "why.title": "选择朱伯队沉香的理由",
     "why.reason1.title": "极速配送",
-    "why.reason1.desc": "HCM - HN 市内2小时送达",
+    "why.reason1.desc": "岘港市内2小时送达",
     "why.reason2.title": "售后保修",
     "why.reason2.desc": "30天内1对1更换",
     "why.reason3.title": "100% 天然",
@@ -638,5 +655,12 @@ export const translations: Record<Locale, Record<string, string>> = {
     "contact.sending": "发送中...",
     "contact.send": "发送消息",
     "contact.thankYou": "感谢您的请求。我们将尽快与您联系！",
+
+    // Policies
+    "policy.lastUpdated": "最后更新：2026年4月21日。如有任何疑问，请联系热线：",
+    "policy.terms.content": "<p>欢迎来到朱伯队沉香。通过访问和使用本网站，您同意遵守以下服务条款。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 一般规定</h3><p>这些条款适用于网站上的所有交易。我们保留随时更改或修改这些条款的权利，恕不另行通知。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 权利与责任</h3><p>客户有责任在下订单时提供正确的信息。我们致力于保护信息并提供与描述完全一致的高质量产品。</p>",
+    "policy.privacy.content": "<p>我们理解您的隐私很重要。本政策说明了我们如何收集、使用和保护您的个人信息。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 信息收集</h3><p>我们仅收集处理订单所需的信息，例如：姓名、电话号码、送货地址和电子邮箱。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 数据保护</h3><p>所有客户信息都经过加密并安全存储。未经同意，我们不会与任何第三方分享信息。</p>",
+    "policy.shipping.content": "<p>我们努力以最快的时间和最优质的服务将产品送达客户。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 送货时间</h3><ul class='list-disc pl-5 space-y-2'><li>岘港市内：2小时内极速送达。</li><li>其他省份：标准送货时间为2 - 4个工作日。</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 运费</h3><p>订单金额满50万越南盾，全国包邮。订单金额低于50万越南盾，运费将根据我们合作快递公司的价格计算。</p>",
+    "policy.warranty.content": "<p>客户满意是我们的首要任务。我们有信心为天然沉香产品提供市场上最好的保修政策。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 保修条件</h3><ul class='list-disc pl-5 space-y-2'><li>香味终身保修。手链将永远保持其天然香气。</li><li>使用过程中免费提供换线和珠子抛光服务。</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 退换货政策</h3><p>如果产品存在制造商缺陷或客户发现产品不是天然沉香，可在30天内1对1更换。</p>",
   },
 }

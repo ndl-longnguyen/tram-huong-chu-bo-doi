@@ -54,31 +54,29 @@ export function AboutPageClient() {
 
   return (
     <>
-      {/* Breadcrumb */}
-      <div className="bg-muted/50 py-4">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Hero */}
+      <section className="relative pb-20 lg:pb-32 pt-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+        
+        {/* Breadcrumb */}
+        <div className="max-w-7xl mx-auto px-4 relative z-10 mb-8">
           <div className="flex items-center gap-2 text-sm">
             <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary">
-              {t("nav.contact") === "LIÊN HỆ" ? "Trang chủ" : l === "zh" ? "首页" : "Home"}
+              {t("nav.home") || (l === "zh" ? "首页" : "Trang chủ")}
             </Link>
             <ChevronRight className="w-4 h-4 text-muted-foreground" />
             <span className="text-foreground font-medium">{t("about.breadcrumb")}</span>
           </div>
         </div>
-      </div>
-
-      {/* Hero */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider uppercase">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
               {t("about.brandStory")}
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 uppercase">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-foreground mb-8 uppercase tracking-tight">
               {l === "zh" ? "沉香" : l === "en" ? "Agarwood" : "Trầm Hương"}
               <span className="block text-primary mt-2">{l === "zh" ? "朱伯队" : l === "en" ? "Chu Bo Doi" : "Chú Bộ Đội"}</span>
             </h1>
@@ -94,18 +92,18 @@ export function AboutPageClient() {
 
             <div className="flex flex-wrap items-center justify-center gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl font-serif font-bold text-primary">15+</div>
-                <p className="text-sm text-muted-foreground mt-1">{t("about.yearsExperience")}</p>
+                <div className="text-4xl md:text-5xl font-serif font-bold text-primary">15+</div>
+                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.yearsExperience")}</p>
               </div>
               <div className="w-px h-12 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-4xl font-serif font-bold text-primary">10,000+</div>
-                <p className="text-sm text-muted-foreground mt-1">{t("about.customers")}</p>
+                <div className="text-4xl md:text-5xl font-serif font-bold text-primary">10,000+</div>
+                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.customers")}</p>
               </div>
               <div className="w-px h-12 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-4xl font-serif font-bold text-primary">100%</div>
-                <p className="text-sm text-muted-foreground mt-1">{t("about.natural")}</p>
+                <div className="text-4xl md:text-5xl font-serif font-bold text-primary">100%</div>
+                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.natural")}</p>
               </div>
             </div>
           </div>
@@ -113,13 +111,13 @@ export function AboutPageClient() {
       </section>
 
       {/* Values - Tinh Tin Tam */}
-      <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-secondary/30 to-background">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 tracking-widest uppercase">
               {t("about.philosophy")}
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground uppercase">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-tight">
               {t("about.philosophyTitle")}
             </h2>
           </div>
@@ -152,11 +150,11 @@ export function AboutPageClient() {
       {/* Timeline */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 tracking-widest uppercase">
               {t("about.journey")}
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground uppercase">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-tight">
               {t("about.journeyTitle")}
             </h2>
           </div>
@@ -185,14 +183,14 @@ export function AboutPageClient() {
       </section>
 
       {/* Commitment */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 lg:py-28 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 tracking-widest uppercase">
                 {t("about.commitment")}
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6 uppercase">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-8 uppercase tracking-tight">
                 {t("about.commitmentTitle")}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">

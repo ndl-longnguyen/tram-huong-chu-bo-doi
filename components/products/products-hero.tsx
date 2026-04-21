@@ -31,7 +31,7 @@ export function ProductsHero() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+      <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
         
@@ -46,14 +46,14 @@ export function ProductsHero() {
           </div>
 
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider uppercase font-bold text-xs">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
               {content.collection[locale as keyof typeof content.collection]}
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6 uppercase">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-foreground mb-6 uppercase tracking-tight">
               {content.title1[locale as keyof typeof content.title1]}
               <span className="block text-primary mt-2">{content.title2[locale as keyof typeof content.title2]}</span>
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
               {content.description[locale as keyof typeof content.description]}
             </p>
           </div>
