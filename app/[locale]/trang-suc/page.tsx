@@ -67,7 +67,7 @@ export default async function ProductsPage({ params }: PageProps) {
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang chủ', item: `https://tramhuongchubodoi.com/${locale}` },
+        { '@type': 'ListItem', position: 1, name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang Chủ', item: `https://tramhuongchubodoi.com/${locale}` },
         { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Jewelry' : locale === 'zh' ? '珠宝' : 'Trang Sức', item: `https://tramhuongchubodoi.com/${locale}/trang-suc` },
       ],
     },

@@ -11,22 +11,22 @@ import { useLanguage } from "@/lib/i18n/language-context"
 
 const braceletTypes = [
   {
-    icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80",
+    icon: "/products/p1.jpg",
     label: { vi: "Vòng Tay 108 Hạt", en: "108 Beads Bracelet", zh: "108颗珠子手链" },
     count: 45
   },
   {
-    icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80",
+    icon: "/products/p2.jpg",
     label: { vi: "Vòng Tay Phong Thủy", en: "Feng Shui Bracelet", zh: "风水手链" },
     count: 38
   },
   {
-    icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80",
+    icon: "/products/p3.jpg",
     label: { vi: "Vòng Tay Bọc Vàng", en: "Gold-wrapped Bracelet", zh: "包金手链" },
     count: 28
   },
   {
-    icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80",
+    icon: "/products/p4.jpg",
     label: { vi: "Vòng Tay Đơn Giản", en: "Simple Bracelet", zh: "简约手链" },
     count: 52
   },
@@ -36,7 +36,7 @@ export default function BraceletPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    home: { vi: "Trang Chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Vòng Tay Trầm Hương", en: "Agarwood Bracelets", zh: "沉香手链" },
     collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
     title1: { vi: "Vòng Tay Trầm Hương", en: "Agarwood Bracelets", zh: "沉香手链" },

@@ -13,7 +13,7 @@ const mainStores = [
     address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
     hours: { vi: "8:00 - 22:00 (Thứ 2 - Chủ nhật)", en: "8:00 - 22:00 (Mon - Sun)", zh: "8:00 - 22:00 (周一至周日)" },
     phone: "0765.942.942",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    image: "/assets/show-room.jpg",
   },
 ]
 
@@ -29,7 +29,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    home: { vi: "Trang Chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Liên hệ", en: "Contact", zh: "联系我们" },
     subtitle: { vi: "LIÊN HỆ VỚI CHÚNG TÔI", en: "CONTACT US", zh: "联系我们" },
     title1: { vi: "Chúng Tôi Luôn Sẵn Sàng", en: "We Are Always Ready", zh: "我们随时准备" },
@@ -113,9 +113,10 @@ export default function ContactPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-          
+        <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
@@ -127,14 +128,14 @@ export default function ContactPage() {
             </div>
 
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
                 {content.subtitle[locale]}
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
                 {content.title1[locale]}
                 <span className="block text-primary mt-2">{content.title2[locale]}</span>
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
                 {content.description[locale]}
               </p>
             </div>
@@ -232,7 +233,7 @@ export default function ContactPage() {
                 <div className="relative hidden lg:block">
                   <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl" />
                   <img
-                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"
+                    src="/assets/show-room.jpg"
                     alt="Tram huong"
                     className="relative w-full h-64 object-cover rounded-2xl"
                   />

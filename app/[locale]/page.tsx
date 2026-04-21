@@ -74,7 +74,7 @@ export default async function HomePage({ params }: PageProps) {
       {
         '@type': 'ListItem',
         position: 1,
-        name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang chủ',
+        name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang Chủ',
         item: `https://tramhuongchubodoi.com/${locale}`,
       },
     ],

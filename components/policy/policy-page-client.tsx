@@ -43,7 +43,7 @@ export function PolicyPageClient({ type }: PolicyPageClientProps) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <a href="/" className="hover:text-primary transition-colors">
-              {t("nav.home") || "Trang chủ"}
+              {t("nav.home") || "Trang Chủ"}
             </a>
             <ChevronRight className="w-4 h-4" />
             <span className="text-foreground font-medium">{currentConfig.title}</span>
@@ -66,11 +66,11 @@ export function PolicyPageClient({ type }: PolicyPageClientProps) {
 
         {/* Content */}
         <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-sm">
-          <div 
+          <div
             className="space-y-6 text-muted-foreground leading-relaxed"
             dangerouslySetInnerHTML={{ __html: t(`${currentConfig.contentKey}.content`) }}
           />
-          
+
           <div className="mt-12 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
               {t("policy.lastUpdated")} <a href="tel:0765942942" className="text-primary font-bold">0765.942.942</a>

@@ -8,19 +8,19 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const incenseProducts = [
-  { id: "1", name: { vi: "Nhang Trầm Hương Cao Cấp", en: "Premium Incense", zh: "高级沉香" }, price: 450000, originalPrice: 550000, image: "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=500&q=80", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
-  { id: "2", name: { vi: "Nụ Trầm Hương Thiên Nhiên", en: "Natural Incense Cones", zh: "天然沉香塔" }, price: 380000, originalPrice: 450000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Mới", en: "New", zh: "新品" } },
-  { id: "3", name: { vi: "Nhang Vòng Trầm Hương", en: "Coil Incense", zh: "盘香" }, price: 520000, originalPrice: 650000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80" },
-  { id: "4", name: { vi: "Nhang Trầm Hương Đặc Biệt", en: "Special Incense", zh: "特级沉香" }, price: 780000, originalPrice: 900000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
-  { id: "5", name: { vi: "Nụ Trầm Mini", en: "Mini Cones", zh: "迷你香塔" }, price: 280000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
-  { id: "6", name: { vi: "Nhang Trầm Gift Set", en: "Gift Set", zh: "礼盒装" }, price: 1200000, originalPrice: 1500000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Quà tặng", en: "Gift", zh: "礼品" } },
+  { id: "1", name: { vi: "Nhang Trầm Hương Cao Cấp", en: "Premium Incense", zh: "高级沉香" }, price: 450000, originalPrice: 550000, image: "/assets/nhang/1.png", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
+  { id: "2", name: { vi: "Nụ Trầm Hương Thiên Nhiên", en: "Natural Incense Cones", zh: "天然沉香塔" }, price: 380000, originalPrice: 450000, image: "/assets/nhang/2.png", badge: { vi: "Mới", en: "New", zh: "新品" } },
+  { id: "3", name: { vi: "Nhang Vòng Trầm Hương", en: "Coil Incense", zh: "盘香" }, price: 520000, originalPrice: 650000, image: "/assets/nhang/3.png" },
+  { id: "4", name: { vi: "Nhang Trầm Hương Đặc Biệt", en: "Special Incense", zh: "特级沉香" }, price: 780000, originalPrice: 900000, image: "/assets/nhang/1.png", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
+  { id: "5", name: { vi: "Nụ Trầm Mini", en: "Mini Cones", zh: "迷你香塔" }, price: 280000, image: "/assets/nhang/2.png" },
+  { id: "6", name: { vi: "Nhang Trầm Gift Set", en: "Gift Set", zh: "礼盒装" }, price: 1200000, originalPrice: 1500000, image: "/assets/nhang/3.png", badge: { vi: "Quà tặng", en: "Gift", zh: "礼品" } },
 ]
 
 export default function IncensePage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    home: { vi: "Trang Chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Nhang Trầm Hương", en: "Agarwood Incense", zh: "沉香" },
     product: { vi: "SẢN PHẨM", en: "PRODUCTS", zh: "产品" },
     title1: { vi: "Nhang Trầm Hương", en: "Agarwood Incense", zh: "沉香" },
@@ -64,7 +64,7 @@ export default function IncensePage() {
         <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
@@ -120,11 +120,14 @@ export default function IncensePage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {incenseProducts.map((product) => (
-                <ProductCard key={product.id} product={{
-                  ...product,
-                  name: product.name[locale],
-                  badge: product.badge?.[locale]
-                }} />
+                <ProductCard
+                  key={product.id}
+                  {...product}
+                  name={product.name[locale]}
+                  badge={product.badge?.[locale]}
+                  originalPrice={product.originalPrice || product.price}
+                  salePrice={product.originalPrice ? product.price : undefined}
+                />
               ))}
             </div>
           </div>

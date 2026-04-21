@@ -8,19 +8,19 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const giftProducts = [
-  { id: "1", name: { vi: "Set Quà Tặng VIP", en: "VIP Gift Set", zh: "VIP礼品套装" }, price: 5500000, originalPrice: 6500000, image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=80", badge: { vi: "Best Seller", en: "Best Seller", zh: "畅销" } },
-  { id: "2", name: { vi: "Hộp Quà Nhang Trầm Premium", en: "Premium Incense Gift Box", zh: "高级香礼盒" }, price: 2800000, originalPrice: 3500000, image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=500&q=80", badge: { vi: "Mới", en: "New", zh: "新品" } },
-  { id: "3", name: { vi: "Set Vòng Tay Cặp Đôi", en: "Couple Bracelet Set", zh: "情侣手链套装" }, price: 3800000, image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" },
-  { id: "4", name: { vi: "Quà Tặng Doanh Nghiệp", en: "Corporate Gift", zh: "企业礼品" }, price: 8500000, originalPrice: 10000000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Corporate", en: "Corporate", zh: "企业" } },
-  { id: "5", name: { vi: "Set Quà Tặng Sinh Nhật", en: "Birthday Gift Set", zh: "生日礼品套装" }, price: 1800000, image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=500&q=80" },
-  { id: "6", name: { vi: "Quà Tặng Tết Luxury", en: "Luxury Tet Gift", zh: "豪华春节礼品" }, price: 12000000, originalPrice: 15000000, image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=500&q=80", badge: { vi: "Limited", en: "Limited", zh: "限量" } },
+  { id: "1", name: { vi: "Set Quà Tặng VIP", en: "VIP Gift Set", zh: "VIP礼品套装" }, price: 5500000, originalPrice: 6500000, image: "/products/p1.jpg", badge: { vi: "Best Seller", en: "Best Seller", zh: "畅销" } },
+  { id: "2", name: { vi: "Hộp Quà Nhang Trầm Premium", en: "Premium Incense Gift Box", zh: "高级香礼盒" }, price: 2800000, originalPrice: 3500000, image: "/products/p2.jpg", badge: { vi: "Mới", en: "New", zh: "新品" } },
+  { id: "3", name: { vi: "Set Vòng Tay Cặp Đôi", en: "Couple Bracelet Set", zh: "情侣手链套装" }, price: 3800000, image: "/products/p3.jpg" },
+  { id: "4", name: { vi: "Quà Tặng Doanh Nghiệp", en: "Corporate Gift", zh: "企业礼品" }, price: 8500000, originalPrice: 10000000, image: "/products/p4.jpg", badge: { vi: "Corporate", en: "Corporate", zh: "企业" } },
+  { id: "5", name: { vi: "Set Quà Tặng Sinh Nhật", en: "Birthday Gift Set", zh: "生日礼品套装" }, price: 1800000, image: "/products/p5.jpg" },
+  { id: "6", name: { vi: "Quà Tặng Tết Luxury", en: "Luxury Tet Gift", zh: "豪华春节礼品" }, price: 12000000, originalPrice: 15000000, image: "/products/p6.jpg", badge: { vi: "Limited", en: "Limited", zh: "限量" } },
 ]
 
 export default function GiftPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    home: { vi: "Trang Chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Quà Tặng Trầm Hương", en: "Agarwood Gifts", zh: "沉香礼品" },
     giftCategory: { vi: "QUÀ TẶNG Ý NGHĨA", en: "MEANINGFUL GIFTS", zh: "有意义的礼物" },
     title1: { vi: "Quà Tặng Trầm Hương", en: "Agarwood Gifts", zh: "沉香礼品" },
@@ -65,7 +65,7 @@ export default function GiftPage() {
         <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
@@ -117,7 +117,14 @@ export default function GiftPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {giftProducts.map((product) => (
-                <ProductCard key={product.id} product={{ ...product, name: product.name[locale], badge: product.badge?.[locale] }} />
+                <ProductCard
+                  key={product.id}
+                  {...product}
+                  name={product.name[locale]}
+                  badge={product.badge?.[locale]}
+                  originalPrice={product.originalPrice || product.price}
+                  salePrice={product.originalPrice ? product.price : undefined}
+                />
               ))}
             </div>
           </div>
@@ -134,9 +141,9 @@ export default function GiftPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: content.service1Title[locale], desc: content.service1Desc[locale], image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&q=80" },
-                { title: content.service2Title[locale], desc: content.service2Desc[locale], image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400&q=80" },
-                { title: content.service3Title[locale], desc: content.service3Desc[locale], image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&q=80" },
+                { title: content.service1Title[locale], desc: content.service1Desc[locale], image: "/products/p1.jpg" },
+                { title: content.service2Title[locale], desc: content.service2Desc[locale], image: "/products/p2.jpg" },
+                { title: content.service3Title[locale], desc: content.service3Desc[locale], image: "/products/p3.jpg" },
               ].map((service, index) => (
                 <div key={index} className="group bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-xl transition-all">
                   <div className="relative h-48 overflow-hidden">

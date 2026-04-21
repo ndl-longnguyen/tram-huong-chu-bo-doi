@@ -51,7 +51,7 @@ export function IntroSection() {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="group bg-card p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
             >
@@ -71,7 +71,7 @@ export function IntroSection() {
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=800&q=80"
+                src="/products/p1.jpg"
                 alt={t("home.intro.bracelet")}
                 className="w-full h-[450px] lg:h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -93,7 +93,7 @@ export function IntroSection() {
             <div className="space-y-4">
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80"
+                  src="/products/p2.jpg"
                   alt="Vòng tay trầm hương"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -101,7 +101,7 @@ export function IntroSection() {
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80"
+                  src="/products/p3.jpg"
                   alt="Sản phẩm trầm hương"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -111,7 +111,7 @@ export function IntroSection() {
             <div className="space-y-4 pt-10">
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80"
+                  src="/products/p4.jpg"
                   alt="Nghệ nhân chế tác"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -119,7 +119,7 @@ export function IntroSection() {
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"
+                  src="/products/p5.jpg"
                   alt="Trầm hương cao cấp"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />

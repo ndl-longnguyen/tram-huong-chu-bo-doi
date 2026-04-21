@@ -5,17 +5,17 @@ import { ChevronRight } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const categories = [
-  { icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80", label: { vi: "Vòng Tay", en: "Bracelets", zh: "手链" }, count: 120 },
-  { icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80", label: { vi: "Nhẫn", en: "Rings", zh: "戒指" }, count: 45 },
-  { icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80", label: { vi: "Chuỗi Cổ", en: "Necklaces", zh: "项链" }, count: 38 },
-  { icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80", label: { vi: "Mặt Dây Chuyền", en: "Pendants", zh: "吊坠" }, count: 56 },
+  { icon: "/products/p1.jpg", label: { vi: "Vòng Tay", en: "Bracelets", zh: "手链" }, count: 120 },
+  { icon: "/products/p2.jpg", label: { vi: "Nhẫn", en: "Rings", zh: "戒指" }, count: 45 },
+  { icon: "/products/p3.jpg", label: { vi: "Chuỗi Cổ", en: "Necklaces", zh: "项链" }, count: 38 },
+  { icon: "/products/p4.jpg", label: { vi: "Mặt Dây Chuyền", en: "Pendants", zh: "吊坠" }, count: 56 },
 ]
 
 export function ProductsHero() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    home: { vi: "Trang Chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
     collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
     title1: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
@@ -34,7 +34,7 @@ export function ProductsHero() {
       <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm mb-8">
@@ -49,7 +49,7 @@ export function ProductsHero() {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
               {content.collection[locale as keyof typeof content.collection]}
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-foreground mb-6 uppercase tracking-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
               {content.title1[locale as keyof typeof content.title1]}
               <span className="block text-primary mt-2">{content.title2[locale as keyof typeof content.title2]}</span>
             </h1>

@@ -8,26 +8,26 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const artProducts = [
-  { id: "1", name: { vi: "Tượng Phật Di Lạc", en: "Buddha Statue", zh: "弥勒佛像" }, price: 15000000, originalPrice: 18000000, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=500&q=80", badge: { vi: "Độc đáo", en: "Unique", zh: "独特" } },
-  { id: "2", name: { vi: "Tượng Quan Âm", en: "Guanyin Statue", zh: "观音像" }, price: 12000000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80" },
-  { id: "3", name: { vi: "Lư Đốt Trầm Cao Cấp", en: "Premium Censer", zh: "高级香炉" }, price: 3500000, originalPrice: 4200000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
-  { id: "4", name: { vi: "Hộp Đựng Trang Sức", en: "Jewelry Box", zh: "首饰盒" }, price: 2800000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80" },
-  { id: "5", name: { vi: "Bút Ký Trầm Hương", en: "Agarwood Pen", zh: "沉香钢笔" }, price: 4500000, originalPrice: 5500000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
-  { id: "6", name: { vi: "Cây Trầm Phong Thủy", en: "Feng Shui Tree", zh: "风水树" }, price: 8500000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
+  { id: "1", name: { vi: "Tượng Phật Di Lạc", en: "Buddha Statue", zh: "弥勒佛像" }, salePrice: 15000000, originalPrice: 18000000, rating: 5, image: "/assets/tuong-phat/3.jpg", badge: { vi: "Độc đáo", en: "Unique", zh: "独特" } },
+  { id: "2", name: { vi: "Tượng Quan Âm", en: "Guanyin Statue", zh: "观音像" }, originalPrice: 12000000, rating: 5, image: "/assets/tuong-phat/2.jpg" },
+  { id: "3", name: { vi: "Lư Đốt Trầm Cao Cấp", en: "Premium Censer", zh: "高级香炉" }, salePrice: 3500000, originalPrice: 4200000, rating: 5, image: "/assets/tuong-phat/1.jpg", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
+  { id: "4", name: { vi: "Hộp Đựng Trang Sức", en: "Jewelry Box", zh: "首饰盒" }, originalPrice: 2800000, rating: 5, image: "/assets/trang-suc/1.jpg" },
+  { id: "5", name: { vi: "Bút Ký Trầm Hương", en: "Agarwood Pen", zh: "沉香钢笔" }, salePrice: 4500000, originalPrice: 5500000, rating: 5, image: "/assets/trang-suc/2.jpg", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
+  { id: "6", name: { vi: "Cây Trầm Phong Thủy", en: "Feng Shui Tree", zh: "风水树" }, originalPrice: 8500000, rating: 5, image: "/assets/phong-thuy/1.jpg" },
 ]
 
 const categories = [
-  { name: { vi: "Tượng Phật", en: "Buddha Statues", zh: "佛像" }, count: 25, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=300&q=80" },
-  { name: { vi: "Lư Đốt Trầm", en: "Censers", zh: "香炉" }, count: 18, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=300&q=80" },
-  { name: { vi: "Vật Phẩm Phong Thủy", en: "Feng Shui Items", zh: "风水物品" }, count: 32, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=300&q=80" },
-  { name: { vi: "Đồ Decor", en: "Decor Items", zh: "装饰品" }, count: 22, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=300&q=80" },
+  { name: { vi: "Tượng Phật", en: "Buddha Statues", zh: "佛像" }, count: 25, image: "/assets/tuong-phat/1.jpg" },
+  { name: { vi: "Lư Đốt Trầm", en: "Censers", zh: "香炉" }, count: 18, image: "/assets/tuong-phat/2.jpg" },
+  { name: { vi: "Vật Phẩm Phong Thủy", en: "Feng Shui Items", zh: "风水物品" }, count: 32, image: "/assets/phong-thuy/1.jpg" },
+  { name: { vi: "Đồ Decor", en: "Decor Items", zh: "装饰品" }, count: 22, image: "/assets/decor/1.jpg" },
 ]
 
 export default function ArtworksPage() {
   const { locale, getLocalizedPath } = useLanguage()
 
   const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
+    home: { vi: "Trang Chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Mỹ Nghệ Trầm Hương", en: "Agarwood Artworks", zh: "沉香工艺品" },
     artCategory: { vi: "MỸ NGHỆ CAO CẤP", en: "PREMIUM ARTWORKS", zh: "高端工艺品" },
     title1: { vi: "Mỹ Nghệ Trầm Hương", en: "Agarwood Artworks", zh: "沉香工艺品" },
@@ -61,7 +61,7 @@ export default function ArtworksPage() {
         <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
@@ -114,7 +114,7 @@ export default function ArtworksPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {artProducts.map((product) => (
-                <ProductCard key={product.id} product={{ ...product, name: product.name[locale], badge: product.badge?.[locale] }} />
+                <ProductCard key={product.id} {...product} name={product.name[locale]} badge={product.badge?.[locale]} />
               ))}
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function ArtworksPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative order-2 lg:order-1">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
-                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Craftsmanship" className="relative w-full h-[400px] object-cover rounded-3xl" />
+                <img src="/assets/decor/1.jpg" alt="Craftsmanship" className="relative w-full h-[400px] object-cover rounded-3xl" />
               </div>
               <div className="order-1 lg:order-2">
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">

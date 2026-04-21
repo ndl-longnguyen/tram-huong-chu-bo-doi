@@ -17,21 +17,21 @@ const values = [
     title: { vi: "TINH", en: "EXCELLENCE", zh: "精" },
     subtitle: { vi: "Tinh hoa nghề truyền thống", en: "Traditional craftsmanship excellence", zh: "传统工艺精华" },
     description: { vi: "Kế thừa và phát huy tinh hoa nghề chế tác trầm hương truyền thống hàng trăm năm của Việt Nam.", en: "Inheriting and promoting the traditional Vietnamese agarwood craftsmanship of hundreds of years.", zh: "继承和发扬越南数百年传统沉香工艺精华。" },
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80",
+    image: "/assets/about/1.jpg",
     icon: Leaf,
   },
   {
     title: { vi: "TÍN", en: "TRUST", zh: "信" },
     subtitle: { vi: "Uy tín và chất lượng", en: "Trust and quality", zh: "信誉与品质" },
     description: { vi: "Cam kết 100% sản phẩm trầm hương tự nhiên, không pha trộn, không hóa chất.", en: "Committed to 100% natural agarwood products, no mixing, no chemicals.", zh: "承诺100%天然沉香产品，无掺杂，无化学品。" },
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80",
+    image: "/assets/about/2.jpg",
     icon: Shield,
   },
   {
     title: { vi: "TÂM", en: "DEDICATION", zh: "心" },
     subtitle: { vi: "Tâm huyết với nghề", en: "Dedication to the craft", zh: "对工艺的专注" },
     description: { vi: "Mỗi sản phẩm đều được chế tác với tâm huyết, sự tỉ mỉ và đam mê của nghệ nhân.", en: "Each product is crafted with dedication, meticulousness and passion of artisans.", zh: "每件产品都凝聚着工匠的心血、细致和热情。" },
-    image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80",
+    image: "/assets/about/3.jpg",
     icon: Users,
   },
 ]
@@ -42,7 +42,7 @@ const stores = [
     address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
     phone: "0765.942.942",
     hours: "8:00 - 22:00",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
+    image: "/assets/show-room.jpg",
   },
 ]
 
@@ -55,14 +55,14 @@ export function AboutPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pb-20 lg:pb-32 pt-6 overflow-hidden">
+      <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-        
+
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-4 relative z-10 mb-8">
           <div className="flex items-center gap-2 text-sm">
             <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary">
-              {t("nav.home") || (l === "zh" ? "首页" : "Trang chủ")}
+              {t("nav.home") || (l === "zh" ? "首页" : "Trang Chủ")}
             </Link>
             <ChevronRight className="w-4 h-4 text-muted-foreground" />
             <span className="text-foreground font-medium">{t("about.breadcrumb")}</span>
@@ -76,7 +76,7 @@ export function AboutPageClient() {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
               {t("about.brandStory")}
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-foreground mb-8 uppercase tracking-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 uppercase tracking-tight">
               {l === "zh" ? "沉香" : l === "en" ? "Agarwood" : "Trầm Hương"}
               <span className="block text-primary mt-2">{l === "zh" ? "朱伯队" : l === "en" ? "Chu Bo Doi" : "Chú Bộ Đội"}</span>
             </h1>
@@ -215,7 +215,7 @@ export function AboutPageClient() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
               <img
-                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80"
+                src="/assets/about/5.jpg"
                 alt="Tram huong cao cap"
                 className="relative w-full h-[500px] object-cover rounded-3xl"
               />

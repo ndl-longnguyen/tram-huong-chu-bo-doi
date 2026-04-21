@@ -1,0 +1,255 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "category": "trang-suc",
+      "slug": "vong-tram-boc-tay08-hat-vip",
+      "images": [
+        "/products/p1.jpg",
+        "/products/p1.jpg",
+        "/products/p1.jpg"
+      ],
+      "name": {
+        "vi": "Vòng Trầm 108 hạt Philip VIP - Chế tác thủ công",
+        "en": "Premium 108 Beads Philip VIP Agarwood - Handcrafted",
+        "zh": "高端108颗菲律宾VIP沉香 - 手工打造"
+      },
+      "price": 22000000,
+      "originalPrice": 25500000,
+      "rating": 5,
+      "badge": {
+        "vi": "TUYỆT PHẨM",
+        "en": "MASTERPIECE",
+        "zh": "杰作"
+      },
+      "badgeType": "best",
+      "shortDescription": {
+        "vi": "Giao thoa giữa nghệ thuật chế tác thủ công và vẻ đẹp tâm linh của Trầm Hương tự nhiên.",
+        "en": "The intersection of handcrafted art and the spiritual beauty of natural Agarwood.",
+        "zh": "手工艺术与天然沉香灵性之美的交汇。"
+      },
+      "description": {
+        "vi": "Sản phẩm đỉnh cao được tuyển chọn từ những khối trầm hương Philip cổ thụ với tuổi đời trên 50 năm, chứa đựng hàm lượng tinh dầu cực lớn, tạo nên độ bóng tự nhiên và hương thơm vĩnh cửu. Mỗi chuỗi gồm 108 hạt trầm, đại diện cho 108 lời cầu chúc bình an, giúp chủ nhân xua tan phiền muộn, khai thông trí tuệ và thu hút tài lộc mạnh mẽ. Từng hạt trầm được nghệ nhân lành nghề mài dũa thủ công tỉ mỉ, giữ trọn vẹn vân gỗ nguyên bản và mùi hương thanh khiết, sang trọng. Đây không chỉ là một món trang sức đẳng cấp mà còn là bảo vật hộ mệnh, khẳng định vị thế và gu thẩm mỹ tinh tế của người sở hữu.",
+        "en": "A masterpiece selected from ancient Philip agarwood trees over 50 years old, containing a vast amount of essential oils, creating a natural luster and eternal fragrance. Each string consists of 108 beads, representing 108 blessings of peace, helping the owner dispel worries, open wisdom, and strongly attract wealth. Each bead is meticulously hand-polished by skilled artisans, preserving the original wood grain and pure, luxurious scent. This is not only a high-class jewelry item but also a protective treasure, affirming the status and refined aesthetic taste of the owner.",
+        "zh": "入选拥有50年以上树龄的高级菲律宾老沉香木，含油量极高，呈现出天然的光泽和恒久的香气。每一串由108颗沉香珠组成，代表着108种平安的祝福，帮助主人消解烦恼、开启智慧、强势招财。每一颗珠子都由资深工匠精心手工打磨，完美保留了原始木纹和清纯奢华的香气。这不仅是一件高端珠宝，更是一件护身宝物，彰显主人的地位与精致的审美趣味。"
+      },
+      "specifications": [
+        {
+          "label": {
+            "vi": "Nguồn gốc",
+            "en": "Origin",
+            "zh": "产地"
+          },
+          "value": {
+            "vi": "Trầm Hương Philip tự nhiên (Đảo Mindanao)",
+            "en": "Natural Philip Agarwood (Mindanao Island)",
+            "zh": "菲律宾天然沉香（棉兰老岛）"
+          }
+        },
+        {
+          "label": {
+            "vi": "Tuổi trầm",
+            "en": "Agarwood Age",
+            "zh": "沉香树龄"
+          },
+          "value": {
+            "vi": "Trên 50 năm tích dầu",
+            "en": "Over 50 years of oil buildup",
+            "zh": "50年以上含油"
+          }
+        },
+        {
+          "label": {
+            "vi": "Số hạt",
+            "en": "Beads count",
+            "zh": "珠子数量"
+          },
+          "value": {
+            "vi": "108 hạt chính + hạt hồ lô",
+            "en": "108 main beads + gourd bead",
+            "zh": "108颗主珠 + 葫芦珠"
+          }
+        },
+        {
+          "label": {
+            "vi": "Kích thước",
+            "en": "Diameter",
+            "zh": "直径"
+          },
+          "value": {
+            "vi": "6mm - 8mm (Tùy chọn)",
+            "en": "6mm - 8mm (Optional)",
+            "zh": "6mm - 8mm（可选）"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "category": "vong-tay",
+      "slug": "vong-tram-deo-tay-phong-chau",
+      "images": [
+        "/products/p2.jpg",
+        "/products/p2.jpg",
+        "/products/p2.jpg"
+      ],
+      "name": {
+        "vi": "Vòng Trầm Phổng Châu - Tinh Hoa Đất Trời",
+        "en": "Phong Chau Agarwood - Essence of Heaven & Earth",
+        "zh": "蓬洲沉香 - 天地之精华"
+      },
+      "price": 16900000,
+      "originalPrice": 16900000,
+      "rating": 4,
+      "badge": {
+        "vi": "QUÝ HIẾM",
+        "en": "RARE",
+        "zh": "稀有"
+      },
+      "shortDescription": {
+        "vi": "Món quà tinh túy từ đại ngàn Phổng Châu, mang vẻ đẹp huyền bí và sang trọng.",
+        "en": "An ethereal gift from the deep forests of Phong Chau, with mysterious and luxurious beauty.",
+        "zh": "来自蓬洲深山的纯净之礼，带有神秘而奢华的美感。"
+      },
+      "description": {
+        "vi": "Được khai thác từ vùng lõi rừng Phổng Châu nổi tiếng, nơi có điều kiện địa chất đặc biệt tạo nên những khối trầm có hương thơm ngọt sâu và vân dầu dày đặc. Vòng tay Trầm Phổng Châu được các nghệ nhân tại Chú Bộ Đội chế tác theo hình dạng thô mộc tự nhiên nhưng vẫn giữ được sự tinh tế trong từng đường cắt. Khi đeo trên tay, nhiệt độ cơ thể sẽ giúp hương trầm tỏa ra đều đặn, mang lại cảm giác thư thái, giảm căng thẳng sau một ngày làm việc mệt mỏi. Đây là sự lựa chọn hoàn hảo cho những người yêu thích vẻ đẹp tự nhiên, không phô trương nhưng vô cùng đẳng cấp.",
+        "en": "Harvested from the famous Phong Chau forest core, where unique geological conditions create agarwood blocks with deep sweet scents and dense oil veins. Phong Chau Agarwood bracelets are crafted by artisans at Chu Bo Doi in natural rustic shapes while maintaining sophistication in every cut. When worn on the wrist, body heat helps the agarwood scent diffuse steadily, bringing a sense of relaxation and reducing stress after a tired working day. This is the perfect choice for those who love natural beauty, not ostentatious but extremely classy.",
+        "zh": "采自著名的蓬洲森林核心地带，特有的地质条件赋予了沉香深邃甜美的香气和密集的含油纹理。蓬洲沉香手链由朱伯队的工匠采用天然质朴的造型打造，同时在每一处切割中保持精致感。佩戴在手腕上时，体温会帮助沉香气味稳定散发，带来放松感并减轻劳累一天后的压力。对于喜爱天然之美、低调而极具内涵的人士来说，这是完美的理想选择。"
+      },
+      "specifications": [
+        {
+          "label": {
+            "vi": "Phân loại",
+            "en": "Category",
+            "zh": "分类"
+          },
+          "value": {
+            "vi": "Trầm rừng tự nhiên",
+            "en": "Natural Forest Agarwood",
+            "zh": "天然森林沉香"
+          }
+        },
+        {
+          "label": {
+            "vi": "Đặc điểm",
+            "en": "Features",
+            "zh": "特点"
+          },
+          "value": {
+            "vi": "Mùi thơm ngọt, ấm áp",
+            "en": "Sweet, warm fragrance",
+            "zh": "气味清甜温暖"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "category": "vong-tay",
+      "slug": "vong-tay-tram-den-viet-nam",
+      "images": [
+        "/products/p3.jpg",
+        "/products/p3.jpg",
+        "/products/p3.jpg"
+      ],
+      "name": {
+        "vi": "Vòng Trầm Tốc Đen Việt Nam - Hiện Đại & Đẳng Cấp",
+        "en": "Black Toc Agarwood Vietnam - Modern & Classy",
+        "zh": "越南黑速沉香 - 现代与档次"
+      },
+      "price": 850000,
+      "originalPrice": 980000,
+      "rating": 5,
+      "badge": {
+        "vi": "ƯU ĐÃI",
+        "en": "OFFER",
+        "zh": "优惠"
+      },
+      "badgeType": "sale",
+      "shortDescription": {
+        "vi": "Sự kết hợp giữa phong cách trẻ trung và giá trị truyền thống từ trầm Việt.",
+        "en": "A blend of youthful style and traditional values from Vietnamese agarwood.",
+        "zh": "年轻风格与越南沉香传统价值的融合。"
+      },
+      "description": {
+        "vi": "Được chế tác từ trầm tốc chọn lọc tại các khu rừng miền Trung Việt Nam, sản phẩm nổi bật với tông màu đen sẫm mang lại vẻ mạnh mẽ và hiện đại. Trầm tốc Việt Nam được ưa chuộng nhờ khả năng lưu hương tốt và màu sắc ổn định theo thời gian. Sản phẩm được thiết kế tối giản, phù hợp để phối hợp với nhiều loại trang phục khác nhau, từ công sở đến dạo phố. Đây là món quà ý nghĩa để dành tặng người thân, bạn bè hoặc cho chính bản thân để bắt đầu hành trình khám phá thế giới trầm hương đầy huyền bí.",
+        "en": "Crafted from selected Toc agarwood in the forests of Central Vietnam, the product stands out with a dark black tone that brings a strong and modern look. Vietnamese Toc agarwood is favored for its good scent retention and stable color over time. The product is designed with minimalism, suitable for combining with many types of outfits, from office to street wear. This is a meaningful gift for relatives, friends or yourself to start a journey of discovering the mysterious world of agarwood.",
+        "zh": "由产自越南中部森林的精选速沉香木制成，深黑色调突显了强大而现代的视觉感。越南速沉香因其良好的留香能力和随时间推移而稳定的色泽深受喜爱。产品设计简约，适合搭配从办公室到街头服饰的多种着装风格。是送给亲朋好友或自己开启探索神秘沉香世界之旅的有意义的礼物。"
+      },
+      "specifications": [
+        {
+          "label": {
+            "vi": "Loại gỗ",
+            "en": "Wood type",
+            "zh": "木材种类"
+          },
+          "value": {
+            "vi": "Trầm Tốc Đen tự nhiên",
+            "en": "Natural Black Toc Agarwood",
+            "zh": "天然黑速沉香"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "category": "trang-suc",
+      "slug": "nhan-tram-huong-moc-ngoc",
+      "images": [
+        "/products/p4.jpg",
+        "/products/p4.jpg",
+        "/products/p4.jpg"
+      ],
+      "name": {
+        "vi": "Nhẫn Trầm Mọc Ngọc - Tuyệt Tác Tâm Linh",
+        "en": "Jade Infused Agarwood Ring - Spiritual Masterpiece",
+        "zh": "玉石沉香戒指 - 灵性杰作"
+      },
+      "price": 1250000,
+      "originalPrice": 1250000,
+      "rating": 5,
+      "badge": {
+        "vi": "ĐỘC ĐÁO",
+        "en": "UNIQUE",
+        "zh": "独特"
+      },
+      "badgeType": "new",
+      "shortDescription": {
+        "vi": "Nét tinh túy từ ngọc bích hòa quyện cùng hương trầm thuần khiết.",
+        "en": "The essence of jade blended with the pure scent of agarwood.",
+        "zh": "玉石的精华与沉香的纯净香气交织在一起。"
+      },
+      "description": {
+        "vi": "Kiệt tác nhẫn phong thủy kết hợp giữa hai loại báu vật của thiên nhiên: Trầm Hương và Ngọc Bích. Thân nhẫn được làm từ gỗ trầm hương lâu năm đã qua xử lý bề mặt bóng mượt, mặt nhẫn đính khối ngọc bích tự nhiên được chạm khắc tinh xảo. Trong phong thủy, sự kết hợp này mang lại sự cân bằng âm dương, giúp người đeo luôn giữ được tâm trí sáng suốt, thu hút vượng khí và gặp nhiều may mắn trong cuộc sống. Sản phẩm là món trang sức không thể thiếu cho những dịp quan trọng, thể hiện phong thái tự tin và quý phái.",
+        "en": "A feng shui ring masterpiece that combines two types of nature's treasures: Agarwood and Jade. The ring body is made from aged agarwood with a smooth surface finish, and the ring face is set with finely carved natural jade blocks. In feng shui, this combination brings yinyang balance, helping the wearer always maintain a clear mind, attract prosperity, and have much luck in life. The product is an indispensable piece of jewelry for important occasions, showing a confident and noble aura.",
+        "zh": "一款融合了自然界两类珍宝——沉香与玉石的风水戒指杰作。戒身由经过表面平滑处理的老沉香木制成，戒面镶嵌有精雕细琢的天然玉石。在风水中，这种结合能带来阴阳平衡，帮助佩戴者始终保持头脑清醒，招财进宝，生活顺遂。这款产品是重要场合不可或缺的珠宝装饰，展现出自信而高贵的气质。"
+      },
+      "specifications": [
+        {
+          "label": {
+            "vi": "Chất liệu thân",
+            "en": "Body Material",
+            "zh": "戒身材质"
+          },
+          "value": {
+            "vi": "Trầm hương Việt Nam",
+            "en": "Vietnam Agarwood",
+            "zh": "越南沉香"
+          }
+        },
+        {
+          "label": {
+            "vi": "Loại Ngọc",
+            "en": "Jade Type",
+            "zh": "玉石种类"
+          },
+          "value": {
+            "vi": "Ngọc Bích tự nhiên",
+            "en": "Natural Nephrite Jade",
+            "zh": "天然碧玉"
+          }
+        }
+      ]
+    }
+  ]
+}

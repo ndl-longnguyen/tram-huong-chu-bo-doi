@@ -9,6 +9,7 @@ export function Footer() {
   const { t, getLocalizedPath } = useLanguage()
 
   const collections = [
+    { name: t("nav.jewelry"), href: "/trang-suc" },
     { name: t("nav.bracelet"), href: "/vong-tay" },
     { name: t("nav.gift"), href: "/qua-tang" },
     { name: t("nav.incense"), href: "/nhang-tram" },
@@ -35,8 +36,8 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-xl font-serif text-primary mb-2 uppercase tracking-wide">{t("footer.newsletter")}</h3>
-              <p className="text-gray-400 text-sm">{t("footer.newsletterDesc")}</p>
+              <h3 className="text-xl font-serif text-primary mb-2 uppercase tracking-wide brightness-125">{t("footer.newsletter")}</h3>
+              <p className="text-gray-300 text-sm">{t("footer.newsletterDesc")}</p>
             </div>
             <div className="flex gap-3 w-full md:w-auto min-w-0">
               <input
@@ -63,15 +64,15 @@ export function Footer() {
                 alt="Trầm Hương Chú Bộ Đội"
                 width={200}
                 height={80}
-                className="h-14 w-auto object-contain logo-primary"
+                className="h-14 w-auto object-contain logo-primary brightness-180"
               />
               <div>
-                <h3 className="text-primary font-serif text-lg font-bold tracking-tight uppercase">
+                <h3 className="text-primary brightness-125 font-serif text-lg font-bold tracking-tight uppercase">
                   TRẦM HƯƠNG CHÚ BỘ ĐỘI
                 </h3>
               </div>
             </div>
-            <ul className="space-y-4 text-sm text-gray-300 mb-8">
+            <ul className="space-y-4 text-sm text-gray-200 mb-8">
               <li className="flex items-start gap-3 group">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="group-hover:text-white transition-colors">Tiên Phước, TP. Đà Nẵng</span>
@@ -107,11 +108,13 @@ export function Footer() {
 
           {/* Policies */}
           <div>
-            <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.policies")}</h3>
-            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <h4 className="text-primary brightness-150 font-serif font-bold mb-8 uppercase tracking-[0.2em] text-[14px] leading-tight">
+              {t("footer.policies")}
+            </h4>
+            <ul className="space-y-4 text-[12px] text-gray-200 uppercase tracking-widest font-bold">
               {policies.map((policy) => (
                 <li key={policy.name}>
-                  <Link href={getLocalizedPath(policy.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
+                  <Link href={getLocalizedPath(policy.href)} className="hover:text-primary brightness-125 transition-all flex items-center gap-2 group opacity-80 hover:opacity-100">
                     {policy.name}
                   </Link>
                 </li>
@@ -121,11 +124,13 @@ export function Footer() {
 
           {/* About Links */}
           <div>
-            <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.aboutUs")}</h3>
-            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <h4 className="text-primary brightness-150 font-serif font-bold mb-8 uppercase tracking-[0.2em] text-[14px] leading-tight">
+              {t("footer.aboutUs")}
+            </h4>
+            <ul className="space-y-4 text-[12px] text-gray-200 uppercase tracking-widest font-bold">
               {aboutLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={getLocalizedPath(link.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
+                  <Link href={getLocalizedPath(link.href)} className="hover:text-primary brightness-125 transition-all flex items-center gap-2 group opacity-80 hover:opacity-100">
                     {link.name}
                   </Link>
                 </li>
@@ -135,11 +140,13 @@ export function Footer() {
 
           {/* Collections */}
           <div>
-            <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.collections")}</h3>
-            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <h4 className="text-primary brightness-150 font-serif font-bold mb-8 uppercase tracking-[0.2em] text-[14px] leading-tight">
+              {t("footer.collections")}
+            </h4>
+            <ul className="space-y-4 text-[12px] text-gray-200 uppercase tracking-widest font-bold">
               {collections.map((collection) => (
                 <li key={collection.name}>
-                  <Link href={getLocalizedPath(collection.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
+                  <Link href={getLocalizedPath(collection.href)} className="hover:text-primary brightness-125 transition-all flex items-center gap-2 group opacity-80 hover:opacity-100">
                     {collection.name}
                   </Link>
                 </li>

@@ -13,7 +13,7 @@ export function CollectionBanner() {
         {/* Left Image */}
         <div className="relative h-[400px] lg:h-[600px]">
           <img
-            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80"
+            src="/assets/banner/1.png"
             alt="Sản phẩm trầm hương"
             className="w-full h-full object-cover"
           />
@@ -21,10 +21,10 @@ export function CollectionBanner() {
 
         {/* Right Content */}
         <div className="relative h-[400px] lg:h-[600px] bg-secondary flex items-center justify-center">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80')`,
+              backgroundImage: `url('/assets/banner/2.png')`,
             }}
           />
           <div className="relative z-10 text-center px-8 max-w-md">
@@ -49,28 +49,28 @@ export function CollectionBanner() {
       <div className="grid grid-cols-2 md:grid-cols-4">
         <div className="relative h-48 md:h-64">
           <img
-            src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80"
+            src="/assets/banner/3.png"
             alt="Gallery 1"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative h-48 md:h-64">
           <img
-            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=400&q=80"
+            src="/assets/banner/4.png"
             alt="Gallery 2"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative h-48 md:h-64">
           <img
-            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80"
+            src="/assets/banner/5.png"
             alt="Gallery 3"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative h-48 md:h-64">
           <img
-            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"
+            src="/assets/banner/1.png"
             alt="Gallery 4"
             className="w-full h-full object-cover"
           />

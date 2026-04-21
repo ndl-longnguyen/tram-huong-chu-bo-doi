@@ -10,7 +10,7 @@ interface ProductCardProps {
   image: string
   originalPrice: number
   salePrice?: number
-  rating: number
+  rating?: number
   badge?: string
   badgeType?: "new" | "best" | "hot" | "sale"
 }
@@ -21,7 +21,7 @@ export function ProductCard({
   image,
   originalPrice,
   salePrice,
-  rating,
+  rating = 5,
   badge,
   badgeType,
 }: ProductCardProps) {
