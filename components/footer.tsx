@@ -1,33 +1,33 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react"
-
-const collections = [
-  "Vòng Tay Trầm Hương Cao Cấp",
-  "Quà tặng trầm hương",
-  "Vòng Trầm Hương 108 Hạt",
-  "Vòng Tay Phong Thủy",
-  "Nụ Trầm Hương Cao Cấp",
-  "Nhang Trầm Hương Cao Cấp",
-  "Vòng Trầm Hương Bọc Vàng",
-]
-
-const policies = [
-  "Chính sách bảo hành",
-  "Chính sách đổi trả",
-  "Chính sách vận chuyển",
-  "FAQ - Câu hỏi thường gặp",
-  "Hướng dẫn thanh toán",
-]
-
-const aboutLinks = [
-  "Giới thiệu",
-  "Câu chuyện thương hiệu",
-  "Liên hệ",
-  "Điều khoản dịch vụ",
-]
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Footer() {
+  const { t, getLocalizedPath } = useLanguage()
+
+  const collections = [
+    t("nav.bracelet"),
+    t("nav.gift"),
+    t("nav.incense"),
+    t("nav.art"),
+  ]
+
+  const policies = [
+    { name: t("footer.policy.terms"), href: "#" },
+    { name: t("footer.policy.privacy"), href: "#" },
+    { name: t("footer.policy.shipping"), href: "#" },
+    { name: t("footer.policy.warranty"), href: "#" },
+  ]
+
+  const aboutLinks = [
+    { name: t("nav.about"), href: "/gioi-thieu" },
+    { name: t("nav.blog"), href: "/blog" },
+    { name: t("nav.contact"), href: "/lien-he" },
+  ]
+
   return (
     <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white">
       {/* Newsletter */}
@@ -35,17 +35,17 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-xl font-serif text-primary mb-2">Đăng ký nhận tin</h3>
-              <p className="text-gray-400 text-sm">Nhận thông tin ưu đãi và sản phẩm mới nhất</p>
+              <h3 className="text-xl font-serif text-primary mb-2 uppercase tracking-wide">{t("footer.newsletter")}</h3>
+              <p className="text-gray-400 text-sm">{t("footer.newsletterDesc")}</p>
             </div>
             <div className="flex gap-3 w-full md:w-auto min-w-0">
               <input
                 type="email"
-                placeholder="Nhập email của bạn"
-                className="flex-1 min-w-0 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                placeholder={t("footer.enterEmail")}
+                className="flex-1 min-w-0 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all shadow-inner"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all shrink-0">
-                Đăng ký
+              <button className="px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-bold hover:shadow-lg hover:shadow-primary/25 transition-all shrink-0 uppercase text-xs tracking-widest">
+                {t("footer.subscribe")}
               </button>
             </div>
           </div>
@@ -54,9 +54,9 @@ export function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+          {/* Company Info - Span 2 columns on large screens for better balance */}
+          <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/logo.png"
@@ -66,50 +66,53 @@ export function Footer() {
                 className="h-14 w-auto object-contain logo-primary"
               />
               <div>
-                <h3 className="text-primary font-serif text-lg font-semibold">
+                <h3 className="text-primary font-serif text-lg font-bold tracking-tight uppercase">
                   TRẦM HƯƠNG CHÚ BỘ ĐỘI
                 </h3>
               </div>
             </div>
-            <ul className="space-y-4 text-sm text-gray-300">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
-                <span>Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)</span>
+            <ul className="space-y-4 text-sm text-gray-300 mb-8">
+              <li className="flex items-start gap-3 group">
+                <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="group-hover:text-white transition-colors">Tiên Phước, TP. Đà Nẵng</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="font-medium">0765.942.942</span>
+              <li className="flex items-center gap-3 group">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold group-hover:text-white transition-colors">0765.942.942</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>tramhuongchubodoi@gmail.com</span>
+              <li className="flex items-center gap-3 group">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="group-hover:text-white transition-colors">tramhuongchubodoi@gmail.com</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>8:00 - 22:00 (Thứ 2 - Chủ nhật)</span>
+              <li className="flex items-center gap-3 group">
+                <Clock className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="group-hover:text-white transition-colors">8:00 - 22:00</span>
               </li>
             </ul>
-            <div className="flex items-center gap-4 mt-6">
-              <a href="https://www.facebook.com/tramhuongchubodoivn" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all">
-                <Facebook className="w-5 h-5" />
+            <div className="flex items-center gap-4">
+              <a href="#" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-lg overflow-hidden relative group">
+                <Facebook className="w-5 h-5 relative z-10" />
+                <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
-              <a href="https://www.instagram.com/tramhuongchubodoi" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all">
-                <Instagram className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent transition-all shadow-lg overflow-hidden relative group">
+                <Instagram className="w-5 h-5 relative z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
-              <a href="https://www.youtube.com/@tramhuongchubodoi" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all">
-                <Youtube className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all shadow-lg overflow-hidden relative group">
+                <Youtube className="w-5 h-5 relative z-10" />
+                <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
             </div>
           </div>
 
           {/* Policies */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-6">Chính sách</h3>
-            <ul className="space-y-3 text-sm text-gray-300">
+            <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.policies")}</h3>
+            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
               {policies.map((policy) => (
-                <li key={policy}>
-                  <Link href="#" className="hover:text-primary hover:pl-2 transition-all inline-block">
-                    {policy}
+                <li key={policy.name}>
+                  <Link href={policy.href} className="hover:text-primary transition-all flex items-center gap-2 group">
+                    {policy.name}
                   </Link>
                 </li>
               ))}
@@ -118,12 +121,12 @@ export function Footer() {
 
           {/* About Links */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-6">Về chúng tôi</h3>
-            <ul className="space-y-3 text-sm text-gray-300">
+            <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.aboutUs")}</h3>
+            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
               {aboutLinks.map((link) => (
-                <li key={link}>
-                  <Link href="#" className="hover:text-primary hover:pl-2 transition-all inline-block">
-                    {link}
+                <li key={link.name}>
+                  <Link href={getLocalizedPath(link.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -132,11 +135,11 @@ export function Footer() {
 
           {/* Collections */}
           <div>
-            <h3 className="text-primary font-serif text-lg font-semibold mb-6">Bộ sưu tập</h3>
-            <ul className="space-y-3 text-sm text-gray-300">
+            <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.collections")}</h3>
+            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
               {collections.map((collection) => (
                 <li key={collection}>
-                  <Link href="#" className="hover:text-primary hover:pl-2 transition-all inline-block">
+                  <Link href={getLocalizedPath("/trang-suc")} className="hover:text-primary transition-all flex items-center gap-2 group">
                     {collection}
                   </Link>
                 </li>
@@ -147,9 +150,9 @@ export function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          <p>© 2022 TRẦM HƯƠNG CHÚ BỘ ĐỘI. Tất cả quyền được bảo lưu.</p>
+      <div className="border-t border-gray-800 bg-black/30">
+        <div className="max-w-7xl mx-auto px-4 py-8 text-center text-[10px] text-gray-500 tracking-widest uppercase font-bold">
+          <p>© 2022 TRẦM HƯƠNG CHÚ BỘ ĐỘI. {t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

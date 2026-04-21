@@ -6,6 +6,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Menu, X, Search, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { LanguageSwitcher } from "./language-switcher"
 
 const navigation = [
   { name: "nav.about", href: "/gioi-thieu" },
@@ -18,12 +19,10 @@ const navigation = [
   { name: "nav.contact", href: "/lien-he" },
 ]
 
-
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { locale, t, getLocalizedPath } = useLanguage()
+  const { t, getLocalizedPath } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,8 +31,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-
 
   return (
     <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-lg" : ""}`}>
@@ -77,6 +74,9 @@ export function Header() {
 
             {/* Contact & Actions */}
             <div className="flex items-center gap-2 md:gap-4">
+              <div className="hidden md:block">
+                <LanguageSwitcher />
+              </div>
               <a
                 href="tel:0765942942"
                 className="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
@@ -87,10 +87,14 @@ export function Header() {
 
               {/* Mobile Menu Button */}
               <button
-                className="lg:hidden text-foreground hover:text-primary transition-colors p-1"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="lg:hidden text-foreground hover:text-primary transition-colors p-2 relative z-[70] cursor-pointer touch-manipulation"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsMenuOpen(!isMenuOpen);
+                }}
+                aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
             </div>
           </div>
@@ -116,9 +120,13 @@ export function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-[600px]" : "max-h-0"}`}>
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out relative z-[60] ${isMenuOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}>
           <nav className="border-t border-border bg-card">
-            <ul className="py-4 px-4 space-y-1">
+            <div className="p-4 border-b border-border flex justify-between items-center bg-muted/30">
+              <span className="text-sm font-medium text-muted-foreground px-4">Ngôn ngữ:</span>
+              <LanguageSwitcher />
+            </div>
+            <ul className="py-2 px-4 space-y-1">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <Link

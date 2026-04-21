@@ -25,10 +25,14 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return NextResponse.next()
 
-  // Skip static files and api routes
+  // Skip static files, api routes, and technical files
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
+    pathname === '/manifest.webmanifest' ||
+    pathname === '/favicon.ico' ||
+    pathname === '/robots.txt' ||
+    pathname === '/sitemap.xml' ||
     pathname.includes('.') // files with extensions
   ) {
     return NextResponse.next()

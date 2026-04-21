@@ -3,9 +3,11 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
+  const { t, getLocalizedPath } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -35,33 +37,32 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 min-h-[90vh] flex flex-col items-center justify-center text-center">
         <div className="animate-fade-in-up">
-          <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm mb-6 tracking-widest">
-            TINH HOA TRẦM VIỆT
+          <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm mb-6 tracking-widest uppercase">
+            {t("hero.subtitle")}
           </span>
         </div>
         
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-wide drop-shadow-2xl animate-fade-in-up animation-delay-100">
-          <span className="block">TRẦM HƯƠNG</span>
-          <span className="block text-primary mt-2">CHÚ BỘ ĐỘI</span>
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-wide drop-shadow-2xl animate-fade-in-up animation-delay-100 uppercase">
+          <span className="block">{t("hero.title")}</span>
+          <span className="block text-primary mt-2">{t("hero.title2")}</span>
         </h1>
         
         <p className="text-white/80 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-200">
-          Kế thừa tinh hoa nghề trầm hương truyền thống, mang đến những sản phẩm 
-          trầm hương tự nhiên 100% với thiết kế độc đáo và chất lượng vượt trội.
+          {t("hero.description")}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
           <Link
-            href="/trang-suc"
-            className="px-10 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300"
+            href={getLocalizedPath("/trang-suc")}
+            className="px-10 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300 uppercase tracking-wider text-sm"
           >
-            KHÁM PHÁ BỘ SƯU TẬP
+            {t("hero.explore")}
           </Link>
           <Link
-            href="/gioi-thieu"
-            className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+            href={getLocalizedPath("/gioi-thieu")}
+            className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/20 hover:border-white/50 transition-all duration-300 uppercase tracking-wider text-sm"
           >
-            VỀ CHÚNG TÔI
+            {t("nav.about")}
           </Link>
         </div>
       </div>

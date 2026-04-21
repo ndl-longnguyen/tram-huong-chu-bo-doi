@@ -1,16 +1,15 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://tramhuongchubodoi.com'
-  
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: ['/api/', '/_next/', '/admin/'],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: 'https://tramhuongchubodoi.com/sitemap.xml',
+    host: 'https://tramhuongchubodoi.com',
   }
 }

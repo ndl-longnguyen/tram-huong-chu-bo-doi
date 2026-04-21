@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 const testimonials = [
   {
@@ -36,6 +37,7 @@ const testimonials = [
 
 export function CommunitySection() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const { t } = useLanguage()
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
@@ -44,6 +46,13 @@ export function CommunitySection() {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
+
+  const stats = [
+    { value: "10,000+", label: t("hero.customers") },
+    { value: "15+", label: t("hero.experience") },
+    { value: "100%", label: t("about.natural") },
+    { value: "5/5", label: t("about.commitmentTitle") },
+  ]
 
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
@@ -56,14 +65,14 @@ export function CommunitySection() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider">
-            KHÁCH HÀNG NÓI GÌ
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase font-bold text-xs">
+            {t("home.community.subtitle")}
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-            Cảm Nhận Từ Khách Hàng
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4 uppercase">
+            {t("home.community.title")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hơn 10,000 khách hàng đã tin tưởng và đồng hành cùng Trầm Hương Chú Bộ Đội
+            {t("home.community.desc")}
           </p>
         </div>
 
@@ -151,17 +160,12 @@ export function CommunitySection() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-          {[
-            { value: "10,000+", label: "Khách hàng" },
-            { value: "15+", label: "Năm kinh nghiệm" },
-            { value: "100%", label: "Trầm hương tự nhiên" },
-            { value: "5/5", label: "Đánh giá trung bình" },
-          ].map((stat, index) => (
+          {stats.map((stat, index) => (
             <div key={index} className="text-center p-6 bg-card rounded-2xl border border-border">
               <div className="font-serif text-3xl md:text-4xl font-bold text-primary mb-2">
                 {stat.value}
               </div>
-              <p className="text-muted-foreground text-sm">{stat.label}</p>
+              <p className="text-muted-foreground text-sm uppercase tracking-wider">{stat.label}</p>
             </div>
           ))}
         </div>

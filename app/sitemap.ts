@@ -1,34 +1,30 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
+
+const BASE_URL = 'https://tramhuongchubodoi.com'
+const LOCALES = ['vi', 'en', 'zh']
+const PAGES = ['', '/trang-suc', '/gioi-thieu', '/lien-he', '/blog', '/nhang-tram', '/vong-tay', '/my-nghe', '/qua-tang']
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tramhuongchubodoi.com'
-  const locales = ['vi', 'en', 'zh']
-  
-  const routes = [
-    '',
-    '/gioi-thieu',
-    '/trang-suc',
-    '/vong-tay',
-    '/nhang-tram',
-    '/my-nghe',
-    '/qua-tang',
-    '/blog',
-    '/lien-he',
-  ]
+  const entries: MetadataRoute.Sitemap = []
 
-  const sitemapEntries: MetadataRoute.Sitemap = []
-
-  // Add entries for each locale and route
-  locales.forEach((locale) => {
-    routes.forEach((route) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
+  for (const locale of LOCALES) {
+    for (const page of PAGES) {
+      entries.push({
+        url: `${BASE_URL}/${locale}${page}`,
         lastModified: new Date(),
-        changeFrequency: route === '' ? 'daily' : 'weekly',
-        priority: route === '' ? 1 : route === '/trang-suc' || route === '/vong-tay' ? 0.9 : 0.8,
+        changeFrequency: page === '' ? 'daily' : page === '/blog' ? 'weekly' : 'monthly',
+        priority: page === '' ? 1.0 : page === '/trang-suc' ? 0.9 : page === '/blog' ? 0.8 : 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            LOCALES.map(l => [
+              l === 'vi' ? 'vi-VN' : l === 'en' ? 'en-US' : 'zh-CN',
+              `${BASE_URL}/${l}${page}`,
+            ])
+          ),
+        },
       })
-    })
-  })
+    }
+  }
 
-  return sitemapEntries
+  return entries
 }

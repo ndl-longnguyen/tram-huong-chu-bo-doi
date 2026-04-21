@@ -1,43 +1,48 @@
+"use client"
+
 import Link from "next/link"
 import { ProductCard } from "@/components/product-card"
 import { ArrowRight } from "lucide-react"
-
-const featuredProducts = [
-  {
-    id: "1",
-    name: "Vòng Tay Bảo Linh Trầm Tốc - Trầm Hương Philip VIP 15mm",
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80",
-    originalPrice: 21500000,
-    salePrice: 18500000,
-    rating: 5,
-    badge: "Best Seller",
-  },
-  {
-    id: "2",
-    name: "Vòng Tay Bảo Hương - Trầm Tốc Cao Cấp",
-    image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80",
-    originalPrice: 15900000,
-    rating: 5,
-  },
-  {
-    id: "3",
-    name: "Vòng Tay Lưu Quang Phối Phục - Trầm Sống",
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80",
-    originalPrice: 18500000,
-    salePrice: 16500000,
-    rating: 5,
-    badge: "Sale",
-  },
-  {
-    id: "4",
-    name: "Vòng Tay Trầm Hương Việt Nam Mộc Thật",
-    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80",
-    originalPrice: 12900000,
-    rating: 4,
-  },
-]
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function FeaturedProducts() {
+  const { t, getLocalizedPath } = useLanguage()
+
+  const featuredProducts = [
+    {
+      id: "1",
+      name: t("product.1.name"),
+      image: "/products/p1.jpg",
+      originalPrice: 21500000,
+      salePrice: 18500000,
+      rating: 5,
+      badgeType: "best" as const,
+    },
+    {
+      id: "2",
+      name: t("product.2.name"),
+      image: "/products/p2.jpg",
+      originalPrice: 15900000,
+      rating: 5,
+    },
+    {
+      id: "3",
+      name: t("product.3.name"),
+      image: "/products/p3.jpg",
+      originalPrice: 18500000,
+      salePrice: 16500000,
+      rating: 5,
+      badgeType: "sale" as const,
+    },
+    {
+      id: "4",
+      name: t("product.4.name"),
+      image: "/products/p4.jpg",
+      originalPrice: 12900000,
+      rating: 4,
+    },
+  ]
+
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
       {/* Decorative Elements */}
@@ -47,14 +52,14 @@ export function FeaturedProducts() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider">
-            BEST SELLERS
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase font-bold text-xs">
+            {t("home.featured.subtitle")}
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-            Sản Phẩm Được Yêu Thích
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4 uppercase">
+            {t("home.featured.title")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Những sản phẩm trầm hương được khách hàng tin tưởng và lựa chọn nhiều nhất
+            {t("home.featured.desc")}
           </p>
         </div>
 
@@ -68,10 +73,10 @@ export function FeaturedProducts() {
         {/* CTA */}
         <div className="text-center mt-14">
           <Link
-            href="/trang-suc"
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
+            href={getLocalizedPath("/trang-suc")}
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group uppercase tracking-wider text-sm font-bold"
           >
-            XEM TẤT CẢ SẢN PHẨM
+            {t("home.featured.viewAll")}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

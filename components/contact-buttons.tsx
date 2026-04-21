@@ -4,7 +4,7 @@ import { Phone, MessageCircle } from "lucide-react"
 
 export function ContactButtons() {
   return (
-    <div className="fixed bottom-24 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-28 right-6 z-[999] flex flex-col gap-4">
       {/* Phone Call */}
       <a
         href="tel:0765942942"
