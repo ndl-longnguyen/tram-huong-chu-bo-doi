@@ -6,13 +6,13 @@ import { ScrollToTop } from '@/components/scroll-to-top'
 import { ContactButtons } from '@/components/contact-buttons'
 import '../globals.css'
 
-const beVietnamPro = Be_Vietnam_Pro({ 
+const beVietnamPro = Be_Vietnam_Pro({
   subsets: ['latin', 'vietnamese'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-sans'
 })
 
-const playfairDisplay = Playfair_Display({ 
+const playfairDisplay = Playfair_Display({
   subsets: ['latin', 'vietnamese'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-serif'
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Chuyên vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương 100% tự nhiên. Bảo hành trọn đời. Giao hàng toàn quốc. Hotline: 0765.942.942',
   keywords: [
     'trầm hương',
-    'trầm hương chú bộ đội', 
+    'trầm hương chú bộ đội',
     'vòng tay trầm hương',
     'trang sức trầm hương',
     'trầm hương cao cấp',
@@ -56,7 +56,6 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://tramhuongchubodoi.com'),
   alternates: {
-    canonical: '/',
     languages: {
       'vi-VN': '/vi',
       'en-US': '/en',
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
@@ -83,7 +82,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
     description: 'Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Vòng tay trầm hương, nhang trầm, mỹ nghệ 100% tự nhiên.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -97,12 +96,12 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'google-site-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'google-site-verification-code',
   },
   category: 'ecommerce',
   icons: {
     icon: '/favicon.ico',
-    apple: '/apple-icon.png',
+    apple: '/apple-touch-icon.png',
   },
 }
 
@@ -141,7 +140,7 @@ const jsonLd = {
       '@type': 'LocalBusiness',
       '@id': 'https://tramhuongchubodoi.com/#localbusiness',
       name: 'Trầm Hương Chú Bộ Đội',
-      image: 'https://tramhuongchubodoi.com/og-image.jpg',
+      image: 'https://tramhuongchubodoi.com/og-image.png',
       '@type': ['Store', 'JewelryStore'],
       address: {
         '@type': 'PostalAddress',
@@ -191,8 +190,9 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   return (
-    <html lang={locale} className="bg-background" suppressHydrationWarning>
+    <html lang={locale} className="bg-background" suppressHydrationWarning style={{ scrollbarGutter: 'stable' }}>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

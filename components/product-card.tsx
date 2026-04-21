@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import { Star, Eye } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 interface ProductCardProps {
   id: string
@@ -9,6 +12,7 @@ interface ProductCardProps {
   salePrice?: number
   rating: number
   badge?: string
+  badgeType?: "new" | "best" | "hot" | "sale"
 }
 
 export function ProductCard({
@@ -19,7 +23,10 @@ export function ProductCard({
   salePrice,
   rating,
   badge,
+  badgeType,
 }: ProductCardProps) {
+  const { t } = useLanguage()
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price) + ' đ'
   }
@@ -27,6 +34,24 @@ export function ProductCard({
   const discountPercent = salePrice 
     ? Math.round((1 - salePrice / originalPrice) * 100) 
     : 0
+
+  // Determine badge text and style
+  let badgeText = badge
+  let badgeClass = "bg-primary"
+
+  if (badgeType === "sale" || badge === "Sale") {
+    badgeText = badge || "Sale"
+    badgeClass = "bg-red-500"
+  } else if (badgeType === "best") {
+    badgeText = t("product.badge.best")
+    badgeClass = "bg-gradient-to-r from-primary to-accent"
+  } else if (badgeType === "new") {
+    badgeText = t("product.badge.new")
+    badgeClass = "bg-green-600"
+  } else if (badgeType === "hot") {
+    badgeText = t("product.badge.hot")
+    badgeClass = "bg-orange-500"
+  }
 
   return (
     <Link href={`/san-pham/${id}`} className="group block">
@@ -45,25 +70,19 @@ export function ProductCard({
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <span className="px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground text-sm font-medium rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
             <Eye className="w-4 h-4" />
-            Xem nhanh
+            {t("product.quickView") || "Xem nhanh"}
           </span>
         </div>
         
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
-          {badge && (
-            <span className={`${
-              badge === "Sale" 
-                ? "bg-red-500" 
-                : badge === "Best Seller" 
-                ? "bg-gradient-to-r from-primary to-accent" 
-                : "bg-primary"
-            } text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg`}>
-              {badge}
+          {badgeText && (
+            <span className={`${badgeClass} text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap`}>
+              {badgeText}
             </span>
           )}
           {salePrice && (
-            <span className="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+            <span className="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md">
               -{discountPercent}%
             </span>
           )}

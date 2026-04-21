@@ -1,6 +1,11 @@
+"use client"
+
 import Link from "next/link"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function CollectionBanner() {
+  const { t, getLocalizedPath } = useLanguage()
+
   return (
     <section className="relative">
       {/* Full Width Image Banner */}
@@ -23,17 +28,18 @@ export function CollectionBanner() {
             }}
           />
           <div className="relative z-10 text-center px-8 max-w-md">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-              BỘ SƯU TẬP KIM TÂM BẢO
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4 uppercase">
+              {t("home.banner.title")}
+              <span className="block text-primary mt-2 text-2xl md:text-3xl">{t("home.banner.title2")}</span>
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Bộ sưu tập đặc biệt với những thiết kế tinh xảo, kết hợp tinh hoa nghệ thuật thủ công truyền thống và phong cách hiện đại.
+              {t("home.banner.desc")}
             </p>
             <Link
-              href="/bo-suu-tap/kim-tam-bao"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-medium rounded hover:bg-primary hover:text-primary-foreground transition-colors"
+              href={getLocalizedPath("/trang-suc")}
+              className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-medium rounded hover:bg-primary hover:text-primary-foreground transition-colors uppercase tracking-wider text-sm font-bold"
             >
-              KHÁM PHÁ
+              {t("home.banner.cta")}
             </Link>
           </div>
         </div>

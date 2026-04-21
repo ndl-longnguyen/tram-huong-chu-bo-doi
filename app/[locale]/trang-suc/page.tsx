@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from 'next'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ProductFilters } from "@/components/products/product-filters"
@@ -7,96 +6,83 @@ import { ProductGrid } from "@/components/products/product-grid"
 import { WhyChooseUs } from "@/components/products/why-choose-us"
 import { StatsSection } from "@/components/products/stats-section"
 import { TestimonialsSection } from "@/components/products/testimonials-section"
-import { ChevronRight } from "lucide-react"
-import Link from "next/link"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { ProductsHero } from "@/components/products/products-hero"
 
-const categories = [
-  { icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80", label: { vi: "Vòng Tay", en: "Bracelets", zh: "手链" }, count: 120 },
-  { icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80", label: { vi: "Nhẫn", en: "Rings", zh: "戒指" }, count: 45 },
-  { icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80", label: { vi: "Chuỗi Cổ", en: "Necklaces", zh: "项链" }, count: 38 },
-  { icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80", label: { vi: "Mặt Dây Chuyền", en: "Pendants", zh: "吊坠" }, count: 56 },
-]
+type PageProps = { params: Promise<{ locale: string }> }
 
-export default function ProductsPage() {
-  const { locale, getLocalizedPath } = useLanguage()
+const metaByLocale: Record<string, { title: string; description: string; keywords: string[] }> = {
+  vi: {
+    title: 'Trang Sức Trầm Hương Cao Cấp | Vòng Tay, Nhẫn, Dây Chuyền Trầm Hương Chính Hãng',
+    description: 'Bộ sưu tập trang sức trầm hương 100% tự nhiên - Vòng tay trầm hương, nhẫn trầm hương, dây chuyền trầm hương. Chế tác thủ công, bảo hành trọn đời. Hotline: 0765.942.942',
+    keywords: ['trang sức trầm hương', 'vòng tay trầm hương cao cấp', 'nhẫn trầm hương', 'dây chuyền trầm hương', 'mua trang sức trầm hương', 'trầm hương 100% tự nhiên'],
+  },
+  en: {
+    title: 'Premium Agarwood Jewelry | Bracelets, Rings & Necklaces - Chu Bo Doi',
+    description: '100% natural agarwood jewelry collection - Bracelets, rings, necklaces. Handcrafted with lifetime warranty. Shop authentic Vietnamese agarwood jewelry. Hotline: 0765.942.942',
+    keywords: ['agarwood jewelry', 'agarwood bracelet', 'agarwood ring', 'agarwood necklace', 'buy agarwood jewelry', 'natural agarwood'],
+  },
+  zh: {
+    title: '高端沉香珠宝 | 手链、戒指、项链 - 朱伯队',
+    description: '100%天然沉香珠宝系列 - 手链、戒指、项链。手工制作，终身保修。购买正品越南沉香珠宝。热线：0765.942.942',
+    keywords: ['沉香珠宝', '沉香手链', '沉香戒指', '沉香项链', '购买沉香珠宝', '天然沉香'],
+  },
+}
 
-  const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
-    collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
-    title1: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
-    title2: { vi: "Cao Cấp", en: "Premium", zh: "高端系列" },
-    description: {
-      vi: "Khám phá bộ sưu tập trang sức trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 20 năm kinh nghiệm.",
-      en: "Discover our collection of 100% natural agarwood jewelry, handcrafted by skilled artisans with over 20 years of experience.",
-      zh: "探索我们100%天然沉香珠宝系列，由拥有20多年经验的熟练工匠手工制作。"
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params
+  const meta = metaByLocale[locale] || metaByLocale.vi
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    alternates: {
+      canonical: `/${locale}/trang-suc`,
+      languages: {
+        'vi-VN': '/vi/trang-suc',
+        'en-US': '/en/trang-suc',
+        'zh-CN': '/zh/trang-suc',
+      },
     },
-    products: { vi: "sản phẩm", en: "products", zh: "件产品" },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `https://tramhuongchubodoi.com/${locale}/trang-suc`,
+      locale: locale === 'vi' ? 'vi_VN' : locale === 'zh' ? 'zh_CN' : 'en_US',
+      type: 'website',
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: meta.title }],
+    },
+  }
+}
+
+export default async function ProductsPage({ params }: PageProps) {
+  const { locale } = await params
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: metaByLocale[locale]?.title || metaByLocale.vi.title,
+    description: metaByLocale[locale]?.description || metaByLocale.vi.description,
+    url: `https://tramhuongchubodoi.com/${locale}/trang-suc`,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang chủ', item: `https://tramhuongchubodoi.com/${locale}` },
+        { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Jewelry' : locale === 'zh' ? '珠宝' : 'Trang Sức', item: `https://tramhuongchubodoi.com/${locale}/trang-suc` },
+      ],
+    },
   }
 
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
-        {/* Hero Banner */}
-        <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          
-          <div className="max-w-7xl mx-auto px-4 relative z-10">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm mb-8">
-              <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
-                {content.home[locale]}
-              </Link>
-              <ChevronRight className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground font-medium">{content.breadcrumb[locale]}</span>
-            </div>
-
-            <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6 tracking-wider">
-                {content.collection[locale]}
-              </span>
-              <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
-                {content.title1[locale]}
-                <span className="block text-primary mt-2">{content.title2[locale]}</span>
-              </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {content.description[locale]}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Category Navigation */}
-        <section className="py-12 bg-card border-y border-border">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {categories.map((category, index) => (
-                <Link
-                  key={index}
-                  href={getLocalizedPath(`/trang-suc/${category.label.vi.toLowerCase().replace(/ /g, '-')}`)}
-                  className="group flex flex-col items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-2xl hover:bg-primary/5 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all">
-                    <img
-                      src={category.icon}
-                      alt={category.label[locale]}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <span className="text-foreground font-semibold block group-hover:text-primary transition-colors text-sm md:text-base">
-                      {category.label[locale]}
-                    </span>
-                    <span className="text-muted-foreground text-xs md:text-sm">{category.count} {content.products[locale]}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Client component handles locale-based content display */}
+        <ProductsHero />
 
         {/* Filters and Products */}
         <section className="py-12">
@@ -108,13 +94,8 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* Why Choose Us */}
         <WhyChooseUs />
-
-        {/* Stats Section */}
         <StatsSection />
-
-        {/* Testimonials */}
         <TestimonialsSection />
       </main>
       <Footer />

@@ -1,25 +1,30 @@
+"use client"
+
 import Link from "next/link"
 import { Sparkles, Shield, Heart } from "lucide-react"
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "100% Tự Nhiên",
-    description: "Trầm hương nguyên chất, không pha trộn hóa chất",
-  },
-  {
-    icon: Shield,
-    title: "Bảo Hành Trọn Đời",
-    description: "Cam kết chất lượng với chính sách bảo hành tốt nhất",
-  },
-  {
-    icon: Heart,
-    title: "Chế Tác Thủ Công",
-    description: "Nghệ nhân lành nghề với hơn 20 năm kinh nghiệm",
-  },
-]
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function IntroSection() {
+  const { t, getLocalizedPath } = useLanguage()
+
+  const features = [
+    {
+      icon: Sparkles,
+      title: t("home.intro.feature1.title"),
+      description: t("home.intro.feature1.desc"),
+    },
+    {
+      icon: Shield,
+      title: t("home.intro.feature2.title"),
+      description: t("home.intro.feature2.desc"),
+    },
+    {
+      icon: Heart,
+      title: t("home.intro.feature3.title"),
+      description: t("home.intro.feature3.desc"),
+    },
+  ]
+
   return (
     <section className="py-20 lg:py-32 bg-background relative overflow-hidden w-full">
       {/* Decorative Background */}
@@ -31,16 +36,15 @@ export function IntroSection() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider">
-            GIỚI THIỆU
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase">
+            {t("nav.about")}
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 text-balance">
-            Trầm Hương Chú Bộ Đội
-            <span className="block text-primary mt-2">Tinh Hoa Trầm Việt</span>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 text-balance uppercase">
+            {t("home.intro.title")}
+            <span className="block text-primary mt-2">{t("home.intro.subtitle")}</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-lg">
-            Chúng tôi tin rằng trầm hương không chỉ là sản phẩm phong thủy, mà còn là biểu tượng 
-            của sự thanh tịnh, may mắn và kết nối với văn hóa truyền thống Việt Nam ngàn đời.
+            {t("home.intro.description")}
           </p>
         </div>
 
@@ -68,17 +72,17 @@ export function IntroSection() {
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=800&q=80"
-                alt="Vòng tay trầm hương"
+                alt={t("home.intro.bracelet")}
                 className="w-full h-[450px] lg:h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full mb-3">
-                  Bộ sưu tập mới
+                <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full mb-3 uppercase tracking-wider">
+                  {t("home.intro.newCollection")}
                 </span>
-                <h3 className="text-white font-serif text-2xl mb-2">Vòng Tay Trầm Hương</h3>
+                <h3 className="text-white font-serif text-2xl mb-2">{t("home.intro.bracelet")}</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Thiết kế tinh xảo, mang năng lượng tích cực và may mắn đến cho người đeo.
+                  {t("home.intro.braceletDesc")}
                 </p>
               </div>
             </div>
@@ -128,10 +132,10 @@ export function IntroSection() {
         {/* CTA */}
         <div className="text-center mt-16">
           <Link
-            href="/gioi-thieu"
-            className="inline-flex items-center justify-center px-10 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+            href={getLocalizedPath("/gioi-thieu")}
+            className="inline-flex items-center justify-center px-10 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group uppercase tracking-wider text-sm"
           >
-            TÌM HIỂU THÊM VỀ CHÚNG TÔI
+            {t("home.intro.learnMore")}
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
