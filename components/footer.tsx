@@ -9,17 +9,17 @@ export function Footer() {
   const { t, getLocalizedPath } = useLanguage()
 
   const collections = [
-    t("nav.bracelet"),
-    t("nav.gift"),
-    t("nav.incense"),
-    t("nav.art"),
+    { name: t("nav.bracelet"), href: "/vong-tay" },
+    { name: t("nav.gift"), href: "/qua-tang" },
+    { name: t("nav.incense"), href: "/nhang-tram" },
+    { name: t("nav.art"), href: "/my-nghe" },
   ]
 
   const policies = [
-    { name: t("footer.policy.terms"), href: "#" },
-    { name: t("footer.policy.privacy"), href: "#" },
-    { name: t("footer.policy.shipping"), href: "#" },
-    { name: t("footer.policy.warranty"), href: "#" },
+    { name: t("footer.policy.terms"), href: "/chinh-sach-dieu-khoan" },
+    { name: t("footer.policy.privacy"), href: "/chinh-sach-bao-mat" },
+    { name: t("footer.policy.shipping"), href: "/chinh-sach-van-chuyen" },
+    { name: t("footer.policy.warranty"), href: "/chinh-sach-bao-hanh" },
   ]
 
   const aboutLinks = [
@@ -90,15 +90,15 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-lg overflow-hidden relative group">
+              <a href="https://www.facebook.com/tramhuongchubodoivn" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-lg overflow-hidden relative group">
                 <Facebook className="w-5 h-5 relative z-10" />
                 <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent transition-all shadow-lg overflow-hidden relative group">
+              <a href="https://www.instagram.com/tramhuongchubodoi" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent transition-all shadow-lg overflow-hidden relative group">
                 <Instagram className="w-5 h-5 relative z-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all shadow-lg overflow-hidden relative group">
+              <a href="https://www.youtube.com/@tramhuongchubodoi" className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all shadow-lg overflow-hidden relative group">
                 <Youtube className="w-5 h-5 relative z-10" />
                 <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
@@ -111,7 +111,7 @@ export function Footer() {
             <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
               {policies.map((policy) => (
                 <li key={policy.name}>
-                  <Link href={policy.href} className="hover:text-primary transition-all flex items-center gap-2 group">
+                  <Link href={getLocalizedPath(policy.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
                     {policy.name}
                   </Link>
                 </li>
@@ -138,9 +138,9 @@ export function Footer() {
             <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.collections")}</h3>
             <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
               {collections.map((collection) => (
-                <li key={collection}>
-                  <Link href={getLocalizedPath("/trang-suc")} className="hover:text-primary transition-all flex items-center gap-2 group">
-                    {collection}
+                <li key={collection.name}>
+                  <Link href={getLocalizedPath(collection.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
+                    {collection.name}
                   </Link>
                 </li>
               ))}
