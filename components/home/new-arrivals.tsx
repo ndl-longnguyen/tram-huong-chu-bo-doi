@@ -11,7 +11,7 @@ export function NewArrivals() {
     {
       id: "5",
       name: t("product.5.name"),
-      image: "/products/p5.jpg",
+      image: "/products/vong-tay/vong-tay-5.jpg",
       originalPrice: 35000000,
       rating: 5,
       badgeType: "new" as const,
@@ -19,7 +19,7 @@ export function NewArrivals() {
     {
       id: "6",
       name: t("product.6.name"),
-      image: "/products/p6.jpg",
+      image: "/products/vong-tay/vong-tay-6.jpg",
       originalPrice: 16500000,
       salePrice: 14500000,
       rating: 5,
@@ -28,14 +28,14 @@ export function NewArrivals() {
     {
       id: "7",
       name: t("product.7.name"),
-      image: "/products/p7.jpg",
+      image: "/products/vong-tay/vong-tay-7.jpg",
       originalPrice: 850000,
       rating: 4,
     },
     {
       id: "8",
       name: t("product.8.name"),
-      image: "/products/p8.jpg",
+      image: "/products/vong-tay/vong-tay-8.jpg",
       originalPrice: 22000000,
       salePrice: 19500000,
       rating: 5,
@@ -44,14 +44,14 @@ export function NewArrivals() {
     {
       id: "9",
       name: t("product.9.name"),
-      image: "/products/p1.jpg",
+      image: "/products/vong-tay/vong-tay-9.jpg",
       originalPrice: 12000000,
       rating: 5,
     },
     {
       id: "10",
       name: t("product.10.name"),
-      image: "/products/p2.jpg",
+      image: "/products/vong-tay/vong-tay-10.jpg",
       originalPrice: 28000000,
       salePrice: 25500000,
       rating: 5,

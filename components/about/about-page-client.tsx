@@ -17,21 +17,21 @@ const values = [
     title: { vi: "TINH", en: "EXCELLENCE", zh: "精" },
     subtitle: { vi: "Tinh hoa nghề truyền thống", en: "Traditional craftsmanship excellence", zh: "传统工艺精华" },
     description: { vi: "Kế thừa và phát huy tinh hoa nghề chế tác trầm hương truyền thống hàng trăm năm của Việt Nam.", en: "Inheriting and promoting the traditional Vietnamese agarwood craftsmanship of hundreds of years.", zh: "继承和发扬越南数百年传统沉香工艺精华。" },
-    image: "/assets/about/1.jpg",
+    image: "/images/about/value-1.jpg",
     icon: Leaf,
   },
   {
     title: { vi: "TÍN", en: "TRUST", zh: "信" },
     subtitle: { vi: "Uy tín và chất lượng", en: "Trust and quality", zh: "信誉与品质" },
     description: { vi: "Cam kết 100% sản phẩm trầm hương tự nhiên, không pha trộn, không hóa chất.", en: "Committed to 100% natural agarwood products, no mixing, no chemicals.", zh: "承诺100%天然沉香产品，无掺杂，无化学品。" },
-    image: "/assets/about/2.jpg",
+    image: "/images/about/value-2.jpg",
     icon: Shield,
   },
   {
     title: { vi: "TÂM", en: "DEDICATION", zh: "心" },
     subtitle: { vi: "Tâm huyết với nghề", en: "Dedication to the craft", zh: "对工艺的专注" },
     description: { vi: "Mỗi sản phẩm đều được chế tác với tâm huyết, sự tỉ mỉ và đam mê của nghệ nhân.", en: "Each product is crafted with dedication, meticulousness and passion of artisans.", zh: "每件产品都凝聚着工匠的心血、细致和热情。" },
-    image: "/assets/about/3.jpg",
+    image: "/images/about/value-3.jpg",
     icon: Users,
   },
 ]
@@ -42,7 +42,7 @@ const stores = [
     address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
     phone: "0765.942.942",
     hours: "8:00 - 22:00",
-    image: "/assets/show-room.jpg",
+    image: "/images/about/showroom-1.jpg",
   },
 ]
 
@@ -215,7 +215,7 @@ export function AboutPageClient() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
               <img
-                src="/assets/about/5.jpg"
+                src="/images/about/about-1.jpg"
                 alt="Tram huong cao cap"
                 className="relative w-full h-[500px] object-cover rounded-3xl"
               />

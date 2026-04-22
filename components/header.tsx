@@ -42,7 +42,7 @@ export function Header() {
             <Link href={getLocalizedPath("/")} className="flex items-center gap-2 md:gap-3 group">
               <div className="relative">
                 <Image
-                  src="/logo.png"
+                  src="/branding/logo.png"
                   alt="Trầm Hương Chú Bộ Đội"
                   width={200}
                   height={80}

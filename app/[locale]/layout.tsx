@@ -100,8 +100,8 @@ export const metadata: Metadata = {
   },
   category: 'ecommerce',
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/branding/favicon.ico',
+    apple: '/branding/apple-touch-icon.png',
   },
 }
 
@@ -120,7 +120,7 @@ const jsonLd = {
       url: 'https://tramhuongchubodoi.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tramhuongchubodoi.com/logo.png',
+        url: 'https://tramhuongchubodoi.com/branding/logo.png',
         width: 200,
         height: 200,
       },

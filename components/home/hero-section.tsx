@@ -21,7 +21,7 @@ export function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&q=80')`,
+          backgroundImage: `url('/images/home/hero-bg.jpg')`,
           transform: `translateY(${scrollY * 0.3}px) scale(1.15)`,
         }}
       />

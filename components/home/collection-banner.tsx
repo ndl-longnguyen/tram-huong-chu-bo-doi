@@ -24,7 +24,7 @@ export function CollectionBanner() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('/assets/banner/2.png')`,
+              backgroundImage: `url('/images/banners/banner-bg.png')`,
             }}
           />
           <div className="relative z-10 text-center px-8 max-w-md">
@@ -49,14 +49,14 @@ export function CollectionBanner() {
       <div className="grid grid-cols-2 md:grid-cols-4">
         <div className="relative h-48 md:h-64">
           <img
-            src="/assets/banner/3.png"
+            src="/images/banners/gallery-1.png"
             alt="Gallery 1"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative h-48 md:h-64">
           <img
-            src="/assets/banner/4.png"
+            src="/images/banners/gallery-2.png"
             alt="Gallery 2"
             className="w-full h-full object-cover"
           />

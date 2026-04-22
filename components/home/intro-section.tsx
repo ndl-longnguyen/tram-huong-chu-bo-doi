@@ -71,7 +71,7 @@ export function IntroSection() {
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="/products/p1.jpg"
+                src="/images/home/intro-1.jpg"
                 alt={t("home.intro.bracelet")}
                 className="w-full h-[450px] lg:h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -93,7 +93,7 @@ export function IntroSection() {
             <div className="space-y-4">
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="/products/p2.jpg"
+                  src="/images/home/intro-2.jpg"
                   alt="Vòng tay trầm hương"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -101,7 +101,7 @@ export function IntroSection() {
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="/products/p3.jpg"
+                  src="/images/home/intro-3.jpg"
                   alt="Sản phẩm trầm hương"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -111,7 +111,7 @@ export function IntroSection() {
             <div className="space-y-4 pt-10">
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="/products/p4.jpg"
+                  src="/images/home/intro-4.jpg"
                   alt="Nghệ nhân chế tác"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -119,7 +119,7 @@ export function IntroSection() {
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
                 <img
-                  src="/products/p5.jpg"
+                  src="/images/home/intro-5.jpg"
                   alt="Trầm hương cao cấp"
                   className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />

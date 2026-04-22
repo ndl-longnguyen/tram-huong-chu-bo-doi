@@ -44,6 +44,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "common.email": "Email",
     "common.address": "Địa chỉ",
     "common.workingHours": "Giờ làm việc",
+    "common.allProducts": "TẤT CẢ SẢN PHẨM",
     
     // Footer
     "footer.newsletter": "Đăng ký nhận tin",
@@ -225,6 +226,27 @@ export const translations: Record<Locale, Record<string, string>> = {
     "policy.privacy.content": "<p>Chúng tôi hiểu rằng quyền riêng tư của bạn là quan trọng. Chính sách này mô tả cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Thu thập thông tin</h3><p>Chúng tôi chỉ thu thập các thông tin cần thiết để xử lý đơn hàng như: Họ tên, số điện thoại, địa chỉ giao hàng và email.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Bảo vệ dữ liệu</h3><p>Mọi thông tin khách hàng được mã hóa và lưu trữ an toàn. Chúng tôi không chia sẻ thông tin cho bất kỳ bên thứ ba nào khi chưa có sự đồng ý.</p>",
     "policy.shipping.content": "<p>Chúng tôi nỗ lực mang sản phẩm đến tay khách hàng trong thời gian nhanh nhất cùng với chất lượng dịch vụ tốt nhất.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Thời gian giao hàng</h3><ul class='list-disc pl-5 space-y-2'><li>Nội thành Đà Nẵng: Giao hỏa tốc trong vòng 2 giờ.</li><li>Các tỉnh thành khác: Giao hàng chuẩn từ 2 - 4 ngày làm việc.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Phí vận chuyển</h3><p>Miễn phí vận chuyển toàn quốc cho các đơn hàng có giá trị từ 500,000 VNĐ. Với đơn hàng dưới 500,000 VNĐ, phí giao hàng sẽ được tính theo bảng giá của đối tác vận chuyển.</p>",
     "policy.warranty.content": "<p>Sự hài lòng của khách hàng là ưu tiên hàng đầu. Chúng tôi tự tin ban hành chính sách bảo hành tốt nhất thị trường cho các sản phẩm trầm hương tự nhiên.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Điều kiện bảo hành</h3><ul class='list-disc pl-5 space-y-2'><li>Bảo hành mùi hương trọn đời. Vòng đeo sẽ giữ được hương thơm tự nhiên mãi mãi.</li><li>Hỗ trợ thay dây, đánh bóng hạt miễn phí trong quá trình sử dụng.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Chính sách đổi trả</h3><p>1 đổi 1 trong vòng 30 ngày nếu sản phẩm có lỗi từ nhà sản xuất hoặc khách hàng phát hiện sản phẩm không phải là trầm tự nhiên.</p>",
+    
+    // Product Detail
+    "product.details.authentic": "Cam kết chính hãng",
+    "product.details.rating": "Đánh giá",
+    "product.details.contactAction": "LIÊN HỆ TƯ VẤN",
+    "product.details.directSupport": "Hỗ trợ trực tiếp 24/7: 0765.942.942",
+    "product.details.freeShipping": "Giao hàng miễn phí",
+    "product.details.shippingNote": "Đơn hàng trên 1 triệu",
+    "product.details.warranty": "Bảo hành trọn đời",
+    "product.details.qualityVerified": "Kiểm định chất lượng",
+    "product.details.tab.description": "Mô tả chi tiết",
+    "product.details.tab.specifications": "Thông số kỹ thuật",
+    "product.details.tab.shipping": "Vận chuyển & Bảo hành",
+    "product.details.origin": "Nguồn gốc xuất xứ",
+    "product.details.originDesc": "Được tuyển chọn kỹ lưỡng từ các vùng trầm hương nổi tiếng tại Việt Nam, mang đậm hơi thở thiên nhiên.",
+    "product.details.crafting": "Quy trình chế tác",
+    "product.details.craftingDesc": "Chế tác hoàn toàn thủ công bởi những nghệ nhân lành nghề với hàng chục năm kinh nghiệm.",
+    "product.details.delivery": "Giao hàng nhanh chóng",
+    "product.details.deliveryDesc": "Giao nhanh trong 2-4 giờ tại TP.HCM & Hà Nội. Từ 2-3 ngày đối với các tỉnh thành khác.",
+    "product.details.warrantyDesc": "Thay dây và đánh bóng miễn phí trọn đời. Cam kết bồi thường nếu phát hiện hàng giả.",
+    "product.details.relatedProducts": "Sản phẩm liên quan",
   },
   en: {
     // Navigation
@@ -263,6 +285,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "common.email": "Email",
     "common.address": "Address",
     "common.workingHours": "Working hours",
+    "common.allProducts": "ALL PRODUCTS",
     
     // Footer
     "footer.newsletter": "Subscribe to Newsletter",
@@ -444,6 +467,27 @@ export const translations: Record<Locale, Record<string, string>> = {
     "policy.privacy.content": "<p>We understand that your privacy is important. This policy describes how we collect, use, and protect your personal information.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Information Collection</h3><p>We only collect information necessary to process orders such as: Full name, phone number, shipping address, and email.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Data Protection</h3><p>All customer information is encrypted and securely stored. We do not share information with any third party without consent.</p>",
     "policy.shipping.content": "<p>We strive to deliver products to customers in the fastest time with the best service quality.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Delivery Time</h3><ul class='list-disc pl-5 space-y-2'><li>Inner Da Nang: Express delivery within 2 hours.</li><li>Other provinces: Standard delivery from 2 - 4 working days.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Shipping Fee</h3><p>Free nationwide shipping for orders valued from 500,000 VND. For orders under 500,000 VND, shipping fee will be calculated according to our shipping partner's pricing.</p>",
     "policy.warranty.content": "<p>Customer satisfaction is our top priority. We are confident in issuing the best warranty policy in the market for natural agarwood products.</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. Warranty Conditions</h3><ul class='list-disc pl-5 space-y-2'><li>Lifetime scent warranty. The bracelet will retain its natural aroma forever.</li><li>Free string replacement and bead polishing during use.</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. Return Policy</h3><p>1-to-1 exchange within 30 days if the product has a manufacturer defect or the customer discovers the product is not natural agarwood.</p>",
+    
+    // Product Detail
+    "product.details.authentic": "Authentic",
+    "product.details.rating": "Rating",
+    "product.details.contactAction": "CONTACT FOR PRICE",
+    "product.details.directSupport": "Direct support 24/7: 0765.942.942",
+    "product.details.freeShipping": "Free Shipping",
+    "product.details.shippingNote": "Orders over 1M",
+    "product.details.warranty": "Lifetime Warranty",
+    "product.details.qualityVerified": "Verified Quality",
+    "product.details.tab.description": "Description",
+    "product.details.tab.specifications": "Specifications",
+    "product.details.tab.shipping": "Shipping & Warranty",
+    "product.details.origin": "Product Origin",
+    "product.details.originDesc": "Handpicked from the regions of Vietnam, ensuring the highest aromatic quality.",
+    "product.details.crafting": "Crafting Process",
+    "product.details.craftingDesc": "Meticulously crafted by master artisans with decades of experience.",
+    "product.details.delivery": "Fast Delivery",
+    "product.details.deliveryDesc": "Delivery within 2-4 hours in HCM & Hanoi. 2-3 days for other provinces.",
+    "product.details.warrantyDesc": "Free string replacement and polishing for life. Quality verification for every product.",
+    "product.details.relatedProducts": "Related Products",
   },
   zh: {
     // Navigation
@@ -482,6 +526,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "common.email": "电子邮件",
     "common.address": "地址",
     "common.workingHours": "工作时间",
+    "common.allProducts": "所有产品",
     
     // Footer
     "footer.newsletter": "订阅通讯",
@@ -662,5 +707,26 @@ export const translations: Record<Locale, Record<string, string>> = {
     "policy.privacy.content": "<p>我们理解您的隐私很重要。本政策说明了我们如何收集、使用和保护您的个人信息。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 信息收集</h3><p>我们仅收集处理订单所需的信息，例如：姓名、电话号码、送货地址和电子邮箱。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 数据保护</h3><p>所有客户信息都经过加密并安全存储。未经同意，我们不会与任何第三方分享信息。</p>",
     "policy.shipping.content": "<p>我们努力以最快的时间和最优质的服务将产品送达客户。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 送货时间</h3><ul class='list-disc pl-5 space-y-2'><li>岘港市内：2小时内极速送达。</li><li>其他省份：标准送货时间为2 - 4个工作日。</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 运费</h3><p>订单金额满50万越南盾，全国包邮。订单金额低于50万越南盾，运费将根据我们合作快递公司的价格计算。</p>",
     "policy.warranty.content": "<p>客户满意是我们的首要任务。我们有信心为天然沉香产品提供市场上最好的保修政策。</p><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>1. 保修条件</h3><ul class='list-disc pl-5 space-y-2'><li>香味终身保修。手链将永远保持其天然香气。</li><li>使用过程中免费提供换线和珠子抛光服务。</li></ul><h3 class='text-xl font-serif text-foreground mt-8 mb-4'>2. 退换货政策</h3><p>如果产品存在制造商缺陷或客户发现产品不是天然沉香，可在30天内1对1更换。</p>",
+    
+    // Product Detail
+    "product.details.authentic": "正品保证",
+    "product.details.rating": "评分",
+    "product.details.contactAction": "联系咨询报价",
+    "product.details.directSupport": "24/7 直接支持: 0765.942.942",
+    "product.details.freeShipping": "面运费",
+    "product.details.shippingNote": "订单满100万",
+    "product.details.warranty": "终身质保",
+    "product.details.qualityVerified": "质量验证",
+    "product.details.tab.description": "详情描述",
+    "product.details.tab.specifications": "规格参数",
+    "product.details.tab.shipping": "配送与保修",
+    "product.details.origin": "产地来源",
+    "product.details.originDesc": "精心挑选自越南各著名沉香产区，确保最高的香气品质。",
+    "product.details.crafting": "工艺流程",
+    "product.details.craftingDesc": "由拥有数十年经验的熟练工匠精心打造。",
+    "product.details.delivery": "急速送达",
+    "product.details.deliveryDesc": "胡志明市和河内2-4小时送达。其他省份2-3天。",
+    "product.details.warrantyDesc": "终身免费更换绳索和抛光。每件产品均经过质量验证。",
+    "product.details.relatedProducts": "相关产品",
   },
 }

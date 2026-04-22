@@ -12,7 +12,7 @@ export function FeaturedProducts() {
     {
       id: "1",
       name: t("product.1.name"),
-      image: "/products/p1.jpg",
+      image: "/products/vong-tay/vong-tay-1.jpg",
       originalPrice: 21500000,
       salePrice: 18500000,
       rating: 5,
@@ -21,14 +21,14 @@ export function FeaturedProducts() {
     {
       id: "2",
       name: t("product.2.name"),
-      image: "/products/p2.jpg",
+      image: "/products/vong-tay/vong-tay-2.jpg",
       originalPrice: 15900000,
       rating: 5,
     },
     {
       id: "3",
       name: t("product.3.name"),
-      image: "/products/p3.jpg",
+      image: "/products/vong-tay/vong-tay-3.jpg",
       originalPrice: 18500000,
       salePrice: 16500000,
       rating: 5,
@@ -37,7 +37,7 @@ export function FeaturedProducts() {
     {
       id: "4",
       name: t("product.4.name"),
-      image: "/products/p4.jpg",
+      image: "/products/vong-tay/vong-tay-4.jpg",
       originalPrice: 12900000,
       rating: 4,
     },

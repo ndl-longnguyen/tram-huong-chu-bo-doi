@@ -25,10 +25,10 @@ export function ProductCard({
   badge,
   badgeType,
 }: ProductCardProps) {
-  const { t } = useLanguage()
-
+  const { locale, t, getLocalizedPath } = useLanguage()
+  
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('vi-VN').format(price) + ' đ'
+    return new Intl.NumberFormat(locale === 'vi' ? 'vi-VN' : locale === 'zh' ? 'zh-CN' : 'en-US').format(price) + ' đ'
   }
 
   const discountPercent = salePrice 
@@ -54,7 +54,7 @@ export function ProductCard({
   }
 
   return (
-    <Link href={`/san-pham/${id}`} className="group block">
+    <Link href={getLocalizedPath(`/san-pham/${id}`)} className="group block">
       <div className="relative overflow-hidden rounded-2xl bg-muted aspect-square">
         {/* Image */}
         <img

@@ -38,7 +38,7 @@ export function ProductGrid() {
       <div>
         <div className="flex items-center justify-between mb-6">
           <h2 className="font-serif text-xl md:text-2xl text-foreground uppercase tracking-wider">
-            {locale === 'en' ? 'ALL PRODUCTS' : locale === 'zh' ? '所有产品' : 'TẤT CẢ SẢN PHẨM'}
+            {t("common.allProducts")}
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

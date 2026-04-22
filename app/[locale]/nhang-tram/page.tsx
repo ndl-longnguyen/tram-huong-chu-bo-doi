@@ -8,12 +8,12 @@ import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const incenseProducts = [
-  { id: "1", name: { vi: "Nhang Trầm Hương Cao Cấp", en: "Premium Incense", zh: "高级沉香" }, price: 450000, originalPrice: 550000, image: "/assets/nhang/1.png", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
-  { id: "2", name: { vi: "Nụ Trầm Hương Thiên Nhiên", en: "Natural Incense Cones", zh: "天然沉香塔" }, price: 380000, originalPrice: 450000, image: "/assets/nhang/2.png", badge: { vi: "Mới", en: "New", zh: "新品" } },
-  { id: "3", name: { vi: "Nhang Vòng Trầm Hương", en: "Coil Incense", zh: "盘香" }, price: 520000, originalPrice: 650000, image: "/assets/nhang/3.png" },
-  { id: "4", name: { vi: "Nhang Trầm Hương Đặc Biệt", en: "Special Incense", zh: "特级沉香" }, price: 780000, originalPrice: 900000, image: "/assets/nhang/1.png", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
-  { id: "5", name: { vi: "Nụ Trầm Mini", en: "Mini Cones", zh: "迷你香塔" }, price: 280000, image: "/assets/nhang/2.png" },
-  { id: "6", name: { vi: "Nhang Trầm Gift Set", en: "Gift Set", zh: "礼盒装" }, price: 1200000, originalPrice: 1500000, image: "/assets/nhang/3.png", badge: { vi: "Quà tặng", en: "Gift", zh: "礼品" } },
+  { id: "1", name: { vi: "Nhang Trầm Hương Cao Cấp", en: "Premium Incense", zh: "高级沉香" }, price: 450000, originalPrice: 550000, image: "/products/nhang-tram/nhang-1.png", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
+  { id: "2", name: { vi: "Nụ Trầm Hương Thiên Nhiên", en: "Natural Incense Cones", zh: "天然沉香塔" }, price: 380000, originalPrice: 450000, image: "/products/nhang-tram/nhang-2.png", badge: { vi: "Mới", en: "New", zh: "新品" } },
+  { id: "3", name: { vi: "Nhang Vòng Trầm Hương", en: "Coil Incense", zh: "盘香" }, price: 520000, originalPrice: 650000, image: "/products/nhang-tram/nhang-3.png" },
+  { id: "4", name: { vi: "Nhang Trầm Hương Đặc Biệt", en: "Special Incense", zh: "特级沉香" }, price: 780000, originalPrice: 900000, image: "/products/nhang-tram/nhang-4.png", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
+  { id: "5", name: { vi: "Nụ Trầm Mini", en: "Mini Cones", zh: "迷你香塔" }, price: 280000, image: "/products/nhang-tram/nhang-5.png" },
+  { id: "6", name: { vi: "Nhang Trầm Gift Set", en: "Gift Set", zh: "礼盒装" }, price: 1200000, originalPrice: 1500000, image: "/products/nhang-tram/nhang-6.png", badge: { vi: "Quà tặng", en: "Gift", zh: "礼品" } },
 ]
 
 export default function IncensePage() {

@@ -11,25 +11,25 @@ export function ExploreSection() {
     {
       title: t("nav.incense"),
       description: t("home.intro.newCollection"),
-      image: "/products/p5.jpg",
+      image: "/images/home/explore-1.jpg",
       href: "/nhang-tram",
     },
     {
       title: t("nav.bracelet"),
       description: t("home.intro.braceletDesc")?.split('.')[0] || "",
-      image: "/products/p1.jpg",
+      image: "/images/home/explore-2.jpg",
       href: "/vong-tay",
     },
     {
       title: t("nav.art"),
       description: t("hero.tagline"),
-      image: "/products/p6.jpg",
+      image: "/images/home/explore-3.jpg",
       href: "/my-nghe",
     },
     {
       title: t("nav.gift"),
       description: t("home.banner.title2"),
-      image: "/products/p7.jpg",
+      image: "/images/home/explore-4.jpg",
       href: "/qua-tang",
     },
   ]

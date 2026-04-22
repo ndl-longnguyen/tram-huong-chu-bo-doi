@@ -60,7 +60,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="/logo.png"
+                src="/branding/logo.png"
                 alt="Trầm Hương Chú Bộ Đội"
                 width={200}
                 height={80}
