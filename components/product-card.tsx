@@ -58,7 +58,7 @@ export function ProductCard({
   }
 
   return (
-    <Link href={`/san-pham/${id}`} className="group block">
+    <Link href={`/san-pham/${id}`} className="group block relative hover:z-50 transition-all">
       <div className="relative overflow-hidden rounded-2xl bg-muted aspect-square">
         {/* Image */}
         <Image
