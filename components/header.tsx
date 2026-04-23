@@ -79,7 +79,7 @@ export function Header() {
               </div>
               <a
                 href="tel:0765942942"
-                className="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
+                className="hidden md:flex items-center gap-2 px-4 py-2 border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-primary-foreground hover:shadow-md transition-all duration-300 group"
               >
                 <Phone className="w-4 h-4 group-hover:animate-pulse" />
                 <span className="font-semibold">0765.942.942</span>
@@ -142,7 +142,7 @@ export function Header() {
               <li className="pt-4">
                 <a
                   href="tel:0765942942"
-                  className="flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-lg font-medium"
+                  className="flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 hover:shadow-md transition-all duration-300"
                 >
                   <Phone className="w-4 h-4" />
                   <span>0765.942.942</span>

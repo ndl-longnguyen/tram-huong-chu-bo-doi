@@ -4,44 +4,13 @@ import Link from "next/link"
 import { ProductCard } from "@/components/product-card"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { getFeaturedProducts } from "@/lib/products"
 
 export function FeaturedProducts() {
-  const { t, getLocalizedPath } = useLanguage()
-
-  const featuredProducts = [
-    {
-      id: "1",
-      name: t("product.1.name"),
-      image: "/products/p1.jpg",
-      originalPrice: 21500000,
-      salePrice: 18500000,
-      rating: 5,
-      badgeType: "best" as const,
-    },
-    {
-      id: "2",
-      name: t("product.2.name"),
-      image: "/products/p2.jpg",
-      originalPrice: 15900000,
-      rating: 5,
-    },
-    {
-      id: "3",
-      name: t("product.3.name"),
-      image: "/products/p3.jpg",
-      originalPrice: 18500000,
-      salePrice: 16500000,
-      rating: 5,
-      badgeType: "sale" as const,
-    },
-    {
-      id: "4",
-      name: t("product.4.name"),
-      image: "/products/p4.jpg",
-      originalPrice: 12900000,
-      rating: 4,
-    },
-  ]
+  const { t, getLocalizedPath, locale } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
+  
+  const featuredProducts = getFeaturedProducts(4)
 
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
@@ -66,7 +35,16 @@ export function FeaturedProducts() {
         {/* Products Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {featuredProducts.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard 
+              key={product.id} 
+              id={product.id}
+              name={product.name[localeKey]}
+              image={product.image}
+              originalPrice={product.originalPrice}
+              salePrice={product.salePrice ?? undefined}
+              rating={product.rating}
+              badgeType={product.badgeType ?? undefined}
+            />
           ))}
         </div>
 
