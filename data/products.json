@@ -2,24 +2,29 @@
   "products": [
     {
       "id": "1",
-      "sku": "VT-BL-001",
-      "slug": "vong-tay-bao-linh-tram-toc-vip",
+      "sku": "VT-CN-16",
+      "slug": "vong-chim-nuoc-16-ly",
       "name": {
-        "vi": "Vòng Tay Bảo Linh Trầm Tốc - Việt Nam VIP",
-        "en": "Bao Linh Premium Agarwood Bracelet - Vietnam VIP",
-        "zh": "宝灵沉香手链 - 越南VIP"
+        "vi": "Vòng Trầm Hương Chìm Nước 16 Ly (Hàng Sưu Tầm)",
+        "en": "Premium Sinking Agarwood Bracelet 16mm",
+        "zh": "高级沉水沉香手链 16mm"
       },
-      "image": "/images/products/vong-tay/vt-001.jpg",
+      "image": "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-1.jpg",
       "images": [
-        "/images/products/vong-tay/vt-001.jpg",
-        "/images/products/vong-tay/vt-001-2.jpg",
-        "/images/products/vong-tay/vt-001-3.jpg",
-        "/images/products/vong-tay/vt-001-4.jpg"
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-1.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-2.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-3.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-4.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-5.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-6.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-7.png",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-8.jpg",
+        "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-9.jpg"
       ],
-      "originalPrice": 21500000,
-      "salePrice": 18500000,
+      "originalPrice": 530000000,
+      "salePrice": 530000000,
       "rating": 5,
-      "reviewCount": 128,
+      "reviewCount": 12,
       "badgeType": "best",
       "category": {
         "vi": "Vòng Tay",
@@ -28,449 +33,485 @@
       },
       "categorySlug": "vong-tay",
       "description": {
-        "vi": "Vòng tay trầm hương cao cấp Bảo Linh được chế tác từ 100% trầm tốc tự nhiên Việt Nam, mang đến năng lượng tích cực và bình an cho người đeo. Sản phẩm được tuyển chọn kỹ lưỡng từ những vùng trầm nổi tiếng nhất Việt Nam như Tiên Phước, Quảng Nam.",
-        "en": "The premium Bao Linh agarwood bracelet is crafted from 100% natural Vietnamese agarwood, bringing positive energy and peace to the wearer. The product is carefully selected from the most famous agarwood regions in Vietnam such as Tien Phuoc, Quang Nam.",
-        "zh": "宝灵高级沉香手链采用100%越南天然沉香制作，为佩戴者带来正能量和平安。产品精选自越南最著名的沉香产区，如先福、广南。"
+        "vi": "Đỉnh cao của nghệ thuật trầm hương - vòng chìm nước 16 ly mang giá trị sưu tầm cực cao. Mùi hương ngọt ngào, sâu thẳm, vân gỗ đen đặc tự nhiên.",
+        "en": "The pinnacle of agarwood art - 16mm sinking bracelet with extremely high collectible value. Sweet, deep fragrance, natural solid black wood grain.",
+        "zh": "沉香艺术的巅峰之作——16毫米沉水手链，具有极高的收藏价值。香气甜美深沉，天然黑色木纹。"
       },
       "features": {
         "vi": [
-          "100% Trầm hương tự nhiên Việt Nam",
-          "Chế tác thủ công bởi nghệ nhân lành nghề",
-          "Hương thơm dịu nhẹ, thanh tao",
-          "Bảo hành mùi hương trọn đời",
-          "Tặng kèm hộp đựng cao cấp và giấy chứng nhận"
+          "100% Trầm hương chìm nước",
+          "Giá trị sưu tầm cao",
+          "Hương thơm vĩnh cửu"
         ],
         "en": [
-          "100% Natural Vietnamese agarwood",
-          "Handcrafted by skilled artisans",
-          "Gentle, elegant fragrance",
-          "Lifetime fragrance warranty",
-          "Includes premium box and certificate"
+          "100% Sinking agarwood",
+          "High collectible value",
+          "Eternal fragrance"
         ],
         "zh": [
-          "100%越南天然沉香",
-          "由熟练工匠手工制作",
-          "香味柔和优雅",
-          "终身香味保修",
-          "附赠高级礼盒和证书"
+          "100% 沉水沉香",
+          "极高收藏价值",
+          "永恒香气"
         ]
       },
       "specs": {
-        "material": { "vi": "Trầm Tốc Việt Nam", "en": "Vietnamese Agarwood", "zh": "越南沉香" },
-        "origin": { "vi": "Tiên Phước, Quảng Nam", "en": "Tien Phuoc, Quang Nam", "zh": "先福，广南" },
-        "size": "8mm - 10mm",
-        "weight": "15g - 20g",
-        "age": { "vi": "20 năm tuổi trầm", "en": "20 years aged", "zh": "20年陈香" }
+        "material": {
+          "vi": "Trầm Hương Chìm Nước",
+          "en": "Sinking Agarwood",
+          "zh": "沉水沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "16mm",
+        "weight": "Chìm nước",
+        "age": {
+          "vi": "Hàng chục năm",
+          "en": "Decades",
+          "zh": "几十年"
+        }
       },
       "inStock": true
     },
     {
       "id": "2",
-      "sku": "VT-BH-002",
-      "slug": "vong-tay-bao-huong-tram-toc-cao-cap",
+      "sku": "VT-BKR",
+      "slug": "vong-nut-bi-kep-re",
       "name": {
-        "vi": "Vòng Tay Bảo Hương - Trầm Tốc Cao Cấp",
-        "en": "Bao Huong Bracelet - Premium Agarwood",
-        "zh": "宝香手链 - 高级沉香"
+        "vi": "Vòng Nút Bì Kẹp Rễ Cận Chìm",
+        "en": "Half-sinking Root Agarwood Bracelet",
+        "zh": "半沉水树根沉香手链"
       },
-      "image": "/images/products/vong-tay/vt-002.jpg",
+      "image": "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-1.jpg",
       "images": [
-        "/images/products/vong-tay/vt-002.jpg",
-        "/images/products/vong-tay/vt-002-2.jpg",
-        "/images/products/vong-tay/vt-002-3.jpg"
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-1.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-2.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-3.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-4.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-5.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-6.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-7.jpg",
+        "/images/products/vong-tay/vong-nut-bi-kep-re/vong-nut-bi-kep-re-8.png"
       ],
-      "originalPrice": 15900000,
-      "salePrice": null,
+      "originalPrice": 18000000,
+      "salePrice": 16000000,
       "rating": 5,
-      "reviewCount": 89,
-      "badgeType": null,
-      "category": { "vi": "Vòng Tay", "en": "Bracelets", "zh": "手链" },
+      "reviewCount": 45,
+      "badgeType": "sale",
+      "category": {
+        "vi": "Vòng Tay",
+        "en": "Bracelets",
+        "zh": "手链"
+      },
       "categorySlug": "vong-tay",
       "description": {
-        "vi": "Vòng tay Bảo Hương với thiết kế thanh lịch, được làm từ trầm tốc cao cấp, phù hợp cho cả nam và nữ. Sản phẩm mang lại cảm giác thanh tịnh, giúp tâm an, trí sáng.",
-        "en": "The Bao Huong bracelet with elegant design, made from premium agarwood, suitable for both men and women. The product brings a sense of purity, helping to calm the mind.",
-        "zh": "宝香手链设计优雅，采用高级沉香制作，适合男女佩戴。产品带来纯净感，有助于平静心灵。"
+        "vi": "Sản phẩm độc đáo làm từ phần bì kẹp rễ cận chìm. Vân gỗ hoang dã, tự nhiên, mùi hương sống động đầy lôi cuốn.",
+        "en": "Unique product made from half-sinking root agarwood. Wild, natural wood grain, lively and captivating fragrance.",
+        "zh": "由半沉水树根沉香制成的独特产品。狂野自然的木纹，生动迷人的香气。"
       },
       "features": {
         "vi": [
-          "Trầm tốc cao cấp nguyên chất",
-          "Thiết kế unisex thanh lịch",
-          "Hương thơm tự nhiên lâu phai",
-          "Hỗ trợ đổi size miễn phí",
-          "Bảo hành trọn đời"
+          "Bì kẹp rễ tự nhiên",
+          "Chất lượng cận chìm",
+          "Vân gỗ độc đáo"
         ],
         "en": [
-          "Pure premium agarwood",
-          "Elegant unisex design",
-          "Long-lasting natural fragrance",
-          "Free size exchange",
-          "Lifetime warranty"
+          "Natural root agarwood",
+          "Half-sinking quality",
+          "Unique wood grain"
         ],
         "zh": [
-          "纯正高级沉香",
-          "优雅中性设计",
-          "持久天然香味",
-          "免费更换尺寸",
-          "终身保修"
+          "天然树根沉香",
+          "半沉水品质",
+          "独特木纹"
         ]
       },
       "specs": {
-        "material": { "vi": "Trầm Tốc Cao Cấp", "en": "Premium Agarwood", "zh": "高级沉香" },
-        "origin": { "vi": "Khánh Hòa, Việt Nam", "en": "Khanh Hoa, Vietnam", "zh": "庆和，越南" },
-        "size": "8mm",
-        "weight": "12g",
-        "age": { "vi": "15 năm tuổi trầm", "en": "15 years aged", "zh": "15年陈香" }
+        "material": {
+          "vi": "Trầm Bì Kẹp Rễ",
+          "en": "Root Agarwood",
+          "zh": "树根沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "Tự nhiên",
+        "weight": "Cận chìm",
+        "age": {
+          "vi": "Trên 20 năm",
+          "en": "Over 20 years",
+          "zh": "20年以上"
+        }
       },
       "inStock": true
     },
     {
       "id": "3",
-      "sku": "VT-LQ-003",
-      "slug": "vong-tay-luu-quang-tram-song-vip",
+      "sku": "VT-BDD",
+      "slug": "lac-bi-dau-do",
       "name": {
-        "vi": "Vòng Tay Lưu Quang - Trầm Sống VIP",
-        "en": "Luu Quang Bracelet - Live Agarwood VIP",
-        "zh": "流光手链 - 活沉香VIP"
+        "vi": "Lắc Tay Bì Dầu Đỏ",
+        "en": "Red Oil Agarwood Bracelet",
+        "zh": "红油沉香手链"
       },
-      "image": "/images/products/vong-tay/vt-003.jpg",
+      "image": "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-1.jpg",
       "images": [
-        "/images/products/vong-tay/vt-003.jpg",
-        "/images/products/vong-tay/vt-003-2.jpg",
-        "/images/products/vong-tay/vt-003-3.jpg"
+        "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-1.jpg",
+        "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-2.jpg",
+        "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-3.jpg",
+        "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-4.jpg",
+        "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-5.png"
       ],
-      "originalPrice": 18500000,
-      "salePrice": 16500000,
-      "rating": 5,
-      "reviewCount": 156,
-      "badgeType": "sale",
-      "category": { "vi": "Vòng Tay", "en": "Bracelets", "zh": "手链" },
+      "originalPrice": 12000000,
+      "salePrice": 12000000,
+      "rating": 4,
+      "reviewCount": 23,
+      "badgeType": "hot",
+      "category": {
+        "vi": "Vòng Tay",
+        "en": "Bracelets",
+        "zh": "手链"
+      },
       "categorySlug": "vong-tay",
       "description": {
-        "vi": "Vòng tay Lưu Quang được chế tác từ trầm sống VIP, loại trầm quý hiếm được hình thành tự nhiên trong thân cây dó bầu còn sống. Sản phẩm mang năng lượng mạnh mẽ, hương thơm đặc biệt.",
-        "en": "The Luu Quang bracelet is crafted from VIP live agarwood, a rare type of agarwood formed naturally in living Aquilaria trees. The product carries powerful energy with a special fragrance.",
-        "zh": "流光手链采用VIP活沉香制作，这是一种在活沉香树中自然形成的稀有沉香。产品具有强大的能量和特殊的香味。"
+        "vi": "Lắc tay trầm hương làm từ phôi bì dầu đỏ đặc biệt. Màu sắc tự nhiên sang trọng, hương thơm nồng nàn lưu giữ dài lâu.",
+        "en": "Agarwood bracelet made from special red oil agarwood blank. Elegant natural color, passionate long-lasting fragrance.",
+        "zh": "采用特制红油沉香料制成的沉香手链。优雅的自然色彩，热情持久的香味。"
       },
       "features": {
         "vi": [
-          "Trầm sống VIP - loại trầm quý hiếm",
-          "Năng lượng mạnh mẽ, hương thơm đặc biệt",
-          "Chế tác tinh xảo, độc đáo",
-          "Kèm giấy kiểm định chất lượng",
-          "Giao hàng nhanh toàn quốc"
+          "Bì dầu đỏ quý hiếm",
+          "Màu sắc tự nhiên",
+          "Thiết kế dạng lắc"
         ],
         "en": [
-          "VIP live agarwood - rare type",
-          "Powerful energy, special fragrance",
-          "Exquisite, unique craftsmanship",
-          "Quality certification included",
-          "Fast nationwide delivery"
+          "Rare red oil agarwood",
+          "Natural color",
+          "Bracelet design"
         ],
         "zh": [
-          "VIP活沉香 - 稀有类型",
-          "强大能量，特殊香味",
-          "精致独特的工艺",
-          "附质量检测证书",
-          "全国快速配送"
+          "珍贵红油沉香",
+          "自然色彩",
+          "手链设计"
         ]
       },
       "specs": {
-        "material": { "vi": "Trầm Sống VIP", "en": "VIP Live Agarwood", "zh": "VIP活沉香" },
-        "origin": { "vi": "Hà Tĩnh, Việt Nam", "en": "Ha Tinh, Vietnam", "zh": "河静，越南" },
-        "size": "10mm",
-        "weight": "18g",
-        "age": { "vi": "25 năm tuổi trầm", "en": "25 years aged", "zh": "25年陈香" }
+        "material": {
+          "vi": "Trầm Bì Dầu Đỏ",
+          "en": "Red Oil Agarwood",
+          "zh": "红油沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "Tiêu chuẩn",
+        "weight": "Tiêu chuẩn",
+        "age": {
+          "vi": "Trên 15 năm",
+          "en": "Over 15 years",
+          "zh": "15年以上"
+        }
       },
       "inStock": true
     },
     {
       "id": "4",
-      "sku": "VT-MT-004",
-      "slug": "vong-tay-tram-huong-viet-nam-moc-that",
+      "sku": "VT-LT-10",
+      "slug": "vong-lu-thong-10-ly",
       "name": {
-        "vi": "Vòng Tay Trầm Hương Việt Nam Mộc Thật",
-        "en": "Authentic Vietnamese Natural Agarwood Bracelet",
-        "zh": "正宗越南天然沉香手链"
+        "vi": "Vòng Lu Thống Trầm Hương 10 Ly",
+        "en": "Agarwood Tube Bracelet 10mm",
+        "zh": "沉香路路通手链 10mm"
       },
-      "image": "/images/products/vong-tay/vt-004.jpg",
+      "image": "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-1.jpg",
       "images": [
-        "/images/products/vong-tay/vt-004.jpg",
-        "/images/products/vong-tay/vt-004-2.jpg",
-        "/images/products/vong-tay/vt-004-3.jpg"
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-1.jpg",
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-2.jpg",
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-3.jpg",
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-4.jpg",
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-5.jpg",
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-6.jpg",
+        "/images/products/vong-tay/vong-lu-thong-10-ly/vong-lu-thong-10-ly-7.png"
       ],
-      "originalPrice": 12900000,
-      "salePrice": null,
-      "rating": 4,
-      "reviewCount": 67,
-      "badgeType": null,
-      "category": { "vi": "Vòng Tay", "en": "Bracelets", "zh": "手链" },
+      "originalPrice": 4500000,
+      "salePrice": 4000000,
+      "rating": 5,
+      "reviewCount": 89,
+      "badgeType": "sale",
+      "category": {
+        "vi": "Vòng Tay",
+        "en": "Bracelets",
+        "zh": "手链"
+      },
       "categorySlug": "vong-tay",
       "description": {
-        "vi": "Vòng tay trầm hương mộc thật với vẻ đẹp tự nhiên, không qua xử lý hóa chất. Sản phẩm giữ nguyên vân gỗ tự nhiên và hương thơm nguyên bản của trầm hương Việt Nam.",
-        "en": "Natural agarwood bracelet with natural beauty, without chemical treatment. The product retains the natural wood grain and original fragrance of Vietnamese agarwood.",
-        "zh": "天然沉香手链，自然美观，未经化学处理。产品保留了越南沉香的天然木纹和原始香味。"
+        "vi": "Thiết kế hạt lu thống mang ý nghĩa phong thủy hanh thông, vạn sự như ý. Hạt 10 ly phù hợp cho cả nam và nữ.",
+        "en": "Tube bead design with feng shui meaning of smooth sailing and success. 10mm beads suitable for both men and women.",
+        "zh": "路路通珠子设计，寓意风水顺遂，万事如意。10毫米珠子适合男女佩戴。"
       },
       "features": {
         "vi": [
-          "100% mộc thật, không xử lý hóa chất",
-          "Vân gỗ tự nhiên đẹp mắt",
-          "Giá cả phải chăng",
-          "Phù hợp người mới bắt đầu",
-          "Hỗ trợ tư vấn 24/7"
+          "Ý nghĩa phong thủy",
+          "Hạt lu thống độc đáo",
+          "Thích hợp mọi giới tính"
         ],
         "en": [
-          "100% authentic, no chemical treatment",
-          "Beautiful natural wood grain",
-          "Affordable price",
-          "Suitable for beginners",
-          "24/7 consultation support"
+          "Feng shui meaning",
+          "Unique tube beads",
+          "Unisex"
         ],
         "zh": [
-          "100%正品，无化学处理",
-          "美丽的天然木纹",
-          "价格实惠",
-          "适合初学者",
-          "24/7咨询支持"
+          "风水寓意",
+          "独特路路通珠子",
+          "中性"
         ]
       },
       "specs": {
-        "material": { "vi": "Trầm Hương Mộc Thật", "en": "Natural Agarwood", "zh": "天然沉香" },
-        "origin": { "vi": "Bình Phước, Việt Nam", "en": "Binh Phuoc, Vietnam", "zh": "平福，越南" },
-        "size": "8mm",
-        "weight": "10g",
-        "age": { "vi": "10 năm tuổi trầm", "en": "10 years aged", "zh": "10年陈香" }
+        "material": {
+          "vi": "Trầm Hương Tự Nhiên",
+          "en": "Natural Agarwood",
+          "zh": "天然沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "10mm",
+        "weight": "Tiêu chuẩn",
+        "age": {
+          "vi": "Trên 10 năm",
+          "en": "Over 10 years",
+          "zh": "10年以上"
+        }
       },
       "inStock": true
     },
     {
       "id": "5",
-      "sku": "TS-NH-005",
-      "slug": "nhan-tram-huong-viet-nam-ngoc-that",
+      "sku": "VT-BC",
+      "slug": "lac-banh-cam",
       "name": {
-        "vi": "Nhẫn Trầm Hương Việt Nam Ngọc Thật",
-        "en": "Vietnamese Jade Agarwood Ring",
-        "zh": "越南玉石沉香戒指"
+        "vi": "Lắc Tay Trầm Hương Banh Cam",
+        "en": "Banh Cam Agarwood Bracelet",
+        "zh": "班甘沉香手链"
       },
-      "image": "/images/products/trang-suc/ts-001.jpg",
+      "image": "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-1.jpg",
       "images": [
-        "/images/products/trang-suc/ts-001.jpg",
-        "/images/products/trang-suc/ts-001-2.jpg"
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-1.jpg",
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-2.jpg",
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-3.jpg",
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-4.jpg",
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-5.jpg",
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-6.jpg",
+        "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-7.png"
       ],
-      "originalPrice": 8500000,
-      "salePrice": 7200000,
+      "originalPrice": 8000000,
+      "salePrice": 8000000,
       "rating": 5,
-      "reviewCount": 45,
+      "reviewCount": 56,
       "badgeType": "new",
-      "category": { "vi": "Trang Sức", "en": "Jewelry", "zh": "首饰" },
-      "categorySlug": "trang-suc",
+      "category": {
+        "vi": "Vòng Tay",
+        "en": "Bracelets",
+        "zh": "手链"
+      },
+      "categorySlug": "vong-tay",
       "description": {
-        "vi": "Nhẫn trầm hương kết hợp ngọc thật, thiết kế sang trọng và độc đáo. Sản phẩm phù hợp làm quà tặng cao cấp cho người thân yêu.",
-        "en": "Agarwood ring combined with real jade, luxurious and unique design. The product is suitable as a premium gift for loved ones.",
-        "zh": "沉香戒指搭配真玉，设计奢华独特。产品适合作为高级礼品送给亲人。"
+        "vi": "Chế tác từ dòng trầm banh cam quý hiếm, màu sắc nổi bật, mùi hương nồng ấm. Món trang sức đẳng cấp thể hiện phong cách.",
+        "en": "Crafted from rare Banh Cam agarwood, outstanding color, warm passionate fragrance. A classy jewelry piece showing style.",
+        "zh": "采用珍贵班甘沉香制作，色彩出众，香气温暖热情。展现风格的高级珠宝。"
       },
       "features": {
         "vi": [
-          "Kết hợp trầm hương và ngọc thật",
-          "Thiết kế sang trọng, đẳng cấp",
-          "Phù hợp làm quà tặng",
-          "Có thể đặt size theo yêu cầu",
-          "Bảo hành chất lượng 12 tháng"
+          "Trầm banh cam quý hiếm",
+          "Mùi hương nồng ấm",
+          "Thiết kế hiện đại"
         ],
         "en": [
-          "Combination of agarwood and real jade",
-          "Luxurious, classy design",
-          "Suitable as a gift",
-          "Custom size available",
-          "12-month quality warranty"
+          "Rare Banh Cam agarwood",
+          "Warm passionate fragrance",
+          "Modern design"
         ],
         "zh": [
-          "沉香与真玉结合",
-          "奢华高档设计",
-          "适合作为礼物",
-          "可定制尺寸",
-          "12个月质量保修"
+          "珍贵班甘沉香",
+          "温暖热情香气",
+          "现代设计"
         ]
       },
       "specs": {
-        "material": { "vi": "Trầm Hương + Ngọc Thật", "en": "Agarwood + Real Jade", "zh": "沉香 + 真玉" },
-        "origin": { "vi": "Việt Nam", "en": "Vietnam", "zh": "越南" },
-        "size": "16mm - 22mm",
-        "weight": "8g",
-        "age": { "vi": "15 năm tuổi trầm", "en": "15 years aged", "zh": "15年陈香" }
+        "material": {
+          "vi": "Trầm Banh Cam",
+          "en": "Banh Cam Agarwood",
+          "zh": "班甘沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "Tiêu chuẩn",
+        "weight": "Tiêu chuẩn",
+        "age": {
+          "vi": "Trên 15 năm",
+          "en": "Over 15 years",
+          "zh": "15年以上"
+        }
       },
       "inStock": true
     },
     {
       "id": "6",
-      "sku": "NT-CC-006",
-      "slug": "nhang-tram-huong-cao-cap-hop-50-cay",
+      "sku": "V108-TT",
+      "slug": "vong-truc-tho-108-hat",
       "name": {
-        "vi": "Nhang Trầm Hương Cao Cấp - Hộp 50 Cây",
-        "en": "Premium Agarwood Incense - Box of 50",
-        "zh": "高级沉香香 - 50支装"
+        "vi": "Vòng Trúc Thô 108 Hạt Tốc Tự Nhiên",
+        "en": "108 Natural Raw Bamboo-shaped Agarwood Beads",
+        "zh": "108颗天然生竹形沉香念珠"
       },
-      "image": "/images/products/nhang-tram/nt-001.jpg",
+      "image": "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-1.jpg",
       "images": [
-        "/images/products/nhang-tram/nt-001.jpg",
-        "/images/products/nhang-tram/nt-001-2.jpg"
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-1.jpg",
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-2.jpg",
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-3.jpg",
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-4.jpg",
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-5.jpg",
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-6.jpg",
+        "/images/products/vong-108-hat/vong-truc-tho-toc-tu-nhien/vong-truc-tho-108-hat-7.png"
       ],
-      "originalPrice": 450000,
-      "salePrice": null,
-      "rating": 5,
-      "reviewCount": 234,
-      "badgeType": "hot",
-      "category": { "vi": "Nhang Trầm", "en": "Incense", "zh": "香" },
-      "categorySlug": "nhang-tram",
+      "originalPrice": 1600000,
+      "salePrice": 1600000,
+      "rating": 4,
+      "reviewCount": 112,
+      "badgeType": "best",
+      "category": {
+        "vi": "Vòng 108 Hạt",
+        "en": "108 Beads",
+        "zh": "108颗念珠"
+      },
+      "categorySlug": "vong-108-hat",
       "description": {
-        "vi": "Nhang trầm hương cao cấp được làm từ bột trầm nguyên chất, không hóa chất độc hại. Hương thơm thanh tao, giúp không gian sống thêm thanh tịnh và thư giãn.",
-        "en": "Premium agarwood incense made from pure agarwood powder, no harmful chemicals. Elegant fragrance helps living space become more peaceful and relaxing.",
-        "zh": "高级沉香香采用纯沉香粉制作，无有害化学物质。优雅的香味使生活空间更加平静和放松。"
+        "vi": "Dạng hạt trúc thô mộc mạc, giữ nguyên vẻ đẹp nguyên sơ của gỗ trầm tốc tự nhiên. Chuỗi 108 hạt thích hợp thiền định và cầu bình an.",
+        "en": "Rustic raw bamboo shape, retaining the pristine beauty of natural agarwood. 108 bead mala suitable for meditation and praying for peace.",
+        "zh": "质朴的生竹形状，保留了天然沉香的原始美感。108颗念珠适合冥想和祈求平安。"
       },
       "features": {
         "vi": [
-          "100% bột trầm nguyên chất",
-          "Không hóa chất độc hại",
-          "Thời gian cháy 45-60 phút/cây",
-          "Hương thơm thanh tao, dịu nhẹ",
-          "Đóng gói đẹp mắt"
+          "Hạt dáng trúc thô",
+          "108 hạt phong thủy",
+          "Giá cả hợp lý"
         ],
         "en": [
-          "100% pure agarwood powder",
-          "No harmful chemicals",
-          "Burn time 45-60 minutes per stick",
-          "Elegant, gentle fragrance",
-          "Beautiful packaging"
+          "Raw bamboo shape",
+          "108 feng shui beads",
+          "Reasonable price"
         ],
         "zh": [
-          "100%纯沉香粉",
-          "无有害化学物质",
-          "每支燃烧时间45-60分钟",
-          "优雅柔和的香味",
-          "精美包装"
+          "生竹形状",
+          "108颗风水念珠",
+          "价格合理"
         ]
       },
       "specs": {
-        "material": { "vi": "Bột Trầm Nguyên Chất", "en": "Pure Agarwood Powder", "zh": "纯沉香粉" },
-        "origin": { "vi": "Việt Nam", "en": "Vietnam", "zh": "越南" },
-        "size": "21cm",
-        "weight": "100g",
-        "age": { "vi": "N/A", "en": "N/A", "zh": "N/A" }
+        "material": {
+          "vi": "Trầm Tốc Tự Nhiên",
+          "en": "Natural Agarwood",
+          "zh": "天然沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "Hạt trúc",
+        "weight": "Nhẹ",
+        "age": {
+          "vi": "Khoảng 10 năm",
+          "en": "Around 10 years",
+          "zh": "约10年"
+        }
       },
       "inStock": true
     },
     {
       "id": "7",
-      "sku": "VT-108-007",
-      "slug": "vong-tram-108-hat-cao-cap",
+      "sku": "V216-BC-4",
+      "slug": "vong-banh-cam-216-hat",
       "name": {
-        "vi": "Vòng Trầm 108 Hạt Cao Cấp - Philip VIP",
-        "en": "108 Beads Premium Agarwood Bracelet - Philip VIP",
-        "zh": "108颗高级沉香手链 - Philip VIP"
+        "vi": "Vòng Banh Cam 216 Hạt 4 Ly",
+        "en": "216 Beads Banh Cam Agarwood Bracelet 4mm",
+        "zh": "216颗班甘沉香念珠 4mm"
       },
-      "image": "/images/products/vong-tay/vt-005.jpg",
+      "image": "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-1.jpg",
       "images": [
-        "/images/products/vong-tay/vt-005.jpg",
-        "/images/products/vong-tay/vt-005-2.jpg",
-        "/images/products/vong-tay/vt-005-3.jpg"
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-1.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-2.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-3.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-4.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-5.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-6.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-7.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-8.jpg",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-9.png",
+        "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-10.jpg"
       ],
-      "originalPrice": 25500000,
-      "salePrice": 22000000,
+      "originalPrice": 10000000,
+      "salePrice": 10000000,
       "rating": 5,
-      "reviewCount": 98,
-      "badgeType": "best",
-      "category": { "vi": "Vòng Tay", "en": "Bracelets", "zh": "手链" },
-      "categorySlug": "vong-tay",
+      "reviewCount": 34,
+      "badgeType": "hot",
+      "category": {
+        "vi": "Vòng 108 Hạt",
+        "en": "108/216 Beads",
+        "zh": "108/216颗念珠"
+      },
+      "categorySlug": "vong-108-hat",
       "description": {
-        "vi": "Vòng trầm 108 hạt cao cấp Philip VIP, được chế tác tỉ mỉ từ trầm hương Việt Nam chất lượng cao nhất. Phù hợp để đeo tay hoặc quấn cổ, mang ý nghĩa phong thủy tốt lành.",
-        "en": "108 beads premium Philip VIP agarwood bracelet, meticulously crafted from the highest quality Vietnamese agarwood. Suitable for wearing on wrist or wrapped around neck, with auspicious feng shui meaning.",
-        "zh": "108颗高级Philip VIP沉香手链，采用越南最高品质沉香精心制作。适合佩戴手腕或绕颈，具有吉祥风水寓意。"
+        "vi": "Thiết kế chuỗi quấn nhiều vòng tinh tế với 216 hạt kích thước 4 ly. Trầm banh cam lên nước càng đeo càng bóng đẹp, hương thơm quyến rũ.",
+        "en": "Exquisite multi-wrap design with 216 beads of 4mm. Banh Cam agarwood gets glossier with wear, captivating fragrance.",
+        "zh": "精致的多圈缠绕设计，配有216颗4毫米珠子。班甘沉香越戴越亮，香味迷人。"
       },
       "features": {
         "vi": [
-          "108 hạt trầm tốc cao cấp",
-          "Có thể đeo tay hoặc quấn cổ",
-          "Ý nghĩa phong thủy tốt lành",
-          "Chế tác thủ công tinh xảo",
-          "Tặng kèm túi đựng cao cấp"
+          "Thiết kế 216 hạt",
+          "Đeo quấn nhiều vòng",
+          "Chất lượng banh cam"
         ],
         "en": [
-          "108 premium agarwood beads",
-          "Can be worn on wrist or neck",
-          "Auspicious feng shui meaning",
-          "Exquisite handcrafted",
-          "Includes premium pouch"
+          "216 beads design",
+          "Multi-wrap wearing",
+          "Banh Cam quality"
         ],
         "zh": [
-          "108颗高级沉香珠",
-          "可戴手腕或绕颈",
-          "吉祥风水寓意",
-          "精美手工制作",
-          "附赠高级收纳袋"
+          "216颗设计",
+          "多圈缠绕佩戴",
+          "班甘品质"
         ]
       },
       "specs": {
-        "material": { "vi": "Trầm Tốc Việt Nam", "en": "Vietnamese Agarwood", "zh": "越南沉香" },
-        "origin": { "vi": "Quảng Nam, Việt Nam", "en": "Quang Nam, Vietnam", "zh": "广南，越南" },
-        "size": "6.2mm",
-        "weight": "25g",
-        "age": { "vi": "30 năm tuổi trầm", "en": "30 years aged", "zh": "30年陈香" }
-      },
-      "inStock": true
-    },
-    {
-      "id": "8",
-      "sku": "VT-PC-008",
-      "slug": "vong-tram-phong-chau",
-      "name": {
-        "vi": "Vòng Trầm Đeo Tay - Trầm Hương Phổng Châu",
-        "en": "Phong Chau Agarwood Bracelet",
-        "zh": "丰洲沉香手链"
-      },
-      "image": "/images/products/vong-tay/vt-006.jpg",
-      "images": [
-        "/images/products/vong-tay/vt-006.jpg",
-        "/images/products/vong-tay/vt-006-2.jpg"
-      ],
-      "originalPrice": 16900000,
-      "salePrice": null,
-      "rating": 4,
-      "reviewCount": 52,
-      "badgeType": null,
-      "category": { "vi": "Vòng Tay", "en": "Bracelets", "zh": "手链" },
-      "categorySlug": "vong-tay",
-      "description": {
-        "vi": "Vòng trầm Phổng Châu với chất lượng trầm hương đặc trưng vùng Phổng Châu, hương thơm ngọt dịu và bền lâu.",
-        "en": "Phong Chau agarwood bracelet with characteristic quality of Phong Chau region, sweet and long-lasting fragrance.",
-        "zh": "丰洲沉香手链，具有丰洲地区特有的品质，香味甜美持久。"
-      },
-      "features": {
-        "vi": [
-          "Trầm hương vùng Phổng Châu",
-          "Hương thơm ngọt dịu đặc trưng",
-          "Thiết kế thanh lịch",
-          "Phù hợp nam nữ",
-          "Bảo hành trọn đời"
-        ],
-        "en": [
-          "Phong Chau region agarwood",
-          "Characteristic sweet fragrance",
-          "Elegant design",
-          "Suitable for both genders",
-          "Lifetime warranty"
-        ],
-        "zh": [
-          "丰洲地区沉香",
-          "特有的甜香",
-          "优雅设计",
-          "男女皆宜",
-          "终身保修"
-        ]
-      },
-      "specs": {
-        "material": { "vi": "Trầm Hương Phổng Châu", "en": "Phong Chau Agarwood", "zh": "丰洲沉香" },
-        "origin": { "vi": "Phổng Châu, Việt Nam", "en": "Phong Chau, Vietnam", "zh": "丰洲，越南" },
-        "size": "8mm",
-        "weight": "14g",
-        "age": { "vi": "18 năm tuổi trầm", "en": "18 years aged", "zh": "18年陈香" }
+        "material": {
+          "vi": "Trầm Banh Cam",
+          "en": "Banh Cam Agarwood",
+          "zh": "班甘沉香"
+        },
+        "origin": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "zh": "越南"
+        },
+        "size": "4mm",
+        "weight": "Tiêu chuẩn",
+        "age": {
+          "vi": "Trên 15 năm",
+          "en": "Over 15 years",
+          "zh": "15年以上"
+        }
       },
       "inStock": true
     }
@@ -478,43 +519,45 @@
   "categories": [
     {
       "slug": "vong-tay",
-      "name": { "vi": "Vòng Tay", "en": "Bracelets", "zh": "手链" },
+      "name": {
+        "vi": "Vòng Tay Đơn",
+        "en": "Single Bracelets",
+        "zh": "单圈手链"
+      },
       "description": {
-        "vi": "Bộ sưu tập vòng tay trầm hương cao cấp",
-        "en": "Premium agarwood bracelet collection",
-        "zh": "高级沉香手链系列"
+        "vi": "Bộ sưu tập vòng tay trầm hương dạng đơn (chuỗi ngắn)",
+        "en": "Premium single agarwood bracelet collection",
+        "zh": "高级单圈沉香手链系列"
       },
       "image": "/images/categories/vong-tay.jpg"
     },
     {
+      "slug": "vong-108-hat",
+      "name": {
+        "vi": "Vòng 108 Hạt",
+        "en": "108 Beads Mala",
+        "zh": "108颗念珠"
+      },
+      "description": {
+        "vi": "Chuỗi vòng trầm hương 108 hạt và 216 hạt quấn nhiều vòng",
+        "en": "108 and 216 beads agarwood mala collection",
+        "zh": "108颗和216颗沉香念珠系列"
+      },
+      "image": "/images/categories/vong-108.jpg"
+    },
+    {
       "slug": "trang-suc",
-      "name": { "vi": "Trang Sức", "en": "Jewelry", "zh": "首饰" },
+      "name": {
+        "vi": "Trang Sức Khác",
+        "en": "Other Jewelry",
+        "zh": "其他首饰"
+      },
       "description": {
         "vi": "Trang sức trầm hương độc đáo",
         "en": "Unique agarwood jewelry",
         "zh": "独特沉香首饰"
       },
       "image": "/images/categories/trang-suc.jpg"
-    },
-    {
-      "slug": "nhang-tram",
-      "name": { "vi": "Nhang Trầm", "en": "Incense", "zh": "香" },
-      "description": {
-        "vi": "Nhang trầm hương nguyên chất",
-        "en": "Pure agarwood incense",
-        "zh": "纯沉香香"
-      },
-      "image": "/images/categories/nhang-tram.jpg"
-    },
-    {
-      "slug": "tinh-dau",
-      "name": { "vi": "Tinh Dầu", "en": "Essential Oil", "zh": "精油" },
-      "description": {
-        "vi": "Tinh dầu trầm hương tự nhiên",
-        "en": "Natural agarwood essential oil",
-        "zh": "天然沉香精油"
-      },
-      "image": "/images/categories/tinh-dau.jpg"
     }
   ]
 }
