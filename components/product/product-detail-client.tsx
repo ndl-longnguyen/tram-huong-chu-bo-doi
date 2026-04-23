@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { toast } from "sonner"
 import Link from "next/link"
 import { 
   ChevronRight, 
@@ -52,12 +53,27 @@ const content = {
   relatedProducts: { vi: "Sản phẩm liên quan", en: "Related Products", zh: "相关产品" },
   reviews: { vi: "đánh giá", en: "reviews", zh: "评价" },
   hotline: { vi: "Hotline tư vấn", en: "Consultation Hotline", zh: "咨询热线" },
+  addedToWishlist: { vi: "Đã thêm vào danh sách yêu thích", en: "Added to wishlist", zh: "已添加到愿望清单" },
+  removedFromWishlist: { vi: "Đã xóa khỏi danh sách yêu thích", en: "Removed from wishlist", zh: "已从愿望清单中删除" },
+  linkCopied: { vi: "Đã sao chép đường dẫn", en: "Link copied to clipboard", zh: "链接已复制到剪贴板" },
 }
 
 export function ProductDetailClient({ product, relatedProducts }: ProductDetailClientProps) {
   const { locale, getLocalizedPath } = useLanguage()
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
+  const [isWishlisted, setIsWishlisted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+    try {
+      const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]')
+      setIsWishlisted(wishlist.includes(product.id))
+    } catch (e) {
+      console.error('Error reading wishlist from localStorage', e)
+    }
+  }, [product.id])
 
   const localeKey = locale as 'vi' | 'en' | 'zh'
   
@@ -75,7 +91,9 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
 
   // Generate Messenger URL with pre-filled message
   const getMessengerUrl = () => {
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
+    if (!isMounted) return 'https://m.me/tramhuongchubodoivn'
+
+    const baseUrl = window.location.origin
     const productUrl = `${baseUrl}/${locale}/san-pham/${product.id}`
     const productName = product.name[localeKey]
     const productPrice = product.salePrice 
@@ -90,6 +108,49 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
     
     const message = encodeURIComponent(messageTemplates[localeKey])
     return `https://m.me/tramhuongchubodoivn?text=${message}`
+  }
+
+  const toggleWishlist = () => {
+    try {
+      const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]')
+      let newWishlist;
+      
+      if (isWishlisted) {
+        newWishlist = wishlist.filter((id: string) => id !== product.id)
+        toast.success(content.removedFromWishlist[localeKey])
+      } else {
+        newWishlist = [...wishlist, product.id]
+        toast.success(content.addedToWishlist[localeKey])
+      }
+      
+      localStorage.setItem('wishlist', JSON.stringify(newWishlist))
+      setIsWishlisted(!isWishlisted)
+      
+      // Optional: Dispatch a custom event to update other components like a header counter
+      window.dispatchEvent(new Event('wishlistUpdated'))
+    } catch (e) {
+      console.error('Error updating wishlist', e)
+    }
+  }
+
+  const handleShare = async () => {
+    const shareData = {
+      title: product.name[localeKey],
+      text: product.description[localeKey],
+      url: window.location.href,
+    }
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData)
+      } else {
+        await navigator.clipboard.writeText(window.location.href)
+        toast.success(content.linkCopied[localeKey])
+      }
+    } catch (err) {
+      // In case user cancelled share or there was an error
+      console.log('Share error or cancelled', err)
+    }
   }
 
   // Badge display
@@ -270,11 +331,21 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     {content.contactOrder[localeKey]}
                   </a>
                   <div className="flex gap-2">
-                    <button className="flex-1 xs:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 border-primary text-primary text-sm md:text-base font-semibold rounded-full hover:bg-primary hover:text-primary-foreground hover:shadow-md transition-all duration-300">
-                      <Heart className="w-4 h-4 md:w-5 md:h-5" />
+                    <button 
+                      onClick={toggleWishlist}
+                      className={`flex-1 xs:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 ${
+                        isWishlisted 
+                          ? 'border-red-500 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30' 
+                          : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                      } text-sm md:text-base font-semibold rounded-full hover:shadow-md transition-all duration-300`}
+                    >
+                      <Heart className={`w-4 h-4 md:w-5 md:h-5 ${isWishlisted ? 'fill-current' : ''}`} />
                       <span className="xs:hidden sm:inline">{content.addToWishlist[localeKey]}</span>
                     </button>
-                    <button className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border-2 border-border rounded-full hover:bg-muted hover:border-primary/50 transition-all duration-300">
+                    <button 
+                      onClick={handleShare}
+                      className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border-2 border-border rounded-full hover:bg-muted hover:border-primary/50 transition-all duration-300"
+                    >
                       <Share2 className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
                   </div>
