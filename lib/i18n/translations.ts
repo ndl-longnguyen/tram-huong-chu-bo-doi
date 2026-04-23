@@ -60,8 +60,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     "footer.aboutUs": "Về chúng tôi",
     "footer.collections": "Bộ sưu tập",
     "footer.copyright": "Tất cả quyền được bảo lưu.",
-    
-    // Home Page Sections
+    "footer.address": "Tiên Phước, TP. Đà Nẵng",
+    "footer.hours": "8:00 - 22:00",
+    "footer.newsletter": "Đăng ký nhận tin",
     "home.intro.title": "Trầm Hương Chú Bộ Đội",
     "home.intro.subtitle": "Tinh Hoa Trầm Việt",
     "home.intro.description": "Chúng tôi tin rằng trầm hương không chỉ là sản phẩm phong thủy, mà còn là biểu tượng của sự thanh tịnh, may mắn và kết nối với văn hóa truyền thống Việt Nam ngàn đời.",
@@ -188,6 +189,16 @@ export const translations: Record<Locale, Record<string, string>> = {
     "testimonials.1.content": "Mình đã mua vòng tay trầm hương cho ba làm quà sinh nhật. Chất lượng tuyệt vời, hương thơm dịu nhẹ, ba mình rất thích. Sẽ tiếp tục ủng hộ Trầm Hương Chú Bộ Đội.",
     "testimonials.2.name": "CHỊ HÀ",
     "testimonials.2.content": "Sản phẩm đúng như mô tả, đóng gói cẩn thận. Nhân viên tư vấn nhiệt tình, giao hàng nhanh. Rất hài lòng với dịch vụ của shop.",
+    "testimonials.3.name": "ANH QUỐC TRƯỜNG",
+    "testimonials.3.role": "Kiến trúc sư",
+    "testimonials.3.content": "Đây là lần thứ 3 tôi mua sản phẩm ở đây. Trầm hương chính hãng, giá cả hợp lý. Nhân viên tư vấn nhiệt tình, chuyên nghiệp.",
+    "testimonials.4.name": "CHỊ THẢO NGỌC",
+    "testimonials.4.role": "Nhà thiết kế",
+    "testimonials.4.content": "Rất hài lòng với dây chuyền trầm hương đã mua. Thiết kế tinh tế, sang trọng. Sẽ tiếp tục ủng hộ Trầm Hương Chú Bộ Đội!",
+    "testimonials.role.business": "Doanh nhân",
+    "testimonials.role.teacher": "Giáo viên",
+    "testimonials.role.architect": "Kiến trúc sư",
+    "testimonials.role.designer": "Nhà thiết kế",
     
     // Contact page
     "contact.breadcrumb": "Liên hệ",
@@ -279,8 +290,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     "footer.aboutUs": "About Us",
     "footer.collections": "Collections",
     "footer.copyright": "All rights reserved.",
-    
-    // Home Page Sections
+    "footer.address": "Tien Phuoc, Da Nang City",
+    "footer.hours": "8:00 AM - 10:00 PM",
+    "footer.newsletter": "Subscribe to Newsletter",
     "home.intro.title": "Tram Huong Chu Bo Doi",
     "home.intro.subtitle": "Vietnamese Agarwood Essence",
     "home.intro.description": "We believe agarwood is not just a feng shui product, but also a symbol of peace, luck and connection to thousands of years of Vietnamese traditional culture.",
@@ -407,6 +419,16 @@ export const translations: Record<Locale, Record<string, string>> = {
     "testimonials.1.content": "I bought an agarwood bracelet for my father as a birthday gift. Excellent quality, gentle fragrance, my father loves it very much. Will continue to support Chu Bo Doi.",
     "testimonials.2.name": "MS. HA",
     "testimonials.2.content": "Product as described, carefully packed. Enthusiastic horizontal consulting, fast delivery. Very satisfied with the shop's service.",
+    "testimonials.3.name": "MR. QUOC TRUONG",
+    "testimonials.3.role": "Architect",
+    "testimonials.3.content": "This is my 3rd time buying here. Genuine agarwood, reasonable price. Enthusiastic and professional consulting staff.",
+    "testimonials.4.name": "MS. THAO NGOC",
+    "testimonials.4.role": "Designer",
+    "testimonials.4.content": "Very satisfied with the agarwood necklace. Exquisite and elegant design. Will continue to support Chu Bo Doi!",
+    "testimonials.role.business": "Entrepreneur",
+    "testimonials.role.teacher": "Teacher",
+    "testimonials.role.architect": "Architect",
+    "testimonials.role.designer": "Designer",
     
     // Contact page
     "contact.breadcrumb": "Contact",
@@ -498,8 +520,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     "footer.aboutUs": "关于我们",
     "footer.collections": "产品系列",
     "footer.copyright": "版权所有。",
-    
-    // Home Page Sections
+    "footer.address": "越南岘港仙福",
+    "footer.hours": "8:00 - 22:00",
+    "footer.newsletter": "订阅通讯",
     "home.intro.title": "朱伯队沉香",
     "home.intro.subtitle": "越南沉香精华",
     "home.intro.description": "我们相信沉香不仅是风水产品，更是和平、好运的象征，也是与越南数千年传统文化的联系。",
@@ -625,6 +648,16 @@ export const translations: Record<Locale, Record<string, string>> = {
     "testimonials.1.content": "我给爸爸买了一个沉香手链作为生日礼物。质量非常好，香气温和，爸爸非常喜欢。会继续支持朱伯队。",
     "testimonials.2.name": "阿河女士",
     "testimonials.2.content": "产品描述一致，包装仔细。咨询热情，发货快。对商店的服务非常满意。",
+    "testimonials.3.name": "郭强先生",
+    "testimonials.3.role": "建筑师",
+    "testimonials.3.content": "这是我第三次在这里购买。正宗沉香，价格合理。咨询团队热情专业。",
+    "testimonials.4.name": "草玉女士",
+    "testimonials.4.role": "设计师",
+    "testimonials.4.content": "对购买的沉香项链非常满意。设计精美优雅。会继续支持朱伯队沉香！",
+    "testimonials.role.business": "企业家",
+    "testimonials.role.teacher": "教师",
+    "testimonials.role.architect": "建筑师",
+    "testimonials.role.designer": "设计师",
     
     // Contact page
     "contact.breadcrumb": "联系方式",

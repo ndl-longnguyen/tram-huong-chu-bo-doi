@@ -35,8 +35,8 @@ export interface Product {
   specs: {
     material: { vi: string; en: string; zh: string }
     origin: { vi: string; en: string; zh: string }
-    size: string
-    weight: string
+    size: { vi: string; en: string; zh: string }
+    weight: { vi: string; en: string; zh: string }
     age: { vi: string; en: string; zh: string }
   }
   inStock: boolean

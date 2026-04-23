@@ -30,7 +30,16 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white">
+    <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white relative overflow-hidden">
+      {/* Background Logo Decoration */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.1] pointer-events-none select-none grayscale invert">
+        <Image
+          src="/logo.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
       {/* Newsletter */}
       <div className="border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-10">
@@ -75,7 +84,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-gray-300 mb-8">
               <li className="flex items-start gap-3 group">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">Tiên Phước, TP. Đà Nẵng</span>
+                <span className="group-hover:text-white transition-colors">{t("footer.address")}</span>
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
@@ -87,7 +96,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 group">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">8:00 - 22:00</span>
+                <span className="group-hover:text-white transition-colors">{t("footer.hours")}</span>
               </li>
             </ul>
             <div className="flex items-center gap-4">
@@ -109,7 +118,7 @@ export function Footer() {
           {/* Policies */}
           <div>
             <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.policies")}</h3>
-            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <ul className="space-y-4 text-xs text-gray-300 uppercase tracking-wider font-medium">
               {policies.map((policy) => (
                 <li key={policy.name}>
                   <Link href={getLocalizedPath(policy.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
@@ -123,7 +132,7 @@ export function Footer() {
           {/* About Links */}
           <div>
             <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.aboutUs")}</h3>
-            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <ul className="space-y-4 text-xs text-gray-300 uppercase tracking-wider font-medium">
               {aboutLinks.map((link) => (
                 <li key={link.name}>
                   <Link href={getLocalizedPath(link.href)} className="hover:text-primary transition-all flex items-center gap-2 group">
@@ -137,7 +146,7 @@ export function Footer() {
           {/* Collections */}
           <div>
             <h3 className="text-primary font-serif font-bold mb-8 uppercase tracking-widest text-xs">{t("footer.collections")}</h3>
-            <ul className="space-y-4 text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <ul className="space-y-4 text-xs text-gray-300 uppercase tracking-wider font-medium">
               {collections.map((collection) => (
                 <li key={collection.name}>
                   <Link href={getLocalizedPath(collection.href)} className="hover:text-primary transition-all flex items-center gap-2 group">

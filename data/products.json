@@ -64,8 +64,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "16mm",
-        "weight": "Chìm nước",
+        "size": { "vi": "16mm", "en": "16mm", "zh": "16mm" },
+        "weight": { "vi": "Chìm nước", "en": "Sinking", "zh": "沉水" },
         "age": {
           "vi": "Hàng chục năm",
           "en": "Decades",
@@ -138,8 +138,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "Tự nhiên",
-        "weight": "Cận chìm",
+        "size": { "vi": "Tự nhiên", "en": "Natural", "zh": "天然" },
+        "weight": { "vi": "Cận chìm", "en": "Half-sinking", "zh": "半沉水" },
         "age": {
           "vi": "Trên 20 năm",
           "en": "Over 20 years",
@@ -207,8 +207,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "Tiêu chuẩn",
-        "weight": "Tiêu chuẩn",
+        "size": { "vi": "Tiêu chuẩn", "en": "Standard", "zh": "标准" },
+        "weight": { "vi": "Tiêu chuẩn", "en": "Standard", "zh": "标准" },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -280,8 +280,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "10mm",
-        "weight": "Tiêu chuẩn",
+        "size": { "vi": "10mm", "en": "10mm", "zh": "10mm" },
+        "weight": { "vi": "Tiêu chuẩn", "en": "Standard", "zh": "标准" },
         "age": {
           "vi": "Trên 10 năm",
           "en": "Over 10 years",
@@ -351,8 +351,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "Tiêu chuẩn",
-        "weight": "Tiêu chuẩn",
+        "size": { "vi": "Tiêu chuẩn", "en": "Standard", "zh": "标准" },
+        "weight": { "vi": "Tiêu chuẩn", "en": "Standard", "zh": "标准" },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -422,8 +422,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "Hạt trúc",
-        "weight": "Nhẹ",
+        "size": { "vi": "Hạt trúc", "en": "Bamboo shaped", "zh": "竹形" },
+        "weight": { "vi": "Nhẹ", "en": "Light", "zh": "轻" },
         "age": {
           "vi": "Khoảng 10 năm",
           "en": "Around 10 years",
@@ -496,8 +496,8 @@
           "en": "Vietnam",
           "zh": "越南"
         },
-        "size": "4mm",
-        "weight": "Tiêu chuẩn",
+        "size": { "vi": "4mm", "en": "4mm", "zh": "4mm" },
+        "weight": { "vi": "Tiêu chuẩn", "en": "Standard", "zh": "标准" },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
