@@ -89,7 +89,7 @@ export default async function ProductsPage({ params }: PageProps) {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-8">
               <ProductFilters />
-              <ProductGrid />
+              <ProductGrid categorySlug="trang-suc" />
             </div>
           </div>
         </section>

@@ -91,7 +91,15 @@ export function getRelatedProducts(productId: string, limit = 4): Product[] {
 // Get featured products (products with badge or high rating)
 export function getFeaturedProducts(limit = 4): Product[] {
   return products
-    .filter((p) => p.badgeType || p.rating >= 5)
+    .filter((p) => p.badgeType === "best" || p.badgeType === "hot" || p.rating >= 5)
+    .slice(0, limit)
+}
+
+// Get new arrivals
+export function getNewArrivals(limit = 6): Product[] {
+  return products
+    .filter((p) => p.badgeType === "new")
+    .concat(products.filter((p) => p.badgeType !== "new"))
     .slice(0, limit)
 }
 

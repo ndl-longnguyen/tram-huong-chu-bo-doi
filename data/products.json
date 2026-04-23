@@ -22,10 +22,8 @@
         "/images/products/vong-tay/vong-chim-nuoc-16-ly/vong-chim-nuoc-16-ly-9.jpg"
       ],
       "originalPrice": 530000000,
-      "salePrice": 530000000,
-      "rating": 5,
-      "reviewCount": 12,
-      "badgeType": "best",
+      "rating": 0,
+      "reviewCount": 0,
       "category": {
         "vi": "Vòng Tay",
         "en": "Bracelets",
@@ -167,7 +165,6 @@
         "/images/products/vong-tay/lac-bi-dau-do/lac-bi-dau-do-5.png"
       ],
       "originalPrice": 12000000,
-      "salePrice": 12000000,
       "rating": 4,
       "reviewCount": 23,
       "badgeType": "hot",
@@ -313,7 +310,6 @@
         "/images/products/vong-tay/lac-banh-cam/lac-banh-cam-7.png"
       ],
       "originalPrice": 8000000,
-      "salePrice": 8000000,
       "rating": 5,
       "reviewCount": 56,
       "badgeType": "new",
@@ -462,7 +458,6 @@
         "/images/products/vong-108-hat/vong-banh-cam-216-hat/vong-banh-cam-216-hat-10.jpg"
       ],
       "originalPrice": 10000000,
-      "salePrice": 10000000,
       "rating": 5,
       "reviewCount": 34,
       "badgeType": "hot",

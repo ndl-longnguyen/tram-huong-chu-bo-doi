@@ -114,7 +114,7 @@ export default function BraceletPage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-8">
               <ProductFilters />
-              <ProductGrid />
+              <ProductGrid categorySlug="vong-tay" />
             </div>
           </div>
         </section>

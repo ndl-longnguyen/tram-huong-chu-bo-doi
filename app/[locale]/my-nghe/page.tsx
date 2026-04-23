@@ -4,17 +4,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { ProductCard } from "@/components/product-card"
+import { ProductGrid } from "@/components/products/product-grid"
 import { useLanguage } from "@/lib/i18n/language-context"
-
-const artProducts = [
-  { id: "1", name: { vi: "Tượng Phật Di Lạc", en: "Buddha Statue", zh: "弥勒佛像" }, price: 15000000, originalPrice: 18000000, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=500&q=80", badge: { vi: "Độc đáo", en: "Unique", zh: "独特" } },
-  { id: "2", name: { vi: "Tượng Quan Âm", en: "Guanyin Statue", zh: "观音像" }, price: 12000000, image: "https://images.unsplash.com/photo-1600618528161-fe7e4e98c8a1?w=500&q=80" },
-  { id: "3", name: { vi: "Lư Đốt Trầm Cao Cấp", en: "Premium Censer", zh: "高级香炉" }, price: 3500000, originalPrice: 4200000, image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=500&q=80", badge: { vi: "Bán chạy", en: "Best Seller", zh: "畅销" } },
-  { id: "4", name: { vi: "Hộp Đựng Trang Sức", en: "Jewelry Box", zh: "首饰盒" }, price: 2800000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80" },
-  { id: "5", name: { vi: "Bút Ký Trầm Hương", en: "Agarwood Pen", zh: "沉香钢笔" }, price: 4500000, originalPrice: 5500000, image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500&q=80", badge: { vi: "Premium", en: "Premium", zh: "高端" } },
-  { id: "6", name: { vi: "Cây Trầm Phong Thủy", en: "Feng Shui Tree", zh: "风水树" }, price: 8500000, image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=500&q=80" },
-]
 
 const categories = [
   { name: { vi: "Tượng Phật", en: "Buddha Statues", zh: "佛像" }, count: 25, image: "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?w=300&q=80" },
@@ -112,11 +103,7 @@ export default function ArtworksPage() {
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">{content.featuredDesc[locale]}</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {artProducts.map((product) => (
-                <ProductCard key={product.id} product={{ ...product, name: product.name[locale], badge: product.badge?.[locale] }} />
-              ))}
-            </div>
+            <ProductGrid categorySlug="my-nghe" />
           </div>
         </section>
 
