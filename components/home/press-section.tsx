@@ -13,10 +13,10 @@ export function PressSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-16 lg:py-20 bg-card border-t border-border">
+    <section className="py-10 lg:py-14 bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase font-bold text-xs">
             {t("home.press.subtitle")}
           </span>
@@ -41,7 +41,7 @@ export function PressSection() {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-12 pt-8 border-t border-border">
+        <div className="mt-8 pt-6 border-t border-border">
           <div className="flex flex-wrap items-center justify-center gap-8 text-center">
             <div className="flex items-center gap-2 text-muted-foreground">
               <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">

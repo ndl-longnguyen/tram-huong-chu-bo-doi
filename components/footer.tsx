@@ -32,7 +32,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white relative overflow-hidden">
       {/* Background Logo Decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.1] pointer-events-none select-none grayscale invert">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.15] pointer-events-none select-none grayscale invert">
         <Image
           src="/logo.png"
           alt=""

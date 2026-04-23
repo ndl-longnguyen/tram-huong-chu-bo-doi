@@ -45,7 +45,7 @@ export function Header() {
 
   useEffect(() => {
     if (searchQuery.trim().length > 1) {
-      const filtered = products.filter(product => 
+      const filtered = products.filter(product =>
         product.name[localeKey].toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.sku.toLowerCase().includes(searchQuery.toLowerCase())
       ).slice(0, 5)
@@ -144,7 +144,7 @@ export function Header() {
                     ))}
                   </div>
                   <div className="bg-muted/30 p-2 border-t border-border">
-                    <button 
+                    <button
                       className="w-full py-2 text-center text-xs font-semibold text-primary hover:underline"
                       onClick={handleSearchSubmit}
                     >
@@ -156,21 +156,21 @@ export function Header() {
             </div>
 
             {/* Contact & Actions */}
-              <div className="flex items-center gap-2 md:gap-4">
-                <div className="hidden md:block">
-                  <LanguageSwitcher />
-                </div>
-                
-                <WishlistDrawer>
-                  <button className="p-2.5 text-foreground hover:text-primary transition-colors relative group">
-                    <Heart className={`w-6 h-6 ${wishlist.length > 0 ? "fill-primary text-primary" : ""}`} />
-                    {wishlist.length > 0 && (
-                      <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-card animate-in zoom-in duration-300">
-                        {wishlist.length}
-                      </span>
-                    )}
-                  </button>
-                </WishlistDrawer>
+            <div className="flex items-center gap-2 md:gap-4">
+              <div className="hidden lg:block">
+                <LanguageSwitcher />
+              </div>
+
+              <WishlistDrawer>
+                <button className="p-2.5 text-foreground hover:text-primary transition-colors relative group">
+                  <Heart className={`w-6 h-6 ${wishlist.length > 0 ? "fill-primary text-primary" : ""}`} />
+                  {wishlist.length > 0 && (
+                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-card animate-in zoom-in duration-300">
+                      {wishlist.length}
+                    </span>
+                  )}
+                </button>
+              </WishlistDrawer>
               <a
                 href="tel:0765942942"
                 className="hidden md:flex items-center gap-2 px-4 py-2 border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-primary-foreground hover:shadow-md transition-all duration-300 group"
@@ -226,7 +226,7 @@ export function Header() {
                   className="w-full px-4 py-2.5 pr-10 border border-border rounded-xl bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                 />
                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                
+
                 {/* Mobile Search Results */}
                 {searchQuery.length > 1 && searchResults.length > 0 && (
                   <div className="mt-2 space-y-2 max-h-60 overflow-y-auto">

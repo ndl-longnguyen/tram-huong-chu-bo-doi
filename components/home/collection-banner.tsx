@@ -12,7 +12,7 @@ export function CollectionBanner() {
       {/* Full Width Image Banner */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left Image */}
-        <div className="relative h-[400px] lg:h-[600px]">
+        <div className="relative h-[300px] lg:h-[450px]">
           <Image
             src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80"
             alt="Sản phẩm trầm hương"
@@ -23,7 +23,7 @@ export function CollectionBanner() {
         </div>
 
         {/* Right Content */}
-        <div className="relative h-[400px] lg:h-[600px] bg-secondary flex items-center justify-center">
+        <div className="relative h-[300px] lg:h-[450px] bg-secondary flex items-center justify-center">
           <div className="absolute inset-0 opacity-30">
             <Image
               src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80"
@@ -53,7 +53,7 @@ export function CollectionBanner() {
 
       {/* Bottom Gallery */}
       <div className="grid grid-cols-2 md:grid-cols-4">
-        <div className="relative h-48 md:h-64">
+        <div className="relative h-40 md:h-52">
           <Image
             src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80"
             alt="Gallery 1"
@@ -62,7 +62,7 @@ export function CollectionBanner() {
             className="object-cover"
           />
         </div>
-        <div className="relative h-48 md:h-64">
+        <div className="relative h-40 md:h-52">
           <Image
             src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=400&q=80"
             alt="Gallery 2"
@@ -71,7 +71,7 @@ export function CollectionBanner() {
             className="object-cover"
           />
         </div>
-        <div className="relative h-48 md:h-64">
+        <div className="relative h-40 md:h-52">
           <Image
             src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80"
             alt="Gallery 3"
@@ -80,7 +80,7 @@ export function CollectionBanner() {
             className="object-cover"
           />
         </div>
-        <div className="relative h-48 md:h-64">
+        <div className="relative h-40 md:h-52">
           <Image
             src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"
             alt="Gallery 4"

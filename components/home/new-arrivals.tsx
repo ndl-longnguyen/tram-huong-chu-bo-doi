@@ -12,10 +12,10 @@ export function NewArrivals() {
   const newProducts = getNewArrivals(6)
 
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <section className="py-12 lg:py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-16 bg-primary" />
             <h2 className="font-serif text-2xl md:text-3xl text-foreground uppercase tracking-widest text-sm font-bold">
@@ -39,7 +39,7 @@ export function NewArrivals() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <Link
             href={getLocalizedPath("/trang-suc")}
             className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-medium rounded hover:bg-primary hover:text-primary-foreground transition-colors uppercase tracking-wider text-sm font-bold"

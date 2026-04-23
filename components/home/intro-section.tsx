@@ -27,7 +27,7 @@ export function IntroSection() {
   ]
 
   return (
-    <section className="py-20 lg:py-32 bg-background relative overflow-hidden w-full">
+    <section className="py-16 lg:py-24 bg-background relative overflow-hidden w-full">
       {/* Decorative Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/5 to-transparent" />
@@ -36,7 +36,7 @@ export function IntroSection() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase">
             {t("nav.about")}
           </span>
@@ -50,7 +50,7 @@ export function IntroSection() {
         </div>
 
         {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {features.map((feature, index) => (
             <div 
               key={index}
@@ -141,7 +141,7 @@ export function IntroSection() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <Link
             href={getLocalizedPath("/gioi-thieu")}
             className="inline-flex items-center justify-center px-10 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group uppercase tracking-wider text-sm"

@@ -49,7 +49,7 @@ const content = {
   size: { vi: "Kích thước", en: "Size", zh: "尺寸" },
   weight: { vi: "Trọng lượng", en: "Weight", zh: "重量" },
   age: { vi: "Tuổi trầm", en: "Age", zh: "年份" },
-  shipping: { vi: "Giao hàng nhanh 2h nội thành Đà Nẵng", en: "Fast 2h delivery in Da Nang city", zh: "岘港市内2小时快速配送" },
+  shipping: { vi: "Giao hàng thần tốc Đà Nẵng, Nội thành 1-2 ngày", en: "Fast delivery in Da Nang, Inner city 1-2 days", zh: "岘港极速配送，市区1-2天" },
   warranty: { vi: "Bảo hành mùi hương trọn đời", en: "Lifetime fragrance warranty", zh: "终身香味保修" },
   return: { vi: "Đổi trả 1-1 trong 30 ngày", en: "1-1 exchange within 30 days", zh: "30天内1-1换货" },
   relatedProducts: { vi: "Sản phẩm liên quan", en: "Related Products", zh: "相关产品" },

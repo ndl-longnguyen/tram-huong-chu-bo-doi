@@ -10,7 +10,7 @@
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #3a4a1c;
+  --primary: #7bbc02;
   --primary-foreground: #ffffff;
   --secondary: #f1f3ec;
   --secondary-foreground: #2d3a1a;
@@ -22,8 +22,8 @@
   --destructive-foreground: #ffffff;
   --border: #d4d9cc;
   --input: #d4d9cc;
-  --ring: #3a4a1c;
-  --primary-filter: invert(24%) sepia(24%) saturate(980%) hue-rotate(42deg) brightness(94%) contrast(92%);
+  --ring: #7bbc02;
+  --primary-filter: invert(59%) sepia(91%) saturate(2335%) hue-rotate(46deg) brightness(96%) contrast(104%);
   --radius: 0.75rem;
 }
 
