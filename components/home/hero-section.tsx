@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -19,12 +20,20 @@ export function HeroSection() {
     <section className="relative w-full min-h-[90vh] overflow-hidden">
       {/* Background with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&q=80')`,
           transform: `translateY(${scrollY * 0.3}px) scale(1.15)`,
         }}
-      />
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&q=80"
+          alt="Agarwood Hero Background"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
       
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-background" />

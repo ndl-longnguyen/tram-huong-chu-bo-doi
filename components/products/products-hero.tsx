@@ -1,18 +1,21 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ChevronRight } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
-
-const categories = [
-  { icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80", label: { vi: "Vòng Tay", en: "Bracelets", zh: "手链" }, count: 120 },
-  { icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80", label: { vi: "Nhẫn", en: "Rings", zh: "戒指" }, count: 45 },
-  { icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80", label: { vi: "Chuỗi Cổ", en: "Necklaces", zh: "项链" }, count: 38 },
-  { icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80", label: { vi: "Mặt Dây Chuyền", en: "Pendants", zh: "吊坠" }, count: 56 },
-]
+import { categories, products } from "@/lib/products"
 
 export function ProductsHero() {
   const { locale, getLocalizedPath } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
+
+  const displayCategories = categories.map(cat => ({
+    icon: cat.image,
+    label: cat.name,
+    slug: cat.slug,
+    count: products.filter(p => p.categorySlug === cat.slug).length
+  }))
 
   const content = {
     home: { vi: "Trang chủ", en: "Home", zh: "首页" },
@@ -64,22 +67,23 @@ export function ProductsHero() {
       <section className="py-12 bg-card border-y border-border">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {categories.map((category, index) => (
+            {displayCategories.map((category, index) => (
               <Link
                 key={index}
-                href={getLocalizedPath(`/trang-suc/${category.label.vi.toLowerCase().replace(/ /g, '-')}`)}
+                href={getLocalizedPath(`/${category.slug}`)}
                 className="group flex flex-col items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-2xl hover:bg-primary/5 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all">
-                  <img
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all relative">
+                  <Image
                     src={category.icon}
-                    alt={category.label[locale as keyof typeof category.label]}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    alt={category.label[localeKey]}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="text-center">
                   <span className="text-foreground font-semibold block group-hover:text-primary transition-colors text-sm md:text-base">
-                    {category.label[locale as keyof typeof category.label]}
+                    {category.label[localeKey]}
                   </span>
                   <span className="text-muted-foreground text-xs md:text-sm">{category.count} {content.products[locale as keyof typeof content.products]}</span>
                 </div>

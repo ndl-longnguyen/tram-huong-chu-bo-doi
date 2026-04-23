@@ -1,38 +1,21 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { categories } from "@/lib/products"
 
 export function ExploreSection() {
-  const { t, getLocalizedPath } = useLanguage()
+  const { t, getLocalizedPath, locale } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
 
-  const exploreItems = [
-    {
-      title: t("nav.incense"),
-      description: t("home.intro.newCollection"),
-      image: "/products/p5.jpg",
-      href: "/nhang-tram",
-    },
-    {
-      title: t("nav.bracelet"),
-      description: t("home.intro.braceletDesc")?.split('.')[0] || "",
-      image: "/products/p1.jpg",
-      href: "/vong-tay",
-    },
-    {
-      title: t("nav.art"),
-      description: t("hero.tagline"),
-      image: "/products/p6.jpg",
-      href: "/my-nghe",
-    },
-    {
-      title: t("nav.gift"),
-      description: t("home.banner.title2"),
-      image: "/products/p7.jpg",
-      href: "/qua-tang",
-    },
-  ]
+  const exploreItems = categories.map(cat => ({
+    title: cat.name[localeKey],
+    description: cat.description[localeKey],
+    image: cat.image,
+    href: `/${cat.slug}`,
+  }))
 
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background">
@@ -51,11 +34,13 @@ export function ExploreSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {exploreItems.map((item, index) => (
             <Link key={index} href={getLocalizedPath(item.href)} className="group block">
-              <div className="relative overflow-hidden rounded-2xl">
-                <img
+              <div className="relative overflow-hidden rounded-2xl aspect-square">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full aspect-square object-cover transition-all duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-all duration-500 group-hover:scale-110"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

@@ -5,15 +5,16 @@ import Image from "next/image"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
-export function Footer() {
-  const { t, getLocalizedPath } = useLanguage()
+import { categories } from "@/lib/products"
 
-  const collections = [
-    { name: t("nav.bracelet"), href: "/vong-tay" },
-    { name: t("nav.gift"), href: "/qua-tang" },
-    { name: t("nav.incense"), href: "/nhang-tram" },
-    { name: t("nav.art"), href: "/my-nghe" },
-  ]
+export function Footer() {
+  const { t, getLocalizedPath, locale } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
+
+  const collections = categories.map(cat => ({
+    name: cat.name[localeKey],
+    href: `/${cat.slug}`
+  }))
 
   const policies = [
     { name: t("footer.policy.terms"), href: "/chinh-sach-dieu-khoan" },

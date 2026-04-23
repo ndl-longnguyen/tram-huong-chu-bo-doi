@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { toast } from "sonner"
 import Link from "next/link"
+import Image from "next/image"
 import { 
   ChevronRight, 
   Star, 
@@ -19,6 +20,7 @@ import {
   MessageCircle
 } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { useWishlist } from "@/lib/wishlist-context"
 import { ProductCard } from "@/components/product-card"
 import type { Product } from "@/lib/products"
 
@@ -60,20 +62,16 @@ const content = {
 
 export function ProductDetailClient({ product, relatedProducts }: ProductDetailClientProps) {
   const { locale, getLocalizedPath } = useLanguage()
+  const { toggleWishlist: globalToggleWishlist, isInWishlist } = useWishlist()
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
-  const [isWishlisted, setIsWishlisted] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  
+  const isWishlisted = isInWishlist(product.id)
 
   useEffect(() => {
     setIsMounted(true)
-    try {
-      const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]')
-      setIsWishlisted(wishlist.includes(product.id))
-    } catch (e) {
-      console.error('Error reading wishlist from localStorage', e)
-    }
-  }, [product.id])
+  }, [])
 
   const localeKey = locale as 'vi' | 'en' | 'zh'
   
@@ -111,25 +109,11 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
   }
 
   const toggleWishlist = () => {
-    try {
-      const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]')
-      let newWishlist;
-      
-      if (isWishlisted) {
-        newWishlist = wishlist.filter((id: string) => id !== product.id)
-        toast.success(content.removedFromWishlist[localeKey])
-      } else {
-        newWishlist = [...wishlist, product.id]
-        toast.success(content.addedToWishlist[localeKey])
-      }
-      
-      localStorage.setItem('wishlist', JSON.stringify(newWishlist))
-      setIsWishlisted(!isWishlisted)
-      
-      // Optional: Dispatch a custom event to update other components like a header counter
-      window.dispatchEvent(new Event('wishlistUpdated'))
-    } catch (e) {
-      console.error('Error updating wishlist', e)
+    globalToggleWishlist(product.id)
+    if (isWishlisted) {
+      toast.success(content.removedFromWishlist[localeKey])
+    } else {
+      toast.success(content.addedToWishlist[localeKey])
     }
   }
 
@@ -197,10 +181,13 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
             <div className="space-y-3 md:space-y-4 min-w-0">
               {/* Main Image */}
               <div className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-muted">
-                <img
+                <Image
                   src={product.images[selectedImage]}
                   alt={product.name[localeKey]}
-                  className="w-full h-full object-cover"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 {badgeText && (
                   <span className={`absolute top-3 left-3 md:top-4 md:left-4 ${badgeClass} text-white text-xs md:text-sm font-semibold px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg`}>
@@ -224,7 +211,15 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                       selectedImage === idx ? "border-primary ring-2 ring-primary/20" : "border-transparent hover:border-border"
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={img}
+                        alt={`${product.name[localeKey]} thumbnail ${idx + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 64px, 80px"
+                        className="object-cover"
+                      />
+                    </div>
                   </button>
                 ))}
               </div>
@@ -240,9 +235,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 >
                   {product.category[localeKey]}
                 </Link>
-                <span className="text-muted-foreground">
-                  {content.sku[localeKey]}: {product.sku}
-                </span>
+
               </div>
 
               {/* Title */}

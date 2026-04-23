@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react"
+import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const testimonials = [
@@ -88,11 +89,13 @@ export function CommunitySection() {
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Avatar */}
               <div className="flex-shrink-0">
-                <div className="relative">
-                  <img
+                <div className="relative w-24 h-24 md:w-32 md:h-32">
+                  <Image
                     src={testimonials[currentIndex].avatar}
                     alt={testimonials[currentIndex].name}
-                    className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-primary/20"
+                    fill
+                    sizes="128px"
+                    className="rounded-full object-cover border-4 border-primary/20"
                   />
                   <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">

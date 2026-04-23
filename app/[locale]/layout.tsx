@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Be_Vietnam_Pro, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/i18n/language-context'
+import { WishlistProvider } from '@/lib/wishlist-context'
 import { ScrollToTop } from '@/components/scroll-to-top'
 import { ContactButtons } from '@/components/contact-buttons'
 import { Toaster } from '@/components/ui/sonner'
@@ -201,9 +202,11 @@ export default async function LocaleLayout({
       </head>
       <body className={`${beVietnamPro.variable} ${playfairDisplay.variable} font-sans antialiased overflow-x-hidden`}>
         <LanguageProvider>
-          {children}
-          <ScrollToTop />
-          <ContactButtons />
+          <WishlistProvider>
+            {children}
+            <ScrollToTop />
+            <ContactButtons />
+          </WishlistProvider>
         </LanguageProvider>
         <Toaster position="bottom-right" richColors />
         {process.env.NODE_ENV === 'production' && <Analytics />}
