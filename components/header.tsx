@@ -8,21 +8,23 @@ import { Menu, X, Search, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { LanguageSwitcher } from "./language-switcher"
 
-const navigation = [
-  { name: "nav.about", href: "/gioi-thieu" },
-  { name: "nav.jewelry", href: "/trang-suc" },
-  { name: "nav.bracelet", href: "/vong-tay" },
-  { name: "nav.incense", href: "/nhang-tram" },
-  { name: "nav.art", href: "/my-nghe" },
-  { name: "nav.gift", href: "/qua-tang" },
-  { name: "nav.blog", href: "/blog" },
-  { name: "nav.contact", href: "/lien-he" },
-]
+import { categories } from "@/lib/products"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { t, getLocalizedPath } = useLanguage()
+  const { t, getLocalizedPath, locale } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
+
+  const navigation = [
+    { name: t("nav.about"), href: "/gioi-thieu" },
+    ...categories.map(cat => ({
+      name: cat.name[localeKey],
+      href: `/${cat.slug}`
+    })),
+    { name: t("nav.blog"), href: "/blog" },
+    { name: t("nav.contact"), href: "/lien-he" },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,7 +112,7 @@ export function Header() {
                     href={getLocalizedPath(item.href)}
                     className="relative px-5 py-2.5 text-foreground hover:text-primary text-sm font-medium transition-colors group"
                   >
-                    {t(item.name)}
+                    {item.name}
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all group-hover:w-3/4" />
                   </Link>
                 </li>
@@ -134,7 +136,7 @@ export function Header() {
                     className="block py-3 px-4 text-foreground hover:text-primary hover:bg-primary/5 text-sm font-medium rounded-lg transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {t(item.name)}
+                    {item.name}
                   </Link>
                 </li>
               ))}

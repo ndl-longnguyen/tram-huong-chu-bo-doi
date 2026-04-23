@@ -2,52 +2,39 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ChevronRight, Gift, Award, Heart, Sparkles } from "lucide-react"
-import Link from "next/link"
+import { ProductFilters } from "@/components/products/product-filters"
 import { ProductGrid } from "@/components/products/product-grid"
+import { WhyChooseUs } from "@/components/products/why-choose-us"
+import { ChevronRight } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { categories, products } from "@/lib/products"
 
-export default function GiftPage() {
+export default function BraceletPage() {
   const { locale, getLocalizedPath } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
+
+  const braceletTypes = categories.map(cat => ({
+    icon: cat.image,
+    label: cat.name,
+    slug: cat.slug,
+    count: products.filter(p => p.categorySlug === cat.slug).length
+  }))
 
   const content = {
     home: { vi: "Trang chủ", en: "Home", zh: "首页" },
     breadcrumb: { vi: "Quà Tặng Trầm Hương", en: "Agarwood Gifts", zh: "沉香礼品" },
-    giftCategory: { vi: "QUÀ TẶNG Ý NGHĨA", en: "MEANINGFUL GIFTS", zh: "有意义的礼物" },
-    title1: { vi: "Quà Tặng Trầm Hương", en: "Agarwood Gifts", zh: "沉香礼品" },
-    title2: { vi: "Đẳng Cấp & Tinh Tế", en: "Elegant & Refined", zh: "优雅精致" },
+    collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
+    title1: { vi: "Quà Tặng", en: "Agarwood", zh: "沉香礼品" },
+    title2: { vi: "Ý Nghĩa", en: "Gifts", zh: "有意义系列" },
     description: {
-      vi: "Tặng quà trầm hương - tặng sức khỏe và bình an. Bộ sưu tập quà tặng cao cấp phù hợp cho mọi dịp đặc biệt trong cuộc sống.",
-      en: "Give agarwood gifts - give health and peace. Premium gift collection suitable for all special occasions in life.",
-      zh: "赠送沉香礼品 - 赠送健康与平安。适合生活中所有特殊场合的高端礼品系列。"
+      vi: "Bộ sưu tập quà tặng trầm hương sang trọng, mang lại lời chúc bình an và tài lộc cho người nhận.",
+      en: "Luxurious agarwood gift collection, bringing wishes of peace and fortune to the recipient.",
+      zh: "奢华沉香礼品系列，为接收者带来平安和财富的祝福。"
     },
-    birthday: { vi: "Quà Tặng Sinh Nhật", en: "Birthday Gifts", zh: "生日礼物" },
-    birthdayDesc: { vi: "Món quà ý nghĩa cho người thân yêu", en: "Meaningful gift for loved ones", zh: "给亲人的有意义礼物" },
-    corporate: { vi: "Quà Tặng Doanh Nghiệp", en: "Corporate Gifts", zh: "企业礼品" },
-    corporateDesc: { vi: "Phong cách đẳng cấp và chuyên nghiệp", en: "Elegant and professional style", zh: "优雅专业的风格" },
-    wedding: { vi: "Quà Tặng Cưới Hỏi", en: "Wedding Gifts", zh: "婚礼礼物" },
-    weddingDesc: { vi: "Lời chúc bình an cho cặp đôi", en: "Wishes of peace for the couple", zh: "对新人的平安祝福" },
-    tet: { vi: "Quà Tặng Tết", en: "Tet Gifts", zh: "春节礼物" },
-    tetDesc: { vi: "Tinh hoa đầu năm mới may mắn", en: "Essence of luck for the new year", zh: "新年好运精华" },
-    priceRange: { vi: "Mức giá:", en: "Price range:", zh: "价格范围：" },
-    collectionTitle: { vi: "Bộ Sưu Tập Quà Tặng", en: "Gift Collection", zh: "礼品系列" },
-    collectionDesc: { vi: "Những món quà trầm hương tinh tế, được đóng gói sang trọng", en: "Exquisite agarwood gifts, elegantly packaged", zh: "精致的沉香礼品，包装精美" },
-    servicesTitle: { vi: "DỊCH VỤ QUÀ TẶNG", en: "GIFT SERVICES", zh: "礼品服务" },
-    servicesSubtitle: { vi: "Dịch Vụ Đặc Biệt", en: "Special Services", zh: "特别服务" },
-    service1Title: { vi: "Gói Quà Cao Cấp", en: "Premium Packaging", zh: "高级包装" },
-    service1Desc: { vi: "Dịch vụ đóng gói quà tặng sang trọng với hộp gỗ trầm và thiệp chúc mừng", en: "Premium gift packaging service with agarwood box and greeting card", zh: "高级礼品包装服务，配有沉香木盒和贺卡" },
-    service2Title: { vi: "Khắc Tên Miễn Phí", en: "Free Engraving", zh: "免费刻字" },
-    service2Desc: { vi: "Khắc tên hoặc thông điệp cá nhân lên sản phẩm hoàn toàn miễn phí", en: "Free engraving of name or personal message on products", zh: "产品免费刻字或个人信息" },
-    service3Title: { vi: "Giao Hàng Express", en: "Express Delivery", zh: "快递服务" },
-    service3Desc: { vi: "Giao hàng nhanh trong 24h, có dịch vụ giao đến tận nơi", en: "Fast delivery within 24h, door-to-door service available", zh: "24小时内快速送达，提供上门服务" },
+    products: { vi: "sản phẩm", en: "products", zh: "件产品" },
   }
-
-  const giftOccasions = [
-    { icon: Gift, title: content.birthday[locale], desc: content.birthdayDesc[locale] },
-    { icon: Award, title: content.corporate[locale], desc: content.corporateDesc[locale] },
-    { icon: Heart, title: content.wedding[locale], desc: content.weddingDesc[locale] },
-    { icon: Sparkles, title: content.tet[locale], desc: content.tetDesc[locale] },
-  ]
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -56,7 +43,7 @@ export default function GiftPage() {
         <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
@@ -67,10 +54,9 @@ export default function GiftPage() {
               <span className="text-foreground font-medium">{content.breadcrumb[locale]}</span>
             </div>
 
-
             <div className="text-center max-w-3xl mx-auto">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
-                {content.giftCategory[locale]}
+                {content.collection[locale]}
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
                 {content.title1[locale]}
@@ -86,59 +72,42 @@ export default function GiftPage() {
         <section className="py-20 bg-card border-y border-border">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {giftOccasions.map((occasion, index) => (
-                <div key={index} className="flex flex-col items-center text-center p-4 md:p-6 bg-muted/50 rounded-2xl hover:bg-primary/5 transition-colors cursor-pointer group">
-                  <div className="w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center mb-3 md:mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <occasion.icon className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:text-white" />
+              {braceletTypes.map((type, index) => (
+                <Link
+                  key={index}
+                  href={getLocalizedPath(`/${type.slug}`)}
+                  className="group flex flex-col items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-2xl hover:bg-primary/5 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all relative">
+                    <Image
+                      src={type.icon}
+                      alt={type.label[localeKey]}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
-                  <h3 className="text-foreground font-semibold mb-1 md:mb-2 text-sm md:text-base">{occasion.title}</h3>
-                  <p className="text-muted-foreground text-xs md:text-sm">{occasion.desc}</p>
-                </div>
+                  <div className="text-center">
+                    <span className="text-foreground font-semibold block group-hover:text-primary transition-colors text-sm md:text-base">
+                      {type.label[localeKey]}
+                    </span>
+                    <span className="text-muted-foreground text-xs md:text-sm">{type.count} {content.products[locale]}</span>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-20 lg:py-28">
+        <section className="py-12">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 uppercase tracking-tight">{content.collectionTitle[locale]}</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">{content.collectionDesc[locale]}</p>
+            <div className="flex flex-col lg:flex-row gap-8">
+              <ProductFilters />
+              <ProductGrid categorySlug="qua-tang" />
             </div>
-
-            <ProductGrid categorySlug="qua-tang" />
           </div>
         </section>
 
-        <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 tracking-widest uppercase">
-                {content.servicesTitle[locale]}
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-tight">{content.servicesSubtitle[locale]}</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { title: content.service1Title[locale], desc: content.service1Desc[locale], image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&q=80" },
-                { title: content.service2Title[locale], desc: content.service2Desc[locale], image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400&q=80" },
-                { title: content.service3Title[locale], desc: content.service3Desc[locale], image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&q=80" },
-              ].map((service, index) => (
-                <div key={index} className="group bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-xl transition-all">
-                  <div className="relative h-48 overflow-hidden">
-                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-foreground font-semibold text-lg mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm">{service.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <WhyChooseUs />
       </main>
       <Footer />
     </div>

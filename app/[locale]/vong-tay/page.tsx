@@ -7,33 +7,20 @@ import { ProductGrid } from "@/components/products/product-grid"
 import { WhyChooseUs } from "@/components/products/why-choose-us"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
-
-const braceletTypes = [
-  {
-    icon: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=100&q=80",
-    label: { vi: "Vòng Tay 108 Hạt", en: "108 Beads Bracelet", zh: "108颗珠子手链" },
-    count: 45
-  },
-  {
-    icon: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&q=80",
-    label: { vi: "Vòng Tay Phong Thủy", en: "Feng Shui Bracelet", zh: "风水手链" },
-    count: 38
-  },
-  {
-    icon: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=100&q=80",
-    label: { vi: "Vòng Tay Bọc Vàng", en: "Gold-wrapped Bracelet", zh: "包金手链" },
-    count: 28
-  },
-  {
-    icon: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&q=80",
-    label: { vi: "Vòng Tay Đơn Giản", en: "Simple Bracelet", zh: "简约手链" },
-    count: 52
-  },
-]
+import { categories, products } from "@/lib/products"
 
 export default function BraceletPage() {
   const { locale, getLocalizedPath } = useLanguage()
+  const localeKey = locale as "vi" | "en" | "zh"
+
+  const braceletTypes = categories.map(cat => ({
+    icon: cat.image,
+    label: cat.name,
+    slug: cat.slug,
+    count: products.filter(p => p.categorySlug === cat.slug).length
+  }))
 
   const content = {
     home: { vi: "Trang chủ", en: "Home", zh: "首页" },
@@ -88,19 +75,20 @@ export default function BraceletPage() {
               {braceletTypes.map((type, index) => (
                 <Link
                   key={index}
-                  href={getLocalizedPath(`/vong-tay/${type.label.vi.toLowerCase().replace(/ /g, '-')}`)}
+                  href={getLocalizedPath(`/${type.slug}`)}
                   className="group flex flex-col items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-2xl hover:bg-primary/5 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all">
-                    <img
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all relative">
+                    <Image
                       src={type.icon}
-                      alt={type.label[locale]}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      alt={type.label[localeKey]}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                   <div className="text-center">
                     <span className="text-foreground font-semibold block group-hover:text-primary transition-colors text-sm md:text-base">
-                      {type.label[locale]}
+                      {type.label[localeKey]}
                     </span>
                     <span className="text-muted-foreground text-xs md:text-sm">{type.count} {content.products[locale]}</span>
                   </div>
