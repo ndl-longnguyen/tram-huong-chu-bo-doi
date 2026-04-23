@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/i18n/language-context'
 import { ScrollToTop } from '@/components/scroll-to-top'
 import { ContactButtons } from '@/components/contact-buttons'
+import { Toaster } from '@/components/ui/sonner'
 import '../globals.css'
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -204,6 +205,7 @@ export default async function LocaleLayout({
           <ScrollToTop />
           <ContactButtons />
         </LanguageProvider>
+        <Toaster position="bottom-right" richColors />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
