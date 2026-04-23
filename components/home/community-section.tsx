@@ -5,47 +5,47 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
 
-const testimonials = [
-  {
-    name: "Anh Minh Hoàng",
-    role: "Doanh nhân",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
-    content: "Tôi đã mua vòng tay trầm hương tại Chú Bộ Đội được 2 năm, chất lượng rất tốt, mùi hương thơm tự nhiên. Dịch vụ chăm sóc khách hàng tuyệt vời!",
-    rating: 5,
-  },
-  {
-    name: "Chị Thu Hà",
-    role: "Giáo viên",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80",
-    content: "Mình đã tặng bố vòng tay trầm hương nhân dịp sinh nhật, bố rất thích. Sản phẩm đẹp, đóng gói cẩn thận, giao hàng nhanh chóng.",
-    rating: 5,
-  },
-  {
-    name: "Anh Quốc Trường",
-    role: "Kiến trúc sư",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80",
-    content: "Đây là lần thứ 3 tôi mua sản phẩm ở đây. Trầm hương chính hãng, giá cả hợp lý. Nhân viên tư vấn nhiệt tình, chuyên nghiệp.",
-    rating: 5,
-  },
-  {
-    name: "Chị Thảo Ngọc",
-    role: "Nhà thiết kế",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80",
-    content: "Rất hài lòng với dây chuyền trầm hương đã mua. Thiết kế tinh tế, sang trọng. Sẽ tiếp tục ủng hộ Trầm Hương Chú Bộ Đội!",
-    rating: 5,
-  },
-]
-
 export function CommunitySection() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const { t } = useLanguage()
 
+  const testimonialsList = [
+    {
+      name: t("testimonials.1.name"),
+      role: t("testimonials.role.business"),
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
+      content: t("testimonials.1.content"),
+      rating: 5,
+    },
+    {
+      name: t("testimonials.2.name"),
+      role: t("testimonials.role.teacher"),
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80",
+      content: t("testimonials.2.content"),
+      rating: 5,
+    },
+    {
+      name: t("testimonials.3.name"),
+      role: t("testimonials.role.architect"),
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80",
+      content: t("testimonials.3.content"),
+      rating: 5,
+    },
+    {
+      name: t("testimonials.4.name"),
+      role: t("testimonials.role.designer"),
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80",
+      content: t("testimonials.4.content"),
+      rating: 5,
+    },
+  ]
+
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+    setCurrentIndex((prev) => (prev + 1) % testimonialsList.length)
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+    setCurrentIndex((prev) => (prev - 1 + testimonialsList.length) % testimonialsList.length)
   }
 
   const stats = [
@@ -91,8 +91,8 @@ export function CommunitySection() {
               <div className="flex-shrink-0">
                 <div className="relative w-24 h-24 md:w-32 md:h-32">
                   <Image
-                    src={testimonials[currentIndex].avatar}
-                    alt={testimonials[currentIndex].name}
+                    src={testimonialsList[currentIndex].avatar}
+                    alt={testimonialsList[currentIndex].name}
                     fill
                     sizes="128px"
                     className="rounded-full object-cover border-4 border-primary/20"
@@ -109,20 +109,20 @@ export function CommunitySection() {
               <div className="flex-1 text-center md:text-left">
                 {/* Stars */}
                 <div className="flex justify-center md:justify-start gap-1 mb-4">
-                  {Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
+                  {Array.from({ length: testimonialsList[currentIndex].rating }).map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                   ))}
                 </div>
 
                 <p className="text-foreground text-lg md:text-xl leading-relaxed mb-6 italic">
-                  &ldquo;{testimonials[currentIndex].content}&rdquo;
+                  &ldquo;{testimonialsList[currentIndex].content}&rdquo;
                 </p>
 
                 <div>
                   <h4 className="font-serif text-xl text-foreground font-semibold">
-                    {testimonials[currentIndex].name}
+                    {testimonialsList[currentIndex].name}
                   </h4>
-                  <p className="text-muted-foreground">{testimonials[currentIndex].role}</p>
+                  <p className="text-muted-foreground">{testimonialsList[currentIndex].role}</p>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ export function CommunitySection() {
             
             {/* Dots */}
             <div className="flex items-center gap-2">
-              {testimonials.map((_, index) => (
+              {testimonialsList.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
