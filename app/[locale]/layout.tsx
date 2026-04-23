@@ -204,7 +204,6 @@ export default async function LocaleLayout({
         <LanguageProvider>
           <WishlistProvider>
             {children}
-            <ScrollToTop />
             <ContactButtons />
           </WishlistProvider>
         </LanguageProvider>
