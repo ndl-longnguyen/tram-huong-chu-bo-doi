@@ -4,17 +4,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ChevronRight, Gift, Award, Heart, Sparkles } from "lucide-react"
 import Link from "next/link"
-import { ProductCard } from "@/components/product-card"
+import { ProductGrid } from "@/components/products/product-grid"
 import { useLanguage } from "@/lib/i18n/language-context"
-
-const giftProducts = [
-  { id: "1", name: { vi: "Set Quà Tặng VIP", en: "VIP Gift Set", zh: "VIP礼品套装" }, price: 5500000, originalPrice: 6500000, image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=80", badge: { vi: "Best Seller", en: "Best Seller", zh: "畅销" } },
-  { id: "2", name: { vi: "Hộp Quà Nhang Trầm Premium", en: "Premium Incense Gift Box", zh: "高级香礼盒" }, price: 2800000, originalPrice: 3500000, image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=500&q=80", badge: { vi: "Mới", en: "New", zh: "新品" } },
-  { id: "3", name: { vi: "Set Vòng Tay Cặp Đôi", en: "Couple Bracelet Set", zh: "情侣手链套装" }, price: 3800000, image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" },
-  { id: "4", name: { vi: "Quà Tặng Doanh Nghiệp", en: "Corporate Gift", zh: "企业礼品" }, price: 8500000, originalPrice: 10000000, image: "https://images.unsplash.com/photo-1605651531144-51381895e23e?w=500&q=80", badge: { vi: "Corporate", en: "Corporate", zh: "企业" } },
-  { id: "5", name: { vi: "Set Quà Tặng Sinh Nhật", en: "Birthday Gift Set", zh: "生日礼品套装" }, price: 1800000, image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=500&q=80" },
-  { id: "6", name: { vi: "Quà Tặng Tết Luxury", en: "Luxury Tet Gift", zh: "豪华春节礼品" }, price: 12000000, originalPrice: 15000000, image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=500&q=80", badge: { vi: "Limited", en: "Limited", zh: "限量" } },
-]
 
 export default function GiftPage() {
   const { locale, getLocalizedPath } = useLanguage()
@@ -115,11 +106,7 @@ export default function GiftPage() {
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">{content.collectionDesc[locale]}</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {giftProducts.map((product) => (
-                <ProductCard key={product.id} product={{ ...product, name: product.name[locale], badge: product.badge?.[locale] }} />
-              ))}
-            </div>
+            <ProductGrid categorySlug="qua-tang" />
           </div>
         </section>
 

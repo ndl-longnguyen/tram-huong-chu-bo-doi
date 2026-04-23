@@ -81,7 +81,7 @@ export function ProductCard({
               {badgeText}
             </span>
           )}
-          {salePrice && (
+          {salePrice && salePrice < originalPrice && (
             <span className="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md">
               -{discountPercent}%
             </span>
@@ -111,7 +111,7 @@ export function ProductCard({
         </div>
         
         {/* Price */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col gap-0.5">
           {salePrice ? (
             <>
               <span className="text-primary font-bold text-lg">

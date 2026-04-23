@@ -194,7 +194,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
             {/* Image Gallery */}
-            <div className="space-y-3 md:space-y-4">
+            <div className="space-y-3 md:space-y-4 min-w-0">
               {/* Main Image */}
               <div className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-muted">
                 <img
@@ -231,7 +231,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
             </div>
 
             {/* Product Info */}
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-4 md:space-y-6 min-w-0">
               {/* Category & SKU */}
               <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm">
                 <Link 
@@ -271,19 +271,21 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
               </div>
 
               {/* Price */}
-              <div className="flex flex-wrap items-baseline gap-2 md:gap-4 py-3 md:py-4 border-y border-border">
+              <div className="py-3 md:py-4 border-y border-border">
                 {product.salePrice ? (
-                  <>
-                    <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
-                      {formatPrice(product.salePrice)}
-                    </span>
+                  <div className="flex flex-col gap-1 md:gap-2">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
+                        {formatPrice(product.salePrice)}
+                      </span>
+                      <span className="px-2 py-0.5 md:py-1 bg-red-100 text-red-600 text-xs md:text-sm font-bold rounded">
+                        -{discountPercent}%
+                      </span>
+                    </div>
                     <span className="text-base md:text-xl text-muted-foreground line-through">
                       {formatPrice(product.originalPrice)}
                     </span>
-                    <span className="px-2 py-0.5 md:py-1 bg-red-100 text-red-600 text-xs md:text-sm font-bold rounded">
-                      -{discountPercent}%
-                    </span>
-                  </>
+                  </div>
                 ) : (
                   <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
                     {formatPrice(product.originalPrice)}
@@ -320,31 +322,31 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col xs:flex-row gap-2 md:gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                   <a
                     href={getMessengerUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-primary/90 hover:shadow-md transition-all duration-300"
                   >
-                    <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
-                    {content.contactOrder[localeKey]}
+                    <MessageCircle className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
+                    <span className="text-center">{content.contactOrder[localeKey]}</span>
                   </a>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 sm:w-auto">
                     <button 
                       onClick={toggleWishlist}
-                      className={`flex-1 xs:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 ${
+                      className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 ${
                         isWishlisted 
                           ? 'border-red-500 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30' 
                           : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
-                      } text-sm md:text-base font-semibold rounded-full hover:shadow-md transition-all duration-300`}
+                      } text-sm md:text-base font-semibold rounded-full hover:shadow-md transition-all duration-300 min-w-0`}
                     >
-                      <Heart className={`w-4 h-4 md:w-5 md:h-5 ${isWishlisted ? 'fill-current' : ''}`} />
-                      <span className="xs:hidden sm:inline">{content.addToWishlist[localeKey]}</span>
+                      <Heart className={`w-4 h-4 md:w-5 md:h-5 shrink-0 ${isWishlisted ? 'fill-current' : ''}`} />
+                      <span className="hidden sm:inline truncate">{content.addToWishlist[localeKey]}</span>
                     </button>
                     <button 
                       onClick={handleShare}
-                      className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border-2 border-border rounded-full hover:bg-muted hover:border-primary/50 transition-all duration-300"
+                      className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border-2 border-border rounded-full hover:bg-muted hover:border-primary/50 transition-all duration-300 shrink-0"
                     >
                       <Share2 className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
@@ -417,24 +419,24 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 {content.specifications[localeKey]}
               </h2>
               <div className="space-y-0">
-                <div className="flex justify-between py-2.5 md:py-3 border-b border-border">
-                  <span className="text-sm md:text-base text-muted-foreground">{content.material[localeKey]}</span>
+                <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
+                  <span className="text-sm md:text-base text-muted-foreground shrink-0">{content.material[localeKey]}</span>
                   <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.material[localeKey]}</span>
                 </div>
-                <div className="flex justify-between py-2.5 md:py-3 border-b border-border">
-                  <span className="text-sm md:text-base text-muted-foreground">{content.origin[localeKey]}</span>
+                <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
+                  <span className="text-sm md:text-base text-muted-foreground shrink-0">{content.origin[localeKey]}</span>
                   <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.origin[localeKey]}</span>
                 </div>
-                <div className="flex justify-between py-2.5 md:py-3 border-b border-border">
-                  <span className="text-sm md:text-base text-muted-foreground">{content.size[localeKey]}</span>
+                <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
+                  <span className="text-sm md:text-base text-muted-foreground shrink-0">{content.size[localeKey]}</span>
                   <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.size}</span>
                 </div>
-                <div className="flex justify-between py-2.5 md:py-3 border-b border-border">
-                  <span className="text-sm md:text-base text-muted-foreground">{content.weight[localeKey]}</span>
+                <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
+                  <span className="text-sm md:text-base text-muted-foreground shrink-0">{content.weight[localeKey]}</span>
                   <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.weight}</span>
                 </div>
-                <div className="flex justify-between py-2.5 md:py-3">
-                  <span className="text-sm md:text-base text-muted-foreground">{content.age[localeKey]}</span>
+                <div className="flex justify-between gap-4 py-2.5 md:py-3">
+                  <span className="text-sm md:text-base text-muted-foreground shrink-0">{content.age[localeKey]}</span>
                   <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.age[localeKey]}</span>
                 </div>
               </div>
