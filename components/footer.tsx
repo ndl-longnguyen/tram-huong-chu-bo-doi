@@ -44,7 +44,7 @@ export function Footer() {
                 placeholder={t("footer.enterEmail")}
                 className="flex-1 min-w-0 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all shadow-inner"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-bold hover:shadow-lg hover:shadow-primary/25 transition-all shrink-0 uppercase text-xs tracking-widest">
+              <button className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 hover:shadow-md transition-all duration-300 shrink-0 uppercase text-xs tracking-widest">
                 {t("footer.subscribe")}
               </button>
             </div>
