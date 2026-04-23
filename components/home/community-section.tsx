@@ -129,7 +129,7 @@ export function CommunitySection() {
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              className="w-12 h-12 bg-card border-2 border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:shadow-md transition-all duration-300"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -140,10 +140,10 @@ export function CommunitySection() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
                     index === currentIndex 
                       ? "w-8 bg-primary" 
-                      : "bg-border hover:bg-primary/50"
+                      : "w-2.5 bg-border hover:bg-primary/50"
                   }`}
                 />
               ))}
@@ -151,7 +151,7 @@ export function CommunitySection() {
 
             <button
               onClick={nextSlide}
-              className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              className="w-12 h-12 bg-card border-2 border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:shadow-md transition-all duration-300"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
