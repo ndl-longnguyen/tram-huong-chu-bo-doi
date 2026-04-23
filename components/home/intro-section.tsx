@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Sparkles, Shield, Heart } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
@@ -70,10 +71,12 @@ export function IntroSection() {
           <div className="relative group">
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative overflow-hidden rounded-2xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=800&q=80"
                 alt={t("home.intro.bracelet")}
-                className="w-full h-[450px] lg:h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -92,36 +95,44 @@ export function IntroSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="relative group overflow-hidden rounded-2xl">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80"
                   alt="Vòng tay trầm hương"
-                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80"
                   alt="Sản phẩm trầm hương"
-                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
               </div>
             </div>
             <div className="space-y-4 pt-10">
               <div className="relative group overflow-hidden rounded-2xl">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80"
                   alt="Nghệ nhân chế tác"
-                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"
                   alt="Trầm hương cao cấp"
-                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
               </div>

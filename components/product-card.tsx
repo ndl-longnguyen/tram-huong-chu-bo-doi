@@ -1,8 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { Star, Eye } from "lucide-react"
+import Image from "next/image"
+import { Star, Eye, Heart } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { useWishlist } from "@/lib/wishlist-context"
 
 interface ProductCardProps {
   id: string
@@ -26,6 +28,8 @@ export function ProductCard({
   badgeType,
 }: ProductCardProps) {
   const { t } = useLanguage()
+  const { toggleWishlist, isInWishlist } = useWishlist()
+  const isFavorite = isInWishlist(id)
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price) + ' đ'
@@ -57,10 +61,12 @@ export function ProductCard({
     <Link href={`/san-pham/${id}`} className="group block">
       <div className="relative overflow-hidden rounded-2xl bg-muted aspect-square">
         {/* Image */}
-        <img
+        <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+          className="object-cover transition-all duration-500 group-hover:scale-110"
         />
         
         {/* Overlay on hover */}
@@ -74,6 +80,22 @@ export function ProductCard({
           </span>
         </div>
         
+        {/* Wishlist Button */}
+        <button
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            toggleWishlist(id)
+          }}
+          className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-all duration-300 z-10 ${
+            isFavorite 
+              ? "bg-red-500 text-white" 
+              : "bg-white/80 backdrop-blur-sm text-muted-foreground hover:text-red-500 hover:bg-white"
+          }`}
+        >
+          <Heart className={`w-4 h-4 ${isFavorite ? "fill-current" : ""}`} />
+        </button>
+
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
           {badgeText && (
