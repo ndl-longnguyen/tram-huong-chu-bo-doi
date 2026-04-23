@@ -14,7 +14,8 @@ import {
   RefreshCw, 
   Phone,
   Check,
-  Package
+  Package,
+  MessageCircle
 } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { ProductCard } from "@/components/product-card"
@@ -72,6 +73,25 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
     setQuantity((prev) => Math.max(1, prev + delta))
   }
 
+  // Generate Messenger URL with pre-filled message
+  const getMessengerUrl = () => {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
+    const productUrl = `${baseUrl}/${locale}/san-pham/${product.id}`
+    const productName = product.name[localeKey]
+    const productPrice = product.salePrice 
+      ? formatPrice(product.salePrice)
+      : formatPrice(product.originalPrice)
+    
+    const messageTemplates = {
+      vi: `Xin chào, tôi muốn đặt hàng sản phẩm:\n\n${productName}\nGiá: ${productPrice}\nSố lượng: ${quantity}\n\nLink sản phẩm: ${productUrl}`,
+      en: `Hello, I would like to order:\n\n${productName}\nPrice: ${productPrice}\nQuantity: ${quantity}\n\nProduct link: ${productUrl}`,
+      zh: `您好，我想订购产品：\n\n${productName}\n价格：${productPrice}\n数量：${quantity}\n\n产品链接：${productUrl}`
+    }
+    
+    const message = encodeURIComponent(messageTemplates[localeKey])
+    return `https://m.me/tramhuongchubodoivn?text=${message}`
+  }
+
   // Badge display
   let badgeText = ""
   let badgeClass = "bg-primary"
@@ -92,7 +112,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
   return (
     <>
       {/* Breadcrumb */}
-      <section className="bg-muted/30 border-b border-border">
+      <section className="bg-muted/30 border-b border-border relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm flex-wrap">
             <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
@@ -109,7 +129,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
       </section>
 
       {/* Product Detail */}
-      <section className="py-6 md:py-8 lg:py-12">
+      <section className="py-6 md:py-8 lg:py-12 relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
             {/* Image Gallery */}
@@ -241,10 +261,12 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 {/* Action Buttons */}
                 <div className="flex flex-col xs:flex-row gap-2 md:gap-3">
                   <a
-                    href="tel:0765942942"
+                    href={getMessengerUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-accent hover:shadow-lg transition-all"
                   >
-                    <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                    <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
                     {content.contactOrder[localeKey]}
                   </a>
                   <div className="flex gap-2">
