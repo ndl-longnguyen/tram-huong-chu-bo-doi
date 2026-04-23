@@ -240,10 +240,10 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 {/* Quantity Selector */}
                 <div className="flex items-center gap-3 md:gap-4">
                   <span className="text-sm md:text-base text-foreground font-medium">{content.quantity[localeKey]}:</span>
-                  <div className="flex items-center border border-border rounded-full">
+                  <div className="flex items-center border-2 border-border rounded-full">
                     <button
                       onClick={() => handleQuantityChange(-1)}
-                      className="p-1.5 md:p-2 hover:bg-muted transition-colors rounded-l-full"
+                      className="p-1.5 md:p-2 hover:bg-muted transition-all duration-300 rounded-l-full disabled:opacity-50"
                       disabled={quantity <= 1}
                     >
                       <Minus className="w-4 h-4 md:w-5 md:h-5" />
@@ -251,7 +251,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     <span className="w-10 md:w-12 text-center text-sm md:text-base font-medium">{quantity}</span>
                     <button
                       onClick={() => handleQuantityChange(1)}
-                      className="p-1.5 md:p-2 hover:bg-muted transition-colors rounded-r-full"
+                      className="p-1.5 md:p-2 hover:bg-muted transition-all duration-300 rounded-r-full"
                     >
                       <Plus className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
@@ -264,17 +264,17 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     href={getMessengerUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-accent hover:shadow-lg transition-all"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-primary/90 hover:shadow-md transition-all duration-300"
                   >
                     <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
                     {content.contactOrder[localeKey]}
                   </a>
                   <div className="flex gap-2">
-                    <button className="flex-1 xs:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 border-primary text-primary text-sm md:text-base font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
+                    <button className="flex-1 xs:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 border-primary text-primary text-sm md:text-base font-semibold rounded-full hover:bg-primary hover:text-primary-foreground hover:shadow-md transition-all duration-300">
                       <Heart className="w-4 h-4 md:w-5 md:h-5" />
                       <span className="xs:hidden sm:inline">{content.addToWishlist[localeKey]}</span>
                     </button>
-                    <button className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border border-border rounded-full hover:bg-muted transition-colors">
+                    <button className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border-2 border-border rounded-full hover:bg-muted hover:border-primary/50 transition-all duration-300">
                       <Share2 className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
                   </div>
