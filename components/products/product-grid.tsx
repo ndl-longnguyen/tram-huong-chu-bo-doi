@@ -45,13 +45,26 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
     }
 
     if (sizeFilter) {
-      items = items.filter(p => p.specs.size.includes(sizeFilter.replace("mm", "")))
+      const sizeValue = sizeFilter.replace("mm", "")
+      items = items.filter(p => 
+        p.specs.size.vi.includes(sizeValue) || 
+        p.specs.size.en.includes(sizeValue) || 
+        p.specs.size.zh.includes(sizeValue)
+      )
     }
 
     if (typeFilter) {
+      const searchTerms = {
+        toc: ["tốc", "toc"],
+        song: ["sống", "live"],
+        chim: ["chìm", "sinking"]
+      }[typeFilter as "toc" | "song" | "chim"] || [typeFilter]
+
       items = items.filter(p => 
-        p.name.vi.toLowerCase().includes(typeFilter.toLowerCase()) || 
-        p.description.vi.toLowerCase().includes(typeFilter.toLowerCase())
+        searchTerms.some(term => 
+          p.name[localeKey].toLowerCase().includes(term.toLowerCase()) || 
+          p.description[localeKey].toLowerCase().includes(term.toLowerCase())
+        )
       )
     }
 
@@ -80,7 +93,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
   return (
     <div className="flex-1">
       {/* Featured Section */}
-      <div className="mb-8">
+      <div className="mb-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="font-serif text-xl md:text-2xl text-foreground uppercase tracking-wider">
             {t("home.featured.title")}
@@ -104,7 +117,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
 
       {/* All Products Section with Header */}
       <div>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-border">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-border">
           <div className="flex items-center gap-2">
             <h2 className="font-serif text-xl md:text-2xl text-foreground uppercase tracking-wider">
               {categorySlug 
@@ -210,7 +223,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
               ))}
             </div>
             {/* Load More */}
-            <div className="text-center mt-12">
+            <div className="text-center mt-8">
               <button className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-widest text-sm">
                 {t("common.viewMore")}
               </button>

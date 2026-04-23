@@ -56,7 +56,7 @@ export function CommunitySection() {
   ]
 
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-40 h-40 border border-primary/20 rounded-full" />
@@ -65,7 +65,7 @@ export function CommunitySection() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase font-bold text-xs">
             {t("home.community.subtitle")}
           </span>
@@ -129,7 +129,7 @@ export function CommunitySection() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-4 mt-6">
             <button
               onClick={prevSlide}
               className="w-12 h-12 bg-card border-2 border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:shadow-md transition-all duration-300"
@@ -162,7 +162,7 @@ export function CommunitySection() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center p-6 bg-card rounded-2xl border border-border">
               <div className="font-serif text-3xl md:text-4xl font-bold text-primary mb-2">
