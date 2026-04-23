@@ -1,4 +1,5 @@
 "use client"
+import { Suspense } from 'react'
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -101,8 +102,16 @@ export default function BraceletPage() {
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-8">
-              <ProductFilters />
-              <ProductGrid categorySlug="nhang-tram" />
+              <Suspense fallback={<div className="w-64 h-96 bg-muted animate-pulse rounded-xl" />}>
+                <ProductFilters />
+              </Suspense>
+              <Suspense fallback={<div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-pulse">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <div key={i} className="aspect-square bg-muted rounded-xl" />
+                ))}
+              </div>}>
+                <ProductGrid categorySlug="nhang-tram" />
+              </Suspense>
             </div>
           </div>
         </section>
