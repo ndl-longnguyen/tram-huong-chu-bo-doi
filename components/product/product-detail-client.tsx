@@ -112,7 +112,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
   return (
     <>
       {/* Breadcrumb */}
-      <section className="bg-muted/30 border-b border-border">
+      <section className="bg-muted/30 border-b border-border relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm flex-wrap">
             <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
@@ -129,7 +129,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
       </section>
 
       {/* Product Detail */}
-      <section className="py-6 md:py-8 lg:py-12">
+      <section className="py-6 md:py-8 lg:py-12 relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
             {/* Image Gallery */}
@@ -264,7 +264,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     href={getMessengerUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-[#0084FF] text-white text-sm md:text-base font-semibold rounded-full hover:bg-[#0073E6] hover:shadow-lg transition-all"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-accent hover:shadow-lg transition-all"
                   >
                     <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
                     {content.contactOrder[localeKey]}
