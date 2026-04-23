@@ -3,61 +3,14 @@
 import Link from "next/link"
 import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { getNewArrivals } from "@/lib/products"
 
 export function NewArrivals() {
-  const { t, getLocalizedPath } = useLanguage()
-
-  const newProducts = [
-    {
-      id: "5",
-      name: t("product.5.name"),
-      image: "/products/p5.jpg",
-      originalPrice: 35000000,
-      rating: 5,
-      badgeType: "new" as const,
-    },
-    {
-      id: "6",
-      name: t("product.6.name"),
-      image: "/products/p6.jpg",
-      originalPrice: 16500000,
-      salePrice: 14500000,
-      rating: 5,
-      badgeType: "best" as const,
-    },
-    {
-      id: "7",
-      name: t("product.7.name"),
-      image: "/products/p7.jpg",
-      originalPrice: 850000,
-      rating: 4,
-    },
-    {
-      id: "8",
-      name: t("product.8.name"),
-      image: "/products/p8.jpg",
-      originalPrice: 22000000,
-      salePrice: 19500000,
-      rating: 5,
-      badgeType: "hot" as const,
-    },
-    {
-      id: "9",
-      name: t("product.9.name"),
-      image: "/products/p1.jpg",
-      originalPrice: 12000000,
-      rating: 5,
-    },
-    {
-      id: "10",
-      name: t("product.10.name"),
-      image: "/products/p2.jpg",
-      originalPrice: 28000000,
-      salePrice: 25500000,
-      rating: 5,
-      badgeType: "new" as const,
-    },
-  ]
+  const { t, getLocalizedPath, locale } = useLanguage()
+  const localeKey = (locale || "vi") as "vi" | "en" | "zh"
+  
+  // Get products from JSON data
+  const newProducts = getNewArrivals(6)
 
   return (
     <section className="py-16 lg:py-24 bg-background">
@@ -76,7 +29,16 @@ export function NewArrivals() {
         {/* Products Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {newProducts.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard 
+              key={product.id} 
+              id={product.id}
+              name={product.name[localeKey]}
+              image={product.image}
+              originalPrice={product.originalPrice}
+              salePrice={product.salePrice || undefined}
+              rating={product.rating}
+              badgeType={product.badgeType || undefined}
+            />
           ))}
         </div>
 

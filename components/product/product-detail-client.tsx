@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { 
   ChevronRight, 
@@ -58,6 +58,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
   const { locale, getLocalizedPath } = useLanguage()
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
+  const [messengerUrl, setMessengerUrl] = useState("https://m.me/tramhuongchubodoivn")
 
   const localeKey = locale as 'vi' | 'en' | 'zh'
   
@@ -73,9 +74,9 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
     setQuantity((prev) => Math.max(1, prev + delta))
   }
 
-  // Generate Messenger URL with pre-filled message
-  const getMessengerUrl = () => {
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
+  // Generate Messenger URL with pre-filled message (client-side only to avoid hydration mismatch)
+  useEffect(() => {
+    const baseUrl = window.location.origin
     const productUrl = `${baseUrl}/${locale}/san-pham/${product.id}`
     const productName = product.name[localeKey]
     const productPrice = product.salePrice 
@@ -89,8 +90,8 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
     }
     
     const message = encodeURIComponent(messageTemplates[localeKey])
-    return `https://m.me/tramhuongchubodoivn?text=${message}`
-  }
+    setMessengerUrl(`https://m.me/tramhuongchubodoivn?text=${message}`)
+  }, [locale, localeKey, product, quantity])
 
   // Badge display
   let badgeText = ""
@@ -261,7 +262,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 {/* Action Buttons */}
                 <div className="flex flex-col xs:flex-row gap-2 md:gap-3">
                   <a
-                    href={getMessengerUrl()}
+                    href={messengerUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-primary/90 hover:shadow-md transition-all duration-300"

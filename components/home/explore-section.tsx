@@ -3,36 +3,24 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { getProductsByCategory, categories } from "@/lib/products"
 
 export function ExploreSection() {
-  const { t, getLocalizedPath } = useLanguage()
+  const { t, getLocalizedPath, locale } = useLanguage()
+  const localeKey = (locale || "vi") as "vi" | "en" | "zh"
 
-  const exploreItems = [
-    {
-      title: t("nav.incense"),
-      description: t("home.intro.newCollection"),
-      image: "/products/p5.jpg",
-      href: "/nhang-tram",
-    },
-    {
-      title: t("nav.bracelet"),
-      description: t("home.intro.braceletDesc")?.split('.')[0] || "",
-      image: "/products/p1.jpg",
-      href: "/vong-tay",
-    },
-    {
-      title: t("nav.art"),
-      description: t("hero.tagline"),
-      image: "/products/p6.jpg",
-      href: "/my-nghe",
-    },
-    {
-      title: t("nav.gift"),
-      description: t("home.banner.title2"),
-      image: "/products/p7.jpg",
-      href: "/qua-tang",
-    },
-  ]
+  // Build explore items from categories with their first product image
+  const exploreItems = categories.slice(0, 4).map((category) => {
+    const categoryProducts = getProductsByCategory(category.slug)
+    const firstProduct = categoryProducts[0]
+    
+    return {
+      title: category.name[localeKey],
+      description: category.description[localeKey],
+      image: firstProduct?.image || category.image,
+      href: `/${category.slug}`,
+    }
+  })
 
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background">
@@ -65,7 +53,7 @@ export function ExploreSection() {
                   <h3 className="text-white font-serif text-lg md:text-xl font-semibold text-center mb-1 uppercase">
                     {item.title}
                   </h3>
-                  <p className="text-white/70 text-xs text-center mb-3">
+                  <p className="text-white/70 text-xs text-center mb-3 line-clamp-2">
                      {item.description}
                   </p>
                   <span className="flex items-center gap-1 text-primary text-xs font-bold uppercase opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">

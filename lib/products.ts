@@ -132,3 +132,29 @@ export function getAllCategorySlugs(): string[] {
 export function getAllProductIds(): string[] {
   return products.map((p) => p.id)
 }
+
+// Get new arrivals (for homepage section)
+export function getNewArrivals(limit = 6): Product[] {
+  // Return products with "new" badge first, then others
+  const newProducts = products.filter((p) => p.badgeType === "new")
+  const otherProducts = products.filter((p) => p.badgeType !== "new")
+  return [...newProducts, ...otherProducts].slice(0, limit)
+}
+
+// Get explore items for homepage (one product per category)
+export function getExploreItems(): { categorySlug: string; image: string }[] {
+  const result: { categorySlug: string; image: string }[] = []
+  const seenCategories = new Set<string>()
+  
+  for (const product of products) {
+    if (!seenCategories.has(product.categorySlug)) {
+      seenCategories.add(product.categorySlug)
+      result.push({
+        categorySlug: product.categorySlug,
+        image: product.image
+      })
+    }
+  }
+  
+  return result
+}
