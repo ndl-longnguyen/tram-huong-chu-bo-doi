@@ -51,7 +51,7 @@ export function FeaturedProducts() {
         {/* CTA */}
         <div className="text-center mt-10">
           <Link
-            href={getLocalizedPath("/trang-suc")}
+            href={getLocalizedPath("/vong-tay")}
             className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group uppercase tracking-wider text-sm font-bold"
           >
             {t("home.featured.viewAll")}

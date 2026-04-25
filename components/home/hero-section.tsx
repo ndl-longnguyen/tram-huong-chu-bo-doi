@@ -62,7 +62,7 @@ export function HeroSection() {
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
           <Link
-            href={getLocalizedPath("/trang-suc")}
+            href={getLocalizedPath("/vong-tay")}
             className="px-10 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300 uppercase tracking-wider text-sm"
           >
             {t("hero.explore")}
