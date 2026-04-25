@@ -108,7 +108,7 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-          
+
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
@@ -225,9 +225,9 @@ export default function ContactPage() {
                 <div className="relative hidden lg:block">
                   <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl" />
                   <img
-                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"
+                    src="/images/sections/tram-huong-chu-bo-doi-section-7.webp"
                     alt="Tram huong"
-                    className="relative w-full h-64 object-cover rounded-2xl"
+                    className="relative w-full h-100 object-cover rounded-2xl"
                   />
                 </div>
               </div>

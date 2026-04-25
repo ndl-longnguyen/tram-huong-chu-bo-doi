@@ -33,8 +33,22 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
   )
 
   const activePrice = searchParams.get("price")
-  const activeSize = searchParams.get("size")
-  const activeType = searchParams.get("type")
+  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "")
+  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "")
+
+  const handleManualPriceApply = () => {
+    const params = new URLSearchParams(searchParams.toString())
+    if (minPrice) params.set("minPrice", minPrice)
+    else params.delete("minPrice")
+    
+    if (maxPrice) params.set("maxPrice", maxPrice)
+    else params.delete("maxPrice")
+
+    // If manual price is set, clear the preset range filter
+    params.delete("price")
+    
+    router.push(pathname + "?" + params.toString(), { scroll: false })
+  }
 
   const filterGroups = [
     {
@@ -46,27 +60,7 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
         { label: t("products.filter.price.10-20m"), value: "10-20m" },
         { label: t("products.filter.price.over20m"), value: "over-20m" }
       ],
-    },
-    {
-      id: "size",
-      label: t("products.filter.size"),
-      options: [
-        { label: "8mm", value: "8mm" },
-        { label: "10mm", value: "10mm" },
-        { label: "12mm", value: "12mm" },
-        { label: "14mm", value: "14mm" },
-        { label: "16mm", value: "16mm" }
-      ],
-    },
-    {
-      id: "type",
-      label: t("products.filter.type"),
-      options: [
-        { label: t("products.filter.type.toc"), value: "toc" },
-        { label: t("products.filter.type.song"), value: "song" },
-        { label: t("products.filter.type.chim"), value: "chim" }
-      ],
-    },
+    }
   ]
 
   return (
@@ -94,26 +88,80 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
                 </button>
                 
                 {isOpen && (
-                  <div className="space-y-2 animate-in fade-in slide-in-from-top-1 duration-200">
-                    {group.options.map((option) => {
-                      const isActive = searchParams.get(group.id) === option.value
-                      return (
-                        <button
-                          key={option.value}
-                          onClick={() => {
-                            router.push(pathname + "?" + createQueryString(group.id, option.value), { scroll: false })
-                          }}
-                          className={`flex items-center justify-between w-full text-left py-1.5 px-3 rounded-lg transition-all ${
-                            isActive 
-                              ? "bg-primary text-primary-foreground font-bold shadow-sm" 
-                              : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                          }`}
-                        >
-                          <span>{option.label}</span>
-                          {isActive && <Check className="w-3 h-3" />}
-                        </button>
-                      )
-                    })}
+                  <div className="space-y-4 animate-in fade-in slide-in-from-top-1 duration-200">
+                    {/* Manual Price Range */}
+                    <div className="space-y-3 px-1">
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="space-y-1">
+                          <label className="text-[10px] text-muted-foreground font-medium uppercase tracking-tighter">{t("products.filter.price.from")} (VNĐ)</label>
+                          <input 
+                            type="number" 
+                            placeholder="0"
+                            value={minPrice}
+                            onChange={(e) => setMinPrice(e.target.value)}
+                            className="w-full px-2 py-1.5 rounded-md border border-border bg-muted/50 focus:outline-none focus:ring-1 focus:ring-primary text-xs"
+                          />
+                        </div>
+                        <div className="space-y-1">
+                          <label className="text-[10px] text-muted-foreground font-medium uppercase tracking-tighter">{t("products.filter.price.to")} (VNĐ)</label>
+                          <input 
+                            type="number" 
+                            placeholder="999..."
+                            value={maxPrice}
+                            onChange={(e) => setMaxPrice(e.target.value)}
+                            className="w-full px-2 py-1.5 rounded-md border border-border bg-muted/50 focus:outline-none focus:ring-1 focus:ring-primary text-xs"
+                          />
+                        </div>
+                      </div>
+                      <button 
+                        onClick={handleManualPriceApply}
+                        className="w-full py-2 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground rounded-md font-bold transition-all text-[10px] uppercase tracking-widest"
+                      >
+                        {t("products.filter.price.apply")}
+                      </button>
+                    </div>
+
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center">
+                        <span className="w-full border-t border-border" />
+                      </div>
+                      <div className="relative flex justify-center text-[10px] uppercase">
+                        <span className="bg-card px-2 text-muted-foreground font-medium">{t("products.filter.price.orQuickSelect")}</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      {group.options.map((option) => {
+                        const isActive = searchParams.get(group.id) === option.value
+                        return (
+                          <button
+                            key={option.value}
+                            onClick={() => {
+                              const params = new URLSearchParams(searchParams.toString())
+                              params.delete("minPrice")
+                              params.delete("maxPrice")
+                              setMinPrice("")
+                              setMaxPrice("")
+                              
+                              if (params.get(group.id) === option.value) {
+                                params.delete(group.id)
+                              } else {
+                                params.set(group.id, option.value)
+                              }
+                              router.push(pathname + "?" + params.toString(), { scroll: false })
+                            }}
+                            className={`flex items-center justify-between w-full text-left py-1.5 px-3 rounded-lg transition-all ${
+                              isActive 
+                                ? "bg-primary text-primary-foreground font-bold shadow-sm" 
+                                : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                            }`}
+                          >
+                            <span>{option.label}</span>
+                            {isActive && <Check className="w-3 h-3" />}
+                          </button>
+                        )
+                      })}
+                    </div>
                   </div>
                 )}
               </div>
@@ -123,9 +171,13 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
       </div>
 
       {/* Clear Filters */}
-      {(activePrice || activeSize || activeType) && (
+      {(activePrice || searchParams.get("minPrice") || searchParams.get("maxPrice")) && (
         <button 
-          onClick={() => router.push(pathname)}
+          onClick={() => {
+            setMinPrice("")
+            setMaxPrice("")
+            router.push(pathname)
+          }}
           className="mt-4 w-full py-3 text-xs font-bold text-red-500 hover:bg-red-50 rounded-xl border border-red-200 transition-all flex items-center justify-center gap-2"
         >
           <X className="w-3 h-3" />

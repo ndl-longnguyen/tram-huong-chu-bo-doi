@@ -77,7 +77,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: product.rating,
-      reviewCount: product.reviewCount,
     },
   }
 

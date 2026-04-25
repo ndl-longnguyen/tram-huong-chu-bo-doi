@@ -20,21 +20,29 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
   const router = useRouter()
   const pathname = usePathname()
   const [visibleCount, setVisibleCount] = useState(24)
-  
+
   const sortBy = searchParams.get("sort") || "newest"
   const priceFilter = searchParams.get("price")
-  const sizeFilter = searchParams.get("size")
-  const typeFilter = searchParams.get("type")
+  const minPriceFilter = searchParams.get("minPrice")
+  const maxPriceFilter = searchParams.get("maxPrice")
+  const activeFilterCount = [priceFilter, minPriceFilter, maxPriceFilter].filter(Boolean).length
 
-  const activeFilterCount = [priceFilter, sizeFilter, typeFilter].filter(Boolean).length
-  
   const baseProducts = useMemo(() => {
-    let items = categorySlug 
-      ? getProductsByCategory(categorySlug) 
+    let items = categorySlug
+      ? getProductsByCategory(categorySlug)
       : products
 
-    // Apply Filters
-    if (priceFilter) {
+    // Apply Manual Price Filters (Priority)
+    if (minPriceFilter || maxPriceFilter) {
+      items = items.filter(p => {
+        const price = p.salePrice || p.originalPrice
+        const min = minPriceFilter ? parseInt(minPriceFilter) : 0
+        const max = maxPriceFilter ? parseInt(maxPriceFilter) : Infinity
+        return price >= min && price <= max
+      })
+    }
+    // Apply Preset Price Filters
+    else if (priceFilter) {
       items = items.filter(p => {
         const price = p.salePrice || p.originalPrice
         if (priceFilter === "under-5m") return price < 5000000
@@ -45,32 +53,8 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
       })
     }
 
-    if (sizeFilter) {
-      const sizeValue = sizeFilter.replace("mm", "")
-      items = items.filter(p => 
-        p.specs.size.vi.includes(sizeValue) || 
-        p.specs.size.en.includes(sizeValue) || 
-        p.specs.size.zh.includes(sizeValue)
-      )
-    }
-
-    if (typeFilter) {
-      const searchTerms = {
-        toc: ["tốc", "toc"],
-        song: ["sống", "live"],
-        chim: ["chìm", "sinking"]
-      }[typeFilter as "toc" | "song" | "chim"] || [typeFilter]
-
-      items = items.filter(p => 
-        searchTerms.some(term => 
-          p.name[localeKey].toLowerCase().includes(term.toLowerCase()) || 
-          p.description[localeKey].toLowerCase().includes(term.toLowerCase())
-        )
-      )
-    }
-
     return items
-  }, [categorySlug, priceFilter, sizeFilter, typeFilter])
+  }, [categorySlug, priceFilter, minPriceFilter, maxPriceFilter])
 
   const sortedProducts = useMemo(() => {
     const items = [...baseProducts]
@@ -80,7 +64,11 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
       case "price-high-low":
         return items.sort((a, b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice))
       case "best-selling":
-        return items.sort((a, b) => b.reviewCount - a.reviewCount)
+        return items.sort((a, b) => {
+          if (a.badgeType === "best" && b.badgeType !== "best") return -1
+          if (a.badgeType !== "best" && b.badgeType === "best") return 1
+          return 0
+        })
       case "newest":
       default:
         return items
@@ -102,8 +90,8 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {featuredProducts.map((product) => (
-            <ProductCard 
-              key={product.id} 
+            <ProductCard
+              key={product.id}
               id={product.id}
               name={product.name[localeKey]}
               image={product.image}
@@ -121,7 +109,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-border">
           <div className="flex items-center gap-2">
             <h2 className="font-serif text-xl md:text-2xl text-foreground uppercase tracking-wider">
-              {categorySlug 
+              {categorySlug
                 ? (getCategoryBySlug(categorySlug)?.name[localeKey] || categorySlug)
                 : t("products.title")}
             </h2>
@@ -140,7 +128,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
             </div>
             {/* Sort Dropdown - Synced with Sidebar */}
             <div className="relative group">
-              <select 
+              <select
                 value={sortBy}
                 onChange={(e) => {
                   const params = new URLSearchParams(searchParams.toString())
@@ -206,8 +194,8 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
           <>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
               {sortedProducts.slice(0, visibleCount).map((product) => (
-                <ProductCard 
-                  key={product.id} 
+                <ProductCard
+                  key={product.id}
                   id={product.id}
                   name={product.name[localeKey]}
                   image={product.image}
@@ -221,7 +209,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
             {/* Load More */}
             {visibleCount < sortedProducts.length && (
               <div className="text-center mt-8">
-                <button 
+                <button
                   onClick={() => setVisibleCount(prev => prev + 12)}
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-widest text-sm"
                 >
@@ -231,7 +219,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
             )}
           </>
         ) : (
-          <div className="text-center py-20 px-6 bg-muted/20 rounded-3xl border-2 border-dashed border-border/50 max-w-2xl mx-auto">
+          <div className="text-center py-20 px-6 bg-muted/20 rounded-3xl border-2 border-dashed border-border/50 mx-auto">
             <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Search className="w-10 h-10 text-primary/50" />
             </div>
@@ -241,16 +229,16 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
             <p className="text-muted-foreground mb-10 leading-relaxed">
               {t("products.noFoundDesc")}
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
+              <a
                 href="tel:0765942942"
                 className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:shadow-lg transition-all active:scale-95 text-sm uppercase tracking-widest"
               >
                 <Phone className="w-4 h-4" />
                 Hotline
               </a>
-              <a 
+              <a
                 href="https://zalo.me/0765942942"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -265,7 +253,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
                 </svg>
                 Zalo
               </a>
-              <a 
+              <a
                 href="https://m.me/tramhuongchubodoi"
                 target="_blank"
                 rel="noopener noreferrer"

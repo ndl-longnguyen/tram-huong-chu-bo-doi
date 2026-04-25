@@ -70,13 +70,13 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.intro.feature2.title": "Bảo Hành Trọn Đời",
     "home.intro.feature2.desc": "Cam kết chất lượng với chính sách bảo hành tốt nhất",
     "home.intro.feature3.title": "Chế Tác Thủ Công",
-    "home.intro.feature3.desc": "Nghệ nhân lành nghề với hơn 20 năm kinh nghiệm",
+    "home.intro.feature3.desc": "Nghệ nhân lành nghề với hơn 10 năm kinh nghiệm",
     "home.intro.newCollection": "Bộ sưu tập mới",
     "home.intro.bracelet": "Vòng Tay Trầm Hương",
     "home.intro.braceletDesc": "Thiết kế tinh xảo, mang năng lượng tích cực và may mắn đến cho người đeo.",
     "home.intro.learnMore": "TÌM HIỂU THÊM VỀ CHÚ BỘ ĐỘI",
 
-    "home.featured.title": "Sản phẩm bán chạy",
+    "home.featured.title": "Sản phẩm nổi bật",
     "home.featured.subtitle": "BEST SELLERS",
     "home.featured.desc": "Những sản phẩm trầm hương được khách hàng tin tưởng và lựa chọn nhiều nhất",
     "home.featured.viewAll": "XEM TẤT CẢ SẢN PHẨM",
@@ -114,9 +114,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.8.name": "Vòng Tay Trầm Hương - Hoàng Kim",
     "product.9.name": "Vòng Đeo Tay Trầm Hương 108 Hạt",
     "product.10.name": "Dây Chuyền Trầm Hương Bọc Vàng",
-    "product.badge.new": "Mới",
-    "product.badge.best": "Bán chạy",
-    "product.badge.hot": "Hot",
     "product.quickView": "Xem nhanh",
 
     // About page
@@ -169,7 +166,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.collection": "BỘ SƯU TẬP",
     "products.title": "Vòng Tay Trầm Hương",
     "products.title2": "Cao Cấp",
-    "products.description": "Khám phá bộ sưu tập trang sức trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 20 năm kinh nghiệm.",
+    "products.description": "Khám phá bộ sưu tập trang sức trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 10 năm kinh nghiệm.",
     "products.items": "sản phẩm",
     "products.filters": "BỘ LỌC",
     "products.sort": "SẮP XẾP",
@@ -180,6 +177,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.badge.best": "Bán chạy",
     "products.badge.new": "Mới",
     "products.badge.hot": "Hot",
+    "products.badge.soldout": "Hết hàng",
     "product.detail.features": "Đặc điểm nổi bật",
     "product.detail.description": "Mô tả sản phẩm",
     "product.detail.inquiry": "Nhận tư vấn ngay",
@@ -225,9 +223,13 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.filter.clearAll": "XÓA TẤT CẢ BỘ LỌC",
     "products.filter.age": "Tuổi Trầm",
     "products.filter.age.10y": "10 năm",
-    "products.filter.age.20y": "20 năm",
+    "products.filter.age.20y": "10 năm",
     "products.filter.age.30y": "30 năm",
     "products.filter.age.over50y": "Trên 50 năm",
+    "products.filter.price.from": "Từ",
+    "products.filter.price.to": "Đến",
+    "products.filter.price.apply": "Áp dụng",
+    "products.filter.price.orQuickSelect": "Hoặc chọn nhanh",
 
     // Why Choose Us
     "why.subtitle": "TẠI SAO CHỌN CHÚNG TÔI",
@@ -366,7 +368,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.intro.braceletDesc": "Exquisite design, bringing positive energy and luck to the wearer.",
     "home.intro.learnMore": "LEARN MORE ABOUT US",
 
-    "home.featured.title": "Best Selling Products",
+    "home.featured.title": "Featured Products",
     "home.featured.subtitle": "BEST SELLERS",
     "home.featured.desc": "Our most trusted and preferred agarwood products by customers",
     "home.featured.viewAll": "VIEW ALL PRODUCTS",
@@ -403,9 +405,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.8.name": "Golden Agarwood Bracelet",
     "product.9.name": "108 Beads Natural Agarwood Bracelet",
     "product.10.name": "Gold-Plated Agarwood Necklace",
-    "product.badge.new": "New",
-    "product.badge.best": "Best Seller",
-    "product.badge.hot": "Hot",
     "product.quickView": "Quick View",
 
     // About page
@@ -468,6 +467,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.badge.best": "Best Seller",
     "products.badge.new": "New",
     "products.badge.hot": "Hot",
+    "products.badge.soldout": "Sold Out",
     "product.detail.features": "Key Features",
     "product.detail.description": "Product Description",
     "product.detail.inquiry": "Inquiry Now",
@@ -516,6 +516,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.filter.age.20y": "20 years",
     "products.filter.age.30y": "30 years",
     "products.filter.age.over50y": "Over 50 years",
+    "products.filter.price.from": "From",
+    "products.filter.price.to": "To",
+    "products.filter.price.apply": "Apply",
+    "products.filter.price.orQuickSelect": "Or quick select",
 
     // Why Choose Us
     "why.subtitle": "WHY CHOOSE US",
@@ -654,7 +658,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.intro.braceletDesc": "设计精美，为佩戴者带来正能量和好运。",
     "home.intro.learnMore": "了解更多关于我们",
 
-    "home.featured.title": "热销产品",
+    "home.featured.title": "精选产品",
     "home.featured.subtitle": "BEST SELLERS",
     "home.featured.desc": "最受客户信任和青睐的沉香产品",
     "home.featured.viewAll": "查看全部产品",
@@ -691,9 +695,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.8.name": "黄金沉香手链",
     "product.9.name": "108颗天然沉香手链",
     "product.10.name": "镀金沉香项链",
-    "product.badge.new": "新品",
-    "product.badge.best": "热销",
-    "product.badge.hot": "热门",
     "product.quickView": "快速预览",
 
     // About page
@@ -732,6 +733,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.badge.best": "畅销",
     "products.badge.new": "新品",
     "products.badge.hot": "热门",
+    "products.badge.soldout": "已售罄",
     "product.detail.features": "产品特点",
     "product.detail.description": "产品描述",
     "product.detail.inquiry": "立即咨询",
@@ -780,6 +782,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.filter.age.20y": "20年",
     "products.filter.age.30y": "30年",
     "products.filter.age.over50y": "50年以上",
+    "products.filter.price.from": "从",
+    "products.filter.price.to": "至",
+    "products.filter.price.apply": "应用",
+    "products.filter.price.orQuickSelect": "或快速选择",
     "blog.toc": "目录",
     "blog.editor": "编辑",
     "blog.promo": "专属优惠",

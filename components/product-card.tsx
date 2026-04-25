@@ -14,7 +14,7 @@ interface ProductCardProps {
   salePrice?: number
   rating: number
   badge?: string
-  badgeType?: "new" | "best" | "hot" | "sale"
+  badgeType?: "new" | "best" | "hot" | "sale" | "soldout"
 }
 
 export function ProductCard({
@@ -43,17 +43,20 @@ export function ProductCard({
   let badgeText = badge
   let badgeClass = "bg-primary"
 
-  if (badgeType === "sale" || badge === "Sale") {
+  if (badgeType === "soldout") {
+    badgeText = t("products.badge.soldout")
+    badgeClass = "bg-gray-500"
+  } else if (badgeType === "sale" || badge === "Sale") {
     badgeText = badge || "Sale"
     badgeClass = "bg-red-500"
   } else if (badgeType === "best") {
-    badgeText = t("product.badge.best")
+    badgeText = t("products.badge.best")
     badgeClass = "bg-gradient-to-r from-primary to-accent"
   } else if (badgeType === "new") {
-    badgeText = t("product.badge.new")
+    badgeText = t("products.badge.new")
     badgeClass = "bg-green-600"
   } else if (badgeType === "hot") {
-    badgeText = t("product.badge.hot")
+    badgeText = t("products.badge.hot")
     badgeClass = "bg-orange-500"
   }
 

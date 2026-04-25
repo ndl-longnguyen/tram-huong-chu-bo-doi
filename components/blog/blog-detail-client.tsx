@@ -233,9 +233,9 @@ export function BlogDetailClient({ post }: BlogDetailClientProps) {
               {/* Banner / CTA */}
               <div className="relative rounded-3xl overflow-hidden aspect-[4/5] group shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=400&q=80"
+                  src={post.image}
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  alt="Promo"
+                  alt={t("blog.promo")}
                   fill
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">

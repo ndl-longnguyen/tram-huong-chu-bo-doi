@@ -103,7 +103,7 @@ Agarwood bracelets or pendants are seen as protective talismans. It protects the
 > **结论：** 沉香不仅是一件奢侈的珠宝，更是一个心灵伴侣，帮助您平衡生活并吸引最积极的能量。
       `
     },
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "/images/blogs/1.webp",
     date: "25/04/2024",
     readTime: { vi: "8 phút đọc", en: "8 min read", zh: "8分钟阅读" },
     category: { vi: "Phong thủy", en: "Feng Shui", zh: "风水" },
@@ -175,7 +175,7 @@ Natural agarwood is completely non-toxic. On the contrary, it is a precious medi
 > **建议：** 请务必选择信誉良好的机构购买沉香，以确保您和家人的健康。
       `
     },
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "/images/blogs/2.webp",
     date: "22/04/2024",
     readTime: { vi: "6 phút đọc", en: "6 min read", zh: "6分钟阅读" },
     category: { vi: "Sức khỏe", en: "Health", zh: "健康" },
@@ -247,7 +247,7 @@ These bracelets often have artificial dark black colors, a pungent chemical smel
 **结论：** 压层沉水沉香是一种美观的流行产品，但买家需要清楚了解自己购买的是哪种类型，以便对价值和耐用性有正确的预期。
       `
     },
-    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80",
+    image: "/images/blogs/3.webp",
     date: "20/04/2024",
     readTime: { vi: "7 phút đọc", en: "7 min read", zh: "7分钟阅读" },
     category: { vi: "Kiến thức", en: "Knowledge", zh: "知识" },
@@ -325,7 +325,7 @@ Since Water restrains Fire, Fire element people should limit wearing items with 
 **提示：** 沉香手链搭配紫水晶不仅是一件精致的珠宝，更是火命人的得力风水助手。
       `
     },
-    image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&q=80",
+    image: "/images/blogs/4.webp",
     date: "18/04/2024",
     readTime: { vi: "5 phút đọc", en: "5 min read", zh: "5分钟阅读" },
     category: { vi: "Phong thủy", en: "Feng Shui", zh: "风水" },
@@ -424,7 +424,7 @@ Feng shui items only work when accompanied by a kind soul. Wearing a bracelet bu
 **结论：** “避邪求福”，遵守这些规则将帮助您的手链保持光亮并充满正能量。
       `
     },
-    image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=800&q=80",
+    image: "/images/blogs/5.webp",
     date: "15/04/2024",
     readTime: { vi: "10 phút đọc", en: "10 min read", zh: "10分钟阅读" },
     category: { vi: "Hướng dẫn", en: "Guide", zh: "指南" },
@@ -508,7 +508,7 @@ The incense burner should be placed in a solemn position on the altar, usually i
 **结论：** 在祭坛上焚烧沉香是一种美好的行为，有助于我们的灵魂保持宁静，并与根源建立更深层次的联系。
       `
     },
-    image: "https://images.unsplash.com/photo-1616169227523-5f66a24f0735?w=800&q=80",
+    image: "/images/blogs/6.webp",
     date: "12/04/2024",
     readTime: { vi: "8 phút đọc", en: "8 min read", zh: "8分钟阅读" },
     category: { vi: "Tâm linh", en: "Spirituality", zh: "心灵" },

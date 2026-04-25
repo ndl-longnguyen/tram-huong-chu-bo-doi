@@ -110,19 +110,23 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
 
   // Badge display
   let badgeText = ""
-  let badgeClass = "bg-primary"
-  if (product.badgeType === "sale") {
+  let badgeClass = ""
+
+  if (product.badgeType === "soldout") {
+    badgeText = t("products.badge.soldout")
+    badgeClass = "bg-gray-500 shadow-lg shadow-gray-500/20"
+  } else if (product.badgeType === "sale") {
     badgeText = t("products.badge.sale")
     badgeClass = "bg-red-500"
   } else if (product.badgeType === "best") {
     badgeText = t("products.badge.best")
-    badgeClass = "bg-gradient-to-r from-primary to-accent"
+    badgeClass = "bg-gradient-to-r from-primary to-accent shadow-lg shadow-primary/20"
   } else if (product.badgeType === "new") {
     badgeText = t("products.badge.new")
-    badgeClass = "bg-green-600"
+    badgeClass = "bg-emerald-500 shadow-lg shadow-emerald-500/20"
   } else if (product.badgeType === "hot") {
     badgeText = t("products.badge.hot")
-    badgeClass = "bg-orange-500"
+    badgeClass = "bg-orange-500 shadow-lg shadow-orange-500/20"
   }
 
   return (
@@ -227,7 +231,6 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                   ))}
                 </div>
                 <span className="text-sm md:text-base text-foreground font-medium">{product.rating}.0</span>
-                <span className="text-xs md:text-sm text-muted-foreground">({product.reviewCount} {t("product.detail.reviews")})</span>
                 <span className={`ml-auto flex items-center gap-1 text-xs md:text-sm font-medium ${product.inStock ? "text-green-600" : "text-red-500"}`}>
                   <Package className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   {product.inStock ? t("product.detail.inStock") : t("product.detail.outOfStock")}

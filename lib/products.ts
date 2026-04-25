@@ -14,8 +14,7 @@ export interface Product {
   originalPrice: number
   salePrice?: number | null
   rating: number
-  reviewCount: number
-  badgeType?: "new" | "best" | "hot" | "sale" | null
+  badgeType?: "new" | "best" | "hot" | "sale" | "soldout" | null
   category: {
     vi: string
     en: string
@@ -115,14 +114,22 @@ export function getAllProducts(page = 1, perPage = 12): { products: Product[]; t
   }
 }
 
+// Helper function to normalize string (remove accents)
+export const normalizeString = (str: string) => {
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+}
+
 // Search products
 export function searchProducts(query: string, locale: "vi" | "en" | "zh" = "vi"): Product[] {
-  const lowercaseQuery = query.toLowerCase()
+  const normalizedQuery = normalizeString(query)
   
   return products.filter((p) => 
-    p.name[locale].toLowerCase().includes(lowercaseQuery) ||
-    p.description[locale].toLowerCase().includes(lowercaseQuery) ||
-    p.sku.toLowerCase().includes(lowercaseQuery)
+    normalizeString(p.name[locale]).includes(normalizedQuery) ||
+    normalizeString(p.sku).includes(normalizedQuery)
   )
 }
 

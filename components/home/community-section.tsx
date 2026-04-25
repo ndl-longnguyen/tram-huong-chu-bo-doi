@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { Quote, ChevronLeft, ChevronRight, Star, User, UserRound, CircleUser, UserCircle } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
 
@@ -13,28 +13,36 @@ export function CommunitySection() {
     {
       name: t("testimonials.1.name"),
       role: t("testimonials.role.business"),
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
+      gender: "male",
+      icon: User,
+      color: "bg-blue-100 text-blue-600",
       content: t("testimonials.1.content"),
       rating: 5,
     },
     {
       name: t("testimonials.2.name"),
       role: t("testimonials.role.teacher"),
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80",
+      gender: "female",
+      icon: UserRound,
+      color: "bg-pink-100 text-pink-600",
       content: t("testimonials.2.content"),
       rating: 5,
     },
     {
       name: t("testimonials.3.name"),
       role: t("testimonials.role.architect"),
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80",
+      gender: "male",
+      icon: CircleUser,
+      color: "bg-emerald-100 text-emerald-600",
       content: t("testimonials.3.content"),
       rating: 5,
     },
     {
       name: t("testimonials.4.name"),
       role: t("testimonials.role.designer"),
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80",
+      gender: "female",
+      icon: UserCircle,
+      color: "bg-purple-100 text-purple-600",
       content: t("testimonials.4.content"),
       rating: 5,
     },
@@ -90,13 +98,12 @@ export function CommunitySection() {
               {/* Avatar */}
               <div className="flex-shrink-0">
                 <div className="relative w-24 h-24 md:w-32 md:h-32">
-                  <Image
-                    src={testimonialsList[currentIndex].avatar}
-                    alt={testimonialsList[currentIndex].name}
-                    fill
-                    sizes="128px"
-                    className="rounded-full object-cover border-4 border-primary/20"
-                  />
+                  <div className={`w-full h-full rounded-full flex items-center justify-center border-4 border-primary/20 ${testimonialsList[currentIndex].color}`}>
+                    {(() => {
+                      const Icon = testimonialsList[currentIndex].icon
+                      return <Icon className="w-12 h-12 md:w-16 md:h-16" />
+                    })()}
+                  </div>
                   <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
