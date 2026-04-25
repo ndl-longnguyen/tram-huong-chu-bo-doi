@@ -1,5 +1,6 @@
 "use client"
 import { Suspense } from 'react'
+import { useParams } from 'next/navigation'
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -12,11 +13,21 @@ import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { categories, products } from "@/lib/products"
 
-export default function BraceletPage() {
+interface CategoryPageProps {
+  categorySlug: string;
+}
+
+export default function CategoryPage({ categorySlug }: CategoryPageProps) {
   const { locale, getLocalizedPath } = useLanguage()
   const localeKey = locale as "vi" | "en" | "zh"
+  
+  const category = categories.find(c => c.slug === categorySlug)
+  
+  if (!category) {
+    return <div>Category not found</div>
+  }
 
-  const braceletTypes = categories.map(cat => ({
+  const categoryTypes = categories.map(cat => ({
     icon: cat.image,
     label: cat.name,
     slug: cat.slug,
@@ -25,15 +36,7 @@ export default function BraceletPage() {
 
   const content = {
     home: { vi: "Trang chủ", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "Nhang Trầm Hương", en: "Agarwood Incense", zh: "沉香香" },
     collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
-    title1: { vi: "Nhang Trầm", en: "Agarwood", zh: "沉香香" },
-    title2: { vi: "Sạch", en: "Incense", zh: "清洁系列" },
-    description: {
-      vi: "Nhang trầm hương sạch, không hóa chất, mang lại không gian thanh tịnh và ấm cúng cho ngôi nhà của bạn.",
-      en: "Clean agarwood incense, chemical-free, bringing a peaceful and cozy space to your home.",
-      zh: "清洁沉香香，无化学添加，为您家带来祥和舒适的空间。"
-    },
     products: { vi: "sản phẩm", en: "products", zh: "件产品" },
   }
 
@@ -52,7 +55,7 @@ export default function BraceletPage() {
                 {content.home[locale]}
               </Link>
               <ChevronRight className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground font-medium">{content.breadcrumb[locale]}</span>
+              <span className="text-foreground font-medium">{category.name[localeKey]}</span>
             </div>
 
             <div className="text-center max-w-3xl mx-auto">
@@ -60,11 +63,10 @@ export default function BraceletPage() {
                 {content.collection[locale]}
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
-                {content.title1[locale]}
-                <span className="block text-primary mt-2">{content.title2[locale]}</span>
+                {category.name[localeKey]}
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-                {content.description[locale]}
+                {category.description[localeKey]}
               </p>
             </div>
           </div>
@@ -72,14 +74,16 @@ export default function BraceletPage() {
 
         <section className="py-20 bg-card border-y border-border">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {braceletTypes.map((type, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
+              {categoryTypes.map((type, index) => (
                 <Link
                   key={index}
                   href={getLocalizedPath(`/${type.slug}`)}
-                  className="group flex flex-col items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-2xl hover:bg-primary/5 hover:shadow-lg transition-all duration-300"
+                  className={`group flex flex-col items-center gap-3 md:gap-4 p-4 rounded-2xl transition-all duration-300 ${
+                    type.slug === categorySlug ? "bg-primary/10 ring-1 ring-primary/30" : "bg-muted/50 hover:bg-primary/5 hover:shadow-lg"
+                  }`}
                 >
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-4 ring-border group-hover:ring-primary/30 transition-all relative">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden ring-2 ring-border group-hover:ring-primary/30 transition-all relative">
                     <Image
                       src={type.icon}
                       alt={type.label[localeKey]}
@@ -88,10 +92,12 @@ export default function BraceletPage() {
                     />
                   </div>
                   <div className="text-center">
-                    <span className="text-foreground font-semibold block group-hover:text-primary transition-colors text-sm md:text-base">
+                    <span className={`font-semibold block transition-colors text-xs md:text-sm ${
+                      type.slug === categorySlug ? "text-primary" : "text-foreground group-hover:text-primary"
+                    }`}>
                       {type.label[localeKey]}
                     </span>
-                    <span className="text-muted-foreground text-xs md:text-sm">{type.count} {content.products[locale]}</span>
+                    <span className="text-muted-foreground text-[10px] md:text-xs">{type.count} {content.products[locale]}</span>
                   </div>
                 </Link>
               ))}
@@ -110,7 +116,7 @@ export default function BraceletPage() {
                   <div key={i} className="aspect-square bg-muted rounded-xl" />
                 ))}
               </div>}>
-                <ProductGrid categorySlug="nhang-tram" />
+                <ProductGrid categorySlug={categorySlug} />
               </Suspense>
             </div>
           </div>

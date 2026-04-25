@@ -28,12 +28,12 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                   <Heart className="w-5 h-5 text-primary fill-primary" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-serif font-bold text-foreground">
+                  <Drawer.Title className="text-xl font-serif font-bold text-foreground">
                     {locale === 'en' ? 'Wishlist' : locale === 'zh' ? '收藏夹' : 'Danh sách yêu thích'}
-                  </h2>
-                  <p className="text-xs text-muted-foreground">
+                  </Drawer.Title>
+                  <Drawer.Description className="text-xs text-muted-foreground">
                     {wishlistItems.length} {locale === 'en' ? 'items' : locale === 'zh' ? '件商品' : 'sản phẩm'}
-                  </p>
+                  </Drawer.Description>
                 </div>
               </div>
               <Drawer.Close asChild>

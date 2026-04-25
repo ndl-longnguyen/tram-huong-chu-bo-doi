@@ -4,14 +4,16 @@ const BASE_URL = 'https://tramhuongchubodoi.com'
 const LOCALES = ['vi', 'en', 'zh']
 const PAGES = [
   '', 
-  '/trang-suc', 
+  '/vong-tay', 
+  '/nhang-nu', 
+  '/dot-xong-lu', 
+  '/tieu-canh', 
+  '/den-ngu', 
+  '/my-nghe', 
+  '/qua-tang',
   '/gioi-thieu', 
   '/lien-he', 
   '/blog', 
-  '/nhang-tram', 
-  '/vong-tay', 
-  '/my-nghe', 
-  '/qua-tang',
   '/chinh-sach-dieu-khoan',
   '/chinh-sach-bao-mat',
   '/chinh-sach-van-chuyen',
@@ -27,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE_URL}/${locale}${page}`,
         lastModified: new Date(),
         changeFrequency: page === '' ? 'daily' : page === '/blog' ? 'weekly' : 'monthly',
-        priority: page === '' ? 1.0 : page === '/trang-suc' ? 0.9 : page === '/blog' ? 0.8 : 0.7,
+        priority: page === '' ? 1.0 : page === '/vong-tay' ? 0.9 : page === '/blog' ? 0.8 : 0.7,
         alternates: {
           languages: Object.fromEntries(
             LOCALES.map(l => [

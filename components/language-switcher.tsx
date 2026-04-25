@@ -14,15 +14,14 @@ export function LanguageSwitcher() {
   const { locale, setLocale, localeNames } = useLanguage()
 
   return (
-    <DropdownMenu modal={false}>
+    <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="flex items-center gap-2 px-3 hover:bg-primary/10 hover:text-primary transition-all w-[110px] justify-start overflow-hidden">
+        <Button variant="ghost" size="sm" className="flex items-center gap-2 px-3 hover:bg-primary/10 hover:text-primary transition-all w-auto min-w-[100px] justify-start overflow-hidden">
           <Globe className="w-4 h-4" />
-          <span className="hidden sm:inline-block font-medium text-xs tracking-wider transition-all duration-300">{localeNames[locale]}</span>
-          <span className="sm:hidden font-medium uppercase font-bold text-xs">{locale}</span>
+          <span className="font-medium text-xs tracking-wider transition-all duration-300">{localeNames[locale]}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[140px] bg-card border-border">
+      <DropdownMenuContent align="end" className="w-[140px] bg-card border-border z-[150]">
         {Object.entries(localeNames).map(([code, name]) => (
           <DropdownMenuItem
             key={code}

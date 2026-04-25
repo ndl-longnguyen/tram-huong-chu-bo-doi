@@ -22,6 +22,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     // Header
     "header.search": "Tìm kiếm sản phẩm...",
     "header.tagline": "Tinh Hoa Trầm Việt",
+    "header.language": "Ngôn ngữ:",
     
     // Hero
     "hero.subtitle": "TINH HOA TRẦM VIỆT - DI SẢN Á ĐÔNG",
@@ -252,6 +253,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     // Header
     "header.search": "Search products...",
     "header.tagline": "Essence of Vietnamese Agarwood",
+    "header.language": "Language:",
     
     // Hero
     "hero.subtitle": "VIETNAMESE AGARWOOD ESSENCE - ASIAN HERITAGE",
@@ -482,6 +484,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     // Header
     "header.search": "搜索产品...",
     "header.tagline": "越南沉香精华",
+    "header.language": "语言:",
     
     // Hero
     "hero.subtitle": "越南沉香精华 - 亚洲遗产",

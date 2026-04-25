@@ -509,20 +509,6 @@
   ],
   "categories": [
     {
-      "slug": "trang-suc",
-      "name": {
-        "vi": "TRANG SỨC",
-        "en": "JEWELRY",
-        "zh": "珠宝首饰"
-      },
-      "description": {
-        "vi": "Trang sức trầm hương cao cấp phối vàng, bạc, đá quý",
-        "en": "Premium agarwood jewelry with gold, silver, and gemstones",
-        "zh": "结合金、银、宝石的高级沉香首饰"
-      },
-      "image": "/images/categories/trang-suc.png"
-    },
-    {
       "slug": "vong-tay",
       "name": {
         "vi": "VÒNG TAY",
@@ -530,25 +516,67 @@
         "zh": "沉香手链"
       },
       "description": {
-        "vi": "Bộ sưu tập vòng tay trầm hương tự nhiên đa dạng mẫu mã",
-        "en": "Diverse collection of natural agarwood bracelets",
-        "zh": "各种款式的天然沉香手链系列"
+        "vi": "Bộ sưu tập vòng tay trầm hương tự nhiên đa dạng mẫu mã, từ hàng phổ thông đến hàng sưu tầm cao cấp.",
+        "en": "Diverse collection of natural agarwood bracelets, from popular to high-end collectible items.",
+        "zh": "各种款式的天然沉香手链系列，从大众款到高端收藏款。"
       },
       "image": "/images/categories/vong-tay.png"
     },
     {
-      "slug": "nhang-tram",
+      "slug": "nhang-nu",
       "name": {
-        "vi": "NHANG TRẦM",
-        "en": "INCENSE",
-        "zh": "沉香香"
+        "vi": "NHANG NỤ",
+        "en": "CONE INCENSE",
+        "zh": "沉香塔香"
       },
       "description": {
-        "vi": "Nhang trầm hương sạch, không hóa chất, mùi thơm dịu nhẹ",
-        "en": "Clean agarwood incense, chemical-free, gentle fragrance",
-        "zh": "清洁沉香香，无化学添加，香气柔和"
+        "vi": "Nhang nụ trầm hương sạch, không hóa chất, khói tỏa ngược tạo hình thác khói tuyệt đẹp và thư giãn.",
+        "en": "Clean agarwood cone incense, chemical-free, backflow smoke creates beautiful relaxing waterfalls.",
+        "zh": "天然无化学添加的沉香塔香，倒流香形成的瀑布景观既美观又放松。"
       },
       "image": "/images/categories/nhang-tram.png"
+    },
+    {
+      "slug": "dot-xong-lu",
+      "name": {
+        "vi": "ĐỐT XÔNG LƯ",
+        "en": "INCENSE BURNERS",
+        "zh": "香炉及配件"
+      },
+      "description": {
+        "vi": "Các loại dụng cụ xông trầm, lư đồng, gốm sứ cao cấp giúp không gian thêm sang trọng và thanh tịnh.",
+        "en": "High-quality agarwood burning tools, copper and ceramic burners for a luxurious and peaceful space.",
+        "zh": "高品质沉香香炉、铜炉、瓷炉，营造奢华宁静的氛围。"
+      },
+      "image": "/images/categories/nhang-tram.png"
+    },
+    {
+      "slug": "tieu-canh",
+      "name": {
+        "vi": "TIỂU CẢNH",
+        "en": "MINI LANDSCAPES",
+        "zh": "沉香盆景"
+      },
+      "description": {
+        "vi": "Tác phẩm tiểu cảnh trầm hương nghệ thuật, sự kết hợp giữa tâm linh và thẩm mỹ tinh tế.",
+        "en": "Artistic agarwood mini landscapes, a combination of spirituality and exquisite aesthetics.",
+        "zh": "艺术沉香盆景，灵性与精致美学的完美结合。"
+      },
+      "image": "/images/categories/my-nghe.png"
+    },
+    {
+      "slug": "den-ngu",
+      "name": {
+        "vi": "ĐÈN NGỦ",
+        "en": "NIGHT LAMPS",
+        "zh": "沉香小夜灯"
+      },
+      "description": {
+        "vi": "Đèn ngủ nghệ thuật trầm hương mang lại ánh sáng ấm áp và hương thơm dịu nhẹ cho giấc ngủ ngon.",
+        "en": "Artistic agarwood night lamps providing warm light and gentle fragrance for a restful sleep.",
+        "zh": "沉香艺术小夜灯，温暖的灯光和幽幽的香气助您安稳入眠。"
+      },
+      "image": "/images/categories/my-nghe.png"
     },
     {
       "slug": "my-nghe",
@@ -558,9 +586,9 @@
         "zh": "沉香工艺品"
       },
       "description": {
-        "vi": "Tượng Phật, cảnh trầm và các tác phẩm nghệ thuật từ trầm hương",
-        "en": "Buddha statues, agarwood landscapes, and artistic works",
-        "zh": "佛像、沉香景观及各种沉香艺术品"
+        "vi": "Tượng Phật, cảnh trầm và các tác phẩm điêu khắc nghệ thuật độc bản từ gỗ trầm hương.",
+        "en": "Buddha statues, agarwood landscapes, and unique artistic sculptures from agarwood.",
+        "zh": "佛像、沉香景观以及独一无二的沉香艺术雕刻品。"
       },
       "image": "/images/categories/my-nghe.png"
     },
@@ -572,9 +600,9 @@
         "zh": "沉香礼品"
       },
       "description": {
-        "vi": "Các bộ quà tặng trầm hương sang trọng và ý nghĩa",
-        "en": "Luxurious and meaningful agarwood gift sets",
-        "zh": "奢华且有意义的沉香礼品套装"
+        "vi": "Những bộ quà tặng trầm hương sang trọng, ý nghĩa dành cho đối tác, người thân và bạn bè.",
+        "en": "Luxurious and meaningful agarwood gift sets for partners, family, and friends.",
+        "zh": "专为合作伙伴、家人 and 朋友准备的奢华且有意义的沉香礼品套装。"
       },
       "image": "/images/categories/qua-tang.png"
     }
