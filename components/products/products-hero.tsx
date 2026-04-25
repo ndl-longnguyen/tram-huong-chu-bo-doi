@@ -19,14 +19,14 @@ export function ProductsHero() {
 
   const content = {
     home: { vi: "Trang chủ", en: "Home", zh: "首页" },
-    breadcrumb: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
+    breadcrumb: { vi: "Vòng Tay Trầm Hương", en: "Agarwood Bracelets", zh: "沉香手链" },
     collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
-    title1: { vi: "Trang Sức Trầm Hương", en: "Agarwood Jewelry", zh: "沉香珠宝" },
+    title1: { vi: "Vòng Tay Trầm Hương", en: "Agarwood Bracelets", zh: "沉香手链" },
     title2: { vi: "Cao Cấp", en: "Premium", zh: "高端系列" },
     description: {
-      vi: "Khám phá bộ sưu tập trang sức trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 20 năm kinh nghiệm.",
-      en: "Discover our collection of 100% natural agarwood jewelry, handcrafted by skilled artisans with over 20 years of experience.",
-      zh: "探索我们100%天然沉香珠宝系列，由拥有20多年经验的熟练工匠手工制作。"
+      vi: "Khám phá bộ sưu tập vòng tay trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 10 năm kinh nghiệm.",
+      en: "Discover our collection of 100% natural agarwood bracelets, handcrafted by skilled artisans with over 10 years of experience.",
+      zh: "探索我们100%天然沉香手链系列，由拥有10多年经验的熟练工匠手工制作。"
     },
     products: { vi: "sản phẩm", en: "products", zh: "件产品" },
   }
@@ -37,7 +37,7 @@ export function ProductsHero() {
       <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm mb-8">

@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react"
 import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
-import { products, getFeaturedProducts, getProductsByCategory } from "@/lib/products"
+import { products, getFeaturedProducts, getProductsByCategory, getCategoryBySlug } from "@/lib/products"
 import { ChevronDown, SlidersHorizontal, X } from "lucide-react"
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import { Drawer } from "vaul"
@@ -121,12 +121,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
           <div className="flex items-center gap-2">
             <h2 className="font-serif text-xl md:text-2xl text-foreground uppercase tracking-wider">
               {categorySlug 
-                ? t(`nav.${categorySlug === 'trang-suc' ? 'jewelry' : 
-                          categorySlug === 'vong-tay' ? 'bracelet' : 
-                          categorySlug === 'nhang-tram' ? 'incense' : 
-                          categorySlug === 'my-nghe' ? 'art' : 
-                          categorySlug === 'qua-tang' ? 'gift' : 
-                          categorySlug.replace("-", "")}`) 
+                ? (getCategoryBySlug(categorySlug)?.name[localeKey] || categorySlug)
                 : t("products.title")}
             </h2>
             <span className="text-xs text-muted-foreground font-medium bg-muted px-2 py-1 rounded-full">
@@ -196,7 +191,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
                   <div className="p-4 border-t border-border bg-muted/30">
                     <Drawer.Close asChild>
                       <button className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-xl uppercase tracking-widest text-sm shadow-lg shadow-primary/20">
-                        {locale === 'en' ? 'Show Results' : locale === 'zh' ? '显示结果' : 'Xem kết quả'} ({sortedProducts.length})
+                        {t("products.showResults")} ({sortedProducts.length})
                       </button>
                     </Drawer.Close>
                   </div>
@@ -232,9 +227,10 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
         ) : (
           <div className="text-center py-20 bg-muted/30 rounded-2xl border-2 border-dashed border-border">
             <p className="text-muted-foreground">
-              {locale === 'en' ? 'No products found in this category.' : 
-               locale === 'zh' ? '该分类下暂无产品。' : 
-               'Chưa có sản phẩm nào trong danh mục này.'}
+              {t("products.noFound")}
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              {t("products.noFoundDesc")}
             </p>
           </div>
         )}

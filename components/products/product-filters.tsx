@@ -129,7 +129,7 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
           className="mt-4 w-full py-3 text-xs font-bold text-red-500 hover:bg-red-50 rounded-xl border border-red-200 transition-all flex items-center justify-center gap-2"
         >
           <X className="w-3 h-3" />
-          {locale === 'en' ? 'CLEAR ALL FILTERS' : locale === 'zh' ? '清除所有筛选' : 'XÓA TẤT CẢ BỘ LỌC'}
+          {t("products.filter.clearAll")}
         </button>
       )}
 

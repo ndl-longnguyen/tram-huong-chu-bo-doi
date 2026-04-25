@@ -41,7 +41,7 @@ export function NewArrivals() {
         {/* CTA */}
         <div className="text-center mt-8">
           <Link
-            href={getLocalizedPath("/trang-suc")}
+            href={getLocalizedPath("/vong-tay")}
             className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-medium rounded hover:bg-primary hover:text-primary-foreground transition-colors uppercase tracking-wider text-sm font-bold"
           >
             {t("common.viewMore")}

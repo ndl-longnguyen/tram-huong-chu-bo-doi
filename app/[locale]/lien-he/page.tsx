@@ -7,15 +7,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
-const mainStores = [
-  {
-    name: { vi: "SHOWROOM CHÍNH", en: "MAIN SHOWROOM", zh: "主展厅" },
-    address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
-    hours: { vi: "8:00 - 22:00 (Thứ 2 - Chủ nhật)", en: "8:00 - 22:00 (Mon - Sun)", zh: "8:00 - 22:00 (周一至周日)" },
-    phone: "0765.942.942",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
-  },
-]
+import { stores } from "@/data/about-content"
+
 
 export default function ContactPage() {
   const { locale, t, getLocalizedPath } = useLanguage()
@@ -175,7 +168,7 @@ export default function ContactPage() {
             </div>
 
             <div className="max-w-xl mx-auto">
-              {mainStores.map((store, index) => (
+              {stores.map((store, index) => (
                 <div key={index} className="group bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-2xl transition-all duration-500">
                   <div className="relative overflow-hidden">
                     <img

@@ -22,16 +22,15 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp | Vòng Tay Trầm Hương Chính Hãng',
+    default: 'Trầm Hương Chú Bộ Đội - Vòng Tay Trầm Hương Cao Cấp | Chính Hãng 100%',
     template: '%s | Trầm Hương Chú Bộ Đội'
   },
-  description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Chuyên vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương 100% tự nhiên. Bảo hành trọn đời. Giao hàng toàn quốc. Hotline: 0765.942.942',
+  description: 'Trầm Hương Chú Bộ Đội - Thương hiệu trầm hương uy tín hàng đầu Việt Nam. Chuyên vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương 100% tự nhiên. Bảo hành trọn đời. Giao hàng toàn quốc. Hotline: 0765.942.942',
   keywords: [
     'trầm hương',
     'trầm hương chú bộ đội',
     'vòng tay trầm hương',
-    'trang sức trầm hương',
-    'trầm hương cao cấp',
+    'vòng tay trầm hương cao cấp',
     'vòng trầm hương',
     'nhang trầm hương',
     'trầm hương tự nhiên',
@@ -65,8 +64,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
-    description: 'Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương 100% tự nhiên. Bảo hành trọn đời.',
+    title: 'Trầm Hương Chú Bộ Đội - Vòng Tay Trầm Hương Cao Cấp',
+    description: 'Thương hiệu trầm hương uy tín hàng đầu Việt Nam. Vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương 100% tự nhiên. Bảo hành trọn đời.',
     url: 'https://tramhuongchubodoi.com',
     siteName: 'Trầm Hương Chú Bộ Đội',
     locale: 'vi_VN',
@@ -76,14 +75,14 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
+        alt: 'Trầm Hương Chú Bộ Đội - Vòng Tay Trầm Hương Cao Cấp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp',
-    description: 'Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam. Vòng tay trầm hương, nhang trầm, mỹ nghệ 100% tự nhiên.',
+    title: 'Trầm Hương Chú Bộ Đội - Vòng Tay Trầm Hương Cao Cấp',
+    description: 'Thương hiệu trầm hương uy tín hàng đầu Việt Nam. Vòng tay trầm hương, nhang trầm, mỹ nghệ 100% tự nhiên.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -143,7 +142,7 @@ const jsonLd = {
       '@id': 'https://tramhuongchubodoi.com/#localbusiness',
       name: 'Trầm Hương Chú Bộ Đội',
       image: 'https://tramhuongchubodoi.com/og-image.png',
-      '@type': ['Store', 'JewelryStore'],
+      '@type': 'Store',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Tiên Phước',
@@ -170,7 +169,7 @@ const jsonLd = {
       '@id': 'https://tramhuongchubodoi.com/#website',
       url: 'https://tramhuongchubodoi.com',
       name: 'Trầm Hương Chú Bộ Đội',
-      description: 'Thương hiệu trang sức trầm hương uy tín hàng đầu Việt Nam',
+      description: 'Thương hiệu trầm hương uy tín hàng đầu Việt Nam',
       publisher: {
         '@id': 'https://tramhuongchubodoi.com/#organization',
       },

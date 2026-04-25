@@ -9,21 +9,20 @@ export const localeNames: Record<Locale, string> = {
 export const translations: Record<Locale, Record<string, string>> = {
   vi: {
     // Navigation
-    "nav.home": "Trang Chủ",
+    "nav.home": "Trang chủ",
     "nav.about": "GIỚI THIỆU",
-    "nav.jewelry": "TRANG SỨC",
     "nav.bracelet": "VÒNG TAY",
     "nav.incense": "NHANG TRẦM",
     "nav.art": "MỸ NGHỆ",
     "nav.gift": "QUÀ TẶNG",
     "nav.blog": "BLOG",
     "nav.contact": "LIÊN HỆ",
-    
+
     // Header
     "header.search": "Tìm kiếm sản phẩm...",
     "header.tagline": "Tinh Hoa Trầm Việt",
     "header.language": "Ngôn ngữ:",
-    
+
     // Hero
     "hero.subtitle": "TINH HOA TRẦM VIỆT - DI SẢN Á ĐÔNG",
     "hero.title": "Trầm Hương",
@@ -34,7 +33,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "hero.experience": "Năm Kinh Nghiệm",
     "hero.customers": "Khách Hàng",
     "hero.products": "Sản Phẩm",
-    
+
     // Common
     "common.viewMore": "Xem thêm",
     "common.viewAll": "Xem tất cả",
@@ -45,7 +44,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "common.email": "Email",
     "common.address": "Địa chỉ",
     "common.workingHours": "Giờ làm việc",
-    
+
     // Footer
     "footer.newsletter": "Đăng ký nhận tin",
     "footer.newsletterDesc": "Nhận thông tin ưu đãi và sản phẩm mới nhất",
@@ -57,12 +56,11 @@ export const translations: Record<Locale, Record<string, string>> = {
     "footer.policy.shipping": "Chính sách vận chuyển",
     "footer.policy.warranty": "Chính sách bảo hành",
     "footer.aboutUs": "Về chúng tôi",
-    
-    "footer.aboutUs": "Về chúng tôi",
+    "about.products": "Sản phẩm",
     "footer.collections": "Bộ sưu tập",
     "footer.copyright": "Tất cả quyền được bảo lưu.",
     "footer.address": "Tiên Phước, TP. Đà Nẵng",
-    "footer.hours": "8:00 - 22:00",
+    "footer.hours": "8:00 - 22:00 (Thứ 2 - Chủ nhật)",
     "footer.newsletter": "Đăng ký nhận tin",
     "home.intro.title": "Trầm Hương Chú Bộ Đội",
     "home.intro.subtitle": "Tinh Hoa Trầm Việt",
@@ -77,7 +75,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.intro.bracelet": "Vòng Tay Trầm Hương",
     "home.intro.braceletDesc": "Thiết kế tinh xảo, mang năng lượng tích cực và may mắn đến cho người đeo.",
     "home.intro.learnMore": "TÌM HIỂU THÊM VỀ CHÚ BỘ ĐỘI",
-    
+
     "home.featured.title": "Sản phẩm nổi bật",
     "home.featured.subtitle": "BEST SELLERS",
     "home.featured.desc": "Những sản phẩm trầm hương được khách hàng tin tưởng và lựa chọn nhiều nhất",
@@ -86,8 +84,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.new.title": "Sản Phẩm Mới",
     "home.new.subtitle": "NEW ARRIVALS",
     "home.new.desc": "Khám phá những thiết kế mới nhất vừa được ra mắt",
-    
-    "home.banner.title": "Bộ Sưu Tập Trang Sức",
+
+    "home.banner.title": "Bộ Sưu Tập Vòng Tay",
     "home.banner.title2": "Đẳng Cấp & Sang Trọng",
     "home.banner.desc": "Sự kết hợp hoàn hảo giữa trầm hương tự nhiên và các loại đá quý, mang lại vẻ đẹp quý phái cho chủ nhân.",
     "home.banner.cta": "KHÁM PHÁ NGAY",
@@ -99,12 +97,12 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.explore.title": "Tìm Hiểu Về Trầm Hương",
     "home.explore.title": "Khám Phá Thêm",
     "home.explore.subtitle": "DANH MỤC SẢN PHẨM",
-    
+
     "home.explore.desc": "Nâng cao hiểu biết của bạn về thế giới trầm hương qua các bài viết chuyên sâu.",
 
     "home.press.title": "Báo Chí Nói Về Trầm Hương Chú Bộ Đội",
     "home.press.subtitle": "TRUYỀN THÔNG",
-    
+
     // Product Names
     "product.1.name": "Vòng Tay Bảo Linh Trầm Tốc - Việt Nam VIP",
     "product.2.name": "Vòng Tay Bảo Hương - Trầm Tốc Cao Cấp",
@@ -120,7 +118,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.badge.best": "Bán chạy",
     "product.badge.hot": "Hot",
     "product.quickView": "Xem nhanh",
-    
+
     // About page
     "about.breadcrumb": "Về Chúng Tôi",
     "about.brandStory": "CÂU CHUYỆN THƯƠNG HIỆU",
@@ -131,17 +129,21 @@ export const translations: Record<Locale, Record<string, string>> = {
     "about.philosophy": "TRIẾT LÝ KINH DOANH",
     "about.philosophyTitle": "Tinh - Tín - Tâm",
     "about.journey": "HÀNH TRÌNH",
-    "about.journeyTitle": "Chặng Đường Phát Triển",
+    "about.title1": "Trầm Hương",
+    "about.title2": "Chú Bộ Đội",
+    "about.breadcrumb": "Giới thiệu",
+    "about.message": "Thông điệp",
+    "about.timeline.title": "Hành Trình Phát Triển",
     "about.commitment": "CAM KẾT CỦA CHÚNG TÔI",
     "about.commitmentTitle": "Chất Lượng Là Ưu Tiên Hàng Đầu",
     "about.commitmentDesc": "Tại Trầm Hương Chú Bộ Đội, chúng tôi cam kết mang đến cho khách hàng những sản phẩm trầm hương tự nhiên 100%, được chọn lọc kỹ càng từ những vùng trầm nổi tiếng của Việt Nam.",
     "about.storeSystem": "HỆ THỐNG CỬA HÀNG",
     "about.visitUs": "Ghé Thăm Chúng Tôi",
-    
+
     // Products page
-    "products.breadcrumb": "Trang Sức Trầm Hương",
+    "products.breadcrumb": "Vòng Tay Trầm Hương",
     "products.collection": "BỘ SƯU TẬP",
-    "products.title": "Trang Sức Trầm Hương",
+    "products.title": "Vòng Tay Trầm Hương",
     "products.title2": "Cao Cấp",
     "products.description": "Khám phá bộ sưu tập trang sức trầm hương tự nhiên 100%, được chế tác thủ công bởi những nghệ nhân lành nghề với hơn 20 năm kinh nghiệm.",
     "products.items": "sản phẩm",
@@ -150,6 +152,36 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.sort.priceLowHigh": "Giá: thấp đến cao",
     "products.sort.priceHighLow": "Giá: cao đến thấp",
     "products.sort.newest": "Mới nhất",
+    "products.badge.sale": "Giảm giá",
+    "products.badge.best": "Bán chạy",
+    "products.badge.new": "Mới",
+    "products.badge.hot": "Hot",
+    "product.detail.features": "Đặc điểm nổi bật",
+    "product.detail.description": "Mô tả sản phẩm",
+    "product.detail.inquiry": "Nhận tư vấn ngay",
+    "product.detail.addWishlist": "Thêm vào yêu thích",
+    "product.detail.inWishlist": "Đã trong yêu thích",
+    "product.detail.quantity": "Số lượng",
+    "product.detail.reviews": "đánh giá",
+    "product.detail.inStock": "Còn hàng",
+    "product.detail.outOfStock": "Hết hàng",
+    "product.detail.shipping": "Giao hàng toàn quốc",
+    "product.detail.warranty": "Bảo hành trọn đời",
+    "product.detail.return": "Đổi trả dễ dàng",
+    "product.detail.hotline": "Hotline tư vấn 24/7",
+    "product.detail.removedFromWishlist": "Đã xóa khỏi danh sách yêu thích",
+    "product.detail.addedToWishlist": "Đã thêm vào danh sách yêu thích",
+    "product.detail.linkCopied": "Đã sao chép đường dẫn vào bộ nhớ tạm",
+    "product.detail.material": "Chất liệu",
+    "product.detail.origin": "Xuất xứ",
+    "product.detail.size": "Kích thước",
+    "product.detail.weight": "Trọng lượng",
+    "product.detail.age": "Tuổi trầm",
+    "product.detail.specifications": "Thông số kỹ thuật",
+    "product.detail.relatedProducts": "Sản phẩm liên quan",
+    "products.showResults": "Xem kết quả",
+    "products.noFound": "Không tìm thấy sản phẩm nào trong danh mục này.",
+    "products.noFoundDesc": "Vui lòng thử điều chỉnh bộ lọc hoặc chọn danh mục khác.",
     "products.sort.bestSelling": "Bán chạy nhất",
     "products.results": "Hiển thị {start} - {end} của {total} kết quả",
     "products.filter.price": "Giá",
@@ -166,12 +198,13 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.filter.type.toc": "Trầm Tốc",
     "products.filter.type.song": "Trầm Sống",
     "products.filter.type.chim": "Trầm Chìm",
+    "products.filter.clearAll": "XÓA TẤT CẢ BỘ LỌC",
     "products.filter.age": "Tuổi Trầm",
     "products.filter.age.10y": "10 năm",
     "products.filter.age.20y": "20 năm",
     "products.filter.age.30y": "30 năm",
     "products.filter.age.over50y": "Trên 50 năm",
-    
+
     // Why Choose Us
     "why.subtitle": "TẠI SAO CHỌN CHÚNG TÔI",
     "why.title": "Lý Do Nên Chọn Trầm Hương Chú Bộ Đội",
@@ -200,7 +233,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "testimonials.role.teacher": "Giáo viên",
     "testimonials.role.architect": "Kiến trúc sư",
     "testimonials.role.designer": "Nhà thiết kế",
-    
+
     // Contact page
     "contact.breadcrumb": "Liên hệ",
     "contact.subtitle": "LIÊN HỆ VỚI CHÚNG TÔI",
@@ -231,30 +264,32 @@ export const translations: Record<Locale, Record<string, string>> = {
     "contact.send": "Gửi tin nhắn",
     "contact.thankYou": "Cảm ơn bạn đã gửi yêu cầu. Chúng tôi sẽ liên hệ lại sớm nhất!",
 
+    // Wishlist
+    "wishlist.title": "Danh sách yêu thích",
+    "wishlist.empty": "Danh sách trống",
+    "wishlist.emptyDesc": "Hãy thêm những sản phẩm bạn yêu thích vào danh sách để xem lại sau nhé.",
+    "wishlist.shopNow": "Mua sắm ngay",
+    "wishlist.inquiryAll": "Nhận tư vấn ngay",
+
     // Policies
     "policy.lastUpdated": "Ngày cập nhật cuối: 21/04/2026. Mọi thắc mắc vui lòng liên hệ hotline:",
-    "policy.terms.content": "<p>Chào mừng Quý khách đến với xưởng Trầm hương Chú Bộ Đội. Việc truy cập và giao dịch tại website đồng nghĩa với việc Quý khách đã đồng ý với các điều khoản dưới đây. Chúng tôi cam kết mang đến trải nghiệm mua sắm minh bạch, tinh tế và đáng tin cậy.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">1. Phạm vi áp dụng</h3><p>Điều khoản này áp dụng cho toàn bộ hoạt động truy cập, tham khảo và mua sắm sản phẩm trầm hương tại website của chúng tôi.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">2. Sản phẩm & thông tin</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Mỗi sản phẩm trầm hương là một cá thể tự nhiên, mang đặc trưng riêng về vân gỗ, hàm lượng dầu và hương thơm.</li><li>Chúng tôi cam kết cung cấp thông tin trung thực và hình ảnh thực tế. Tuy nhiên, có thể tồn tại sai lệch rất nhỏ do điều kiện ánh sáng hoặc thiết bị hiển thị.</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">3. Giá cả</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Giá sản phẩm được niêm yết bằng VNĐ và có thể được điều chỉnh theo từng thời điểm.</li><li>Mức giá chưa bao gồm phí vận chuyển, phí vận chuyển sẽ được tính dựa vào đơn vị vận chuyển.</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">4. Đặt hàng & xác nhận</h3><p>Mỗi đơn hàng đều được xác nhận lại nhằm đảm bảo sự chính xác và quyền lợi của Quý khách. Chúng tôi bảo lưu quyền từ chối hoặc hủy đơn trong các trường hợp thông tin không đầy đủ, không thể liên hệ, hoặc có dấu hiệu bất thường như:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Thông tin không chính xác</li><li>Không liên hệ được khách</li><li>Dấu hiệu đơn hàng không hợp lệ.</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">5. Thanh toán</h3><p>Chúng tôi hỗ trợ các hình thức thanh toán linh hoạt:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Thanh toán khi nhận hàng (COD)</li><li>Chuyển khoản ngân hàng</li></ul><p>Với các đơn hàng giá trị cao, chúng tôi có thể đề nghị đặt cọc để đảm bảo quá trình giao dịch được trọn vẹn.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">6. Giới hạn trách nhiệm</h3><p>Chúng tôi không chịu trách nhiệm đối với các trường hợp sản phẩm bị ảnh hưởng do sử dụng không đúng cách hoặc tác động từ môi trường như nước, độ ẩm hoặc hóa chất. Ngoài ra, các sự cố ngoài khả năng kiểm soát cũng nằm ngoài phạm vi trách nhiệm của chúng tôi.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">7. Điều chỉnh điều khoản</h3><p>Các điều khoản có thể được cập nhật nhằm phù hợp với thực tế vận hành. Phiên bản mới sẽ có hiệu lực ngay khi được công bố trên website.</p>",
-    "policy.privacy.content": "<p>Chúng tôi tôn trọng sự riêng tư và xem việc bảo vệ thông tin khách hàng là một phần cốt lõi trong trải nghiệm dịch vụ.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Mục đích thu thập</h3><p>Thông tin được thu thập nhằm phục vụ:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Xử lý và giao nhận đơn hàng</li><li>Chăm sóc khách hàng</li><li>Nâng cao chất lượng dịch vụ</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Thông tin thu thập</h3><p>Bao gồm: họ tên, số điện thoại, địa chỉ nhận hàng và các thông tin liên hệ cần thiết khác.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Phạm vi sử dụng</h3><p>Thông tin chỉ được sử dụng nội bộ hoặc chia sẻ với đơn vị vận chuyển nhằm hoàn tất đơn hàng. Chúng tôi không mua bán hoặc trao đổi dữ liệu khách hàng dưới bất kỳ hình thức nào.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Bảo mật dữ liệu</h3><p>Dữ liệu được lưu trữ và bảo vệ bằng các biện pháp phù hợp nhằm hạn chế truy cập trái phép và đảm bảo an toàn thông tin.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Quyền của khách hàng</h3><p>Quý khách có quyền yêu cầu kiểm tra, cập nhật hoặc xóa thông tin cá nhân bất kỳ lúc nào. Đồng thời, Quý khách có thể từ chối nhận các thông tin quảng bá từ chúng tôi.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Liên hệ</h3><p>Mọi yêu cầu liên quan đến dữ liệu cá nhân, vui lòng liên hệ:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Hotline: 0765.942.942</li><li>Email: Tramhuongchubodoi@gmail.com</li></ul><p>Với chúng tôi, mỗi sản phẩm trầm không chỉ là một món hàng, mà là sự gửi gắm giá trị và niềm tin. Vì vậy, mọi trải nghiệm của Quý khách luôn được chúng tôi trân trọng và bảo vệ xứng đáng.</p>",
-    "policy.shipping.content": "<p>Mỗi đơn hàng không chỉ là một giao dịch, mà là một trải nghiệm. Vì vậy, chúng tôi chú trọng từ khâu đóng gói đến giao nhận, đảm bảo sản phẩm đến tay Quý khách trong trạng thái trọn vẹn nhất.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Thời gian giao hàng</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Giao hàng thần tốc quanh khu vực Đà Nẵng</li><li>Nội thành: 1–2 ngày</li><li>Ngoại tỉnh: 2–5 ngày</li></ul><p>Thời gian có thể thay đổi tùy điều kiện vận chuyển hoặc các yếu tố khách quan. Mọi phát sinh sẽ được thông báo chủ động.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Kiểm tra khi nhận hàng</h3><p>Quý khách được kiểm tra sản phẩm trước khi thanh toán nhằm đảm bảo:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Đúng mẫu đã chọn</li><li>Đúng kích thước, số lượng</li></ul><p>Lưu ý: việc kiểm tra không bao gồm sử dụng thử sản phẩm.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Đóng gói</h3><p>Sản phẩm được đóng gói cẩn thận với tiêu chuẩn riêng của Xưởng trầm hương Chú Bộ Đội:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Hộp bảo quản phù hợp</li><li>Chống sốc, chống ẩm</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Phí vận chuyển</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Phí vận chuyển được tính theo khu vực và giá trị đơn hàng</li><li>Một số đơn hàng sẽ được hỗ trợ miễn phí vận chuyển theo chính sách từng thời điểm</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Trách nhiệm giao hàng</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Trong trường hợp sản phẩm bị hư hỏng, thất lạc do vận chuyển, chúng tôi sẽ trực tiếp xử lý và đảm bảo quyền lợi cho Quý khách</li><li>Nếu phát sinh sai sót từ phía chúng tôi, mọi chi phí liên quan sẽ được chịu hoàn toàn</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Xác nhận đơn hàng</h3><p>Để đảm bảo chất lượng phục vụ, các đơn hàng đều được xác nhận trước khi gửi. Với đơn hàng giá trị cao, chúng tôi có thể áp dụng hình thức đặt cọc phù hợp.</p><p class=\"italic mt-6\">“Chúng tôi không chỉ gửi đi một sản phẩm, mà là sự chỉn chu trong từng chi tiết và cam kết đồng hành lâu dài cùng Quý khách.”</p>",
-    "policy.warranty.content": "<p>Chúng tôi tin rằng giá trị của trầm hương không chỉ nằm ở thời điểm sở hữu, mà còn trong quá trình sử dụng lâu dài. Vì vậy, chính sách bảo hành được xây dựng nhằm đồng hành cùng Quý khách.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Phạm vi bảo hành</h3><p>Áp dụng đối với các sản phẩm vòng trầm và phụ kiện:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Hỗ trợ thay dây, chỉnh sửa vòng</li><li>Làm mới, vệ sinh sản phẩm định kỳ</li></ul><p>Thời gian bảo hành cụ thể sẽ được thông báo khi mua hàng.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Điều kiện bảo hành</h3><p>Sản phẩm được bảo hành khi:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Còn trong thời gian bảo hành</li><li>Không bị hư hỏng do tác động mạnh, nước hoặc hóa chất</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Trường hợp không áp dụng</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Sản phẩm bị hư hỏng, biến dạng do sử dụng sai cách</li><li>Tác động từ môi trường như ẩm mốc, ngâm nước, hóa chất</li><li>Hao mòn tự nhiên trong quá trình sử dụng</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Chi phí bảo hành</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Miễn phí đối với các lỗi kỹ thuật hoặc hỗ trợ cơ bản thay dây, đánh bóng.</li><li>Trường hợp ngoài phạm vi bảo hành, chúng tôi vẫn hỗ trợ với chi phí hợp lý</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Thời gian xử lý</h3><p>Thời gian bảo hành thường từ 3–7 ngày tùy tình trạng sản phẩm. Chúng tôi luôn cố gắng xử lý trong thời gian sớm nhất để không làm gián đoạn trải nghiệm của Quý khách.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Hỗ trợ sau bảo hành</h3><p>Ngay cả khi đã hết thời gian bảo hành, Quý khách vẫn được hỗ trợ chăm sóc sản phẩm trong suốt quá trình sử dụng.</p>",
   },
   en: {
     // Navigation
     "nav.home": "Home",
     "nav.about": "ABOUT US",
-    "nav.jewelry": "JEWELRY",
     "nav.bracelet": "BRACELETS",
     "nav.incense": "INCENSE",
     "nav.art": "ARTWORKS",
     "nav.gift": "GIFTS",
     "nav.blog": "BLOG",
     "nav.contact": "CONTACT",
-    
+
     // Header
     "header.search": "Search products...",
     "header.tagline": "Essence of Vietnamese Agarwood",
     "header.language": "Language:",
-    
+
     // Hero
     "hero.subtitle": "VIETNAMESE AGARWOOD ESSENCE - ASIAN HERITAGE",
     "hero.title": "Agarwood",
@@ -265,7 +300,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "hero.experience": "Years Experience",
     "hero.customers": "Customers",
     "hero.products": "Products",
-    
+
     // Common
     "common.viewMore": "View more",
     "common.viewAll": "View all",
@@ -276,7 +311,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "common.email": "Email",
     "common.address": "Address",
     "common.workingHours": "Working hours",
-    
+
     // Footer
     "footer.newsletter": "Subscribe to Newsletter",
     "footer.newsletterDesc": "Get the latest updates and promotions",
@@ -288,13 +323,11 @@ export const translations: Record<Locale, Record<string, string>> = {
     "footer.policy.shipping": "Shipping Policy",
     "footer.policy.warranty": "Warranty Policy",
     "footer.aboutUs": "About Us",
-    
-    "footer.aboutUs": "About Us",
+    "about.products": "Products",
     "footer.collections": "Collections",
     "footer.copyright": "All rights reserved.",
     "footer.address": "Tien Phuoc, Da Nang City",
-    "footer.hours": "8:00 AM - 10:00 PM",
-    "footer.newsletter": "Subscribe to Newsletter",
+    "footer.hours": "8:00 AM - 10:00 PM (Mon - Sun)",
     "home.intro.title": "Tram Huong Chu Bo Doi",
     "home.intro.subtitle": "Vietnamese Agarwood Essence",
     "home.intro.description": "We believe agarwood is not just a feng shui product, but also a symbol of peace, luck and connection to thousands of years of Vietnamese traditional culture.",
@@ -308,7 +341,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.intro.bracelet": "Agarwood Bracelets",
     "home.intro.braceletDesc": "Exquisite design, bringing positive energy and luck to the wearer.",
     "home.intro.learnMore": "LEARN MORE ABOUT US",
-    
+
     "home.featured.title": "Featured Products",
     "home.featured.subtitle": "BEST SELLERS",
     "home.featured.desc": "Our most trusted and preferred agarwood products by customers",
@@ -317,8 +350,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.new.title": "New Arrivals",
     "home.new.subtitle": "NEW ARRIVALS",
     "home.new.desc": "Explore our latest newly launched designs",
-    
-    "home.banner.title": "Jewelry Collection",
+
+    "home.banner.title": "Bracelets Collection",
     "home.banner.title2": "Class & Luxury",
     "home.banner.desc": "The perfect combination of natural agarwood and precious stones, bringing noble beauty to the owner.",
     "home.banner.cta": "EXPLORE NOW",
@@ -327,15 +360,14 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.community.subtitle": "SPREADING VALUES",
     "home.community.desc": "Share your passion and knowledge about Vietnamese agarwood with thousands of agarwood lovers nationwide.",
 
-    "home.explore.title": "Learn About Agarwood",
     "home.explore.title": "Explore More",
     "home.explore.subtitle": "PRODUCT CATEGORIES",
-    
+
     "home.explore.desc": "Enhance your understanding of the agarwood world through in-depth articles.",
 
     "home.press.title": "Press Talking About Us",
     "home.press.subtitle": "MEDIA",
-    
+
     // Product Names
     "product.1.name": "Bao Linh Agarwood Bracelet - Vietnam VIP",
     "product.2.name": "Bao Huong Bracelet - Premium Agarwood",
@@ -351,9 +383,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.badge.best": "Best Seller",
     "product.badge.hot": "Hot",
     "product.quickView": "Quick View",
-    
+
     // About page
-    "about.breadcrumb": "About Us",
     "about.brandStory": "BRAND STORY",
     "about.quote": "Since ancient times, agarwood has been discovered and cherished by our ancestors - revered as precious wood carrying the spirit of nature, bringing peace and fortune.",
     "about.yearsExperience": "Years experience",
@@ -362,25 +393,59 @@ export const translations: Record<Locale, Record<string, string>> = {
     "about.philosophy": "BUSINESS PHILOSOPHY",
     "about.philosophyTitle": "Excellence - Trust - Dedication",
     "about.journey": "OUR JOURNEY",
-    "about.journeyTitle": "Development Milestones",
+    "about.title1": "Agarwood",
+    "about.title2": "Chu Bo Doi",
+    "about.breadcrumb": "About Us",
+    "about.message": "Message",
+    "about.timeline.title": "Our Journey",
     "about.commitment": "OUR COMMITMENT",
     "about.commitmentTitle": "Quality Is Our Top Priority",
     "about.commitmentDesc": "At Tram Huong Chu Bo Doi, we are committed to providing customers with 100% natural agarwood products, carefully selected from famous agarwood regions of Vietnam.",
     "about.storeSystem": "STORE SYSTEM",
     "about.visitUs": "Visit Us",
-    
+
     // Products page
-    "products.breadcrumb": "Agarwood Jewelry",
+    "products.breadcrumb": "Agarwood Bracelets",
     "products.collection": "COLLECTION",
-    "products.title": "Agarwood Jewelry",
+    "products.title": "Agarwood Bracelets",
     "products.title2": "Premium",
-    "products.description": "Discover our collection of 100% natural agarwood jewelry, handcrafted by skilled artisans with over 20 years of experience.",
+    "products.description": "Discover our collection of 100% natural agarwood bracelets, handcrafted by skilled artisans with over 20 years of experience.",
     "products.items": "products",
     "products.filters": "FILTERS",
     "products.sort": "SORT BY",
     "products.sort.priceLowHigh": "Price: low to high",
     "products.sort.priceHighLow": "Price: high to low",
     "products.sort.newest": "Newest",
+    "products.badge.sale": "Sale",
+    "products.badge.best": "Best Seller",
+    "products.badge.new": "New",
+    "products.badge.hot": "Hot",
+    "product.detail.features": "Key Features",
+    "product.detail.description": "Product Description",
+    "product.detail.inquiry": "Inquiry Now",
+    "product.detail.addWishlist": "Add to wishlist",
+    "product.detail.inWishlist": "In Wishlist",
+    "product.detail.quantity": "Quantity",
+    "product.detail.reviews": "reviews",
+    "product.detail.inStock": "In Stock",
+    "product.detail.outOfStock": "Out of Stock",
+    "product.detail.shipping": "Nationwide shipping",
+    "product.detail.warranty": "Lifetime warranty",
+    "product.detail.return": "Easy return",
+    "product.detail.hotline": "24/7 Hotline",
+    "product.detail.removedFromWishlist": "Removed from wishlist",
+    "product.detail.addedToWishlist": "Added to wishlist",
+    "product.detail.linkCopied": "Link copied to clipboard",
+    "product.detail.material": "Material",
+    "product.detail.origin": "Origin",
+    "product.detail.size": "Size",
+    "product.detail.weight": "Weight",
+    "product.detail.age": "Age",
+    "product.detail.specifications": "Specifications",
+    "product.detail.relatedProducts": "Related Products",
+    "products.showResults": "Show Results",
+    "products.noFound": "No products found in this category.",
+    "products.noFoundDesc": "Please try adjusting the filters or select another category.",
     "products.sort.bestSelling": "Best selling",
     "products.results": "Showing {start} - {end} of {total} results",
     "products.filter.price": "Price",
@@ -397,6 +462,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.filter.type.toc": "Toc Agarwood",
     "products.filter.type.song": "Song Agarwood",
     "products.filter.type.chim": "Sinking Agarwood",
+    "products.filter.clearAll": "CLEAR ALL FILTERS",
     "products.filter.age": "Age",
     "products.filter.age.10y": "10 years",
     "products.filter.age.20y": "20 years",
@@ -431,7 +497,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "testimonials.role.teacher": "Teacher",
     "testimonials.role.architect": "Architect",
     "testimonials.role.designer": "Designer",
-    
+
     // Contact page
     "contact.breadcrumb": "Contact",
     "contact.subtitle": "CONTACT US",
@@ -462,30 +528,32 @@ export const translations: Record<Locale, Record<string, string>> = {
     "contact.send": "Send message",
     "contact.thankYou": "Thank you for your request. We will contact you soon!",
 
+    // Wishlist
+    "wishlist.title": "Wishlist",
+    "wishlist.empty": "Your wishlist is empty",
+    "wishlist.emptyDesc": "Add products you love to your wishlist to see them later.",
+    "wishlist.shopNow": "Shop Now",
+    "wishlist.inquiryAll": "Inquiry All",
+
     // Policies
     "policy.lastUpdated": "Last updated: April 21, 2026. For any inquiries, please contact our hotline:",
-    "policy.terms.content": "<p>Welcome to Tram Huong Chu Bo Doi workshop. By accessing and transacting on our website, you agree to the following terms. We are committed to providing a transparent, sophisticated, and reliable shopping experience.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">1. Scope of Application</h3><p>These terms apply to all access, reference, and shopping activities for agarwood products on our website.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">2. Products & Information</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Each agarwood product is a natural individual, carrying unique characteristics in wood grain, oil content, and fragrance.</li><li>We are committed to providing honest information and realistic images. However, slight deviations may exist due to lighting conditions or display devices.</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">3. Pricing</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Product prices are listed in USD and may be adjusted from time to time.</li><li>Listed prices do not include shipping fees; shipping fees will be calculated based on the carrier.</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">4. Ordering & Confirmation</h3><p>Each order is re-confirmed to ensure accuracy and customer rights. We reserve the right to refuse or cancel orders in cases of incomplete information, inability to contact, or abnormal signs such as:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Inaccurate information</li><li>Unable to contact the customer</li><li>Signs of invalid orders.</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">5. Payment</h3><p>We support flexible payment methods:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Cash on Delivery (COD)</li><li>Bank Transfer</li></ul><p>For high-value orders, we may request a deposit to ensure a smooth transaction.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">6. Limitation of Liability</h3><p>We are not responsible for cases where products are affected by improper use or environmental impacts such as water, humidity, or chemicals. Additionally, incidents beyond our control are also outside our scope of responsibility.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">7. Adjustment of Terms</h3><p>Terms may be updated to suit operational realities. The new version will take effect as soon as it is published on the website.</p>",
-    "policy.privacy.content": "<p>We respect privacy and see protecting customer information as a core part of the service experience.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Collection Purpose</h3><p>Information is collected to serve:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Order processing and delivery</li><li>Customer care</li><li>Improving service quality</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Information Collected</h3><p>Includes: full name, phone number, shipping address, and other necessary contact information.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Scope of Use</h3><p>Information is only used internally or shared with the shipping unit to complete the order. We do not sell or exchange customer data in any form.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Data Security</h3><p>Data is stored and protected using appropriate measures to restrict unauthorized access and ensure information safety.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Customer Rights</h3><p>You have the right to request inspection, update, or deletion of personal information at any time. At the same time, you can refuse to receive promotional information from us.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Contact</h3><p>Any requests related to personal data, please contact:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Hotline: 0765.942.942</li><li>Email: Tramhuongchubodoi@gmail.com</li></ul><p>For us, each agarwood product is not just a commodity, but an entrustment of value and trust. Therefore, all your experiences are always respected and deservedly protected by us.</p>",
-    "policy.shipping.content": "<p>Each order is not just a transaction, but an experience. Therefore, we focus from packaging to delivery, ensuring products reach you in the most complete state.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Delivery Time</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Fast delivery around Da Nang area</li><li>Inner city: 1–2 days</li><li>Provinces: 2–5 days</li></ul><p>Time may change depending on shipping conditions or objective factors. Any occurrences will be proactively announced.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Inspection Upon Receipt</h3><p>You can inspect the product before payment to ensure:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Correct model chosen</li><li>Correct size, quantity</li></ul><p>Note: Inspection does not include trial use of the product.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Packaging</h3><p>Products are carefully packed with the specific standards of Chu Bo Doi Agarwood Workshop:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Suitable storage box</li><li>Shockproof, moisture-proof</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Shipping Fee</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Shipping fee is calculated by region and order value</li><li>Some orders will be supported with free shipping according to the policy at each time</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Delivery Responsibility</h3><ul class=\"list-disc pl-5 space-y-2\"><li>In case of products being damaged or lost during shipping, we will directly handle and ensure benefits for you</li><li>If errors occur from our side, all related costs will be fully borne by us</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Order Confirmation</h3><p>To ensure service quality, all orders are confirmed before sending. For high-value orders, we may apply a suitable deposit form.</p><p class=\"italic mt-6\">“We don't just send a product, but meticulousness in every detail and a commitment to long-term companionship with you.”</p>",
-    "policy.warranty.content": "<p>We believe that the value of agarwood lies not only in the moment of ownership but also in the long-term use. Therefore, the warranty policy is built to accompany you.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Warranty Scope</h3><p>Applies to agarwood bracelets and accessories:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Support string replacement, bracelet adjustment</li><li>Refresh, periodic product cleaning</li></ul><p>Specific warranty period will be announced at the time of purchase.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">Warranty Conditions</h3><p>Products are warranted when:</p><ul class=\"list-disc pl-5 space-y-2\"><li>Still within the warranty period</li><li>Not damaged due to strong impact, water, or chemicals</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Not Applicable Cases</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Product is damaged or deformed due to incorrect use</li><li>Environmental impacts such as mold, water soaking, chemicals</li><li>Natural wear and tear during use</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Warranty Cost</h3><ul class=\"list-disc pl-5 space-y-2\"><li>Free for technical errors or basic support for string replacement, polishing.</li><li>For cases outside the warranty scope, we still support with reasonable cost</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">Processing Time</h3><p>Warranty time is usually from 3–7 days depending on product condition. We always try to process in the earliest time so as not to interrupt your experience.</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">After-warranty Support</h3><p>Even when the warranty period has expired, you are still supported to care for the product throughout the use process.</p>",
   },
   zh: {
     // Navigation
     "nav.home": "首页",
     "nav.about": "关于我们",
-    "nav.jewelry": "珠宝首饰",
     "nav.bracelet": "手链",
     "nav.incense": "沉香",
     "nav.art": "工艺品",
     "nav.gift": "礼品",
     "nav.blog": "博客",
     "nav.contact": "联系我们",
-    
+
     // Header
     "header.search": "搜索产品...",
     "header.tagline": "越南沉香精华",
     "header.language": "语言:",
-    
+
     // Hero
     "hero.subtitle": "越南沉香精华 - 亚洲遗产",
     "hero.title": "沉香",
@@ -496,7 +564,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "hero.experience": "年经验",
     "hero.customers": "客户",
     "hero.products": "产品",
-    
+
     // Common
     "common.viewMore": "查看更多",
     "common.viewAll": "查看全部",
@@ -507,7 +575,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "common.email": "电子邮件",
     "common.address": "地址",
     "common.workingHours": "工作时间",
-    
+
     // Footer
     "footer.newsletter": "订阅通讯",
     "footer.newsletterDesc": "获取最新优惠和产品信息",
@@ -519,13 +587,11 @@ export const translations: Record<Locale, Record<string, string>> = {
     "footer.policy.shipping": "配送政策",
     "footer.policy.warranty": "保修政策",
     "footer.aboutUs": "关于我们",
-    
-    "footer.aboutUs": "关于我们",
+    "about.products": "产品",
     "footer.collections": "产品系列",
     "footer.copyright": "版权所有。",
     "footer.address": "越南岘港仙福",
-    "footer.hours": "8:00 - 22:00",
-    "footer.newsletter": "订阅通讯",
+    "footer.hours": "8:00 - 22:00 (周一至周日)",
     "home.intro.title": "朱伯队沉香",
     "home.intro.subtitle": "越南沉香精华",
     "home.intro.description": "我们相信沉香不仅是风水产品，更是和平、好运的象征，也是与越南数千年传统文化的联系。",
@@ -539,7 +605,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.intro.bracelet": "沉香手链",
     "home.intro.braceletDesc": "设计精美，为佩戴者带来正能量和好运。",
     "home.intro.learnMore": "了解更多关于我们",
-    
+
     "home.featured.title": "精选产品",
     "home.featured.subtitle": "畅销产品",
     "home.featured.desc": "最受客户信任和青睐的沉香产品",
@@ -548,24 +614,24 @@ export const translations: Record<Locale, Record<string, string>> = {
     "home.new.title": "新品上架",
     "home.new.subtitle": "新品上架",
     "home.new.desc": "探索最新推出的产品设计",
-    
+
     "home.banner.title": "珠宝系列",
     "home.banner.title2": "端庄与奢华",
     "home.banner.desc": "天然沉香与宝石的完美结合，为主人带来高贵的美感。",
     "home.banner.cta": "立即探索",
-    
+
     "home.community.title": "沉香社区",
     "home.community.subtitle": "传播价值",
     "home.community.desc": "与全国成千上万的沉香爱好者分享您对越南沉香的热情和知识。",
 
     "home.explore.title": "探索更多",
     "home.explore.subtitle": "产品分类",
-    
+
     "home.explore.desc": "通过深入的文章增强您对沉香世界的了解。",
 
     "home.press.title": "媒体报道",
     "home.press.subtitle": "媒体中心",
-    
+
     // Product Names
     "product.1.name": "越南VIP保灵沉香手链",
     "product.2.name": "保香手链 - 高端沉香",
@@ -581,9 +647,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.badge.best": "热销",
     "product.badge.hot": "热门",
     "product.quickView": "快速预览",
-    
+
     // About page
-    "about.breadcrumb": "关于我们",
     "about.brandStory": "品牌故事",
     "about.quote": "自古以来，沉香被我们的祖先发现和珍视——被尊为珍贵的木材，承载着大自然的灵气，带来平安和好运。",
     "about.yearsExperience": "年经验",
@@ -592,25 +657,59 @@ export const translations: Record<Locale, Record<string, string>> = {
     "about.philosophy": "经营理念",
     "about.philosophyTitle": "精 - 信 - 心",
     "about.journey": "我们的旅程",
-    "about.journeyTitle": "发展里程碑",
+    "about.title1": "沉香",
+    "about.title2": "朱伯队",
+    "about.breadcrumb": "关于我们",
+    "about.message": "理念",
+    "about.timeline.title": "发展历程",
     "about.commitment": "我们的承诺",
     "about.commitmentTitle": "品质是我们的首要任务",
     "about.commitmentDesc": "在朱伯队沉香，我们承诺为客户提供100%天然沉香产品，精心挑选自越南著名沉香产区。",
     "about.storeSystem": "门店系统",
     "about.visitUs": "欢迎光临",
-    
+
     // Products page
-    "products.breadcrumb": "沉香珠宝",
+    "products.breadcrumb": "沉香手链",
     "products.collection": "产品系列",
-    "products.title": "沉香珠宝",
+    "products.title": "沉香手链",
     "products.title2": "高端系列",
-    "products.description": "探索我们100%天然沉香珠宝系列，由拥有20多年经验的熟练工匠手工制作。",
+    "products.description": "探索我们100%天然沉香手链系列，由拥有20多年经验的熟练工匠手工制作。",
     "products.items": "件产品",
     "products.filters": "产品筛选",
     "products.sort": "排序方式",
     "products.sort.priceLowHigh": "价格：从低到高",
     "products.sort.priceHighLow": "价格：从高到低",
-    "products.sort.newest": "最新上架",
+    "products.sort.newest": "最新",
+    "products.badge.sale": "促销",
+    "products.badge.best": "畅销",
+    "products.badge.new": "新品",
+    "products.badge.hot": "热门",
+    "product.detail.features": "产品特点",
+    "product.detail.description": "产品描述",
+    "product.detail.inquiry": "立即咨询",
+    "product.detail.addWishlist": "加入收藏",
+    "product.detail.inWishlist": "已收藏",
+    "product.detail.quantity": "数量",
+    "product.detail.reviews": "条评论",
+    "product.detail.inStock": "有货",
+    "product.detail.outOfStock": "无货",
+    "product.detail.shipping": "全国配送",
+    "product.detail.warranty": "终身保修",
+    "product.detail.return": "轻松退换",
+    "product.detail.hotline": "24/7 咨询热线",
+    "product.detail.removedFromWishlist": "已从收藏夹移除",
+    "product.detail.addedToWishlist": "已加入收藏夹",
+    "product.detail.linkCopied": "链接已复制到剪贴板",
+    "product.detail.material": "材质",
+    "product.detail.origin": "产地",
+    "product.detail.size": "尺寸",
+    "product.detail.weight": "重量",
+    "product.detail.age": "年份",
+    "product.detail.specifications": "规格",
+    "product.detail.relatedProducts": "相关产品",
+    "products.showResults": "显示结果",
+    "products.noFound": "在此类别中未找到任何产品。",
+    "products.noFoundDesc": "请尝试调整过滤器或选择另一个类别。",
     "products.sort.bestSelling": "最畅销",
     "products.results": "显示 {total} 个结果中的 {start} - {end}",
     "products.filter.price": "价格",
@@ -626,7 +725,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.filter.type": "沉香种类",
     "products.filter.type.toc": "速香",
     "products.filter.type.song": "生香",
-    "products.filter.type.chim": "沉水香",
+    "products.filter.type.chim": "沉水沉香",
+    "products.filter.clearAll": "清除所有筛选",
     "products.filter.age": "年份",
     "products.filter.age.10y": "10年",
     "products.filter.age.20y": "20年",
@@ -661,7 +761,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "testimonials.role.teacher": "教师",
     "testimonials.role.architect": "建筑师",
     "testimonials.role.designer": "设计师",
-    
+
     // Contact page
     "contact.breadcrumb": "联系方式",
     "contact.subtitle": "联系我们",
@@ -692,11 +792,14 @@ export const translations: Record<Locale, Record<string, string>> = {
     "contact.send": "发送消息",
     "contact.thankYou": "感谢您的请求。我们将尽快与您联系！",
 
+    // Wishlist
+    "wishlist.title": "收藏夹",
+    "wishlist.empty": "收藏夹是空的",
+    "wishlist.emptyDesc": "添加您喜欢的产品到收藏夹以便稍后查看。",
+    "wishlist.shopNow": "现在去购物",
+    "wishlist.inquiryAll": "全部咨询",
+
     // Policies
     "policy.lastUpdated": "最后更新：2026年4月21日。如有任何疑问，请联系热线：",
-    "policy.terms.content": "<p>欢迎来到朱伯队沉香工坊。访问本网站并进行交易即表示您同意以下条款。我们致力于提供透明、精致且可靠的购物体验。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">1. 适用范围</h3><p>本条款适用于在本网站访问、参考和购买沉香产品的所有活动。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">2. 产品与信息</h3><ul class=\"list-disc pl-5 space-y-2\"><li>每件沉香产品都是天然的个体，在木纹、含油量和香气方面具有独特的特征。</li><li>我们致力于提供真实的信息和实拍图片。然而，由于光线条件或显示设备的原因，可能存在微小的偏差。</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">3. 价格</h3><ul class=\"list-disc pl-5 space-y-2\"><li>产品价格以越南盾 (VND) 列出，并可能不时调整。</li><li>标价不包括运费；运费将根据物流公司计算。</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">4. 订购与确认</h3><p>每份订单都会重新确认，以确保准确性和客户权益。在信息不完整、无法联系或出现异常迹象的情况下，我们保留拒绝或取消订单的权利，例如：</p><ul class=\"list-disc pl-5 space-y-2\"><li>信息不准确</li><li>无法联系到客户</li><li>订单无效的迹象。</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">5. 付款方式</h3><p>我们支持灵活的付款方式：</p><ul class=\"list-disc pl-5 space-y-2\"><li>货到付款 (COD)</li><li>银行转账</li></ul><p>对于高价值订单，我们可能会要求支付定金以确保交易圆满完成。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">6. 责任限制</h3><p>对于因使用不当或受水、湿度或化学品等环境影响而导致产品受损的情况，我们不承担责任。此外，超出我们控制范围的事故也不在我们的责任范围内。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">7. 条款调整</h3><p>条款可能会根据运营实际情况进行更新。新版本一经在网站上发布即生效。</p>",
-    "policy.privacy.content": "<p>我们尊重隐私，并将保护客户信息视为服务体验的核心部分。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">收集目的</h3><p>收集信息的目的是为了服务于：</p><ul class=\"list-disc pl-5 space-y-2\"><li>订单处理和交付</li><li>客户服务</li><li>提高服务质量</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">收集的信息</h3><p>包括：姓名、电话号码、送货地址和其他必要的联系信息。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">使用范围</h3><p>信息仅在内部使用或与物流单位共享，以完成订单。我们不会以任何形式出售或交换客户数据。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">数据安全</h3><p>使用适当的措施存储和保护数据，以限制未经授权的访问并确保信息安全。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">客户权利</h3><p>您有权随时要求检查、更新或删除个人信息。同时，您可以拒绝接收我们的宣传信息。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">联系方式</h3><p>任何与个人数据相关的请求，请联系：</p><ul class=\"list-disc pl-5 space-y-2\"><li>热线电话: 0765.942.942</li><li>电子邮件: Tramhuongchubodoi@gmail.com</li></ul><p>对我们而言，每件沉香产品不仅是一件商品，更是一种价值和信任的寄托。因此，您的所有体验始终受到我们的尊重和应有的保护。</p>",
-    "policy.shipping.content": "<p>每份订单不仅是一次交易，更是一次体验。因此，我们注重从包装到交付的每一个环节，确保产品以最完整的状态送到您的手中。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">送货时间</h3><ul class=\"list-disc pl-5 space-y-2\"><li>岘港地区极速配送</li><li>市区：1-2天</li><li>省外：2-5天</li></ul><p>时间可能会根据运输条件或客观因素而变化。任何发生的情况都将主动通知。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">收货检查</h3><p>您可以在付款前检查产品，以确保：</p><ul class=\"list-disc pl-5 space-y-2\"><li>型号正确</li><li>尺寸、数量正确</li></ul><p>注意：检查不包括试用产品。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">包装</h3><p>产品根据朱伯队沉香工坊的特定标准精心包装：</p><ul class=\"list-disc pl-5 space-y-2\"><li>合适的收纳盒</li><li>防震、防潮</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">运费</h3><ul class=\"list-disc pl-5 space-y-2\"><li>运费按地区和订单价值计算</li><li>部分订单将根据不同时期的政策获得免运费支持</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">交付责任</h3><ul class=\"list-disc pl-5 space-y-2\"><li>如果产品在运输过程中损坏或丢失，我们将直接处理并确保您的权益</li><li>如果是由于我们的错误，所有相关费用将由我们完全承担制造</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">订单确认</h3><p>为了确保服务质量，所有订单在发送前都会进行确认。对于高价值订单，我们可能会采取适当的定金形式。</p><p class=\"italic mt-6\">“我们不仅发送一件产品，更是对每一个细节的细致入微，以及与您长期相伴的承诺。”</p>",
-    "policy.warranty.content": "<p>我们相信，沉香的价值不仅在于拥有的那一刻，更在于长期的使用过程。因此，我们建立了保修政策来陪伴您。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">保修范围</h3><p>适用于沉香手链及配饰：</p><ul class=\"list-disc pl-5 space-y-2\"><li>支持换线、调整手链</li><li>定期翻新、清洁产品</li></ul><p>具体的保修期限将在购买时通知。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">保修条件</h3><p>产品在以下情况下予以保修：</p><ul class=\"list-disc pl-5 space-y-2\"><li>仍在保修期内</li><li>并非因强力撞击、水淹或化学品导致的损坏</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">不适用情况</h3><ul class=\"list-disc pl-5 space-y-2\"><li>因使用不当导致产品损坏或变形</li><li>环境影响，如发霉、水浸、化学品</li><li>使用过程中的自然损耗</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">保修费用</h3><ul class=\"list-disc pl-5 space-y-2\"><li>对于技术错误或基本的换线、抛光支持，费用全免。</li><li>对于超出保修范围的情况，我们仍将以合理的费用提供支持</li></ul><h3 class=\"text-foreground font-bold mt-8 mb-4\">处理时间</h3><p>保修时间通常为3-7天，具体取决于产品状况。我们始终尽力在最短的时间内处理，以免中断您的体验。</p><h3 class=\"text-foreground font-bold mt-8 mb-4\">保修后支持</h3><p>即使在保修期届满后，您仍能在整个使用过程中获得产品护理支持。</p>",
   },
 }

@@ -2,13 +2,14 @@
 
 import { useLanguage } from "@/lib/i18n/language-context"
 import { Shield, Truck, FileText, ChevronRight } from "lucide-react"
+import { policyContent } from "@/data/policy-content"
 
 interface PolicyPageClientProps {
   type: "terms" | "privacy" | "shipping" | "warranty"
 }
 
 export function PolicyPageClient({ type }: PolicyPageClientProps) {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
 
   const config = {
     terms: {
@@ -34,7 +35,9 @@ export function PolicyPageClient({ type }: PolicyPageClientProps) {
   }
 
   const currentConfig = config[type]
+  const policyData = policyContent[type]
   const Icon = currentConfig.icon
+  const l = locale as "vi" | "en" | "zh"
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -59,7 +62,7 @@ export function PolicyPageClient({ type }: PolicyPageClientProps) {
             <Icon className="w-8 h-8 text-primary" />
           </div>
           <h1 className="font-serif text-3xl md:text-4xl text-foreground font-bold uppercase tracking-widest mb-4">
-            {currentConfig.title}
+            {policyData.title[l]}
           </h1>
           <div className="w-24 h-1 bg-primary rounded-full"></div>
         </div>
@@ -68,12 +71,12 @@ export function PolicyPageClient({ type }: PolicyPageClientProps) {
         <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-sm">
           <div 
             className="space-y-6 text-muted-foreground leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: t(`${currentConfig.contentKey}.content`) }}
+            dangerouslySetInnerHTML={{ __html: policyData.content[l] }}
           />
           
           <div className="mt-12 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              {t("policy.lastUpdated")} <a href="tel:0765942942" className="text-primary font-bold">0765.942.942</a>
+              {policyContent.lastUpdated[l]} <a href="tel:0765942942" className="text-primary font-bold">0765.942.942</a>
             </p>
           </div>
         </div>
