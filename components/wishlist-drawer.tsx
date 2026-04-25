@@ -29,10 +29,10 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                 </div>
                 <div>
                   <Drawer.Title className="text-xl font-serif font-bold text-foreground">
-                    {locale === 'en' ? 'Wishlist' : locale === 'zh' ? '收藏夹' : 'Danh sách yêu thích'}
+                    {t("wishlist.title")}
                   </Drawer.Title>
                   <Drawer.Description className="text-xs text-muted-foreground">
-                    {wishlistItems.length} {locale === 'en' ? 'items' : locale === 'zh' ? '件商品' : 'sản phẩm'}
+                    {wishlistItems.length} {t("products.items")}
                   </Drawer.Description>
                 </div>
               </div>
@@ -92,19 +92,17 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                   <Heart className="w-10 h-10 text-muted-foreground/30" />
                 </div>
                 <h3 className="text-lg font-medium text-foreground mb-2">
-                  {locale === 'en' ? 'Your wishlist is empty' : locale === 'zh' ? '收藏夹是空的' : 'Danh sách trống'}
+                  {t("wishlist.empty")}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-8 max-w-[200px]">
-                  {locale === 'en' ? 'Add products you love to your wishlist to see them later.' : 
-                   locale === 'zh' ? '添加您喜欢的产品到收藏夹以便稍后查看。' : 
-                   'Hãy thêm những sản phẩm bạn yêu thích vào danh sách để xem lại sau nhé.'}
+                  {t("wishlist.emptyDesc")}
                 </p>
                 <Drawer.Close asChild>
                   <Link 
-                    href={getLocalizedPath("/trang-suc")}
+                    href={getLocalizedPath("/vong-tay")}
                     className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:shadow-lg transition-all"
                   >
-                    {locale === 'en' ? 'Shop Now' : locale === 'zh' ? '现在去购物' : 'Mua sắm ngay'}
+                    {t("wishlist.shopNow")}
                   </Link>
                 </Drawer.Close>
               </div>
@@ -118,7 +116,7 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                 className="w-full flex items-center justify-center gap-2 py-4 bg-primary text-primary-foreground rounded-2xl font-bold hover:shadow-xl transition-all"
               >
                 <ShoppingBag className="w-5 h-5" />
-                {locale === 'en' ? 'Inquiry All' : locale === 'zh' ? '全部咨询' : 'Nhận tư vấn ngay'}
+                {t("wishlist.inquiryAll")}
               </Link>
             </div>
           )}

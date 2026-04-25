@@ -6,10 +6,10 @@ export function StatsSection() {
   const { t } = useLanguage()
 
   const stats = [
-    { value: "300,000", suffix: "+", label: t("about.customers") },
-    { value: "20", suffix: "+", label: t("nav.incense") === "NHANG TRẦM" ? "Quốc Gia" : t("nav.about") === "ABOUT US" ? "Countries" : "国家" },
-    { value: "50", suffix: "+", label: t("nav.incense") === "NHANG TRẦM" ? "Nhân sự" : t("nav.about") === "ABOUT US" ? "Personnel" : "人员" },
-    { value: "45", suffix: "+", label: t("about.yearsExperience") },
+    { value: "1,000", suffix: "+", label: t("about.customers") },
+    { value: "10", suffix: "+", label: t("about.yearsExperience") },
+    { value: "100", suffix: "%", label: t("about.natural") },
+    { value: "200", suffix: "+", label: t("about.products") || "Sản phẩm" },
   ]
 
   return (

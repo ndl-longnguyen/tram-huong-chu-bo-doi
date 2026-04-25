@@ -49,10 +49,10 @@ export function CommunitySection() {
   }
 
   const stats = [
-    { value: "10,000+", label: t("hero.customers") },
-    { value: "15+", label: t("hero.experience") },
+    { value: "1,000+", label: t("hero.customers") },
+    { value: "10+", label: t("hero.experience") },
     { value: "100%", label: t("about.natural") },
-    { value: "5/5", label: t("about.commitmentTitle") },
+    { value: "200+", label: t("about.products") || "Sản phẩm" },
   ]
 
   return (

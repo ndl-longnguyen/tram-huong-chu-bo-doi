@@ -12,7 +12,7 @@ import { useWishlist } from "@/lib/wishlist-context"
 
 import { categories, products } from "@/lib/products"
 import { Product } from "@/lib/products"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,6 +24,7 @@ export function Header() {
   const { wishlist } = useWishlist()
   const localeKey = locale as "vi" | "en" | "zh"
   const router = useRouter()
+  const pathname = usePathname()
 
   const navigation = [
     { name: t("nav.about"), href: "/gioi-thieu" },
@@ -88,9 +89,8 @@ export function Header() {
     <>
       {/* Sticky Mini Header (Temporary Header) - Desktop Only */}
       <div
-        className={`hidden lg:block fixed top-0 left-0 right-0 z-[60] bg-card/95 backdrop-blur-md border-b border-border shadow-lg transition-all duration-500 ease-in-out ${
-          isScrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
-        }`}
+        className={`hidden lg:block fixed top-0 left-0 right-0 z-[60] bg-card/95 backdrop-blur-md border-b border-border shadow-lg transition-all duration-500 ease-in-out ${isScrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href={getLocalizedPath("/")} className="flex items-center gap-2 group flex-shrink-0">
@@ -104,18 +104,24 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:block overflow-hidden">
-            <ul className="flex items-center gap-4 xl:gap-6 px-4">
-              {navigation.map((item) => (
-                <li key={item.name} className="flex-shrink-0">
-                  <Link
-                    href={getLocalizedPath(item.href)}
-                    className="text-xs xl:text-sm font-medium text-foreground hover:text-primary transition-colors relative group whitespace-nowrap"
-                  >
-                    {item.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                  </Link>
-                </li>
-              ))}
+            <ul className="flex items-center gap-4 xl:gap-4 px-4">
+              {navigation.map((item) => {
+                const localizedPath = getLocalizedPath(item.href)
+                const isActive = pathname === localizedPath || (item.href !== "/" && pathname.startsWith(localizedPath))
+                return (
+                  <li key={item.name} className="flex-shrink-0">
+                    <Link
+                      href={localizedPath}
+                      className={`text-xs xl:text-sm font-medium transition-colors relative group whitespace-nowrap ${isActive ? "text-primary" : "text-foreground hover:text-primary"
+                        }`}
+                    >
+                      {item.name}
+                      <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`} />
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
 
@@ -138,7 +144,7 @@ export function Header() {
       </div>
 
       {/* Main Header - Fixed on Mobile, Relative on Desktop */}
-      <header 
+      <header
         className={`w-full z-40 transition-all duration-300 
           fixed top-0 left-0 right-0 lg:relative 
           ${isScrolled ? "shadow-md bg-card/95 backdrop-blur-md" : "bg-card"}
@@ -264,17 +270,23 @@ export function Header() {
           <nav className="hidden lg:block border-t border-border/50 bg-gradient-to-r from-transparent via-muted/30 to-transparent">
             <div className="max-w-7xl mx-auto px-4">
               <ul className="flex items-center justify-center gap-1 py-2">
-                {navigation.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={getLocalizedPath(item.href)}
-                      className="relative px-5 py-2.5 text-foreground hover:text-primary text-sm font-medium transition-colors group"
-                    >
-                      {item.name}
-                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all group-hover:w-3/4" />
-                    </Link>
-                  </li>
-                ))}
+                {navigation.map((item) => {
+                  const localizedPath = getLocalizedPath(item.href)
+                  const isActive = pathname === localizedPath || (item.href !== "/" && pathname.startsWith(localizedPath))
+                  return (
+                    <li key={item.name}>
+                      <Link
+                        href={localizedPath}
+                        className={`relative px-3 py-2 text-xs xl:text-sm font-medium transition-colors group uppercase tracking-wide ${isActive ? "text-primary" : "text-foreground hover:text-primary"
+                          }`}
+                      >
+                        {item.name}
+                        <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary transition-all ${isActive ? "w-3/4" : "w-0 group-hover:w-3/4"
+                          }`} />
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </nav>
@@ -286,21 +298,18 @@ export function Header() {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`lg:hidden fixed inset-0 z-[100] transition-all duration-300 ${
-          isMenuOpen ? "visible" : "invisible pointer-events-none"
-        }`}
+        className={`lg:hidden fixed inset-0 z-[100] transition-all duration-300 ${isMenuOpen ? "visible" : "invisible pointer-events-none"
+          }`}
       >
         <div
-          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
-            isMenuOpen ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0"
+            }`}
           onClick={() => setIsMenuOpen(false)}
         />
 
         <div
-          className={`absolute top-0 right-0 w-[85%] max-w-sm h-full bg-card shadow-2xl transition-transform duration-500 ease-out flex flex-col ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 w-[85%] max-w-sm h-full bg-card shadow-2xl transition-transform duration-500 ease-out flex flex-col ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="p-4 border-b border-border flex items-center justify-between bg-muted/20">
             <Link href={getLocalizedPath("/")} onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
@@ -355,18 +364,24 @@ export function Header() {
 
             <nav className="p-4">
               <ul className="space-y-1">
-                {navigation.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={getLocalizedPath(item.href)}
-                      className="flex items-center justify-between py-3.5 px-4 text-foreground hover:text-primary hover:bg-primary/5 text-base font-medium rounded-xl transition-all group"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                      <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </li>
-                ))}
+                {navigation.map((item) => {
+                  const localizedPath = getLocalizedPath(item.href)
+                  const isActive = pathname === localizedPath || (item.href !== "/" && pathname.startsWith(localizedPath))
+                  return (
+                    <li key={item.name}>
+                      <Link
+                        href={localizedPath}
+                        className={`flex items-center justify-between py-3.5 px-4 text-base font-medium rounded-xl transition-all group ${isActive ? "text-primary bg-primary/5" : "text-foreground hover:text-primary hover:bg-primary/5"
+                          }`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                        <ChevronRight className={`w-4 h-4 transition-transform ${isActive ? "text-primary translate-x-1" : "text-muted-foreground group-hover:text-primary group-hover:translate-x-1"
+                          }`} />
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </nav>
           </div>

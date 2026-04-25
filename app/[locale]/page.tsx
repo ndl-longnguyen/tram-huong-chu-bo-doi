@@ -14,19 +14,19 @@ type PageProps = { params: Promise<{ locale: string }> }
 
 const metaByLocale: Record<string, { title: string; description: string; keywords: string[] }> = {
   vi: {
-    title: 'Trầm Hương Chú Bộ Đội - Trang Sức Trầm Hương Cao Cấp Chính Hãng',
+    title: 'Trầm Hương Chú Bộ Đội - Vòng Tay Trầm Hương Cao Cấp Chính Hãng',
     description: 'Thương hiệu trầm hương uy tín hàng đầu Việt Nam. Chuyên vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương 100% tự nhiên. Bảo hành trọn đời. Hotline: 0765.942.942',
-    keywords: ['trầm hương chú bộ đội', 'vòng tay trầm hương', 'trang sức trầm hương', 'trầm hương việt nam', 'nhang trầm hương cao cấp'],
+    keywords: ['trầm hương chú bộ đội', 'vòng tay trầm hương', 'vòng tay trầm hương cao cấp', 'trầm hương việt nam', 'nhang trầm hương cao cấp'],
   },
   en: {
-    title: 'Tram Huong Chu Bo Doi - Premium Vietnamese Agarwood Jewelry',
+    title: 'Tram Huong Chu Bo Doi - Premium Vietnamese Agarwood Bracelets',
     description: 'Vietnam\'s leading authentic agarwood brand. Specializing in agarwood bracelets, incense, and artworks - 100% natural. Lifetime warranty. Hotline: 0765.942.942',
-    keywords: ['agarwood jewelry', 'vietnamese agarwood', 'agarwood bracelet', 'natural agarwood', 'chu bo doi agarwood'],
+    keywords: ['agarwood bracelets', 'vietnamese agarwood', 'agarwood bracelet', 'natural agarwood', 'chu bo doi agarwood'],
   },
   zh: {
-    title: '朱伯队沉香 - 越南高端沉香珠宝',
+    title: '朱伯队沉香 - 越南高端沉香手链',
     description: '越南领先的正品沉香品牌。专注沉香手链、沉香线香、工艺品 - 100%天然。终身保修。热线：0765.942.942',
-    keywords: ['沉香珠宝', '越南沉香', '沉香手链', '天然沉香', '朱伯队沉香'],
+    keywords: ['沉香手链', '越南沉香', '沉香手链', '天然沉香', '朱伯队沉香'],
   },
 }
 

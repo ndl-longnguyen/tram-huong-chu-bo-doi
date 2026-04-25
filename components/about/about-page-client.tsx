@@ -1,50 +1,11 @@
 "use client"
 
-import { ChevronRight, Award, Shield, Leaf, Users } from "lucide-react"
+import { ChevronRight, Award, Shield, Leaf, Users, MessageSquare } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
-const timeline = [
-  { year: "2015", event: { vi: "Khởi nghiệp với đam mê trầm hương", en: "Started with passion for agarwood", zh: "带着对沉香的热情开始创业" } },
-  { year: "2019", event: { vi: "Mở xưởng sản xuất tại Tiên Phước", en: "Open factory in Tien Phuoc", zh: "在仙福开设工厂" } },
-  { year: "2022", event: { vi: "Mở rộng đa dạng sản phẩm", en: "Expanded product range", zh: "扩大产品范围" } },
-  { year: "2023", event: { vi: "Phát triển kênh bán hàng online", en: "Developed online sales channel", zh: "发展线上销售渠道" } },
-  { year: "2024", event: { vi: "Hơn 10,000 khách hàng tin tưởng", en: "Over 10,000 trusted customers", zh: "超过10,000位信赖的客户" } },
-]
+import { timeline, philosophyContent, stores, commitmentFeatures } from "@/data/about-content"
 
-const values = [
-  {
-    title: { vi: "TINH", en: "EXCELLENCE", zh: "精" },
-    subtitle: { vi: "Tinh hoa nghề truyền thống", en: "Traditional craftsmanship excellence", zh: "传统工艺精华" },
-    description: { vi: "Kế thừa và phát huy tinh hoa nghề chế tác trầm hương truyền thống hàng trăm năm của Việt Nam.", en: "Inheriting and promoting the traditional Vietnamese agarwood craftsmanship of hundreds of years.", zh: "继承和发扬越南数百年传统沉香工艺精华。" },
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80",
-    icon: Leaf,
-  },
-  {
-    title: { vi: "TÍN", en: "TRUST", zh: "信" },
-    subtitle: { vi: "Uy tín và chất lượng", en: "Trust and quality", zh: "信誉与品质" },
-    description: { vi: "Cam kết 100% sản phẩm trầm hương tự nhiên, không pha trộn, không hóa chất.", en: "Committed to 100% natural agarwood products, no mixing, no chemicals.", zh: "承诺100%天然沉香产品，无掺杂，无化学品。" },
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80",
-    icon: Shield,
-  },
-  {
-    title: { vi: "TÂM", en: "DEDICATION", zh: "心" },
-    subtitle: { vi: "Tâm huyết với nghề", en: "Dedication to the craft", zh: "对工艺的专注" },
-    description: { vi: "Mỗi sản phẩm đều được chế tác với tâm huyết, sự tỉ mỉ và đam mê của nghệ nhân.", en: "Each product is crafted with dedication, meticulousness and passion of artisans.", zh: "每件产品都凝聚着工匠的心血、细致和热情。" },
-    image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80",
-    icon: Users,
-  },
-]
-
-const stores = [
-  {
-    name: { vi: "SHOWROOM CHÍNH", en: "MAIN SHOWROOM", zh: "主展厅" },
-    address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
-    phone: "0765.942.942",
-    hours: "8:00 - 22:00",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
-  },
-]
 
 type LocaleKey = "vi" | "en" | "zh"
 
@@ -55,9 +16,9 @@ export function AboutPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pb-20 lg:pb-32 pt-6 overflow-hidden">
+      <section className="relative pb-16 lg:pb-20 pt-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-        
+
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-4 relative z-10 mb-8">
           <div className="flex items-center gap-2 text-sm">
@@ -76,9 +37,9 @@ export function AboutPageClient() {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
               {t("about.brandStory")}
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-foreground mb-8 uppercase tracking-tight">
-              {l === "zh" ? "沉香" : l === "en" ? "Agarwood" : "Trầm Hương"}
-              <span className="block text-primary mt-2">{l === "zh" ? "朱伯队" : l === "en" ? "Chu Bo Doi" : "Chú Bộ Đội"}</span>
+            <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl text-foreground font-bold uppercase tracking-[0.2em] leading-tight">
+              {t("about.title1")}
+              <span className="block text-primary mt-2">{t("about.title2")}</span>
             </h1>
 
             <blockquote className="relative">
@@ -90,67 +51,121 @@ export function AboutPageClient() {
               </p>
             </blockquote>
 
-            <div className="flex flex-wrap items-center justify-center gap-8 mt-12">
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mt-12">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-primary">15+</div>
-                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.yearsExperience")}</p>
+                <div className="text-3xl md:text-5xl font-serif font-bold text-primary">10+</div>
+                <p className="text-[10px] md:text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.yearsExperience")}</p>
               </div>
-              <div className="w-px h-12 bg-border hidden sm:block" />
+              <div className="w-px h-10 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-primary">10,000+</div>
-                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.customers")}</p>
+                <div className="text-3xl md:text-5xl font-serif font-bold text-primary">1,000+</div>
+                <p className="text-[10px] md:text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.customers")}</p>
               </div>
-              <div className="w-px h-12 bg-border hidden sm:block" />
+              <div className="w-px h-10 bg-border hidden sm:block" />
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-primary">100%</div>
-                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.natural")}</p>
+                <div className="text-3xl md:text-5xl font-serif font-bold text-primary">100%</div>
+                <p className="text-[10px] md:text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.natural")}</p>
+              </div>
+              <div className="w-px h-10 bg-border hidden sm:block" />
+              <div className="text-center">
+                <div className="text-3xl md:text-5xl font-serif font-bold text-primary">200+</div>
+                <p className="text-[10px] md:text-sm text-muted-foreground mt-1 uppercase tracking-wider">{t("about.products") || "Sản phẩm"}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values - Tinh Tin Tam */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-secondary/30 to-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 tracking-widest uppercase">
+      {/* Philosophy - Zen Minimalist */}
+      <section className="py-16 lg:py-20 bg-secondary/30 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Section Header - Centered & Poetic */}
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
               {t("about.philosophy")}
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-tight">
-              {t("about.philosophyTitle")}
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 tracking-tight">
+              <span className="block md:inline">{philosophyContent.header[l].line1}</span>
+              <span className="hidden md:inline"> — </span>
+              <span className="block md:inline">{philosophyContent.header[l].line2}</span>
             </h2>
+            <div className="w-16 h-px bg-primary/40 mx-auto my-6" />
+            <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+              {philosophyContent.intro[l]}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="group bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-2xl transition-all duration-500">
-                <div className="relative overflow-hidden">
-                  <img src={value.image} alt={value.title[l]} className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <value.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="font-serif text-3xl text-white font-bold">{value.title[l]}</span>
+          {/* Three Pillars - Journey Layout */}
+          <div className="relative">
+            {/* Connecting Line - Desktop */}
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6">
+              {philosophyContent.pillars.map((pillar, index) => (
+                <div
+                  key={index}
+                  className="group relative"
+                >
+                  {/* Card */}
+                  <div className="relative bg-card border border-border rounded-2xl p-8 lg:p-10 hover:border-primary/30 hover:shadow-xl transition-all duration-500 h-full">
+                    {/* Number Badge */}
+                    <div className="absolute -top-4 left-8 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
+                      {pillar.number}
                     </div>
+
+                    {/* Content */}
+                    <div className="pt-4">
+                      <h3 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
+                        {pillar.title[l]}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                        {pillar.description[l]}
+                      </p>
+                    </div>
+
+                    {/* Decorative accent line at bottom */}
+                    <div className="absolute bottom-0 left-8 right-8 h-0.5 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
+
+                  {/* Journey Arrow - Between cards on desktop */}
+                  {index < philosophyContent.pillars.length - 1 && (
+                    <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                      <div className="w-6 h-6 bg-background border border-border rounded-full flex items-center justify-center">
+                        <ChevronRight className="w-3 h-3 text-primary" />
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="p-6">
-                  <h3 className="text-foreground font-semibold text-lg mb-2">{value.subtitle[l]}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description[l]}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Quote - Message Box */}
+          <div className="mt-20 relative">
+            <div className="max-w-2xl mx-auto">
+              <div className="relative bg-foreground text-white rounded-2xl p-8 md:p-10 text-center">
+                {/* Quote marks */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                  <span className="font-serif text-xl text-white leading-none">&ldquo;</span>
                 </div>
+
+                <p className="text-xs uppercase tracking-widest text-white/40 mb-4 pt-2">
+                  {t("about.message")}
+                </p>
+                <p className="font-serif text-lg md:text-xl text-white/90 italic leading-relaxed">
+                  {philosophyContent.quote[l]}
+                </p>
+                <div className="mt-6 w-12 h-px bg-primary mx-auto" />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Timeline */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 tracking-widest uppercase">
               {t("about.journey")}
             </span>
@@ -183,7 +198,7 @@ export function AboutPageClient() {
       </section>
 
       {/* Commitment */}
-      <section className="py-20 lg:py-28 bg-muted/50">
+      <section className="py-16 lg:py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -197,19 +212,17 @@ export function AboutPageClient() {
                 {t("about.commitmentDesc")}
               </p>
               <div className="space-y-4">
-                {[
-                  { icon: Shield, text: l === "vi" ? "Bảo hành trọn đời cho tất cả sản phẩm" : l === "zh" ? "所有产品终身保修" : "Lifetime warranty for all products" },
-                  { icon: Leaf, text: l === "vi" ? "100% trầm hương tự nhiên, không hóa chất" : l === "zh" ? "100%天然沉香，无化学品" : "100% natural agarwood, no chemicals" },
-                  { icon: Award, text: l === "vi" ? "Chứng nhận chất lượng ISO" : l === "zh" ? "ISO质量认证" : "ISO quality certification" },
-                  { icon: Users, text: l === "vi" ? "Đội ngũ nghệ nhân lành nghề 20+ năm" : l === "zh" ? "20多年经验的熟练工匠团队" : "Team of skilled artisans 20+ years" },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-primary" />
+                {commitmentFeatures.map((item, index) => {
+                  const Icon = item.icon === "Shield" ? Shield : item.icon === "Leaf" ? Leaf : item.icon === "Award" ? Award : Users
+                  return (
+                    <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
+                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="text-foreground">{item.text[l as keyof typeof item.text]}</span>
                     </div>
-                    <span className="text-foreground">{item.text}</span>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
             <div className="relative">
@@ -225,9 +238,9 @@ export function AboutPageClient() {
       </section>
 
       {/* Store System */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider uppercase">
               {t("about.storeSystem")}
             </span>
@@ -266,7 +279,7 @@ export function AboutPageClient() {
                     <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    {store.hours}
+                    {store.hours[l]}
                   </p>
                 </div>
               </div>
