@@ -88,10 +88,10 @@ export function getRelatedProducts(productId: string, limit = 4): Product[] {
     .slice(0, limit)
 }
 
-// Get featured products (products with badge or high rating)
-export function getFeaturedProducts(limit = 4): Product[] {
+// Get featured products (Best Sellers - filtered by 'best' badge)
+export function getFeaturedProducts(limit = 8): Product[] {
   return products
-    .filter((p) => p.badgeType === "best" || p.badgeType === "hot" || p.rating >= 5)
+    .filter((p) => p.badgeType === "best")
     .slice(0, limit)
 }
 

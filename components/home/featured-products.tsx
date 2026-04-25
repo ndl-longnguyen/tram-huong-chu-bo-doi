@@ -10,7 +10,7 @@ export function FeaturedProducts() {
   const { t, getLocalizedPath, locale } = useLanguage()
   const localeKey = locale as "vi" | "en" | "zh"
   
-  const featuredProducts = getFeaturedProducts(4)
+  const featuredProducts = getFeaturedProducts(8)
 
   return (
     <section className="py-16 lg:py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
@@ -33,7 +33,7 @@ export function FeaturedProducts() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {featuredProducts.map((product) => (
             <ProductCard 
               key={product.id} 
