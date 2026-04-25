@@ -20,9 +20,9 @@ interface CategoryPageProps {
 export default function CategoryPage({ categorySlug }: CategoryPageProps) {
   const { locale, getLocalizedPath } = useLanguage()
   const localeKey = locale as "vi" | "en" | "zh"
-  
+
   const category = categories.find(c => c.slug === categorySlug)
-  
+
   if (!category) {
     return <div>Category not found</div>
   }
@@ -68,39 +68,6 @@ export default function CategoryPage({ categorySlug }: CategoryPageProps) {
               <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
                 {category.description[localeKey]}
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-card border-y border-border">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
-              {categoryTypes.map((type, index) => (
-                <Link
-                  key={index}
-                  href={getLocalizedPath(`/${type.slug}`)}
-                  className={`group flex flex-col items-center gap-3 md:gap-4 p-4 rounded-2xl transition-all duration-300 ${
-                    type.slug === categorySlug ? "bg-primary/10 ring-1 ring-primary/30" : "bg-muted/50 hover:bg-primary/5 hover:shadow-lg"
-                  }`}
-                >
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden ring-2 ring-border group-hover:ring-primary/30 transition-all relative">
-                    <Image
-                      src={type.icon}
-                      alt={type.label[localeKey]}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <span className={`font-semibold block transition-colors text-xs md:text-sm ${
-                      type.slug === categorySlug ? "text-primary" : "text-foreground group-hover:text-primary"
-                    }`}>
-                      {type.label[localeKey]}
-                    </span>
-                    <span className="text-muted-foreground text-[10px] md:text-xs">{type.count} {content.products[locale]}</span>
-                  </div>
-                </Link>
-              ))}
             </div>
           </div>
         </section>

@@ -228,7 +228,7 @@ export function AboutPageClient() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
               <img
-                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80"
+                src="/images/sections/tram-huong-chu-bo-doi-section-7.webp"
                 alt="Tram huong cao cap"
                 className="relative w-full h-[500px] object-cover rounded-3xl"
               />

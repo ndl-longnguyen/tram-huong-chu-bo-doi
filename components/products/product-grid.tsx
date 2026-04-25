@@ -4,7 +4,7 @@ import { useState, useMemo } from "react"
 import { ProductCard } from "@/components/product-card"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { products, getFeaturedProducts, getProductsByCategory, getCategoryBySlug } from "@/lib/products"
-import { ChevronDown, SlidersHorizontal, X } from "lucide-react"
+import { ChevronDown, SlidersHorizontal, X, Phone, MessageCircle, MessageSquare, Search } from "lucide-react"
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import { Drawer } from "vaul"
 import { ProductFilters } from "./product-filters"
@@ -19,6 +19,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
+  const [visibleCount, setVisibleCount] = useState(24)
   
   const sortBy = searchParams.get("sort") || "newest"
   const priceFilter = searchParams.get("price")
@@ -134,7 +135,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
             <div className="hidden md:block text-xs text-muted-foreground font-medium">
               {t("products.results")
                 .replace("{start}", "1")
-                .replace("{end}", Math.min(24, sortedProducts.length).toString())
+                .replace("{end}", Math.min(visibleCount, sortedProducts.length).toString())
                 .replace("{total}", sortedProducts.length.toString())}
             </div>
             {/* Sort Dropdown - Synced with Sidebar */}
@@ -203,8 +204,8 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
 
         {sortedProducts.length > 0 ? (
           <>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {sortedProducts.map((product) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+              {sortedProducts.slice(0, visibleCount).map((product) => (
                 <ProductCard 
                   key={product.id} 
                   id={product.id}
@@ -218,20 +219,64 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
               ))}
             </div>
             {/* Load More */}
-            <div className="text-center mt-8">
-              <button className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-widest text-sm">
-                {t("common.viewMore")}
-              </button>
-            </div>
+            {visibleCount < sortedProducts.length && (
+              <div className="text-center mt-8">
+                <button 
+                  onClick={() => setVisibleCount(prev => prev + 12)}
+                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-widest text-sm"
+                >
+                  {t("common.viewMore")}
+                </button>
+              </div>
+            )}
           </>
         ) : (
-          <div className="text-center py-20 bg-muted/30 rounded-2xl border-2 border-dashed border-border">
-            <p className="text-muted-foreground">
+          <div className="text-center py-20 px-6 bg-muted/20 rounded-3xl border-2 border-dashed border-border/50 max-w-2xl mx-auto">
+            <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Search className="w-10 h-10 text-primary/50" />
+            </div>
+            <h3 className="font-serif text-2xl text-foreground mb-4 uppercase tracking-wider">
               {t("products.noFound")}
-            </p>
-            <p className="text-sm text-muted-foreground mt-2">
+            </h3>
+            <p className="text-muted-foreground mb-10 leading-relaxed">
               {t("products.noFoundDesc")}
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="tel:0765942942"
+                className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:shadow-lg transition-all active:scale-95 text-sm uppercase tracking-widest"
+              >
+                <Phone className="w-4 h-4" />
+                Hotline
+              </a>
+              <a 
+                href="https://zalo.me/0765942942"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-[#0068ff] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95 text-sm uppercase tracking-widest"
+              >
+                <svg viewBox="0 0 48 48" className="w-5 h-5">
+                  <path fill="#eee" d="M29,5H19c-1.845,0-3.601,0.366-5.214,1.014C10.453,9.25,8,14.528,8,19	c0,6.771,0.936,10.735,3.712,14.607c0.216,0.301,0.357,0.653,0.376,1.022c0.043,0.835-0.129,2.365-1.634,3.742	c-0.162,0.148-0.059,0.419,0.16,0.428c0.942,0.041,2.843-0.014,4.797-0.877c0.557-0.246,1.191-0.203,1.729,0.083	C20.453,39.764,24.333,40,28,40c4.676,0,9.339-1.04,12.417-2.916C42.038,34.799,43,32.014,43,29V19C43,11.268,36.732,5,29,5z" />
+                  <path fill="#0068ff" d="M36.75,27C34.683,27,33,25.317,33,23.25s1.683-3.75,3.75-3.75s3.75,1.683,3.75,3.75	S38.817,27,36.75,27z M36.75,21c-1.24,0-2.25,1.01-2.25,2.25s1.01,2.25,2.25,2.25S39,24.49,39,23.25S37.99,21,36.75,21z" />
+                  <path fill="#0068ff" d="M31.5,27h-1c-0.276,0-0.5-0.224-0.5-0.5V18h1.5V27z" />
+                  <path fill="#0068ff" d="M27,19.75v0.519c-0.629-0.476-1.403-0.769-2.25-0.769c-2.067,0-3.75,1.683-3.75,3.75	S22.683,27,24.75,27c0.847,0,1.621-0.293,2.25-0.769V26.5c0,0.276,0.224,0.5,0.5,0.5h1v-7.25H27z M24.75,25.5	c-1.24,0-2.25-1.01-2.25-2.25S23.51,21,24.75,21S27,22.01,27,23.25S25.99,25.5,24.75,25.5z" />
+                  <path fill="#0068ff" d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5	c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z" />
+                </svg>
+                Zalo
+              </a>
+              <a 
+                href="https://m.me/tramhuongchubodoi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-[#0084ff] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95 text-sm uppercase tracking-widest"
+              >
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
+                  <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.438 5.504 3.688 7.203V22l3.405-1.867c.91.252 1.873.388 2.907.388 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm.994 12.442l-2.545-2.716-4.97 2.716 5.467-5.804 2.609 2.716 4.906-2.716-5.467 5.804z" />
+                </svg>
+                Messenger
+              </a>
+            </div>
           </div>
         )}
       </div>

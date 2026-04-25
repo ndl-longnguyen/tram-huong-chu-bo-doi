@@ -31,7 +31,7 @@ export function ExploreSection() {
         </div>
 
         {/* Explore Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {exploreItems.map((item, index) => (
             <Link key={index} href={getLocalizedPath(item.href)} className="group block">
               <div className="relative overflow-hidden rounded-2xl aspect-square">

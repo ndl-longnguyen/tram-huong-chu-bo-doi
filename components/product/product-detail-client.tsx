@@ -385,23 +385,23 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
               <div className="space-y-0">
                 <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
                   <span className="text-sm md:text-base text-muted-foreground shrink-0">{t("product.detail.material")}</span>
-                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.material[localeKey]}</span>
+                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.material?.[localeKey]}</span>
                 </div>
                 <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
                   <span className="text-sm md:text-base text-muted-foreground shrink-0">{t("product.detail.origin")}</span>
-                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.origin[localeKey]}</span>
+                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.origin?.[localeKey]}</span>
                 </div>
                 <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
                   <span className="text-sm md:text-base text-muted-foreground shrink-0">{t("product.detail.size")}</span>
-                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.size[localeKey]}</span>
+                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.size?.[localeKey]}</span>
                 </div>
                 <div className="flex justify-between gap-4 py-2.5 md:py-3 border-b border-border">
                   <span className="text-sm md:text-base text-muted-foreground shrink-0">{t("product.detail.weight")}</span>
-                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.weight[localeKey]}</span>
+                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.weight?.[localeKey]}</span>
                 </div>
                 <div className="flex justify-between gap-4 py-2.5 md:py-3">
                   <span className="text-sm md:text-base text-muted-foreground shrink-0">{t("product.detail.age")}</span>
-                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.age[localeKey]}</span>
+                  <span className="text-sm md:text-base text-foreground font-medium text-right">{product.specs.age?.[localeKey]}</span>
                 </div>
               </div>
             </div>
