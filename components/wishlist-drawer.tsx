@@ -47,7 +47,7 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
               <div className="space-y-6">
                 {wishlistItems.map((product) => (
                   <div key={product.id} className="flex gap-4 group">
-                    <Link 
+                    <Link
                       href={getLocalizedPath(`/san-pham/${product.id}`)}
                       className="relative w-20 h-20 rounded-xl overflow-hidden bg-muted flex-shrink-0"
                     >
@@ -60,7 +60,7 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                     </Link>
                     <div className="flex-1 min-w-0 py-1 flex flex-col justify-between">
                       <div>
-                        <Link 
+                        <Link
                           href={getLocalizedPath(`/san-pham/${product.id}`)}
                           className="text-sm font-medium text-foreground hover:text-primary transition-colors line-clamp-1 block"
                         >
@@ -74,7 +74,7 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                         <span className="text-primary font-bold text-sm">
                           {new Intl.NumberFormat('vi-VN').format(product.salePrice || product.originalPrice)} đ
                         </span>
-                        <button 
+                        <button
                           onClick={() => toggleWishlist(product.id)}
                           className="p-1.5 text-muted-foreground hover:text-red-500 hover:bg-red-50 transition-all rounded-md"
                           title="Xóa khỏi yêu thích"
@@ -98,7 +98,7 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
                   {t("wishlist.emptyDesc")}
                 </p>
                 <Drawer.Close asChild>
-                  <Link 
+                  <Link
                     href={getLocalizedPath("/vong-tay")}
                     className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:shadow-lg transition-all"
                   >
@@ -108,10 +108,10 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
               </div>
             )}
           </div>
-          
+
           {wishlistItems.length > 0 && (
             <div className="p-6 bg-muted/30 border-t border-border">
-              <Link 
+              <Link
                 href={getLocalizedPath("/lien-he")}
                 className="w-full flex items-center justify-center gap-2 py-4 bg-primary text-primary-foreground rounded-2xl font-bold hover:shadow-xl transition-all"
               >

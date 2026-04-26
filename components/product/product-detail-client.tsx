@@ -292,8 +292,6 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                 <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                   <a
                     href={getMessengerUrl()}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-primary-foreground text-sm md:text-base font-semibold rounded-full hover:bg-primary/90 hover:shadow-md transition-all duration-300"
                   >
                     <MessageCircle className="w-4 h-4 md:w-5 md:h-5 shrink-0" />

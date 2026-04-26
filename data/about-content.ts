@@ -63,7 +63,7 @@ export const stores = [
       zh: "8:00 - 22:00 (周一至周日)"
     },
     phone: "0765.942.942",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
+    image: "/images/showrooms/1.jpg",
   },
 ];
 

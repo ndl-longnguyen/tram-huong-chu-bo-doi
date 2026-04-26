@@ -240,8 +240,6 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
               </a>
               <a
                 href="https://zalo.me/0765942942"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-[#0068ff] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95 text-sm uppercase tracking-widest"
               >
                 <svg viewBox="0 0 48 48" className="w-5 h-5">
@@ -254,9 +252,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
                 Zalo
               </a>
               <a
-                href="https://m.me/tramhuongchubodoi"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://m.me/tramhuongchubodoivn"
                 className="flex items-center gap-2 px-6 py-3 bg-[#0084ff] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95 text-sm uppercase tracking-widest"
               >
                 <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">

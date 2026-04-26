@@ -43,8 +43,6 @@ export function ContactButtons() {
       {/* Messenger */}
       <a
         href="https://m.me/tramhuongchubodoivn"
-        target="_blank"
-        rel="noopener noreferrer"
         className="group pointer-events-auto relative w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
         aria-label="Messenger"
       >
@@ -74,8 +72,6 @@ export function ContactButtons() {
         {/* Zalo */}
         <a
           href="https://zalo.me/0765942942"
-          target="_blank"
-          rel="noopener noreferrer"
           className="group pointer-events-auto relative w-12 h-12 bg-[#0068FF] text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
           aria-label="Zalo"
         >
