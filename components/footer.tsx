@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react"
 
 import Link from "next/link"
 import Image from "next/image"
@@ -29,6 +30,17 @@ export function Footer() {
     { name: t("nav.contact"), href: "/lien-he" },
   ]
 
+  const [email, setEmail] = useState("")
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+
+    const subject = encodeURIComponent("Đăng ký nhận bản tin - Trầm Hương Chú Bộ Đội")
+    const body = encodeURIComponent(`Tôi muốn đăng ký nhận bản tin qua email: ${email}`)
+    window.location.href = `mailto:tramhuongchubodoi@gmail.com?subject=${subject}&body=${body}`
+  }
+
   return (
     <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white relative overflow-hidden">
       {/* Background Logo Decoration */}
@@ -48,16 +60,22 @@ export function Footer() {
               <h3 className="text-xl font-serif text-primary mb-2 uppercase tracking-wide">{t("footer.newsletter")}</h3>
               <p className="text-gray-400 text-sm">{t("footer.newsletterDesc")}</p>
             </div>
-            <div className="flex gap-3 w-full md:w-auto min-w-0">
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-3 w-full md:w-auto min-w-0">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("footer.enterEmail")}
+                required
                 className="flex-1 min-w-0 md:w-80 px-5 py-3 bg-gray-900 border border-gray-700 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all shadow-inner"
               />
-              <button className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 hover:shadow-md transition-all duration-300 shrink-0 uppercase text-xs tracking-widest">
+              <button
+                type="submit"
+                className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 hover:shadow-md transition-all duration-300 shrink-0 uppercase text-xs tracking-widest"
+              >
                 {t("footer.subscribe")}
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -162,7 +180,7 @@ export function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-800 bg-black/30">
         <div className="max-w-7xl mx-auto px-4 py-8 text-center text-[10px] text-gray-500 tracking-widest uppercase font-bold">
-          <p>© 2022 TRẦM HƯƠNG CHÚ BỘ ĐỘI. {t("footer.copyright")}</p>
+          <p>© {new Date().getFullYear()} TRẦM HƯƠNG CHÚ BỘI ĐỘI. {t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

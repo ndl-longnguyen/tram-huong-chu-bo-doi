@@ -123,19 +123,17 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <a
-              href="tel:0765942942"
-              className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-bold hover:shadow-lg transition-all active:scale-95"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">0765.942.942</span>
-            </a>
-            <button
-              className="lg:hidden text-foreground hover:text-primary p-1"
-              onClick={() => setIsMenuOpen(true)}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
+            <LanguageSwitcher />
+            <WishlistDrawer>
+              <button className="p-2 text-foreground hover:text-primary transition-colors relative group">
+                <Heart className={`w-6 h-6 ${wishlist.length > 0 ? "fill-primary text-primary" : ""}`} />
+                {wishlist.length > 0 && (
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-card animate-in zoom-in duration-300">
+                    {wishlist.length}
+                  </span>
+                )}
+              </button>
+            </WishlistDrawer>
           </div>
         </div>
       </div>

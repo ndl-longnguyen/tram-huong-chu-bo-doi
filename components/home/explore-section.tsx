@@ -44,14 +44,14 @@ export function ExploreSection() {
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
+
                 {/* Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-end p-6">
+                <div className="absolute inset-0 flex flex-col items-center justify-end p-4">
                   <h3 className="text-white font-serif text-lg md:text-xl font-semibold text-center mb-1 uppercase">
                     {item.title}
                   </h3>
                   <p className="text-white/70 text-xs text-center mb-3">
-                     {item.description}
+                    {item.description}
                   </p>
                   <span className="flex items-center gap-1 text-primary text-xs font-bold uppercase opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                     {t("common.viewMore")} <ArrowRight className="w-4 h-4" />

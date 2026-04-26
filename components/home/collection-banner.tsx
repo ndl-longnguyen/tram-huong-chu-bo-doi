@@ -14,7 +14,7 @@ export function CollectionBanner() {
         {/* Left Image */}
         <div className="relative h-[300px] lg:h-[450px]">
           <Image
-            src="/images/sections/tram-huong-chu-bo-doi-section-1.webp"
+            src="/images/sections/tram-huong-chu-bo-doi-section-3.webp"
             alt="Sản phẩm trầm hương"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -26,7 +26,7 @@ export function CollectionBanner() {
         <div className="relative h-[300px] lg:h-[450px] bg-secondary flex items-center justify-center">
           <div className="absolute inset-0 opacity-30">
             <Image
-              src="/images/sections/tram-huong-chu-bo-doi-section-2.webp"
+              src="/images/sections/tram-huong-chu-bo-doi-section-6.webp"
               alt="Background pattern"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -55,7 +55,7 @@ export function CollectionBanner() {
       <div className="grid grid-cols-2 md:grid-cols-4">
         <div className="relative h-40 md:h-52">
           <Image
-            src="/images/sections/tram-huong-chu-bo-doi-section-3.webp"
+            src="/images/sections/tram-huong-chu-bo-doi-section-1.webp"
             alt="Gallery 1"
             fill
             sizes="(max-width: 768px) 50vw, 25vw"
@@ -82,7 +82,7 @@ export function CollectionBanner() {
         </div>
         <div className="relative h-40 md:h-52">
           <Image
-            src="/images/sections/tram-huong-chu-bo-doi-section-6.webp"
+            src="/images/sections/tram-huong-chu-bo-doi-section-2.webp"
             alt="Gallery 4"
             fill
             sizes="(max-width: 768px) 50vw, 25vw"
