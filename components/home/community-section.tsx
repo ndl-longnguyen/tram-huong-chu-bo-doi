@@ -64,7 +64,7 @@ export function CommunitySection() {
   ]
 
   return (
-    <section className="py-16 lg:py-20 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-40 h-40 border border-primary/20 rounded-full" />
@@ -143,18 +143,17 @@ export function CommunitySection() {
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
-            
+
             {/* Dots */}
             <div className="flex items-center gap-2">
               {testimonialsList.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    index === currentIndex 
-                      ? "w-8 bg-primary" 
+                  className={`h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
+                      ? "w-8 bg-primary"
                       : "w-2.5 bg-border hover:bg-primary/50"
-                  }`}
+                    }`}
                 />
               ))}
             </div>

@@ -53,8 +53,8 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show mini header after scrolling down 300px
-      setIsScrolled(window.scrollY > 300)
+      // Show mini header after scrolling down 100px
+      setIsScrolled(window.scrollY > 100)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)

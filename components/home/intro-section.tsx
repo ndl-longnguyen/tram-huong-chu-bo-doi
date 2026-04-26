@@ -27,7 +27,7 @@ export function IntroSection() {
   ]
 
   return (
-    <section className="py-16 lg:py-24 bg-background relative overflow-hidden w-full">
+    <section className="py-12 lg:py-16 bg-background relative overflow-hidden w-full">
       {/* Decorative Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/5 to-transparent" />
@@ -52,7 +52,7 @@ export function IntroSection() {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="group bg-card p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
             >
@@ -63,81 +63,6 @@ export function IntroSection() {
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
           ))}
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Image with overlay */}
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative overflow-hidden rounded-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=800&q=80"
-                alt={t("home.intro.bracelet")}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full mb-3 uppercase tracking-wider">
-                  {t("home.intro.newCollection")}
-                </span>
-                <h3 className="text-white font-serif text-2xl mb-2">{t("home.intro.bracelet")}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  {t("home.intro.braceletDesc")}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right - Images Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="relative group overflow-hidden rounded-2xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80"
-                  alt="Vòng tay trầm hương"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
-              </div>
-              <div className="relative group overflow-hidden rounded-2xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80"
-                  alt="Sản phẩm trầm hương"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
-              </div>
-            </div>
-            <div className="space-y-4 pt-10">
-              <div className="relative group overflow-hidden rounded-2xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80"
-                  alt="Nghệ nhân chế tác"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
-              </div>
-              <div className="relative group overflow-hidden rounded-2xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"
-                  alt="Trầm hương cao cấp"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* CTA */}

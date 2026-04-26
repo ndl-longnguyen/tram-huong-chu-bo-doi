@@ -18,7 +18,7 @@ export function ExploreSection() {
   }))
 
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background">
+    <section className="py-12 lg:py-16 bg-gradient-to-b from-muted/30 to-background">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-14">

@@ -83,7 +83,7 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-white/60" />
+        <ChevronDown className="w-12 h-12 text-primary" />
       </div>
 
       {/* Bottom Gradient */}

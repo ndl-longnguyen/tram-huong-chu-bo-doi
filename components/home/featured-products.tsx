@@ -9,11 +9,11 @@ import { getFeaturedProducts } from "@/lib/products"
 export function FeaturedProducts() {
   const { t, getLocalizedPath, locale } = useLanguage()
   const localeKey = locale as "vi" | "en" | "zh"
-  
+
   const featuredProducts = getFeaturedProducts(8)
 
   return (
-    <section className="py-16 lg:py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -35,8 +35,8 @@ export function FeaturedProducts() {
         {/* Products Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {featuredProducts.map((product, index) => (
-            <ProductCard 
-              key={product.id} 
+            <ProductCard
+              key={product.id}
               id={product.id}
               name={product.name[localeKey]}
               image={product.image}

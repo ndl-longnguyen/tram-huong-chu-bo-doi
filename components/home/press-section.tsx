@@ -13,7 +13,7 @@ export function PressSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-10 lg:py-14 bg-card border-t border-border">
+    <section className="py-12 lg:py-16 bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-8">
@@ -47,25 +47,25 @@ export function PressSection() {
               <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm">ISO Certified</span>
+              <span className="text-sm font-medium">{t("home.press.iso")}</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm">{t("common.workingHours")}</span>
+              <span className="text-sm font-medium">{t("common.workingHours")}</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm">100% {t("about.natural")}</span>
+              <span className="text-sm font-medium">{t("home.press.natural100")}</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm">Global Shipping</span>
+              <span className="text-sm font-medium">{t("home.press.globalShipping")}</span>
             </div>
           </div>
         </div>

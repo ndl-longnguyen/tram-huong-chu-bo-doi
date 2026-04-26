@@ -51,9 +51,7 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
   }, [minParam, maxParam])
 
   const formatPrice = (value: number) => {
-    if (value >= 200000000) {
-      return `${(value / 200000000).toFixed(1).replace(".0", "")} ${t("products.filter.price.billion")}`
-    }
+
     if (value >= 1000000) {
       return `${(value / 1000000).toFixed(0)} ${t("products.filter.price.million")}`
     }
@@ -67,7 +65,7 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
     if (values[0] > 0) params.set("minPrice", values[0].toString())
     else params.delete("minPrice")
 
-    // Set max price if < 1 billion
+    // Set max price if < 200 million
     if (values[1] < 200000000) params.set("maxPrice", values[1].toString())
     else params.delete("maxPrice")
 
@@ -82,10 +80,12 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
       id: "price",
       label: t("products.filter.price"),
       options: [
-        { label: t("products.filter.price.under5m"), value: "under-5m" },
+        { label: t("products.filter.price.under2m"), value: "under-2m" },
+        { label: t("products.filter.price.2-5m"), value: "2-5m" },
         { label: t("products.filter.price.5-10m"), value: "5-10m" },
         { label: t("products.filter.price.10-20m"), value: "10-20m" },
-        { label: t("products.filter.price.over20m"), value: "over-20m" },
+        { label: t("products.filter.price.20-50m"), value: "20-50m" },
+        { label: t("products.filter.price.50-100m"), value: "50-100m" },
         { label: t("products.filter.price.over100m"), value: "over-100m" }
       ],
     }
@@ -149,8 +149,8 @@ export function ProductFilters({ isMobile = false }: { isMobile?: boolean }) {
                       />
 
                       <div className="flex justify-between text-[10px] text-muted-foreground font-medium uppercase tracking-widest px-0.5">
-                        <span>0đ</span>
-                        <span>1 {t("products.filter.price.billion")} VND</span>
+                        <span>0 VND</span>
+                        <span>200 {t("products.filter.price.million")} VND</span>
                       </div>
                     </div>
 

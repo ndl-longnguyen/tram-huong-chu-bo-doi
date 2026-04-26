@@ -45,10 +45,13 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
     else if (priceFilter) {
       items = items.filter(p => {
         const price = p.salePrice || p.originalPrice
-        if (priceFilter === "under-5m") return price < 5000000
+        if (priceFilter === "under-2m") return price < 2000000
+        if (priceFilter === "2-5m") return price >= 2000000 && price <= 5000000
         if (priceFilter === "5-10m") return price >= 5000000 && price <= 10000000
         if (priceFilter === "10-20m") return price >= 10000000 && price <= 20000000
-        if (priceFilter === "over-20m") return price > 20000000
+        if (priceFilter === "20-50m") return price >= 20000000 && price <= 50000000
+        if (priceFilter === "50-100m") return price >= 50000000 && price <= 100000000
+        if (priceFilter === "over-100m") return price > 100000000
         return true
       })
     }
