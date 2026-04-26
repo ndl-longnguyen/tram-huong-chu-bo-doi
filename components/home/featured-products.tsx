@@ -34,7 +34,7 @@ export function FeaturedProducts() {
 
         {/* Products Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          {featuredProducts.map((product) => (
+          {featuredProducts.map((product, index) => (
             <ProductCard 
               key={product.id} 
               id={product.id}
@@ -44,6 +44,7 @@ export function FeaturedProducts() {
               salePrice={product.salePrice ?? undefined}
               rating={product.rating}
               badgeType={product.badgeType ?? undefined}
+              priority={index < 4}
             />
           ))}
         </div>

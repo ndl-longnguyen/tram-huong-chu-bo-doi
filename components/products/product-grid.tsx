@@ -89,7 +89,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {featuredProducts.map((product) => (
+          {featuredProducts.map((product, index) => (
             <ProductCard
               key={product.id}
               id={product.id}
@@ -99,6 +99,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
               salePrice={product.salePrice ?? undefined}
               rating={product.rating}
               badgeType={product.badgeType ?? undefined}
+              priority={index < 4}
             />
           ))}
         </div>
@@ -193,7 +194,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
         {sortedProducts.length > 0 ? (
           <>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-              {sortedProducts.slice(0, visibleCount).map((product) => (
+              {sortedProducts.slice(0, visibleCount).map((product, index) => (
                 <ProductCard
                   key={product.id}
                   id={product.id}
@@ -203,6 +204,7 @@ export function ProductGrid({ categorySlug }: ProductGridProps) {
                   salePrice={product.salePrice ?? undefined}
                   rating={product.rating}
                   badgeType={product.badgeType ?? undefined}
+                  priority={index < 4}
                 />
               ))}
             </div>

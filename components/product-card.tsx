@@ -15,6 +15,7 @@ interface ProductCardProps {
   rating: number
   badge?: string
   badgeType?: "new" | "best" | "hot" | "sale" | "soldout"
+  priority?: boolean
 }
 
 export function ProductCard({
@@ -26,6 +27,7 @@ export function ProductCard({
   rating,
   badge,
   badgeType,
+  priority,
 }: ProductCardProps) {
   const { t } = useLanguage()
   const { toggleWishlist, isInWishlist } = useWishlist()
@@ -68,6 +70,7 @@ export function ProductCard({
           src={image}
           alt={name}
           fill
+          priority={priority}
           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
           className="object-cover transition-all duration-500 group-hover:scale-110"
         />
@@ -77,7 +80,7 @@ export function ProductCard({
         
         {/* Quick view button */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span className="px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground text-sm font-medium rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <span className="px-4 py-2 bg-white/90 text-foreground text-sm font-medium rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
             <Eye className="w-4 h-4" />
             {t("product.quickView") || "Xem nhanh"}
           </span>
@@ -93,7 +96,7 @@ export function ProductCard({
           className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-all duration-300 z-10 ${
             isFavorite 
               ? "bg-red-500 text-white" 
-              : "bg-white/80 backdrop-blur-sm text-muted-foreground hover:text-red-500 hover:bg-white"
+              : "bg-white/90 text-muted-foreground hover:text-red-500 hover:bg-white"
           }`}
         >
           <Heart className={`w-4 h-4 ${isFavorite ? "fill-current" : ""}`} />

@@ -1,14 +1,17 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/home/hero-section"
-import { IntroSection } from "@/components/home/intro-section"
-import { FeaturedProducts } from "@/components/home/featured-products"
-import { NewArrivals } from "@/components/home/new-arrivals"
-import { CollectionBanner } from "@/components/home/collection-banner"
-import { CommunitySection } from "@/components/home/community-section"
-import { ExploreSection } from "@/components/home/explore-section"
-import { PressSection } from "@/components/home/press-section"
+
+// Lazy load components that are not immediately visible
+const Footer = dynamic(() => import("@/components/footer").then(mod => mod.Footer))
+const IntroSection = dynamic(() => import("@/components/home/intro-section").then(mod => mod.IntroSection))
+const FeaturedProducts = dynamic(() => import("@/components/home/featured-products").then(mod => mod.FeaturedProducts))
+const NewArrivals = dynamic(() => import("@/components/home/new-arrivals").then(mod => mod.NewArrivals))
+const CollectionBanner = dynamic(() => import("@/components/home/collection-banner").then(mod => mod.CollectionBanner))
+const CommunitySection = dynamic(() => import("@/components/home/community-section").then(mod => mod.CommunitySection))
+const ExploreSection = dynamic(() => import("@/components/home/explore-section").then(mod => mod.ExploreSection))
+const PressSection = dynamic(() => import("@/components/home/press-section").then(mod => mod.PressSection))
 
 type PageProps = { params: Promise<{ locale: string }> }
 

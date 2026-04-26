@@ -45,8 +45,8 @@ export default function CategoryPage({ categorySlug }: CategoryPageProps) {
       <Header />
       <main className="flex-1">
         <section className="relative pb-16 lg:pb-24 pt-6 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl hidden lg:block" />
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl hidden lg:block" />
 
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             {/* Breadcrumb */}

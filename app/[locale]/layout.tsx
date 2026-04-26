@@ -3,7 +3,6 @@ import { Be_Vietnam_Pro, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/i18n/language-context'
 import { WishlistProvider } from '@/lib/wishlist-context'
-import { ScrollToTop } from '@/components/scroll-to-top'
 import { ContactButtons } from '@/components/contact-buttons'
 import { Toaster } from '@/components/ui/sonner'
 import '../globals.css'
@@ -191,7 +190,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   return (
-    <html lang={locale} className="bg-background" suppressHydrationWarning style={{ scrollbarGutter: 'stable' }}>
+    <html lang={locale} className="bg-background" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <script

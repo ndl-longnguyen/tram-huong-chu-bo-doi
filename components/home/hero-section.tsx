@@ -11,7 +11,11 @@ export function HeroSection() {
   const { t, getLocalizedPath } = useLanguage()
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
+    const handleScroll = () => {
+      if (window.innerWidth > 1024) {
+        setScrollY(window.scrollY)
+      }
+    }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -22,7 +26,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0"
         style={{
-          transform: `translateY(${scrollY * 0.3}px) scale(1.15)`,
+          transform: scrollY > 0 ? `translateY(${scrollY * 0.3}px) scale(1.15)` : 'scale(1.15)',
         }}
       >
         <Image
