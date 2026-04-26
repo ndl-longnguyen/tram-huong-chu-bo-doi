@@ -1,9 +1,9 @@
 export const timeline = [
   { year: "2015", event: { vi: "Khởi nghiệp với đam mê trầm hương", en: "Started with passion for agarwood", zh: "带着对沉香的热情开始创业" } },
-  { year: "2019", event: { vi: "Mở xưởng sản xuất tại Tiên Phước", en: "Open factory in Tien Phuoc", zh: "在仙福开设工厂" } },
+  { year: "2019", event: { vi: "Mở xưởng sản xuất tại Tiên Phước", en: "Opened factory in Tien Phuoc", zh: "在仙福开设工厂" } },
   { year: "2022", event: { vi: "Mở rộng đa dạng sản phẩm", en: "Expanded product range", zh: "扩大产品范围" } },
   { year: "2023", event: { vi: "Phát triển kênh bán hàng online", en: "Developed online sales channel", zh: "发展线上销售渠道" } },
-  { year: "2024", event: { vi: "Hơn 1,000 khách hàng tin tưởng", en: "Over 1,000 trusted customers", zh: "超过1,000位信赖的客户" } },
+  { year: "2024", event: { vi: "Hơn 1,000 khách hàng tin tưởng", en: "Over 1,000 satisfied customers", zh: "超过1,000位信赖的客户" } },
 ];
 
 export const philosophyContent = {
@@ -24,7 +24,7 @@ export const philosophyContent = {
       description: {
         vi: "Trầm được tuyển chọn từ rừng tự nhiên, rõ ràng nguồn gốc, tuân thủ luật pháp, không pha tạp — giữ trọn giá trị nguyên thủy của thiên nhiên.",
         en: "Agarwood selected from natural forests, with clear origins, full legal compliance, no adulteration — preserving the pristine value of nature.",
-        zh: "从天然森林中精选沉香，来源清晰，遵守法律，无掺杂——保留大自然的原始价值。",
+        zh: "从天然森林中精选沉香，来源清晰，遵守法律，无掺假——保留大自然的原始价值。",
       },
     },
     {
@@ -32,7 +32,7 @@ export const philosophyContent = {
       title: { vi: "Giữ trọn hương thật", en: "Preserving True Fragrance", zh: "保留真香" },
       description: {
         vi: "Mỗi sản phẩm được làm thủ công, không hóa chất, không can thiệp — để hương trầm sâu, ấm và tự nhiên nhất.",
-        en: "Each product is handcrafted, no chemicals, no interference — for the deepest, warmest, most natural agarwood scent.",
+        en: "Each product is handcrafted, no chemicals, no alteration — for the deepest, warmest, most natural agarwood scent.",
         zh: "每件产品均为手工制作，无化学品，无干预——呈现最深沉、最温暖、最自然的沉香香气。",
       },
     },
@@ -59,7 +59,7 @@ export const stores = [
     address: "Tiên Phước, TP. Đà Nẵng (Quảng Nam cũ)",
     hours: {
       vi: "8:00 - 22:00 (Thứ 2 - Chủ nhật)",
-      en: "8:00 - 22:00 (Mon - Sun)",
+      en: "8:00 AM - 10:00 PM (Mon - Sun)",
       zh: "8:00 - 22:00 (周一至周日)"
     },
     phone: "0765.942.942",
@@ -81,7 +81,7 @@ export const commitmentFeatures = [
     text: {
       vi: "100% trầm hương tự nhiên, không hóa chất",
       en: "100% natural agarwood, no chemicals",
-      zh: "100%天然沉香，无化学品"
+      zh: "100%天然沉香，无化学添加"
     }
   },
   {
@@ -96,7 +96,7 @@ export const commitmentFeatures = [
     icon: "Users",
     text: {
       vi: "Đội ngũ nghệ nhân lành nghề 10+ năm",
-      en: "Team of skilled artisans 10+ years",
+      en: "Team of skilled artisans with 10+ years of experience",
       zh: "10多年经验的熟练工匠团队"
     }
   }

@@ -1,4 +1,3 @@
-
 export interface BlogPost {
   id: string
   slug: string
@@ -71,14 +70,14 @@ Vòng tay trầm hương hay các mặt dây chuyền trầm hương được xe
       en: `
 In feng shui, agarwood is considered an item carrying extremely strong Yang energy, capable of warding off evil spirits, neutralizing bad luck, and bringing fortune to the owner. Here are the surprising effects of agarwood that you may not know.
 
-### 1. Warding off evil and impure air
-Agarwood is formed from injuries on the Aquilaria tree, absorbing the spiritual essence of heaven and earth over decades or centuries. Therefore, it carries the purest source of energy. When burning agarwood or placing it in the house, its fragrance and energy help purify the space, dispel bad vibes, and bring openness and peace.
+### 1. Warding off evil spirits and negative energy
+Agarwood is formed from injuries on the Aquilaria tree, absorbing the spiritual essence of heaven and earth over decades or centuries. Therefore, it carries the purest source of energy. When burning agarwood or placing it in the house, its fragrance and energy help purify the space, dispel negative energy, and bring openness and peace.
 
 ### 2. Attracting wealth and luck
 Many entrepreneurs and business people often place agarwood ornaments or burn agarwood at their workplace. They believe the fragrance helps activate wealth sectors, making work smooth and successful. The pure scent also helps maintain a clear mind, leading to sound business decisions.
 
 ### 3. Balancing energy and mind
-The power of agarwood doesn't stop at the space but directly affects people. Wearing an agarwood bracelet helps the owner always feel at peace, reducing stress and temper. In feng shui, a peaceful soul is the **strongest magnet** to attract good things.
+The power of agarwood doesn't stop at the space but directly affects people. Wearing an agarwood bracelet helps the owner always feel at peace, reducing stress and irritability. In feng shui, a peaceful soul is the **strongest magnet** to attract good things.
 
 ### 4. Protective talisman
 Agarwood bracelets or pendants are seen as protective talismans. It protects the wearer from negative environmental impacts, especially when going to places with heavy negative energy.
@@ -143,13 +142,13 @@ Trầm hương tự nhiên hoàn toàn không độc. Ngược lại, nó là m�
       en: `
 Many people are concerned that burning agarwood in enclosed spaces or inhaling it frequently might be harmful. However, the truth is quite the opposite if you use clean, natural agarwood.
 
-### 1. Stress reduction and sedation
+### 1. Stress relief and relaxation
 The compound benzylacetone in agarwood has a calming effect on the central nervous system. When inhaling agarwood scent, the body releases hormones that help relax, reduce anxiety, and alleviate stress. This is why agarwood is often used in meditation and yoga.
 
 ### 2. Improving sleep quality
 If you frequently suffer from insomnia, try burning a small agarwood cone about 30 minutes before bed. The lingering fragrance will help you fall asleep easier and sleep deeper without nightmares.
 
-### 3. Cleaning the respiratory tract
+### 3. Cleansing the respiratory tract
 Natural agarwood has antibacterial and anti-inflammatory properties. Inhaling clean agarwood scent can help soothe the throat, reduce nasal congestion, and purify the surrounding air, protecting the respiratory system from bacteria.
 
 ### 4. Is agarwood toxic?
@@ -216,10 +215,10 @@ Những loại vòng này thường có màu sắc đen sẫm nhân tạo, mùi 
 In today's market, the term 'sinking agarwood' appears very commonly. To be a wise buyer, you need to clearly distinguish between different types of sinking agarwood.
 
 ### 1. Definition of sinking agarwood
-Sinking agarwood (Tram Sanh Chim) is formed from the outer bark layer of the Aquilaria tree. When the tree is injured, resin is secreted to cover the wound, forming thin layers. 'Sinking' here means the essential oil content in the agarwood piece is so high that its density is heavier than water, causing it to sink when placed in water.
+Sinking agarwood is formed from the outer bark layer of the Aquilaria tree. When the tree is injured, resin is secreted to cover the wound, forming thin layers. 'Sinking' here means the essential oil content in the agarwood piece is so high that its density is heavier than water, causing it to sink when placed in water.
 
 ### 2. Natural vs. Laminated Sinking Agarwood
-In nature, solid pieces of sinking agarwood are very thin and rare. Therefore, to create products like bracelets, people use the **lamination method**. They stack thin layers of agarwood and use a specialized glue to bind them together, then turn them into beads.
+In nature, solid pieces of sinking agarwood are very thin and rare. Therefore, to create products like bracelets, people use the **layering method**. They stack thin layers of agarwood and use a specialized glue to bind them together, then turn them into beads.
 
 ### 3. The truth about quality
 Because glue is used, laminated agarwood usually doesn't have the same durability as natural solid agarwood. Some low-quality glues can cause skin irritation for sensitive people. However, if made with good glue and quality agarwood, laminated products still offer great aesthetics and fragrance at a reasonable price.
@@ -235,7 +234,7 @@ These bracelets often have artificial dark black colors, a pungent chemical smel
 ### 1. 什么是沉水沉香
 沉水沉香是由沉香树的外皮层形成的。当树木受损时，树脂会分泌出来覆盖伤口，形成薄层。“沉水”在这里意味着沉香片中的精油含量非常高，使其密度比水重，导致放入水中时会下沉。
 
-### 2. 天然 vs 压层沉水沉香
+### 2. 天然沉香与压层沉水沉香的对比
 在自然界中，整块的沉水沉香非常薄且稀有。因此，为了制作手链等产品，人们使用**压层法**。他们将薄层的沉香堆叠在一起，并使用专用胶水将其粘合，然后加工成珠子。
 
 ### 3. 质量真相
@@ -258,12 +257,12 @@ These bracelets often have artificial dark black colors, a pungent chemical smel
     slug: "nguoi-menh-hoa-nen-deo-gi",
     title: {
       vi: "Người mệnh Hỏa nên đeo gì? Bí quyết chọn vòng phong thủy",
-      en: "What should people of the Fire element wear?",
-      zh: "火命人应该佩戴什么？"
+      en: "What should Fire element people wear? Tips for choosing feng shui bracelets",
+      zh: "火命人应该佩戴什么？选择风水手链的秘诀",
     },
     excerpt: {
       vi: "Chọn vòng phong thủy đúng bản mệnh không chỉ giúp tăng thêm vẻ đẹp mà còn mang lại sự hanh thông trong cuộc sống và sự nghiệp.",
-      en: "Choosing the right feng shui bracelet for your destiny not only enhances beauty but also brings success in life and career.",
+      en: "Choosing the right feng shui bracelet for your birth element not only enhances beauty but also brings success in life and career.",
       zh: "根据命理选择正确的风水手链，不仅能增加美感，还能带来生活和事业的顺利。"
     },
     content: {
@@ -287,7 +286,7 @@ Vì Thủy khắc Hỏa, người mệnh Hỏa nên hạn chế đeo các vật 
 **Lời nhắn:** Một chiếc vòng trầm hương mix thạch anh tím không chỉ là món trang sức tinh tế mà còn là trợ thủ phong thủy đắc lực cho người mệnh Hỏa.
       `,
       en: `
-In the five elements, Fire symbolizes fire, passion, and strength. Choosing the right feng shui item will help people of the Fire element restrain their temper and maximize their abilities.
+In the five elements, the Fire element symbolizes passion, energy, and strength. Choosing the right feng shui item will help people of the Fire element restrain their temper and maximize their abilities.
 
 ### 1. Harmonious and supporting colors
 According to the law of the five elements, Wood produces Fire. Therefore, Fire element people are extremely suitable for colors belonging to the Wood element, such as **green**. Additionally, they can choose harmonious colors of the Fire element itself, like **red, pink, and purple**.
@@ -341,7 +340,7 @@ Since Water restrains Fire, Fire element people should limit wearing items with 
     },
     excerpt: {
       vi: "Đeo vòng phong thủy không chỉ là sở thích mà còn là sự tôn trọng đối với các quy luật năng lượng. Đừng để những sai lầm nhỏ làm mất đi tác dụng của vòng.",
-      en: "Wearing a feng shui bracelet is not just a hobby but a respect for energy laws. Don't let small mistakes lose the effect of the bracelet.",
+      en: "Wearing a feng shui bracelet is not just a style choice but a respect for energy laws. Don't let small mistakes lose the effect of the bracelet.",
       zh: "佩戴风水手链不仅是个人爱好，更是对能量规律的尊重。不要因为小错误而失去手链的效果。"
     },
     content: {
@@ -384,7 +383,7 @@ Avoid placing feng shui bracelets in toilets, on the floor, or in damp, dark pla
 After a period of wearing, a feng shui bracelet recognizes and connects with the owner's energy. Lending it to others can disrupt this energy source.
 
 ### 4. Wearing a bracelet that is too old or severely cracked
-In feng shui, cracked items often carry signs of 'blocking disaster'. When a bracelet is too old or damaged, you should consider replacing or renewing the beads.
+In feng shui, cracked items often carry signs of 'warding off calamity'. When a bracelet is too old or damaged, you should consider replacing or renewing the beads.
 
 ### 5. Wearing bracelets on both hands at the same time
 Many people have the habit of wearing multiple bracelets on both wrists. However, this image in feng shui resembles 'handcuffs', which can hinder luck and freedom.
@@ -395,7 +394,7 @@ Dirt and sweat accumulated over time make the bracelet lose its shine and affect
 ### 7. Having bad thoughts while wearing the bracelet
 Feng shui items only work when accompanied by a kind soul. Wearing a bracelet but with a restless mind and unkind actions makes it hard for the bracelet to protect you.
 
-**Conclusion:** 'Precaution is better than cure', following these rules will help your bracelet stay shiny and full of positive energy.
+**Conclusion:** 'Observe the rules and good fortune follows', following these rules will help your bracelet stay shiny and full of positive energy.
       `,
       zh: `
 风水手链，特别是沉香手链，承载着灵气和能量。为了让手链最大限度地发挥护身作用，您需要避免以下7个禁忌。
@@ -421,7 +420,7 @@ Feng shui items only work when accompanied by a kind soul. Wearing a bracelet bu
 ### 7. 佩戴手链时存有恶念
 风水物品只有在伴随着善良灵魂时才起作用。佩戴手链但心神不宁、行为不端，手链也难以保护您。
 
-**结论：** “避邪求福”，遵守这些规则将帮助您的手链保持光亮并充满正能量。
+**结论：** “遵守规则，好运自来”，遵守这些规则将帮助您的手链保持光亮并充满正能量。
       `
     },
     image: "/images/blogs/5.webp",
@@ -435,12 +434,12 @@ Feng shui items only work when accompanied by a kind soul. Wearing a bracelet bu
     slug: "co-nen-dot-tram-huong-tren-ban-tho",
     title: {
       vi: "Có nên đốt trầm hương trên bàn thờ, khi nào nên đốt?",
-      en: "Should agarwood be burned on the altar, when should it be burned?",
+      en: "Should you burn agarwood on the altar? When is the right time?",
       zh: "应该在祭坛上烧沉香吗？什么时候烧？"
     },
     excerpt: {
       vi: "Đốt trầm trên bàn thờ là một nét đẹp tâm linh của người Việt. Nhưng thực hiện thế nào cho đúng và trang trọng nhất thì không phải ai cũng rõ.",
-      en: "Burning agarwood on the altar is a spiritual beauty of Vietnamese people. But how to do it correctly and most solemnly is not clear to everyone.",
+      en: "Burning agarwood on the altar is a cherished spiritual tradition of Vietnamese people. But how to do it correctly and most solemnly is not clear to everyone.",
       zh: "在祭坛上烧沉香是越南人的一种精神美。但如何正确且庄重地操作，并不是每个人都清楚。"
     },
     content: {
@@ -484,7 +483,7 @@ For the altar, you should choose agarwood sticks (coreless) or agarwood cones. A
 ### 4. Placement of the incense burner
 The incense burner should be placed in a solemn position on the altar, usually in front of or next to the incense bowl. Ensure the burner is always clean and wiped regularly.
 
-**Conclusion:** Burning agarwood on the altar is a beautiful act, helping our souls stay more quiet and connect more deeply with our roots.
+**Conclusion:** Burning agarwood on the altar is a beautiful act, helping our souls grow quieter and connect more deeply with our roots.
       `,
       zh: `
 长期以来，沉香香气一直被视为连接现实世界与精神世界的纽带。在祭坛上焚烧沉香不仅带来香气，还具有深远的意义。
@@ -500,10 +499,10 @@ The incense burner should be placed in a solemn position on the altar, usually i
 - **感到家庭不稳时：** 沉香的能量有助于重新平衡磁场，带来平安。
 
 ### 3. 应该使用哪种沉香？
-对于祭坛，您应选择沉香线香（无芯）或沉香线。沉香塔香在香炉中燃烧时会产生美丽的烟雾和持久的香气。最重要的一点是必须使用**纯净沉香**，避免使用廉价的化学沉香，因为那会失去庄重感并影响健康。
+对于祭坛，您应选择沉香线香（无芯）或沉香塔香。沉香塔香在香炉中燃烧时会产生美丽的烟雾和持久的香气。最重要的一点是必须使用**纯净沉香**，避免使用廉价的化学沉香，因为那会失去庄重感并影响健康。
 
 ### 4. 香炉的摆放位置
-香炉应摆放在祭坛上的庄重位置，通常在香炉碗的前面或旁边。确保香炉始终干净并定期擦拭。
+香炉应摆放在祭坛上的庄重位置，通常在香炉的前面或旁边。确保香炉始终干净并定期擦拭。
 
 **结论：** 在祭坛上焚烧沉香是一种美好的行为，有助于我们的灵魂保持宁静，并与根源建立更深层次的联系。
       `
