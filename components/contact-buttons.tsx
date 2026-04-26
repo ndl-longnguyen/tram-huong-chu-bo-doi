@@ -26,6 +26,16 @@ export function ContactButtons() {
     })
   }
 
+  const PAGE_ID = '122094725762008027'
+  const [messengerUrl, setMessengerUrl] = useState(`https://m.me/${PAGE_ID}`)
+
+  useEffect(() => {
+    const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    if (isMobile) {
+      setMessengerUrl(`fb-messenger://user-thread/${PAGE_ID}`)
+    }
+  }, [])
+
   return (
     <div className="fixed bottom-6 right-4 sm:right-6 z-40 flex flex-col items-end gap-3 sm:gap-4 pointer-events-none">
       {/* Phone Call */}
@@ -42,7 +52,7 @@ export function ContactButtons() {
 
       {/* Messenger */}
       <a
-        href="https://m.me/tramhuongchubodoivn"
+        href={messengerUrl}
         className="group pointer-events-auto relative w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
         aria-label="Messenger"
       >

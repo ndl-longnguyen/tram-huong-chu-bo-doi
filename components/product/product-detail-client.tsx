@@ -4,16 +4,16 @@ import { useState, useEffect } from "react"
 import { toast } from "sonner"
 import Link from "next/link"
 import Image from "next/image"
-import { 
-  ChevronRight, 
-  Star, 
-  Minus, 
-  Plus, 
-  Heart, 
-  Share2, 
-  Truck, 
-  Shield, 
-  RefreshCw, 
+import {
+  ChevronRight,
+  Star,
+  Minus,
+  Plus,
+  Heart,
+  Share2,
+  Truck,
+  Shield,
+  RefreshCw,
   Phone,
   Check,
   Package,
@@ -37,7 +37,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
   const [isMounted, setIsMounted] = useState(false)
-  
+
   const isWishlisted = isInWishlist(product.id)
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
   }, [])
 
   const localeKey = locale as 'vi' | 'en' | 'zh'
-  
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price) + ' đ'
   }
@@ -60,23 +60,34 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
 
   // Generate Messenger URL with pre-filled message
   const getMessengerUrl = () => {
-    if (!isMounted) return 'https://m.me/tramhuongchubodoivn'
+    const PAGE_ID = '122094725762008027'
+    if (!isMounted) return `https://m.me/${PAGE_ID}`
 
     const baseUrl = window.location.origin
     const productUrl = `${baseUrl}/${locale}/san-pham/${product.id}`
     const productName = product.name[localeKey]
-    const productPrice = product.salePrice 
+    const productPrice = product.salePrice
       ? formatPrice(product.salePrice)
       : formatPrice(product.originalPrice)
-    
+
     const messageTemplates = {
       vi: `Xin chào, tôi muốn đặt hàng sản phẩm:\n\n${productName}\nGiá: ${productPrice}\nSố lượng: ${quantity}\n\nLink sản phẩm: ${productUrl}`,
       en: `Hello, I would like to order:\n\n${productName}\nPrice: ${productPrice}\nQuantity: ${quantity}\n\nProduct link: ${productUrl}`,
       zh: `您好，我想订购产品：\n\n${productName}\n价格：${productPrice}\n数量：${quantity}\n\n产品链接：${productUrl}`
     }
-    
-    const message = encodeURIComponent(messageTemplates[localeKey])
-    return `https://m.me/tramhuongchubodoivn?text=${message}`
+
+    const message = messageTemplates[localeKey]
+    const encodedMessage = encodeURIComponent(message)
+
+    // Detect mobile for deep linking
+    const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+    if (isMobile) {
+      // Use deep link for mobile apps
+      return `fb-messenger://user-thread/${PAGE_ID}`
+    }
+
+    return `https://m.me/${PAGE_ID}?text=${encodedMessage}`
   }
 
   const toggleWishlist = () => {
@@ -182,9 +193,8 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                   <button
                     key={idx}
                     onClick={() => setSelectedImage(idx)}
-                    className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg md:rounded-xl overflow-hidden border-2 transition-all ${
-                      selectedImage === idx ? "border-primary ring-2 ring-primary/20" : "border-transparent hover:border-border"
-                    }`}
+                    className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg md:rounded-xl overflow-hidden border-2 transition-all ${selectedImage === idx ? "border-primary ring-2 ring-primary/20" : "border-transparent hover:border-border"
+                      }`}
                   >
                     <div className="relative w-full h-full">
                       <Image
@@ -204,7 +214,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
             <div className="space-y-4 md:space-y-6 min-w-0">
               {/* Category & SKU */}
               <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm">
-                <Link 
+                <Link
                   href={getLocalizedPath(`/${product.categorySlug}`)}
                   className="px-2.5 py-1 md:px-3 bg-primary/10 text-primary rounded-full font-medium hover:bg-primary/20 transition-colors"
                 >
@@ -224,9 +234,8 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 md:w-5 md:h-5 ${
-                        i < product.rating ? "fill-accent text-accent" : "fill-gray-200 text-gray-200"
-                      }`}
+                      className={`w-4 h-4 md:w-5 md:h-5 ${i < product.rating ? "fill-accent text-accent" : "fill-gray-200 text-gray-200"
+                        }`}
                     />
                   ))}
                 </div>
@@ -298,18 +307,17 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     <span className="text-center">{t("product.detail.inquiry")}</span>
                   </a>
                   <div className="flex gap-2 sm:w-auto">
-                    <button 
+                    <button
                       onClick={toggleWishlist}
-                      className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 ${
-                        isWishlisted 
-                          ? 'border-red-500 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30' 
-                          : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
-                      } text-sm md:text-base font-semibold rounded-full hover:shadow-md transition-all duration-300 min-w-0`}
+                      className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-4 border-2 ${isWishlisted
+                        ? 'border-red-500 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30'
+                        : 'border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                        } text-sm md:text-base font-semibold rounded-full hover:shadow-md transition-all duration-300 min-w-0`}
                     >
                       <Heart className={`w-4 h-4 md:w-5 md:h-5 shrink-0 ${isWishlisted ? 'fill-current' : ''}`} />
                       <span className="hidden sm:inline truncate">{isInWishlist(product.id) ? t("product.detail.inWishlist") : t("product.detail.addWishlist")}</span>
                     </button>
-                    <button 
+                    <button
                       onClick={handleShare}
                       className="flex items-center justify-center px-3 md:px-4 py-3 md:py-4 border-2 border-border rounded-full hover:bg-muted hover:border-primary/50 transition-all duration-300 shrink-0"
                     >

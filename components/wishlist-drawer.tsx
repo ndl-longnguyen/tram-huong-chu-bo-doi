@@ -13,6 +13,33 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
   const { t, locale, getLocalizedPath } = useLanguage()
   const localeKey = locale as "vi" | "en" | "zh"
 
+  const PAGE_ID = '122094725762008027'
+  
+  const messengerUrl = React.useMemo(() => {
+    const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    if (isMobile) return `fb-messenger://user-thread/${PAGE_ID}`
+
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
+    const topProducts = wishlistItems.slice(0, 5)
+    
+    const labels = {
+      vi: { intro: "Xin chào, tôi quan tâm đến các sản phẩm sau trong danh sách yêu thích:", price: "Giá", link: "Link" },
+      en: { intro: "Hello, I am interested in the following products from my wishlist:", price: "Price", link: "Link" },
+      zh: { intro: "您好，我对我的愿望清单中的以下产品感兴趣：", price: "价格", link: "链接" }
+    }
+    
+    const currentLabels = labels[localeKey] || labels.vi
+
+    const productList = topProducts.map(p => {
+      const price = new Intl.NumberFormat('vi-VN').format(p.salePrice || p.originalPrice) + ' đ'
+      const url = `${baseUrl}/${locale}/san-pham/${p.id}`
+      return `- ${p.name[localeKey]}\n  ${currentLabels.price}: ${price}\n  ${currentLabels.link}: ${url}`
+    }).join('\n\n')
+
+    const message = `${currentLabels.intro}\n\n${productList}`
+    return `https://m.me/${PAGE_ID}?text=${encodeURIComponent(message)}`
+  }, [wishlistItems, locale, localeKey])
+
   return (
     <Drawer.Root direction="right">
       <Drawer.Trigger asChild>
@@ -111,13 +138,13 @@ export function WishlistDrawer({ children }: { children: React.ReactNode }) {
 
           {wishlistItems.length > 0 && (
             <div className="p-6 bg-muted/30 border-t border-border">
-              <Link
-                href={getLocalizedPath("/lien-he")}
+              <a
+                href={messengerUrl}
                 className="w-full flex items-center justify-center gap-2 py-4 bg-primary text-primary-foreground rounded-2xl font-bold hover:shadow-xl transition-all"
               >
                 <ShoppingBag className="w-5 h-5" />
                 {t("wishlist.inquiryAll")}
-              </Link>
+              </a>
             </div>
           )}
         </Drawer.Content>
