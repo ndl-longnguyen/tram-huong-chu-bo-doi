@@ -15,13 +15,16 @@ import {
 import { useLanguage } from "@/lib/i18n/language-context"
 import { Locale } from "@/lib/i18n/translations"
 import { BlogPost, blogPosts } from "@/data/blog-content"
+import type { Product } from "@/lib/products"
 import ReactMarkdown from "react-markdown"
+import { ProductCard } from "@/components/product-card"
 
 interface BlogDetailClientProps {
   post: BlogPost
+  recommendedProducts: Product[]
 }
 
-export function BlogDetailClient({ post }: BlogDetailClientProps) {
+export function BlogDetailClient({ post, recommendedProducts }: BlogDetailClientProps) {
   const { locale, getLocalizedPath, t } = useLanguage()
   const l = locale as Locale
   const [readingProgress, setReadingProgress] = useState(0)
@@ -146,7 +149,7 @@ export function BlogDetailClient({ post }: BlogDetailClientProps) {
             <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden mb-16 shadow-2xl border-background group">
               <Image
                 src={post.image}
-                alt={post.title[l]}
+                alt={`${post.title[l]} - Trầm Hương Chú Bộ Đội`}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -230,12 +233,36 @@ export function BlogDetailClient({ post }: BlogDetailClientProps) {
                 </div>
               </div>
 
+              {recommendedProducts.length > 0 && (
+                <div className="bg-card rounded-3xl p-8 border border-border shadow-sm">
+                  <h3 className="font-serif text-xl text-foreground font-bold mb-8 flex items-center gap-3">
+                    <span className="w-1.5 h-6 bg-primary rounded-full" />
+                    {t("blog.recommendedProducts")}
+                  </h3>
+
+                  <div className="grid grid-cols-1 gap-5">
+                    {recommendedProducts.map((product) => (
+                      <ProductCard
+                        key={product.id}
+                        id={product.id}
+                        name={product.name[l]}
+                        image={product.image}
+                        originalPrice={product.originalPrice}
+                        salePrice={product.salePrice ?? undefined}
+                        rating={product.rating}
+                        badgeType={product.badgeType ?? undefined}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Banner / CTA */}
               <div className="relative rounded-3xl overflow-hidden aspect-[4/5] group shadow-xl">
                 <Image
                   src={post.image}
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  alt={t("blog.promo")}
+                  alt={`${t("blog.promoTitle")} - Trầm Hương Chú Bộ Đội`}
                   fill
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">

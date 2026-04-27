@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { AboutPageClient } from "@/components/about/about-page-client"
-
-type PageProps = { params: Promise<{ locale: string }> }
+import { buildAbsoluteUrl, createPageMetadata } from '@/lib/seo'
+import type { LocalizedPageProps } from '@/lib/i18n/config'
 
 const metaByLocale: Record<string, { title: string; description: string; keywords: string[] }> = {
   vi: {
@@ -23,33 +23,20 @@ const metaByLocale: Record<string, { title: string; description: string; keyword
   },
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: LocalizedPageProps): Promise<Metadata> {
   const { locale } = await params
   const meta = metaByLocale[locale] || metaByLocale.vi
 
-  return {
+  return createPageMetadata({
+    locale,
+    pathname: '/gioi-thieu',
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
-    alternates: {
-      canonical: `/${locale}/gioi-thieu`,
-      languages: {
-        'vi-VN': '/vi/gioi-thieu',
-        'en-US': '/en/gioi-thieu',
-        'zh-CN': '/zh/gioi-thieu',
-      },
-    },
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: `https://tramhuongchubodoi.com/${locale}/gioi-thieu`,
-      type: 'website',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: meta.title }],
-    },
-  }
+  })
 }
 
-export default async function AboutPage({ params }: PageProps) {
+export default async function AboutPage({ params }: LocalizedPageProps) {
   const { locale } = await params
 
   const jsonLd = {
@@ -57,12 +44,12 @@ export default async function AboutPage({ params }: PageProps) {
     '@type': 'AboutPage',
     name: metaByLocale[locale]?.title || metaByLocale.vi.title,
     description: metaByLocale[locale]?.description || metaByLocale.vi.description,
-    url: `https://tramhuongchubodoi.com/${locale}/gioi-thieu`,
+    url: buildAbsoluteUrl(`/${locale}/gioi-thieu`),
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang chủ', item: `https://tramhuongchubodoi.com/${locale}` },
-        { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'About Us' : locale === 'zh' ? '关于我们' : 'Giới Thiệu', item: `https://tramhuongchubodoi.com/${locale}/gioi-thieu` },
+        { '@type': 'ListItem', position: 1, name: locale === 'en' ? 'Home' : locale === 'zh' ? '首页' : 'Trang chủ', item: buildAbsoluteUrl(`/${locale}`) },
+        { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'About Us' : locale === 'zh' ? '关于我们' : 'Giới Thiệu', item: buildAbsoluteUrl(`/${locale}/gioi-thieu`) },
       ],
     },
   }

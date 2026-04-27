@@ -4,16 +4,16 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BlogDetailClient } from "@/components/blog/blog-detail-client"
 import { blogPosts, getBlogPostBySlug } from "@/data/blog-content"
+import { getProductsByCategory } from "@/lib/products"
+import { resolveLocale, SUPPORTED_LOCALES } from '@/lib/i18n/config'
+import { buildAbsoluteUrl, createPageMetadata, toIsoDateString } from '@/lib/seo'
 
-type PageProps = {
-  params: Promise<{ locale: string; slug: string }>
-}
+type PageProps = { params: Promise<{ locale: string; slug: string }> }
 
 export async function generateStaticParams() {
-  const locales = ['vi', 'en', 'zh']
   const params: { locale: string; slug: string }[] = []
 
-  for (const locale of locales) {
+  for (const locale of SUPPORTED_LOCALES) {
     for (const post of blogPosts) {
       params.push({ locale, slug: post.slug })
     }
@@ -32,29 +32,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const l = locale as 'vi' | 'en' | 'zh'
+  const l = resolveLocale(locale)
 
-  return {
+  return createPageMetadata({
+    locale,
+    pathname: `/blog/${slug}`,
     title: post.title[l],
     description: post.excerpt[l],
-    alternates: {
-      canonical: `/${locale}/blog/${slug}`,
-      languages: {
-        'vi-VN': `/vi/blog/${slug}`,
-        'en-US': `/en/blog/${slug}`,
-        'zh-CN': `/zh/blog/${slug}`,
-      },
-    },
-    openGraph: {
-      title: post.title[l],
-      description: post.excerpt[l],
-      url: `https://tramhuongchubodoi.com/${locale}/blog/${slug}`,
-      type: 'article',
-      publishedTime: post.date,
-      authors: [post.author[l]],
-      images: [{ url: post.image, width: 1200, height: 630, alt: post.title[l] }],
-    },
-  }
+    type: 'article',
+    image: post.image,
+  })
 }
 
 export default async function BlogDetailPage({ params }: PageProps) {
@@ -65,25 +52,38 @@ export default async function BlogDetailPage({ params }: PageProps) {
     notFound()
   }
 
-  const l = locale as 'vi' | 'en' | 'zh'
+  const l = resolveLocale(locale)
+  const publishedDate = toIsoDateString(post.date)
+  const recommendedCategorySlug =
+    slug.includes('hit') ? 'nhang-nu' :
+    slug.includes('sanh-chim') ? 'vong-tay' :
+    slug.includes('phong-thuy') ? 'vong-tay' :
+    'dot-xong-lu'
+  const recommendedProducts = getProductsByCategory(recommendedCategorySlug).slice(0, 2)
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    mainEntityOfPage: buildAbsoluteUrl(`/${locale}/blog/${slug}`),
     headline: post.title[l],
+    alternativeHeadline: post.excerpt[l],
     description: post.excerpt[l],
     image: post.image,
-    datePublished: post.date,
+    datePublished: publishedDate,
+    dateModified: publishedDate,
+    inLanguage: locale,
+    articleSection: post.category[l],
+    keywords: [post.category[l], 'trầm hương', 'agarwood', post.title[l]],
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: post.author[l],
     },
     publisher: {
       '@type': 'Organization',
       name: 'Trầm Hương Chú Bộ Đội',
-      logo: { '@type': 'ImageObject', url: 'https://tramhuongchubodoi.com/logo.png' },
+      logo: { '@type': 'ImageObject', url: buildAbsoluteUrl('/logo.png') },
     },
-    url: `https://tramhuongchubodoi.com/${locale}/blog/${slug}`,
+    url: buildAbsoluteUrl(`/${locale}/blog/${slug}`),
   }
 
   return (
@@ -94,7 +94,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
       />
       <Header />
       <main className="flex-1">
-        <BlogDetailClient post={post} />
+        <BlogDetailClient post={post} recommendedProducts={recommendedProducts} />
       </main>
       <Footer />
     </div>

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PolicyPageClient } from "@/components/policy/policy-page-client"
-
-type PageProps = { params: Promise<{ locale: string }> }
+import type { LocalizedPageProps } from '@/lib/i18n/config'
+import { createPageMetadata } from '@/lib/seo'
 
 const metaByLocale: Record<string, { title: string; description: string }> = {
   vi: {
@@ -20,24 +20,18 @@ const metaByLocale: Record<string, { title: string; description: string }> = {
   },
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: LocalizedPageProps): Promise<Metadata> {
   const { locale } = await params
   const meta = metaByLocale[locale] || metaByLocale.vi
-  return {
+  return createPageMetadata({
+    locale,
+    pathname: '/chinh-sach-dieu-khoan',
     title: meta.title,
     description: meta.description,
-    alternates: {
-      canonical: `https://tramhuongchubodoi.com/${locale}/chinh-sach-dieu-khoan`,
-      languages: {
-        'vi': '/vi/chinh-sach-dieu-khoan',
-        'en': '/en/chinh-sach-dieu-khoan',
-        'zh': '/zh/chinh-sach-dieu-khoan',
-      },
-    },
-  }
+  })
 }
 
-export default async function TermsPage({ params }: PageProps) {
+export default async function TermsPage({ params }: LocalizedPageProps) {
   return (
     <>
       <Header />

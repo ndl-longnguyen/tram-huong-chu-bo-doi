@@ -154,6 +154,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "blog.subscribe": "Đăng ký",
     "blog.share": "Chia sẻ",
     "blog.relatedPosts": "Bài viết liên quan",
+    "blog.recommendedProducts": "Sản phẩm phù hợp",
     "blog.tags": "Thẻ",
     "blog.copyLink": "Đã sao chép liên kết",
     "blog.toc": "Mục lục",
@@ -202,6 +203,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.detail.age": "Tuổi trầm",
     "product.detail.specifications": "Thông số kỹ thuật",
     "product.detail.relatedProducts": "Sản phẩm liên quan",
+    "product.detail.relatedArticles": "Bài viết liên quan",
+    "product.detail.readBuyingGuide": "Đọc thêm kiến thức trước khi chọn mua",
     "products.showResults": "Xem kết quả",
     "products.noFound": "CHƯA TÌM THẤY SẢN PHẨM PHÙ HỢP?",
     "products.noFoundDesc": "Hãy liên hệ trực tiếp với chúng tôi qua Hotline, Zalo hoặc Messenger để được tư vấn và đặt hàng theo yêu cầu riêng của bạn.",
@@ -326,6 +329,37 @@ export const translations: Record<Locale, Record<string, string>> = {
 
     // Policies
     "policy.lastUpdated": "Ngày cập nhật cuối: 21/04/2026. Mọi thắc mắc vui lòng liên hệ hotline:",
+
+    // Category Common
+    "category.home": "Trang chủ",
+    "category.collection": "BỘ SƯU TẬP",
+    "category.products": "sản phẩm",
+
+    // Contact form placeholders
+    "contact.enterName": "Nhập họ tên",
+    "contact.enterPhone": "Nhập số điện thoại",
+    "contact.enterEmail": "Nhập email của bạn",
+    "contact.messageContent": "Nội dung",
+
+    // SEO Metadata
+    "meta.home.title": "Trầm Hương Chú Bộ Đội | Tinh Hoa Trầm Việt - Di Sản Á Đông",
+    "meta.home.description": "Trầm Hương Chú Bộ Đội chuyên cung cấp vòng tay trầm hương, nhang trầm, mỹ nghệ trầm hương tự nhiên 100%. Tinh hoa nghệ nhân Việt, bảo hành trọn đời.",
+    "meta.about.title": "Câu Chuyện Thương Hiệu | Trầm Hương Chú Bộ Đội",
+    "meta.about.description": "Khám phá hành trình mang tinh hoa trầm Việt vươn xa. Triết lý Tinh - Tín - Tâm trong từng sản phẩm trầm hương thủ công.",
+    "meta.contact.title": "Liên Hệ Tư Vấn | Trầm Hương Chú Bộ Đội",
+    "meta.contact.description": "Hỗ trợ tư vấn sản phẩm trầm hương 24/7. Hệ thống cửa hàng tại Đà Nẵng và giao hàng toàn quốc.",
+    "meta.bracelet.title": "Vòng Tay Trầm Hương Cao Cấp | Tinh Hoa Trầm Việt",
+    "meta.bracelet.description": "Bộ sưu tập vòng tay trầm hương tự nhiên, chế tác tinh xảo, mang lại bình an và tài lộc cho chủ nhân.",
+    "meta.incense.title": "Nhang Trầm Hương Sạch | Hương Thơm Thanh Khiết",
+    "meta.incense.description": "Nhang nụ trầm hương, nhang không tăm tự nhiên. Không hóa chất, an toàn cho sức khỏe, phù hợp xông nhà, thiền định.",
+    "meta.art.title": "Mỹ Nghệ Trầm Hương | Tác Phẩm Nghệ Thuật Độc Bản",
+    "meta.art.description": "Tượng trầm, tiểu cảnh trầm hương và các tác phẩm mỹ nghệ phong thủy cao cấp từ trầm khối tự nhiên.",
+    "meta.gift.title": "Quà Tặng Trầm Hương | Sang Trọng & Ý Nghĩa",
+    "meta.gift.description": "Quà tặng đối tác, người thân tinh tế từ trầm hương. Gói trọn tâm tình trong từng hộp quà cao cấp.",
+    "meta.burner.title": "Dụng Cụ Xông Trầm | Đẳng Cấp Thưởng Trầm",
+    "meta.burner.description": "Lư xông trầm, thác khói, phụ kiện thưởng trầm đa dạng mẫu mã, chất liệu cao cấp.",
+    "meta.blog.title": "Blog Trầm Hương | Kiến Thức Phong Thủy & Sức Khỏe",
+    "meta.blog.description": "Chia sẻ kiến thức chuyên sâu về trầm hương Việt Nam - cách phân biệt thật giả, ý nghĩa phong thủy và lịch sử trầm hương.",
   },
   en: {
     // Navigation
@@ -474,6 +508,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "blog.subscribe": "Subscribe",
     "blog.share": "Share",
     "blog.relatedPosts": "Related Posts",
+    "blog.recommendedProducts": "Recommended Products",
     "blog.tags": "Tags",
     "blog.copyLink": "Link copied",
     "blog.toc": "Table of Contents",
@@ -522,6 +557,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.detail.age": "Age",
     "product.detail.specifications": "Specifications",
     "product.detail.relatedProducts": "Related Products",
+    "product.detail.relatedArticles": "Related Articles",
+    "product.detail.readBuyingGuide": "Read more before choosing a product",
     "products.showResults": "Show Results",
     "products.noFound": "CAN'T FIND WHAT YOU'RE LOOKING FOR?",
     "products.noFoundDesc": "Please contact us directly via Hotline, Zalo, or Messenger for personalized consultation and custom orders according to your requirements.",
@@ -646,6 +683,37 @@ export const translations: Record<Locale, Record<string, string>> = {
 
     // Policies
     "policy.lastUpdated": "Last updated: April 21, 2026. For any inquiries, please contact our hotline:",
+
+    // Category Common
+    "category.home": "Home",
+    "category.collection": "COLLECTION",
+    "category.products": "products",
+
+    // Contact form placeholders
+    "contact.enterName": "Enter your name",
+    "contact.enterPhone": "Enter phone number",
+    "contact.enterEmail": "Enter your email",
+    "contact.messageContent": "Content",
+
+    // SEO Metadata
+    "meta.home.title": "Chu Bo Doi Agarwood | Vietnamese Agarwood Essence - Asian Heritage",
+    "meta.home.description": "Chu Bo Doi Agarwood specializes in 100% natural agarwood bracelets, incense, and artworks. Craftsmanship excellence, lifetime warranty.",
+    "meta.about.title": "Brand Story | Chu Bo Doi Agarwood",
+    "meta.about.description": "Discover our journey of bringing Vietnamese agarwood essence to the world. Philosophy of Excellence - Trust - Dedication.",
+    "meta.contact.title": "Contact & Support | Chu Bo Doi Agarwood",
+    "meta.contact.description": "24/7 agarwood product consultation. Store system in Da Nang and worldwide shipping.",
+    "meta.bracelet.title": "Premium Agarwood Bracelets | Vietnamese Essence",
+    "meta.bracelet.description": "Collection of natural agarwood bracelets, exquisitely crafted to bring peace and prosperity.",
+    "meta.incense.title": "Natural Agarwood Incense | Pure Fragrance",
+    "meta.incense.description": "Agarwood cones and sticks. No chemicals, safe for health, perfect for home scenting and meditation.",
+    "meta.art.title": "Agarwood Artworks | Unique Masterpieces",
+    "meta.art.description": "Agarwood statues and premium feng shui artworks carved from high-quality natural agarwood blocks.",
+    "meta.gift.title": "Agarwood Gifts | Luxury & Meaningful",
+    "meta.gift.description": "Exquisite agarwood gifts for partners and loved ones. Sophistication in every premium gift box.",
+    "meta.burner.title": "Incense Burners & Accessories | Scent Arts",
+    "meta.burner.description": "Incense burners, smoke waterfalls, and accessories with diverse designs and premium materials.",
+    "meta.blog.title": "Agarwood Blog | Knowledge, Feng Shui & Health Tips",
+    "meta.blog.description": "In-depth knowledge about Vietnamese agarwood - how to distinguish real vs fake, feng shui meaning, and history.",
   },
   zh: {
     // Navigation
@@ -818,6 +886,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.detail.age": "年份",
     "product.detail.specifications": "规格",
     "product.detail.relatedProducts": "相关产品",
+    "product.detail.relatedArticles": "相关文章",
+    "product.detail.readBuyingGuide": "选购前阅读更多知识",
     "products.showResults": "显示结果",
     "products.noFound": "没有找到心仪的产品？",
     "products.noFoundDesc": "请通过热线、Zalo 或 Messenger 直接联系我们，以便根据您的需求进行个性化咨询及定制服务。",
@@ -872,8 +942,27 @@ export const translations: Record<Locale, Record<string, string>> = {
     "products.guide.burner.g2.desc": "将沉香块或沉香粉放在热源中心。避免直接接触大火。",
     "products.guide.burner.g3.title": "享受香气",
     "products.guide.burner.g3.desc": "盖上炉盖，享受纯净香气。每次使用后清洁器具，以保持香气纯正。",
+    // Blog page
+    "blog.home": "首页",
+    "blog.breadcrumb": "博客",
+    "blog.category": "博客与新闻",
+    "blog.title1": "探索世界",
+    "blog.title2": "沉香",
+    "blog.description": "由我们的专家团队分享关于越南沉香的深度知识、经验和有趣故事。",
+    "blog.readMore": "阅读更多",
+    "blog.loadMore": "加载更多文章",
+    "blog.newsletter": "通讯",
+    "blog.newsletterTitle": "订阅新文章",
+    "blog.newsletterDesc": "当有关于沉香、风水和健康的新文章时接收通知",
+    "blog.enterEmail": "输入您的邮箱",
+    "blog.subscribe": "订阅",
+    "blog.share": "分享",
+    "blog.relatedPosts": "相关文章",
+    "blog.tags": "标签",
+    "blog.copyLink": "链接已复制",
     "blog.toc": "目录",
     "blog.editor": "编辑",
+    "blog.recommendedProducts": "推荐产品",
     "blog.promo": "专属优惠",
     "blog.promoTitle": "天然沉香 - 天地精华",
     "blog.discoverNow": "立即探索",
@@ -946,5 +1035,36 @@ export const translations: Record<Locale, Record<string, string>> = {
 
     // Policies
     "policy.lastUpdated": "最后更新：2026年4月21日。如有任何疑问，请联系热线：",
+
+    // Category Common
+    "category.home": "首页",
+    "category.collection": "产品系列",
+    "category.products": "件产品",
+
+    // Contact form placeholders
+    "contact.enterName": "输入姓名",
+    "contact.enterPhone": "输入电话号码",
+    "contact.enterEmail": "输入您的邮箱",
+    "contact.messageContent": "内容",
+
+    // SEO Metadata
+    "meta.home.title": "朱伯队沉香 | 越南沉香精华 - 亚洲遗产",
+    "meta.home.description": "朱伯队沉香专注于100%天然沉香手链、沉香熏香及工艺品。越南工匠精神，终身保修。",
+    "meta.about.title": "品牌故事 | 朱伯队沉香",
+    "meta.about.description": "探索将越南沉香精华推向世界的历程。每一件手工沉香产品都蕴含着“精、信、心”的理念。",
+    "meta.contact.title": "联系咨询 | 朱伯队沉香",
+    "meta.contact.description": "24/7沉香产品咨询支持。岘港门店系统及全国/全球发货。",
+    "meta.bracelet.title": "高端沉香手链 | 越南沉香精华",
+    "meta.bracelet.description": "天然沉香手链系列，工艺精湛，为主人带来平安与财富。",
+    "meta.incense.title": "天然沉香熏香 | 纯净香气",
+    "meta.incense.description": "沉香塔香、线香。无化学添加，健康安全，适合居家和冥想。",
+    "meta.art.title": "沉香工艺品 | 独一无二的艺术品",
+    "meta.art.description": "由高品质天然沉香块雕刻而成的沉香佛像和高端风水工艺品。",
+    "meta.gift.title": "沉香礼品 | 奢华而有意义",
+    "meta.gift.description": "为合作伙伴和亲友准备的精美沉香礼品。每一款高端礼盒都充满心意。",
+    "meta.burner.title": "熏香器具 | 高端品香附件",
+    "meta.burner.description": "款式多样、材质高端的香炉、倒流香炉及品香配件。",
+    "meta.blog.title": "沉香博客 | 沉香知识、风水与健康",
+    "meta.blog.description": "关于越南沉香的深入知识 - 如何辨别真假沉香、风水意义和历史。",
   },
 }

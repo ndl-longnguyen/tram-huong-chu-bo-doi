@@ -1,31 +1,25 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-
-const locales = ['vi', 'en', 'zh']
-const defaultLocale = 'vi'
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '@/lib/i18n/config'
 
 function getLocale(request: NextRequest): string {
-  // Check if locale is in the pathname
   const pathname = request.nextUrl.pathname
-  const pathnameLocale = locales.find(
+  const pathnameLocale = SUPPORTED_LOCALES.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
-  if (pathnameLocale) return pathnameLocale
 
-  return defaultLocale
+  return pathnameLocale || DEFAULT_LOCALE
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Check if pathname already has a locale
-  const pathnameHasLocale = locales.some(
+  const pathnameHasLocale = SUPPORTED_LOCALES.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
 
   if (pathnameHasLocale) return NextResponse.next()
 
-  // Skip static files, api routes, and technical files
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
@@ -33,20 +27,16 @@ export function middleware(request: NextRequest) {
     pathname === '/favicon.ico' ||
     pathname === '/robots.txt' ||
     pathname === '/sitemap.xml' ||
-    pathname.includes('.') // files with extensions
+    pathname.includes('.')
   ) {
     return NextResponse.next()
   }
 
-  // Redirect to locale-prefixed path
   const locale = getLocale(request)
   const newUrl = new URL(`/${locale}${pathname}`, request.url)
   return NextResponse.redirect(newUrl)
 }
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next, api)
-    '/((?!_next|api|.*\\..*).*)',
-  ],
+  matcher: ['/((?!_next|api|.*\\..*).*)'],
 }
