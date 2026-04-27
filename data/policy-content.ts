@@ -43,16 +43,16 @@ export const policyContent = {
       <p>These terms apply to all access, reference, and shopping activities for agarwood products on our website.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">2. Products & Information</h3>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Each agarwood product is a natural individual, carrying unique characteristics of wood grain, oil content, and fragrance.</li>
+        <li>Each agarwood product is a unique natural piece, carrying its own distinct characteristics of wood grain, oil content, and fragrance.</li>
         <li>We are committed to providing honest information and realistic images. However, very small deviations may exist due to lighting conditions or display devices.</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">3. Pricing</h3>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Product prices are listed in VND and can be adjusted at each time.</li>
-        <li>Prices do not include shipping fees, which will be calculated based on the shipping unit.</li>
+        <li>Product prices are listed in VND and are subject to change at any time.</li>
+        <li>Prices do not include shipping fees, which will be calculated based on the courier service.</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">4. Ordering & Confirmation</h3>
-      <p>Each order is re-confirmed to ensure accuracy and your benefits. We reserve the right to refuse or cancel orders in cases of incomplete information, unable to contact, or unusual signs such as:</p>
+      <p>Each order is re-confirmed to ensure accuracy and your benefits. We reserve the right to refuse or cancel orders in cases of incomplete information, unable to contact, or irregularities such as:</p>
       <ul class="list-disc pl-5 space-y-2">
         <li>Inaccurate information</li>
         <li>Unable to contact the customer</li>
@@ -66,9 +66,9 @@ export const policyContent = {
       </ul>
       <p>For high-value orders, we may propose a deposit to ensure the transaction is complete.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">6. Limitation of Liability</h3>
-      <p>We are not responsible for cases where products are affected by incorrect use or environmental impacts such as water, humidity, or chemicals. In addition, incidents beyond control are also outside the scope of our responsibility.</p>
-      <h3 class="text-foreground font-bold mt-8 mb-4">7. Adjustment of Terms</h3>
-      <p>Terms can be updated to suit operational reality. The new version will take effect as soon as it is published on the website.</p>`,
+      <p>We are not responsible for cases where products are affected by incorrect use or environmental impacts such as water, humidity, or chemicals. In addition, events beyond our control are also outside the scope of our liability.</p>
+      <h3 class="text-foreground font-bold mt-8 mb-4">7. Amendments to Terms</h3>
+      <p>These Terms may be updated to reflect operational changes. The new version will take effect as soon as it is published on the website.</p>`,
       zh: `<p>欢迎来到朱伯队沉香工坊。访问和在网站上交易意味着您已同意以下条款。我们致力于带来透明、精致且可靠的购物体验。</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">1. 适用范围</h3>
       <p>本条款适用于我们网站上沉香产品的所有访问、参考和购物活动。</p>
@@ -79,7 +79,7 @@ export const policyContent = {
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">3. 定价</h3>
       <ul class="list-disc pl-5 space-y-2">
-        <li>产品价格以越南盾列出，并可根据每个时间进行调整。</li>
+        <li>产品价格以越南盾列出，并可随时调整。</li>
         <li>价格不包括运费，运费将根据物流单位计算。</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">4. 订购与确认</h3>
@@ -139,21 +139,21 @@ export const policyContent = {
       <h3 class="text-foreground font-bold mt-8 mb-4">Collected Information</h3>
       <p>Including: full name, phone number, delivery address, and other necessary contact information.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">Scope of Use</h3>
-      <p>Information is only used internally or shared with the shipping unit to complete orders. We do not sell or exchange customer data in any form.</p>
+      <p>Information is only used internally or shared with the courier service to complete orders. We do not sell or exchange customer data in any form.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">Data Security</h3>
       <p>Data is stored and protected with appropriate measures to limit unauthorized access and ensure information safety.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">Customer Rights</h3>
-      <p>You have the right to request checking, updating, or deleting personal information at any time. At the same time, you can refuse to receive promotional information from us.</p>
+      <p>You have the right to request access to, update, or delete your personal information at any time. At the same time, you can refuse to receive promotional information from us.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">Contact</h3>
       <p>For any requests related to personal data, please contact:</p>
       <ul class="list-disc pl-5 space-y-2">
         <li>Hotline: 0765.942.942</li>
         <li>Email: Tramhuongchubodoi@gmail.com</li>
       </ul>
-      <p>With us, each agarwood product is not just an item, but an entrustment of value and trust. Therefore, all your experiences are always cherished and worthily protected by us.</p>`,
+      <p>With us, each agarwood product is not just an item, but a vessel of value and trust. Therefore, all your experiences are always cherished and carefully protected by us.</p>`,
       zh: `<p>我们尊重隐私，并将保护客户信息视为服务体验的核心部分。</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">收集目的</h3>
-      <p>收集信息是为了服务：</p>
+      <p>收集信息的目的包括：</p>
       <ul class="list-disc pl-5 space-y-2">
         <li>处理和配送订单</li>
         <li>客户关怀</li>
@@ -220,11 +220,11 @@ export const policyContent = {
         <li>Inner city: 1–2 days</li>
         <li>Provinces: 2–5 days</li>
       </ul>
-      <p>Time may change depending on shipping conditions or objective factors. Any occurrences will be proactively announced.</p>
+      <p>Time may change depending on shipping conditions or unforeseen circumstances. You will be notified promptly of any changes.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">Inspection Upon Receipt</h3>
       <p>You can inspect the product before payment to ensure:</p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Correct model chosen</li>
+        <li>Correct product model as ordered</li>
         <li>Correct size, quantity</li>
       </ul>
       <p>Note: Inspection does not include trial use of the product.</p>
@@ -237,16 +237,16 @@ export const policyContent = {
       <h3 class="text-foreground font-bold mt-8 mb-4">Shipping Fee</h3>
       <ul class="list-disc pl-5 space-y-2">
         <li>Shipping fee is calculated by region and order value</li>
-        <li>Some orders will be supported with free shipping according to the policy at each time</li>
+        <li>Some orders will be supported with free shipping according to our current promotions</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">Delivery Responsibility</h3>
       <ul class="list-disc pl-5 space-y-2">
-        <li>In case of products being damaged or lost during shipping, we will directly handle and ensure benefits for you</li>
+        <li>In case of products being damaged or lost during shipping, we will directly handle and protect your interests</li>
         <li>If errors occur from our side, all related costs will be fully borne by us</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">Order Confirmation</h3>
-      <p>To ensure service quality, all orders are confirmed before sending. For high-value orders, we may apply a suitable deposit form.</p>
-      <p class="italic mt-6">“We don't just send a product, but meticulousness in every detail and a commitment to long-term companionship with you.”</p>`,
+      <p>To ensure service quality, all orders are confirmed before sending. For high-value orders, we may require a partial deposit.</p>
+      <p class="italic mt-6">“We don't just send a product, but meticulous care in every detail and a commitment to long-term companionship with you.”</p>`,
       zh: `<p>每份订单不仅仅是一次交易，更是一次体验。因此，我们注重从包装到配送的每一个环节，确保产品以最完整的状态送到您手中。</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">配送时间</h3>
       <ul class="list-disc pl-5 space-y-2">
@@ -319,8 +319,8 @@ export const policyContent = {
       <h3 class="text-foreground font-bold mt-8 mb-4">Warranty Scope</h3>
       <p>Applies to agarwood bracelets and accessories:</p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Support string replacement, bracelet adjustment</li>
-        <li>Refresh, periodic product cleaning</li>
+        <li>String replacement and bracelet adjustment support</li>
+        <li>Periodic cleaning and product restoration</li>
       </ul>
       <p>Specific warranty period will be announced at the time of purchase.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">Warranty Conditions</h3>
@@ -341,9 +341,9 @@ export const policyContent = {
         <li>For cases outside the warranty scope, we still support with reasonable cost</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">Processing Time</h3>
-      <p>Warranty time is usually from 3–7 days depending on product condition. We always try to process in the earliest time so as not to interrupt your experience.</p>
+      <p>Warranty processing time is usually 3–7 days depending on product condition. We always aim to process as quickly as possible so as not to interrupt your experience.</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">After-warranty Support</h3>
-      <p>Even when the warranty period has expired, you are still supported to care for the product throughout the use process.</p>`,
+      <p>Even when the warranty period has expired, you are still supported to care for the product throughout the product's lifetime.</p>`,
       zh: `<p>我们相信，沉香的价值不仅在于拥有的那一刻，更在于长期的使用。因此，保修政策旨在陪伴您。</p>
       <h3 class="text-foreground font-bold mt-8 mb-4">保修范围</h3>
       <p>适用于沉香手链及配件：</p>
@@ -366,7 +366,7 @@ export const policyContent = {
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">保修费用</h3>
       <ul class="list-disc pl-5 space-y-2">
-        <li>技术错误或基础换绳、抛光支持免费。</li>
+        <li>技术缺陷或基础换绳、抛光支持免费。</li>
         <li>对于保修范围外的情况，我们仍以合理的成本提供支持</li>
       </ul>
       <h3 class="text-foreground font-bold mt-8 mb-4">处理时间</h3>

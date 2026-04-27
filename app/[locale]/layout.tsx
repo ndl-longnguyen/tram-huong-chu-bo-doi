@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/i18n/language-context'
 import { WishlistProvider } from '@/lib/wishlist-context'
 import { ContactButtons } from '@/components/contact-buttons'
+import { LiveStreamPopup } from '@/components/live-stream-popup'
 import { Toaster } from '@/components/ui/sonner'
 import '../globals.css'
 
@@ -203,6 +204,7 @@ export default async function LocaleLayout({
           <WishlistProvider>
             {children}
             <ContactButtons />
+            <LiveStreamPopup />
           </WishlistProvider>
         </LanguageProvider>
         <Toaster position="bottom-right" richColors />
