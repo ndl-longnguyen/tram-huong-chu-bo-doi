@@ -23,15 +23,17 @@ import { useLanguage } from "@/lib/i18n/language-context"
 import { useWishlist } from "@/lib/wishlist-context"
 import { ProductCard } from "@/components/product-card"
 import type { Product } from "@/lib/products"
+import type { BlogPost } from "@/data/blog-content"
 
 interface ProductDetailClientProps {
   product: Product
   relatedProducts: Product[]
+  relatedArticles: BlogPost[]
 }
 
 
 
-export function ProductDetailClient({ product, relatedProducts }: ProductDetailClientProps) {
+export function ProductDetailClient({ product, relatedProducts, relatedArticles }: ProductDetailClientProps) {
   const { t, locale, getLocalizedPath } = useLanguage()
   const { toggleWishlist: globalToggleWishlist, isInWishlist } = useWishlist()
   const [selectedImage, setSelectedImage] = useState(0)
@@ -169,7 +171,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
               <div className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-muted">
                 <Image
                   src={product.images[selectedImage]}
-                  alt={product.name[localeKey]}
+                  alt={`${product.name[localeKey]} - ảnh chi tiết ${selectedImage + 1}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -189,7 +191,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
 
               {/* Thumbnail Gallery */}
               <div className="flex gap-2 md:gap-3 overflow-x-auto pb-2 scrollbar-hide">
-                {product.images.map((img, idx) => (
+              {product.images.map((img, idx) => (
                   <button
                     key={idx}
                     onClick={() => setSelectedImage(idx)}
@@ -199,7 +201,7 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
                     <div className="relative w-full h-full">
                       <Image
                         src={img}
-                        alt={`${product.name[localeKey]} thumbnail ${idx + 1}`}
+                        alt={`${product.name[localeKey]} - ảnh thu nhỏ ${idx + 1}`}
                         fill
                         sizes="(max-width: 768px) 64px, 80px"
                         className="object-cover"
@@ -370,10 +372,10 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
           <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             {/* Features */}
             <div className="bg-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-sm">
-              <h3 className="text-foreground font-bold mb-4 flex items-center gap-2">
+              <h2 className="font-serif text-lg md:text-xl lg:text-2xl text-foreground mb-4 md:mb-6 flex items-center gap-2">
                 <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                 {t("product.detail.features")}
-              </h3>
+              </h2>
               <ul className="space-y-3 md:space-y-4">
                 {product.features[localeKey].map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2 md:gap-3">
@@ -425,6 +427,47 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
               {product.description[localeKey]}
             </p>
           </div>
+
+          {relatedArticles.length > 0 && (
+            <div className="mt-4 md:mt-6 lg:mt-8 bg-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-sm">
+              <div className="flex items-center justify-between gap-4 mb-4 md:mb-6">
+                <h2 className="font-serif text-lg md:text-xl lg:text-2xl text-foreground">
+                  {t("product.detail.relatedArticles")}
+                </h2>
+                <Link
+                  href={getLocalizedPath("/blog")}
+                  className="text-sm font-medium text-primary hover:underline"
+                >
+                  {t("product.detail.readBuyingGuide")}
+                </Link>
+              </div>
+              <div className="grid gap-4 md:grid-cols-3">
+                {relatedArticles.map((article) => (
+                  <Link
+                    key={article.id}
+                    href={getLocalizedPath(`/blog/${article.slug}`)}
+                    className="group rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-colors"
+                  >
+                    <div className="relative aspect-[16/10] bg-muted">
+                      <Image
+                        src={article.image}
+                        alt={article.title[localeKey]}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-xs uppercase tracking-widest text-primary mb-2">{article.category[localeKey]}</p>
+                      <h3 className="text-sm md:text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                        {article.title[localeKey]}
+                      </h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

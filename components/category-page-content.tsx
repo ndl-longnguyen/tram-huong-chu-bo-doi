@@ -1,6 +1,5 @@
 "use client"
 import { Suspense } from 'react'
-import { useParams } from 'next/navigation'
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -33,12 +32,6 @@ export default function CategoryPage({ categorySlug }: CategoryPageProps) {
     slug: cat.slug,
     count: products.filter(p => p.categorySlug === cat.slug).length
   }))
-
-  const content = {
-    home: { vi: "Trang chủ", en: "Home", zh: "首页" },
-    collection: { vi: "BỘ SƯU TẬP", en: "COLLECTION", zh: "产品系列" },
-    products: { vi: "sản phẩm", en: "products", zh: "件产品" },
-  }
 
   const renderGuide = () => {
     let guideKey = ""
@@ -111,7 +104,7 @@ export default function CategoryPage({ categorySlug }: CategoryPageProps) {
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm mb-8">
               <Link href={getLocalizedPath("/")} className="text-muted-foreground hover:text-primary transition-colors">
-                {content.home[locale]}
+                {t('category.home')}
               </Link>
               <ChevronRight className="w-4 h-4 text-muted-foreground" />
               <span className="text-foreground font-medium">{category.name[localeKey]}</span>
@@ -119,7 +112,7 @@ export default function CategoryPage({ categorySlug }: CategoryPageProps) {
 
             <div className="text-center max-w-3xl mx-auto">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
-                {content.collection[locale]}
+                {t('category.collection')}
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 uppercase tracking-tight">
                 {category.name[localeKey]}
@@ -134,8 +127,12 @@ export default function CategoryPage({ categorySlug }: CategoryPageProps) {
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-8">
-              <ProductFilters />
-              <ProductGrid categorySlug={categorySlug} />
+              <Suspense fallback={<div className="w-full h-24 rounded-lg bg-muted/30 animate-pulse" />}>
+                <ProductFilters />
+              </Suspense>
+              <Suspense fallback={<div className="flex-1 h-96 rounded-lg bg-muted/30 animate-pulse" />}>
+                <ProductGrid categorySlug={categorySlug} />
+              </Suspense>
             </div>
           </div>
         </section>

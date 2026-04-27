@@ -6,6 +6,8 @@ import { WishlistProvider } from '@/lib/wishlist-context'
 import { ContactButtons } from '@/components/contact-buttons'
 import { LiveStreamPopup } from '@/components/live-stream-popup'
 import { Toaster } from '@/components/ui/sonner'
+import { SUPPORTED_LOCALES } from '@/lib/i18n/config'
+import { BASE_URL } from '@/lib/seo'
 import '../globals.css'
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -55,12 +57,13 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://tramhuongchubodoi.com'),
+  metadataBase: new URL(BASE_URL),
   alternates: {
     languages: {
       'vi-VN': '/vi',
       'en-US': '/en',
       'zh-CN': '/zh',
+      'x-default': '/vi',
     },
   },
   openGraph: {
@@ -107,7 +110,7 @@ export const metadata: Metadata = {
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'vi' }, { locale: 'en' }, { locale: 'zh' }]
+  return SUPPORTED_LOCALES.map((locale) => ({ locale }))
 }
 
 // JSON-LD Structured Data for SEO
@@ -138,11 +141,10 @@ const jsonLd = {
       ],
     },
     {
-      '@type': 'LocalBusiness',
+      '@type': 'Store',
       '@id': 'https://tramhuongchubodoi.com/#localbusiness',
       name: 'Trầm Hương Chú Bộ Đội',
       image: 'https://tramhuongchubodoi.com/og-image.png',
-      '@type': 'Store',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Tiên Phước',
@@ -172,11 +174,6 @@ const jsonLd = {
       description: 'Thương hiệu trầm hương uy tín hàng đầu Việt Nam',
       publisher: {
         '@id': 'https://tramhuongchubodoi.com/#organization',
-      },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://tramhuongchubodoi.com/vi/tim-kiem?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
       },
     },
   ],

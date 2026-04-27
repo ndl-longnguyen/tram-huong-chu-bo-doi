@@ -65,10 +65,9 @@ export function ProductCard({
   return (
     <Link href={`/san-pham/${id}`} className="group block relative hover:z-50 transition-all">
       <div className="relative overflow-hidden rounded-2xl bg-muted aspect-square">
-        {/* Image */}
         <Image
           src={image}
-          alt={name}
+          alt={`${name} - Trầm Hương Chú Bộ Đội`}
           fill
           priority={priority}
           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
