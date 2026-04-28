@@ -55,7 +55,6 @@ export function LiveStreamPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.4 }}
             exit={{ opacity: 0 }}
-            onClick={() => handleClose()}
             className="absolute inset-0 bg-black/70 backdrop-blur-md"
           />
 
