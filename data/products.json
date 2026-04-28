@@ -64,11 +64,6 @@
           "en": "200g",
           "zh": "200克"
         },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 5 năm",
           "en": "Over 5 years",
@@ -142,11 +137,6 @@
           "en": "100g",
           "zh": "100克"
         },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 5 năm",
           "en": "Over 5 years",
@@ -217,11 +207,6 @@
           "vi": "21 nụ cao cấp",
           "en": "21 cones",
           "zh": "21颗塔香"
-        },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
         },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 15 năm",
@@ -295,11 +280,6 @@
           "en": "30 cones",
           "zh": "30颗塔香"
         },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 10 năm",
           "en": "Over 10 years",
@@ -369,11 +349,6 @@
           "vi": "40 thanh trầm",
           "en": "40 sticks",
           "zh": "40根"
-        },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
         },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 10 năm",
@@ -448,11 +423,6 @@
           "en": "40 cloud coils",
           "zh": "40片盘香"
         },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 10 năm",
           "en": "Over 10 years",
@@ -523,11 +493,6 @@
           "en": "18 cloud coils",
           "zh": "18片盘香"
         },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 15 năm",
           "en": "Over 15 years",
@@ -597,11 +562,6 @@
           "en": "18 cloud coils",
           "zh": "18片盘香"
         },
-        "weight": {
-          "vi": "Theo số lượng (nụ/thanh)",
-          "en": "By unit count (buds/sticks)",
-          "zh": "按数量（颗/根）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 10 năm",
           "en": "Over 10 years",
@@ -669,11 +629,6 @@
           "vi": "Tiêu chuẩn",
           "en": "Standard",
           "zh": "标准"
-        },
-        "weight": {
-          "vi": "Hộp quà cao cấp",
-          "en": "Premium gift box",
-          "zh": "高端礼盒包装"
         },
         "age": {
           "vi": "Trên 15 năm",
@@ -745,11 +700,6 @@
           "en": "Standard",
           "zh": "标准"
         },
-        "weight": {
-          "vi": "Theo tác phẩm",
-          "en": "By artwork",
-          "zh": "按作品"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -817,11 +767,6 @@
           "vi": "Tiêu chuẩn",
           "en": "Standard",
           "zh": "标准"
-        },
-        "weight": {
-          "vi": "Theo tác phẩm",
-          "en": "By artwork",
-          "zh": "按作品"
         },
         "age": {
           "vi": "Trên 15 năm",
@@ -893,11 +838,6 @@
           "vi": "Tiêu chuẩn",
           "en": "Standard",
           "zh": "标准"
-        },
-        "weight": {
-          "vi": "Theo tác phẩm",
-          "en": "By artwork",
-          "zh": "按作品"
         },
         "age": {
           "vi": "Trên 15 năm",
@@ -977,11 +917,6 @@
           "en": "Standard",
           "zh": "标准"
         },
-        "weight": {
-          "vi": "Theo tác phẩm",
-          "en": "By artwork",
-          "zh": "按作品"
-        },
         "age": {
           "vi": "Hàng chục năm",
           "en": "Decades",
@@ -1052,11 +987,6 @@
           "en": "Standard",
           "zh": "标准"
         },
-        "weight": {
-          "vi": "Theo tác phẩm",
-          "en": "By artwork",
-          "zh": "按作品"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -1124,11 +1054,6 @@
           "vi": "hạt 12li",
           "en": "12li",
           "zh": "12li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "10-20 năm",
@@ -1201,11 +1126,6 @@
           "vi": "hạt 12 li",
           "en": "12li",
           "zh": "12li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "7-12 năm",
@@ -1283,11 +1203,6 @@
           "en": "8li",
           "zh": "8li"
         },
-        "weight": {
-          "vi": "Chìm nước",
-          "en": "Sinking",
-          "zh": "沉水"
-        },
         "age": {
           "vi": "trên 50 năm",
           "en": "Over 50 years",
@@ -1362,11 +1277,6 @@
           "en": "6mm beads",
           "zh": "6毫米珠"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "10-20 năm",
           "en": "10-20 years",
@@ -1438,11 +1348,6 @@
           "vi": "hạt 14li",
           "en": "14li",
           "zh": "14li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "10-15 năm",
@@ -1520,11 +1425,6 @@
           "en": "4mm, 216 beads",
           "zh": "4mm，216颗"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 20 năm",
           "en": "Over 20 years",
@@ -1601,11 +1501,6 @@
           "en": "Raw rough bracelet, 12mm",
           "zh": "原木粗手链 12毫米"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 30 năm",
           "en": "Over 30 years",
@@ -1675,11 +1570,6 @@
           "vi": "vòng thô 7li 108 hạt",
           "en": "Raw rough bracelet, 7mm",
           "zh": "原木粗手链 7毫米"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "7-12 năm",
@@ -1756,11 +1646,6 @@
           "en": "10li",
           "zh": "10li"
         },
-        "weight": {
-          "vi": "Chìm nước",
-          "en": "Sinking",
-          "zh": "沉水"
-        },
         "age": {
           "vi": "trên 50 năm",
           "en": "Over 50 years",
@@ -1834,11 +1719,6 @@
           "en": "12li",
           "zh": "12li"
         },
-        "weight": {
-          "vi": "Chìm nước",
-          "en": "Sinking",
-          "zh": "沉水"
-        },
         "age": {
           "vi": "trên 50 năm",
           "en": "Over 50 years",
@@ -1909,11 +1789,6 @@
           "en": "16li",
           "zh": "16li"
         },
-        "weight": {
-          "vi": "Chìm nước",
-          "en": "Sinking",
-          "zh": "沉水"
-        },
         "age": {
           "vi": "trên 50 năm",
           "en": "Over 50 years",
@@ -1982,11 +1857,6 @@
           "vi": "Vòng thô 4li",
           "en": "4li",
           "zh": "4li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "trên 50 năm",
@@ -2060,11 +1930,6 @@
           "en": "7mm, 108 beads",
           "zh": "7mm，108颗"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 30 năm",
           "en": "Over 30 years",
@@ -2135,11 +2000,6 @@
           "vi": "6mm, 108 hạt",
           "en": "6mm, 108 beads",
           "zh": "6mm，108颗"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "trên 30 năm",
@@ -2213,11 +2073,6 @@
           "en": "14li",
           "zh": "14li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -2288,11 +2143,6 @@
           "vi": "6mm, 108 hạt",
           "en": "6mm, 108 beads",
           "zh": "6mm，108颗"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "Trên 15 năm",
@@ -2367,11 +2217,6 @@
           "en": "14li",
           "zh": "14li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 20 năm",
           "en": "Over 20 years",
@@ -2442,11 +2287,6 @@
           "vi": "hạt 14li",
           "en": "14mm beads",
           "zh": "14毫米珠"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "Trên 15 năm",
@@ -2519,11 +2359,6 @@
           "en": "12mm",
           "zh": "12mm"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -2595,11 +2430,6 @@
           "vi": "hạt 14li",
           "en": "14li",
           "zh": "14li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "7-12 năm",
@@ -2676,11 +2506,6 @@
           "en": "12li",
           "zh": "12li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "7-12 năm",
           "en": "7-12 years",
@@ -2750,11 +2575,6 @@
           "en": "Bamboo-node raw beads, 8mm",
           "zh": "竹节原木珠 8毫米"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 30 năm",
           "en": "Over 30 years",
@@ -2823,11 +2643,6 @@
           "vi": "Đốt trúc thô 8li",
           "en": "Bamboo-node raw beads, 8mm",
           "zh": "竹节原木珠 8毫米"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "Trên 15 năm",
@@ -2900,11 +2715,6 @@
           "en": "Bangle 18mm wide, 6mm thick",
           "zh": "手镯宽18毫米，厚6毫米"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "5-10 năm",
           "en": "5-10 years",
@@ -2975,11 +2785,6 @@
           "vi": "Đốt trúc thô 10li",
           "en": "Bamboo-node raw beads, 10mm",
           "zh": "竹节原木珠 10毫米"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "trên 30 năm",
@@ -3055,11 +2860,6 @@
           "en": "14li",
           "zh": "14li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 20 năm",
           "en": "Over 20 years",
@@ -3133,11 +2933,6 @@
           "en": "7mm, 108 beads",
           "zh": "7mm，108颗"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "7-12 năm",
           "en": "7-12 years",
@@ -3208,11 +3003,6 @@
           "vi": "12mm",
           "en": "12mm",
           "zh": "12mm"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "7-12 năm",
@@ -3292,11 +3082,6 @@
           "en": "Bangle 18mm wide, 6mm thick",
           "zh": "手镯宽18毫米，厚6毫米"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 20 năm",
           "en": "Over 20 years",
@@ -3367,11 +3152,6 @@
           "en": "14li",
           "zh": "14li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -3441,11 +3221,6 @@
           "vi": "hạt 12 li",
           "en": "12mm",
           "zh": "12mm"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "7-12 năm",
@@ -3519,11 +3294,6 @@
           "vi": "Đốt trúc 10li",
           "en": "10li",
           "zh": "10li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "7-12 năm",
@@ -3599,11 +3369,6 @@
           "en": "Bangle 18mm wide, 6mm thick",
           "zh": "手镯宽18毫米，厚6毫米"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "trên 20 năm",
           "en": "Over 20 years",
@@ -3678,11 +3443,6 @@
           "en": "10li",
           "zh": "10li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -3754,11 +3514,6 @@
           "vi": "Hạt nút 6li",
           "en": "6li",
           "zh": "6li"
-        },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
         },
         "age": {
           "vi": "trên 30 năm",
@@ -3835,11 +3590,6 @@
           "en": "10li",
           "zh": "10li"
         },
-        "weight": {
-          "vi": "Cận chìm/Tốc",
-          "en": "Half-sinking",
-          "zh": "半沉水"
-        },
         "age": {
           "vi": "Trên 15 năm",
           "en": "Over 15 years",
@@ -3907,11 +3657,6 @@
           "vi": "2 gam",
           "en": "2g",
           "zh": "2克"
-        },
-        "weight": {
-          "vi": "Theo trọng lượng gói (2g / 5g)",
-          "en": "By package weight (2g / 5g)",
-          "zh": "按包装重量（2g / 5g）"
         },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 40 năm",
@@ -3981,11 +3726,6 @@
           "vi": "5 gam",
           "en": "5g",
           "zh": "5克"
-        },
-        "weight": {
-          "vi": "Theo trọng lượng gói (2g / 5g)",
-          "en": "By package weight (2g / 5g)",
-          "zh": "按包装重量（2g / 5g）"
         },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 40 năm",
@@ -4058,11 +3798,6 @@
           "en": "5g",
           "zh": "5克"
         },
-        "weight": {
-          "vi": "Theo trọng lượng gói (2g / 5g)",
-          "en": "By package weight (2g / 5g)",
-          "zh": "按包装重量（2g / 5g）"
-        },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 40 năm",
           "en": "Over 40 years",
@@ -4131,11 +3866,6 @@
           "vi": "2 gam",
           "en": "2g",
           "zh": "2克"
-        },
-        "weight": {
-          "vi": "Theo trọng lượng gói (2g / 5g)",
-          "en": "By package weight (2g / 5g)",
-          "zh": "按包装重量（2g / 5g）"
         },
         "age": {
           "vi": "Nguyên liệu trầm hương trên 40 năm",
@@ -4208,11 +3938,6 @@
           "vi": "Cỡ lớn",
           "en": "Large size",
           "zh": "大号"
-        },
-        "weight": {
-          "vi": "Nặng",
-          "en": "Heavy",
-          "zh": "重"
         },
         "age": {
           "vi": "Trên 50 năm",

@@ -199,7 +199,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.detail.material": "Chất liệu",
     "product.detail.origin": "Xuất xứ",
     "product.detail.size": "Kích thước",
-    "product.detail.weight": "Trọng lượng",
+
     "product.detail.age": "Tuổi trầm",
     "product.detail.specifications": "Thông số kỹ thuật",
     "product.detail.relatedProducts": "Sản phẩm liên quan",
@@ -553,7 +553,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.detail.material": "Material",
     "product.detail.origin": "Origin",
     "product.detail.size": "Size",
-    "product.detail.weight": "Weight",
+
     "product.detail.age": "Age",
     "product.detail.specifications": "Specifications",
     "product.detail.relatedProducts": "Related Products",
@@ -882,7 +882,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     "product.detail.material": "材质",
     "product.detail.origin": "产地",
     "product.detail.size": "尺寸",
-    "product.detail.weight": "重量",
+
     "product.detail.age": "年份",
     "product.detail.specifications": "规格",
     "product.detail.relatedProducts": "相关产品",

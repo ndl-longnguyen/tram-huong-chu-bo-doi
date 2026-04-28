@@ -104,7 +104,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
       { '@type': 'PropertyValue', name: t['product.detail.material'], value: product.specs.material[localeKey] },
       { '@type': 'PropertyValue', name: t['product.detail.origin'], value: product.specs.origin[localeKey] },
       { '@type': 'PropertyValue', name: t['product.detail.size'], value: product.specs.size[localeKey] },
-      { '@type': 'PropertyValue', name: t['product.detail.weight'], value: product.specs.weight[localeKey] },
       { '@type': 'PropertyValue', name: t['product.detail.age'], value: product.specs.age[localeKey] },
     ],
   }
