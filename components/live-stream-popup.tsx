@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 
 const POPUP_KEY = "live-stream-popup-last-shown"
 const SHOW_DELAY = 3000 // 3 seconds
-const COOLDOWN = 6 * 60 * 60 * 1000 // 6 hours
+const COOLDOWN = 3 * 60 * 60 * 1000 // 6 hours
 
 export function LiveStreamPopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -53,7 +53,7 @@ export function LiveStreamPopup() {
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
+            animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             className="absolute inset-0 bg-black/70 backdrop-blur-md"
           />
@@ -64,7 +64,7 @@ export function LiveStreamPopup() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-2xl bg-card rounded-[2rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] border border-white/10 flex flex-col md:flex-row min-h-[400px]"
+            className="relative w-full max-w-2xl bg-card rounded-[2rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] flex flex-col md:flex-row min-h-[400px]"
           >
             {/* Close Button */}
             <button

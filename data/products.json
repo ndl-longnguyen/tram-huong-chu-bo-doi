@@ -663,7 +663,7 @@
       },
       "categorySlug": "tieu-canh",
       "description": {
-        "vi": "Tác phẩm tiểu cảnh Bồng Lai Vọng Nguyệt được chế tác tinh xảo, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian.",
+        "vi": "Tác phẩm tiểu cảnh Bồng Lai Vọng Nguyệt được chế tác tinh xảo, tuyển chọn từ những phôi trầm hương tự nhiên chất lượng, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian, thu hút tài lộc và phong thủy cho gia chủ.",
         "en": "The Paradise Moon Viewing mini landscape masterpiece is exquisitely crafted, a perfect combination of sculpture art and rare natural agarwood, bringing prosperity to the space.",
         "zh": "蓬莱望月 盆景杰作工艺精益求精，是雕刻艺术与稀有天然沉香的完美结合，为空间带来繁荣。"
       },
@@ -696,14 +696,14 @@
           "zh": "越南"
         },
         "size": {
-          "vi": "Tiêu chuẩn",
-          "en": "Standard",
-          "zh": "标准"
+          "vi": "Cao 50cm - Dài 70cm - Rộng 25cm",
+          "en": "50cm x 70cm x 25cm",
+          "zh": "50cm x 70cm x 25cm"
         },
         "age": {
-          "vi": "Trên 15 năm",
-          "en": "Over 15 years",
-          "zh": "15年以上"
+          "vi": "Nguyên liệu trầm hương trên 30 năm",
+          "en": "Over 30 years",
+          "zh": "30年以上"
         }
       },
       "inStock": true
@@ -731,7 +731,7 @@
       },
       "categorySlug": "tieu-canh",
       "description": {
-        "vi": "Tác phẩm tiểu cảnh Nhất Sơn Cửu Đỉnh được chế tác tinh xảo, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian.",
+        "vi": "Tác phẩm tiểu cảnh Nhất Sơn Cửu Đỉnh được chế tác tinh xảo, tuyển chọn từ những phôi trầm hương tự nhiên chất lượng, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian, thu hút tài lộc và phong thủy cho gia chủ.",
         "en": "The One Mountain Nine Tripods mini landscape masterpiece is exquisitely crafted, a perfect combination of sculpture art and rare natural agarwood, bringing prosperity to the space.",
         "zh": "一山九鼎 盆景杰作工艺精益求精，是雕刻艺术与稀有天然沉香的完美结合，为空间带来繁荣。"
       },
@@ -764,12 +764,12 @@
           "zh": "越南"
         },
         "size": {
-          "vi": "Tiêu chuẩn",
-          "en": "Standard",
-          "zh": "标准"
+          "vi": "Cao 70cm - Đường kính 25cm",
+          "en": "70cm x 25cm",
+          "zh": "70cm x 25cm"
         },
         "age": {
-          "vi": "Trên 15 năm",
+          "vi": "Nguyên liệu trầm hương trên 15 năm",
           "en": "Over 15 years",
           "zh": "15年以上"
         }
@@ -792,7 +792,7 @@
         "/images/products/tieu-canh/nhat-tam-bai-phat/nhat-tam-bai-phat-3.webp",
         "/images/products/tieu-canh/nhat-tam-bai-phat/nhat-tam-bai-phat-4.webp"
       ],
-      "originalPrice": 30000000,
+      "originalPrice": 50000000,
       "rating": 5,
       "badgeType": "new",
       "category": {
@@ -802,15 +802,15 @@
       },
       "categorySlug": "tieu-canh",
       "description": {
-        "vi": "Tác phẩm tiểu cảnh Nhất Tâm Bái Phật được chế tác tinh xảo, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian.",
+        "vi": "Tác phẩm tiểu cảnh Nhất Tâm Bái Phật được chế tác tinh xảo, tuyển chọn từ những phôi trầm hương tự nhiên chất lượng, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian, thu hút tài lộc và phong thủy cho gia chủ.",
         "en": "The One Heart Praying mini landscape masterpiece is exquisitely crafted, a perfect combination of sculpture art and rare natural agarwood, bringing prosperity to the space.",
         "zh": "一心拜佛 盆景杰作工艺精益求精，是雕刻艺术与稀有天然沉香的完美结合，为空间带来繁荣。"
       },
       "features": {
         "vi": [
-          "Trầm hương tự nhiên cao cấp, chế tác thủ công bởi nghệ nhân",
-          "Mỗi tác phẩm là độc bản, mang đậm giá trị nghệ thuật",
-          "Phong thủy vượng khí, mang lại may mắn và thịnh vượng"
+          "\"Nhất Tâm Bái Phật\" – tác phẩm trầm hương được chế tác từ một phôi trầm hương liền khối, chất lượng trầm cao, giữ trọn vẹn vân gỗ và thần thái tự nhiên của trầm.",
+          "Sự kết hợp giữa trầm hương và tiểu cảnh tượng Phật an nhiên, hình ảnh thầy trò Đường Tăng trên hành trình thỉnh kinh, bonsai tạo nên tổng thể hài hòa và đầy chiều sâu.",
+          "Không chỉ là một tác phẩm nghệ thuật, đây còn là biểu tượng của sự hướng tâm, bình an và kiên định. Hương trầm tỏa ra dịu sâu, ấm và bền, mang lại cảm giác tĩnh tại cho không gian."
         ],
         "en": [
           "Premium natural agarwood, handcrafted by skilled artisans",
@@ -835,14 +835,14 @@
           "zh": "越南"
         },
         "size": {
-          "vi": "Tiêu chuẩn",
-          "en": "Standard",
-          "zh": "标准"
+          "vi": "Cao 60cm - Dài 50cm - Rộng 25cm",
+          "en": "60cm x 50cm x 25cm",
+          "zh": "60cm x 50cm x 25cm"
         },
         "age": {
-          "vi": "Trên 15 năm",
-          "en": "Over 15 years",
-          "zh": "15年以上"
+          "vi": "Nguyên liệu trầm hương trên 20 năm",
+          "en": "Over 20 years",
+          "zh": "20年以上"
         }
       },
       "inStock": true
@@ -870,7 +870,7 @@
         "/images/products/tieu-canh/thuan-buom-xuoi-gio/thuan-buom-xuoi-gio-10.webp",
         "/images/products/tieu-canh/thuan-buom-xuoi-gio/thuan-buom-xuoi-gio-11.webp"
       ],
-      "originalPrice": 120000000,
+      "originalPrice": 60000000,
       "rating": 5,
       "badgeType": "new",
       "category": {
@@ -880,15 +880,15 @@
       },
       "categorySlug": "tieu-canh",
       "description": {
-        "vi": "Tác phẩm tiểu cảnh Thuận Buồm Xuôi Gió được chế tác tinh xảo, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian.",
+        "vi": "Tác phẩm tiểu cảnh Thuận Buồm Xuôi Gió được chế tác tinh xảo, tuyển chọn từ những phôi trầm hương tự nhiên chất lượng, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian, thu hút tài lộc và phong thủy cho gia chủ.",
         "en": "The Smooth Sailing mini landscape masterpiece is exquisitely crafted, a perfect combination of sculpture art and rare natural agarwood, bringing prosperity to the space.",
         "zh": "顺风顺水盆景杰作工艺精益求精，是雕刻艺术与稀有天然沉香的完美结合，为空间带来繁荣。"
       },
       "features": {
         "vi": [
-          "Trầm hương tự nhiên cao cấp, chế tác thủ công bởi nghệ nhân",
-          "Mỗi tác phẩm là độc bản, mang đậm giá trị nghệ thuật",
-          "Phong thủy vượng khí, mang lại may mắn và thịnh vượng"
+          "Được ghép từ nhiều mảnh trầm kiến tự nhiên chất lượng cao, tuổi trầm cực kì lâu. Mỗi thớ gỗ mang một dấu ấn riêng của thời gian và thiên nhiên.",
+          "Sự kết hợp tỉ mỉ tạo nên hình khối con thuyền vững vàng, tượng trưng cho hành trình hanh thông, vượt sóng bình an.",
+          "Tác phẩm lan tỏa hương trầm dịu sâu, ấm và bền – một nguồn năng lượng tĩnh tại, mang lại cảm giác an yên và may mắn cho không gian sống."
         ],
         "en": [
           "Premium natural agarwood, handcrafted by skilled artisans",
@@ -913,14 +913,14 @@
           "zh": "越南"
         },
         "size": {
-          "vi": "Tiêu chuẩn",
-          "en": "Standard",
-          "zh": "标准"
+          "vi": "Cao 55cm - Dài 65cm - Rộng 30cm",
+          "en": "55cm x 65cm x 30cm",
+          "zh": "55cm x 65cm x 30cm"
         },
         "age": {
-          "vi": "Hàng chục năm",
-          "en": "Decades",
-          "zh": "数十年"
+          "vi": "Nguyên liệu trầm hương trên 40 năm",
+          "en": "Over 40 years",
+          "zh": "40年以上"
         }
       },
       "inStock": true
@@ -940,7 +940,7 @@
         "/images/products/tieu-canh/tram-toa-kim-ngu/tram-toa-kim-ngu-2.webp",
         "/images/products/tieu-canh/tram-toa-kim-ngu/tram-toa-kim-ngu-3.webp"
       ],
-      "originalPrice": 10000000,
+      "originalPrice": 6000000,
       "rating": 5,
       "badgeType": null,
       "category": {
@@ -950,7 +950,7 @@
       },
       "categorySlug": "tieu-canh",
       "description": {
-        "vi": "Tác phẩm tiểu cảnh Trầm Tọa Kim Ngư được chế tác tinh xảo, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian.",
+        "vi": "Tác phẩm tiểu cảnh Trầm Tọa Kim Ngư được chế tác tinh xảo, tuyển chọn từ những phôi trầm hương tự nhiên chất lượng, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian, thu hút tài lộc và phong thủy cho gia chủ.",
         "en": "The Agarwood Golden Carp Throne mini landscape masterpiece is exquisitely crafted, a perfect combination of sculpture art and rare natural agarwood, bringing prosperity to the space.",
         "zh": "沉香金鱼宝座盆景杰作工艺精益求精，是雕刻艺术与稀有天然沉香的完美结合，为空间带来繁荣。"
       },
@@ -983,12 +983,12 @@
           "zh": "越南"
         },
         "size": {
-          "vi": "Tiêu chuẩn",
+          "vi": "Dài 14cm - Rộng 10cm - Cao 15cm",
           "en": "Standard",
           "zh": "标准"
         },
         "age": {
-          "vi": "Trên 15 năm",
+          "vi": "Nguyên liệu trầm hương trên 30 năm",
           "en": "Over 15 years",
           "zh": "15年以上"
         }
@@ -1230,7 +1230,7 @@
         "/images/products/vong-tay/vong-toc-bong-viet/vong-toc-bong-viet-6.webp",
         "/images/products/vong-tay/vong-toc-bong-viet/vong-toc-bong-viet-7.webp"
       ],
-      "originalPrice": 4500000,
+      "originalPrice": 12500000,
       "rating": 5,
       "badgeType": null,
       "category": {
@@ -2097,7 +2097,7 @@
         "/images/products/vong-tay/vong-toc-bong-viet-6li-108-hat/vong-toc-bong-viet-6li-108-hat-3.webp",
         "/images/products/vong-tay/vong-toc-bong-viet-6li-108-hat/vong-toc-bong-viet-6li-108-hat-4.webp"
       ],
-      "originalPrice": 3500000,
+      "originalPrice": 6500000,
       "rating": 5,
       "badgeType": null,
       "category": {
@@ -3902,7 +3902,7 @@
       },
       "categorySlug": "tieu-canh",
       "description": {
-        "vi": "Tác phẩm Nhất Trụ Kình Thiên chế tác từ khối trầm mắt tử quý hiếm. Dáng đứng uy nghi như cột trụ chống trời, mang ý nghĩa bản lĩnh và sự vững vàng trong sự nghiệp.",
+        "vi": "Tác phẩm tiểu cảnh Nhất Trụ Kình Thiên - Trầm Mắt Tử được chế tác tinh xảo, tuyển chọn từ những phôi trầm hương tự nhiên chất lượng, là sự kết hợp hoàn hảo giữa nghệ thuật điêu khắc và trầm hương tự nhiên quý hiếm, mang lại vượng khí cho không gian, thu hút tài lộc và phong thủy cho gia chủ.",
         "en": "Heaven Pillar masterpiece crafted from rare Eye Knot agarwood. Majestic standing like a pillar supporting the sky, meaning courage and stability in career.",
         "zh": "由稀有眼结沉香打造的一柱擎天杰作。雄伟站立如撑天之柱，寓意事业的勇气与稳健。"
       },
@@ -3935,14 +3935,14 @@
           "zh": "越南"
         },
         "size": {
-          "vi": "Cỡ lớn",
-          "en": "Large size",
-          "zh": "大号"
+          "vi": "Cao 80cm - Dài 55cm - Rộng 35cm",
+          "en": "80cm x 55cm x 35cm",
+          "zh": "80cm x 55cm x 35cm"
         },
         "age": {
-          "vi": "Trên 50 năm",
-          "en": "Over 50 years",
-          "zh": "50年以上"
+          "vi": "Nguyên liệu trầm hương trên 40 năm",
+          "en": "Over 40 years",
+          "zh": "40年以上"
         }
       },
       "inStock": false
