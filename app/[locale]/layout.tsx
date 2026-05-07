@@ -8,6 +8,7 @@ import { LiveStreamPopup } from '@/components/live-stream-popup'
 import { Toaster } from '@/components/ui/sonner'
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config'
 import { BASE_URL } from '@/lib/seo'
+import Script from 'next/script'
 import '../globals.css'
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -194,6 +195,12 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9166964727480227"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className={`${beVietnamPro.variable} ${playfairDisplay.variable} font-sans antialiased overflow-x-hidden`}>
