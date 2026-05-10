@@ -38,7 +38,7 @@ export function Footer() {
 
     const subject = encodeURIComponent("Đăng ký nhận bản tin - Trầm Hương Chú Bộ Đội")
     const body = encodeURIComponent(`Tôi muốn đăng ký nhận bản tin qua email: ${email}`)
-    window.location.href = `mailto:tramhuongchubodoi@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@tramhuongchubodoi.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -110,7 +110,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">tramhuongchubodoi@gmail.com</span>
+                <span className="group-hover:text-white transition-colors">info@tramhuongchubodoi.com</span>
               </li>
               <li className="flex items-center gap-3 group">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />

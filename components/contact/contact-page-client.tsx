@@ -30,7 +30,7 @@ export function ContactPageClient() {
     {
       icon: Mail,
       title: t('contact.email'),
-      value: "tramhuongchubodoi@gmail.com",
+      value: "info@tramhuongchubodoi.com",
       description: t('contact.emailResponse'),
     },
     {

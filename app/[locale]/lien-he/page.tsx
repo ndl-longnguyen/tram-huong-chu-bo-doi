@@ -29,7 +29,7 @@ export default async function ContactPage({ params }: LocalizedPageProps) {
       '@type': 'Organization',
       name: 'Trầm Hương Chú Bộ Đội',
       telephone: '0765.942.942',
-      email: 'tramhuongchubodoi@gmail.com',
+      email: 'info@tramhuongchubodoi.com',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Đà Nẵng',
