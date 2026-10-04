@@ -103,6 +103,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       priceCurrency: 'VND',
       price: product.salePrice || product.originalPrice,
       priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+      validFrom: `${new Date().getFullYear()}-01-01`,
       availability: product.inStock
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
