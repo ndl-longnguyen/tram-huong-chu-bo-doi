@@ -374,5 +374,101 @@ export const policyContent = {
       <h3 class="text-foreground font-bold mt-8 mb-4">保修后支持</h3>
       <p>即使保修期已过，您在整个使用过程中仍能获得产品保养支持。</p>`
     }
+  },
+  returns: {
+    title: { vi: "Chính Sách Đổi Trả", en: "Return & Refund Policy", zh: "退换货政策" },
+    content: {
+      vi: `<p>Tại xưởng Trầm hương Chú Bộ Đội, mỗi tác phẩm trầm đều được chế tác và kiểm tra kỹ lưỡng trước khi gửi đến Quý khách. Nhằm đảm bảo tối đa quyền lợi của khách hàng khi mua sắm online, chúng tôi áp dụng chính sách đổi trả minh bạch và chu đáo dưới đây.</p>
+      <h3 class="text-foreground font-bold mt-8 mb-4">1. Thời gian áp dụng đổi trả</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Trong vòng 07 ngày:</strong> Đổi mẫu, đổi size vòng hoặc đổi sản phẩm khác khi Quý khách có nhu cầu thay đổi (sản phẩm chưa qua sử dụng).</li>
+        <li><strong>Trong vòng 30 ngày:</strong> Đổi mới 1 - 1 hoặc hoàn tiền nếu sản phẩm phát sinh lỗi kỹ thuật chế tác từ xưởng hoặc hư hại trong quá trình vận chuyển.</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">2. Điều kiện chấp nhận đổi trả</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Sản phẩm còn nguyên trạng, chưa qua sử dụng, chưa bị tiếp xúc với nước, hóa chất tẩy rửa hoặc chất lạ.</li>
+        <li>Còn đầy đủ phụ kiện đi kèm: hộp đựng cao cấp, túi gấm, hạt dự phòng, dây xỏ, thẻ thông tin sản phẩm (nếu có).</li>
+        <li>Có thông tin xác nhận mua hàng (Số điện thoại đặt hàng hoặc mã vận đơn).</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">3. Các trường hợp không áp dụng đổi trả</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Sản phẩm bị ngâm nước, tiếp xúc với nước hoa, cồn, xà phòng hoặc hóa chất làm biến tính gỗ và mùi hương tự nhiên.</li>
+        <li>Sản phẩm bị nứt vỡ, cháy sém, biến dạng do va đập mạnh hoặc bảo quản không đúng hướng dẫn của xưởng.</li>
+        <li>Sản phẩm được chế tác riêng biệt theo kích thước hoặc yêu cầu đặc biệt của Quý khách (khắc chữ cá nhân, bọc vàng/bạc riêng).</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">4. Chi phí vận chuyển đổi trả</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Miễn phí 100%:</strong> Xưởng chịu toàn bộ chi phí vận chuyển 2 chiều nếu lỗi do xưởng (giao sai mẫu, sản phẩm lỗi kỹ thuật hoặc sự cố vận chuyển).</li>
+        <li><strong>Hỗ trợ linh hoạt:</strong> Quý khách thanh toán phí vận chuyển 2 chiều khi có nhu cầu đổi size hoặc đổi mẫu theo sở thích cá nhân.</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">5. Quy trình 4 bước đổi trả nhanh chóng</h3>
+      <ol class="list-decimal pl-5 space-y-2">
+        <li><strong>Bước 1:</strong> Liên hệ qua Hotline/Zalo <strong>0765.942.942</strong> hoặc Fanpage, cung cấp hình ảnh/video tình trạng sản phẩm và lý do đổi trả.</li>
+        <li><strong>Bước 2:</strong> Chuyên viên của xưởng xác nhận tình trạng và hướng dẫn Quý khách đóng gói cẩn thận.</li>
+        <li><strong>Bước 3:</strong> Quý khách gửi sản phẩm về địa chỉ xưởng tại Tiên Phước, Quảng Nam (hoặc bưu tá đến tận nơi nhận hàng theo thỏa thuận).</li>
+        <li><strong>Bước 4:</strong> Sau khi nhận và thẩm định trong vòng 24 - 48 giờ, xưởng sẽ gửi ngay sản phẩm đổi mới hoặc hoàn tất chuyển khoản hoàn tiền cho Quý khách.</li>
+      </ol>
+      <p class="italic mt-6">“Sự hài lòng và an tâm của Quý khách là uy tín trường tồn của Trầm Hương Chú Bộ Đội.”</p>`,
+      en: `<p>At Chu Bo Doi Agarwood Workshop, each agarwood piece is crafted and thoroughly inspected before being delivered to you. To ensure your complete peace of mind when shopping online, we implement the following transparent and thoughtful return policy.</p>
+      <h3 class="text-foreground font-bold mt-8 mb-4">1. Return & Exchange Period</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Within 07 days:</strong> Exchange for another model, size, or product if you wish to adjust your selection (item must be unused).</li>
+        <li><strong>Within 30 days:</strong> 1-to-1 replacement or refund if the product has manufacturing defects or is damaged during transit.</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">2. Eligibility Conditions</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>The product remains in pristine, original condition, unused, and free from contact with water, detergents, or chemicals.</li>
+        <li>Includes all original packaging and accessories: luxury box, brocade pouch, spare beads, threading string, and product cards.</li>
+        <li>Proof of purchase (order phone number or delivery tracking number).</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">3. Non-returnable Items</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Products exposed to water, perfume, alcohol, or cleaning agents which alter the natural wood grain and aroma.</li>
+        <li>Items cracked, burnt, or deformed due to physical impact or incorrect storage.</li>
+        <li>Customized orders crafted specifically to your request (custom engraving, bespoke gold/silver encasing).</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">4. Shipping Costs</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>100% Free:</strong> The workshop covers all round-trip shipping costs if the fault is ours (wrong model sent, defect, transit damage).</li>
+        <li><strong>Customer-paid:</strong> If you exchange for personal preference or size change, customer covers round-trip shipping fee.</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">5. 4-Step Return Process</h3>
+      <ol class="list-decimal pl-5 space-y-2">
+        <li><strong>Step 1:</strong> Contact Hotline/Zalo at <strong>+84 765.942.942</strong> or message our Fanpage with photos/video of the product.</li>
+        <li><strong>Step 2:</strong> Our consultant confirms eligibility and guides safe repackaging.</li>
+        <li><strong>Step 3:</strong> Send the package back to our workshop in Tien Phuoc, Quang Nam.</li>
+        <li><strong>Step 4:</strong> Within 24-48 hours upon receipt and inspection, we dispatch the replacement or process your refund immediately.</li>
+      </ol>`,
+      zh: `<p>在朱伯队沉香工坊，每件沉香作品在发往您手中之前都经过精心制作和严格检查。为了确保您在线购物的全面权益，我们执行以下透明而周到的退换货政策。</p>
+      <h3 class="text-foreground font-bold mt-8 mb-4">1. 退换货期限</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>7天内：</strong> 如需更换款式、珠子尺寸或更换其他产品（产品必须未经使用）。</li>
+        <li><strong>30天内：</strong> 如果产品存在工坊制作缺陷或运输损坏，提供1对1换新或全额退款。</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">2. 退换货条件</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>产品保持原始完好状态，未经使用，未接触水、洗涤剂或化学物质。</li>
+        <li>配件齐全：高档收纳盒、锦囊、备用珠、穿绳及商品卡（如有）。</li>
+        <li>提供购买确认信息（下单电话或物流单号）。</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">3. 不适用退换货的情况</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>产品浸水、接触香水、酒精或化学品导致改变天然木质和香气。</li>
+        <li>因剧烈碰撞或保存不当导致破裂、烧焦或变形的产品。</li>
+        <li>根据客户个性化需求单独定制的产品（个性刻字、定制包金银）。</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">4. 运输费用</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>完全免费：</strong> 如果是工坊失误（发错货、质量瑕疵或运输损坏），我们承担往返运费。</li>
+        <li><strong>个人调整：</strong> 因个人喜好或更换尺寸的换货，客户承担往返运费。</li>
+      </ul>
+      <h3 class="text-foreground font-bold mt-8 mb-4">5. 简易退换4步骤</h3>
+      <ol class="list-decimal pl-5 space-y-2">
+        <li><strong>第一步：</strong> 拨打热线/Zalo <strong>0765.942.942</strong> 或联系主页，提供产品照片/视频及退换原因。</li>
+        <li><strong>第二步：</strong> 顾问确认情况并指导您妥善包装。</li>
+        <li><strong>第三步：</strong> 将产品寄回位于仙福的工坊。</li>
+        <li><strong>第四步：</strong> 收到并检验后24-48小时内，工坊将立即寄出换新产品或完成退款。</li>
+      </ol>`
+    }
   }
 };

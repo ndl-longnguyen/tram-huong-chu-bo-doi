@@ -7,6 +7,8 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { stores } from "@/data/about-content"
+import { GoogleMapSection } from "@/components/google-map-section"
+import { toast } from "sonner"
 
 export function ContactPageClient() {
   const { locale, t, getLocalizedPath } = useLanguage()
@@ -44,10 +46,26 @@ export function ContactPageClient() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    alert(t('contact.thankYou'))
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        toast.success(t('contact.thankYou') || "Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ liên hệ sớm nhất.")
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+      } else {
+        const data = await response.json().catch(() => ({}))
+        toast.error(data.error || "Gửi thất bại, vui lòng thử lại sau.")
+      }
+    } catch (err) {
+      console.error(err)
+      toast.error("Không thể kết nối đến máy chủ, vui lòng liên hệ hotline 0765.942.942")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -105,7 +123,7 @@ export function ContactPageClient() {
         </section>
 
         {/* Store Locations */}
-        <section className="py-16 bg-gradient-to-b from-muted/30 to-background">
+        <section className="py-12 bg-gradient-to-b from-muted/30 to-background">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4 tracking-wider">
@@ -154,8 +172,11 @@ export function ContactPageClient() {
           </div>
         </section>
 
+        {/* Google Maps Section */}
+        <GoogleMapSection className="bg-background" />
+
         {/* Contact Form */}
-        <section className="py-16 lg:py-24">
+        <section className="py-12 lg:py-24">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left - Info */}

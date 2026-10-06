@@ -7,6 +7,7 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide
 import { useLanguage } from "@/lib/i18n/language-context"
 
 import { categories } from "@/lib/products"
+import { toast } from "sonner"
 
 export function Footer() {
   const { t, getLocalizedPath, locale } = useLanguage()
@@ -22,6 +23,7 @@ export function Footer() {
     { name: t("footer.policy.privacy"), href: "/chinh-sach-bao-mat" },
     { name: t("footer.policy.shipping"), href: "/chinh-sach-van-chuyen" },
     { name: t("footer.policy.warranty"), href: "/chinh-sach-bao-hanh" },
+    { name: t("footer.policy.returns"), href: "/chinh-sach-doi-tra" },
   ]
 
   const aboutLinks = [
@@ -31,14 +33,33 @@ export function Footer() {
   ]
 
   const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email) return
+    if (!email || isSubmitting) return
 
-    const subject = encodeURIComponent("Đăng ký nhận bản tin - Trầm Hương Chú Bộ Đội")
-    const body = encodeURIComponent(`Tôi muốn đăng ký nhận bản tin qua email: ${email}`)
-    window.location.href = `mailto:info@tramhuongchubodoi.com?subject=${subject}&body=${body}`
+    setIsSubmitting(true)
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        toast.success(t("footer.newsletterSuccess") || "Đăng ký nhận tin thành công! Cảm ơn bạn.")
+        setEmail("")
+      } else {
+        const data = await response.json().catch(() => ({}))
+        toast.error(data.error || "Đăng ký thất bại, vui lòng thử lại sau.")
+      }
+    } catch (err) {
+      console.error(err)
+      toast.error("Không thể kết nối đến máy chủ, vui lòng thử lại sau.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -71,9 +92,10 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 hover:shadow-md transition-all duration-300 shrink-0 uppercase text-xs tracking-widest"
+                disabled={isSubmitting}
+                className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 hover:shadow-md transition-all duration-300 shrink-0 uppercase text-xs tracking-widest disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {t("footer.subscribe")}
+                {isSubmitting ? "..." : t("footer.subscribe")}
               </button>
             </form>
           </div>
@@ -100,17 +122,34 @@ export function Footer() {
               </div>
             </div>
             <ul className="space-y-4 text-sm text-gray-300 mb-8">
-              <li className="flex items-start gap-3 group">
-                <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">{t("footer.address")}</span>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/Tr%E1%BA%A7m+H%C6%B0%C1%A1ng+Ch%C3%BA+B%E1%BB%99+%C4%90%E1%BB%99i/@15.5031616,108.3230188,852m/data=!3m1!1e3!4m6!3m5!1s0x3169e9965a70bae3:0x70a48fbae13e2df!8m2!3d15.5031616!4d108.3230188!16s%2Fg%2F11zxv1j6h8?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 group hover:text-white transition-colors"
+                >
+                  <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:text-white transition-colors">{t("footer.address")}</span>
+                </a>
               </li>
-              <li className="flex items-center gap-3 group">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="font-semibold group-hover:text-white transition-colors">0765.942.942</span>
+              <li>
+                <a
+                  href="tel:0765942942"
+                  className="flex items-center gap-3 group hover:text-white transition-colors"
+                >
+                  <Phone className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <span className="font-semibold group-hover:text-white transition-colors">0765.942.942</span>
+                </a>
               </li>
-              <li className="flex items-center gap-3 group">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-white transition-colors">info@tramhuongchubodoi.com</span>
+              <li>
+                <a
+                  href="mailto:info@tramhuongchubodoi.com"
+                  className="flex items-center gap-3 group hover:text-white transition-colors"
+                >
+                  <Mail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:text-white transition-colors">info@tramhuongchubodoi.com</span>
+                </a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
@@ -159,6 +198,25 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+
+            {/* Logo Bộ Công Thương phía dưới Liên hệ */}
+            <div className="mt-6 pt-2">
+              <a
+                href="http://online.gov.vn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform duration-300 hover:scale-105"
+                title="Website đã thông báo với Bộ Công Thương"
+              >
+                <Image
+                  src="/bo-cong-thuong.png"
+                  alt="Đã thông báo Bộ Công Thương"
+                  width={150}
+                  height={57}
+                  className="h-12 w-auto object-contain"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Collections */}
@@ -180,7 +238,7 @@ export function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-800 bg-black/30">
         <div className="max-w-7xl mx-auto px-4 py-8 text-center text-[10px] text-gray-500 tracking-widest uppercase font-bold">
-          <p>© {new Date().getFullYear()} TRẦM HƯƠNG CHÚ BỘI ĐỘI. {t("footer.copyright")}</p>
+          <p>© {new Date().getFullYear()} TRẦM HƯƠNG CHÚ BỘ ĐỘI. {t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

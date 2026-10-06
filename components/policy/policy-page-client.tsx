@@ -1,11 +1,11 @@
 "use client"
 
 import { useLanguage } from "@/lib/i18n/language-context"
-import { Shield, Truck, FileText, ChevronRight } from "lucide-react"
+import { Shield, Truck, FileText, ChevronRight, RotateCcw } from "lucide-react"
 import { policyContent } from "@/data/policy-content"
 
 interface PolicyPageClientProps {
-  type: "terms" | "privacy" | "shipping" | "warranty"
+  type: "terms" | "privacy" | "shipping" | "warranty" | "returns"
 }
 
 export function PolicyPageClient({ type }: PolicyPageClientProps) {
@@ -31,6 +31,11 @@ export function PolicyPageClient({ type }: PolicyPageClientProps) {
       title: t("footer.policy.warranty"),
       icon: Shield,
       contentKey: "policy.warranty",
+    },
+    returns: {
+      title: t("footer.policy.returns"),
+      icon: RotateCcw,
+      contentKey: "policy.returns",
     },
   }
 

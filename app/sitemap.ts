@@ -19,6 +19,7 @@ const STATIC_PAGES = [
   '/chinh-sach-bao-mat',
   '/chinh-sach-van-chuyen',
   '/chinh-sach-bao-hanh',
+  '/chinh-sach-doi-tra',
 ] as const
 
 function buildAlternates(pathname: string) {

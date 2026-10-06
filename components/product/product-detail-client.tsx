@@ -483,9 +483,9 @@ export function ProductDetailClient({ product, relatedProducts, relatedArticles 
                   name={relatedProduct.name[localeKey]}
                   image={relatedProduct.image}
                   originalPrice={relatedProduct.originalPrice}
-                  salePrice={relatedProduct.salePrice}
+                  salePrice={relatedProduct.salePrice ?? undefined}
                   rating={relatedProduct.rating}
-                  badgeType={relatedProduct.badgeType}
+                  badgeType={relatedProduct.badgeType ?? undefined}
                 />
               ))}
             </div>

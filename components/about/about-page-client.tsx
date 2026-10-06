@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 import { timeline, philosophyContent, stores, commitmentFeatures } from "@/data/about-content"
+import { GoogleMapSection } from "@/components/google-map-section"
 
 
 type LocaleKey = "vi" | "en" | "zh"
@@ -287,6 +288,9 @@ export function AboutPageClient() {
           </div>
         </div>
       </section>
+
+      {/* Google Map Section */}
+      <GoogleMapSection className="bg-secondary/20" />
     </>
   )
 }
