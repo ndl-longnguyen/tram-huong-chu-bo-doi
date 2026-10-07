@@ -209,11 +209,11 @@ export function Footer() {
                 title="Website đã thông báo với Bộ Công Thương"
               >
                 <Image
-                  src="/bo-cong-thuong.png"
+                  src="/images/bo-cong-thuong.png"
                   alt="Đã thông báo Bộ Công Thương"
                   width={150}
                   height={57}
-                  className="h-12 w-auto object-contain"
+                  className="h-16 w-auto object-contain"
                 />
               </a>
             </div>
