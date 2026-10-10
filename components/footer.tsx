@@ -200,7 +200,7 @@ export function Footer() {
             </ul>
 
             {/* Logo Bộ Công Thương phía dưới Liên hệ */}
-            <div className="mt-6 pt-2">
+            {/* <div className="mt-6 pt-2">
               <a
                 href="http://online.gov.vn"
                 target="_blank"
@@ -216,7 +216,7 @@ export function Footer() {
                   className="h-16 w-auto object-contain"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Collections */}
